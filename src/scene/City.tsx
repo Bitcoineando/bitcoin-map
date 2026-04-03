@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { buildings, districts, journeys } from '../data/city-data';
+import { buildings, dependencies, districts, journeys } from '../data/city-data';
 import { computeBuildingPositions } from '../layout';
 import { useStore } from '../store';
 import { DistrictMesh } from './District';
@@ -14,8 +14,9 @@ export function City() {
   const activeJourney = useStore((s) => s.activeJourney);
   const currentStop = useStore((s) => s.currentStop);
   const hiddenDistricts = useStore((s) => s.hiddenDistricts);
+  const selectedBuilding = useStore((s) => s.selectedBuilding);
 
-  // Build a set of hidden building IDs for filtering roads
+  // Build a set of hidden building IDs for filtering
   const hiddenBuildingIds = useMemo(() => {
     const hidden = new Set<string>();
     for (const b of buildings) {
@@ -33,6 +34,17 @@ export function City() {
   const visibleDistricts = useMemo(() => {
     return districts.filter((d) => !hiddenDistricts.has(d.id));
   }, [hiddenDistricts]);
+
+  // Connected buildings for the selected building
+  const connectedIds = useMemo(() => {
+    if (!selectedBuilding) return new Set<string>();
+    const connected = new Set<string>();
+    for (const dep of dependencies) {
+      if (dep.from === selectedBuilding) connected.add(dep.to);
+      if (dep.to === selectedBuilding) connected.add(dep.from);
+    }
+    return connected;
+  }, [selectedBuilding]);
 
   // Which buildings are on the active journey?
   const journeyBuildingIds = useMemo(() => {
@@ -60,7 +72,7 @@ export function City() {
         <DistrictMesh key={d.id} district={d} />
       ))}
 
-      {/* Roads (dependency lines) */}
+      {/* Roads — only shown for selected building */}
       <Roads hiddenBuildingIds={hiddenBuildingIds} />
 
       {/* Journey paths */}
@@ -74,6 +86,8 @@ export function City() {
           isOnJourney={journeyBuildingIds.has(bp.id)}
           isCurrentStop={currentStopBuildingId === bp.id}
           journeyActive={activeJourney !== null}
+          isConnected={connectedIds.has(bp.id)}
+          hasSelection={selectedBuilding !== null}
         />
       ))}
 

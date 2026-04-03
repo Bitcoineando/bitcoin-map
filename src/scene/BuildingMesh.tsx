@@ -10,9 +10,11 @@ interface Props {
   isOnJourney: boolean;
   isCurrentStop: boolean;
   journeyActive: boolean;
+  isConnected: boolean;
+  hasSelection: boolean;
 }
 
-export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive }: Props) {
+export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive, isConnected, hasSelection }: Props) {
   const [hovered, setHovered] = useState(false);
   const meshRef = useRef<Mesh>(null);
   const selectBuilding = useStore((s) => s.selectBuilding);
@@ -24,17 +26,32 @@ export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive }: 
   // Determine opacity/brightness
   let opacity = 1;
   let emissiveIntensity = 0;
+
   if (journeyActive) {
+    // Journey mode: highlight journey stops
     if (isCurrentStop) {
       emissiveIntensity = 0.4;
     } else if (isOnJourney) {
       emissiveIntensity = 0.1;
     } else {
-      opacity = 0.2;
+      opacity = 0.15;
+    }
+  } else if (hasSelection) {
+    // Selection mode: highlight selected + connected
+    if (isSelected) {
+      emissiveIntensity = 0.4;
+    } else if (isConnected) {
+      emissiveIntensity = 0.2;
+      opacity = 0.9;
+    } else {
+      opacity = 0.15;
     }
   }
-  if (hovered) emissiveIntensity = 0.3;
-  if (isSelected) emissiveIntensity = 0.3;
+
+  if (hovered && !isSelected) emissiveIntensity = Math.max(emissiveIntensity, 0.2);
+
+  // Show label for: hovered, selected, current stop, or connected buildings
+  const showLabel = hovered || isSelected || isCurrentStop || (hasSelection && isConnected);
 
   return (
     <group position={bp.position}>
@@ -43,7 +60,10 @@ export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive }: 
         ref={meshRef}
         onPointerOver={(e) => { e.stopPropagation(); setHovered(true); document.body.style.cursor = 'pointer'; }}
         onPointerOut={() => { setHovered(false); document.body.style.cursor = 'default'; }}
-        onClick={(e) => { e.stopPropagation(); selectBuilding(bp.id); }}
+        onClick={(e) => {
+          e.stopPropagation();
+          selectBuilding(isSelected ? null : bp.id);
+        }}
       >
         <boxGeometry args={bp.dimensions} />
         <meshStandardMaterial
@@ -55,8 +75,8 @@ export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive }: 
         />
       </mesh>
 
-      {/* Label — show on hover or when selected or current stop */}
-      {(hovered || isSelected || isCurrentStop) && building && (
+      {/* Label */}
+      {showLabel && building && (
         <Text
           position={[0, bp.dimensions[1] / 2 + 0.6, 0]}
           fontSize={0.5}
