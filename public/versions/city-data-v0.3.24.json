@@ -1,0 +1,1465 @@
+{
+  "version": "v0.3.24",
+  "github_base": "https://github.com/bitcoin/bitcoin/blob/v0.3.24",
+  "generated": "2026-04-03T16:57:26",
+  "file_count": 81,
+  "dependency_count": 115,
+  "districts": [
+    {
+      "id": "init",
+      "name": "INIT",
+      "color": "#e0e0e0",
+      "position": [
+        -75.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 3
+    },
+    {
+      "id": "network",
+      "name": "NETWORK",
+      "color": "#f59e0b",
+      "position": [
+        -45.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 4
+    },
+    {
+      "id": "consensus",
+      "name": "CONSENSUS",
+      "color": "#3b82f6",
+      "position": [
+        15.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "script",
+      "name": "SCRIPT",
+      "color": "#818cf8",
+      "position": [
+        45.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "wallet",
+      "name": "WALLET",
+      "color": "#22c55e",
+      "position": [
+        -15.0,
+        -28
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "rpc",
+      "name": "RPC",
+      "color": "#14b8a6",
+      "position": [
+        15.0,
+        -28
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "storage",
+      "name": "STORAGE",
+      "color": "#78716c",
+      "position": [
+        -15.0,
+        -56
+      ],
+      "size": [
+        10.4,
+        10.4
+      ],
+      "buildingCount": 8
+    },
+    {
+      "id": "crypto",
+      "name": "CRYPTO",
+      "color": "#d946ef",
+      "position": [
+        15.0,
+        -56
+      ],
+      "size": [
+        18.4,
+        18.4
+      ],
+      "buildingCount": 18
+    },
+    {
+      "id": "util",
+      "name": "UTIL",
+      "color": "#6b7280",
+      "position": [
+        45.0,
+        -56
+      ],
+      "size": [
+        20.0,
+        20.0
+      ],
+      "buildingCount": 20
+    },
+    {
+      "id": "gui",
+      "name": "GUI",
+      "color": "#f43f5e",
+      "position": [
+        -15.0,
+        -84
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 4
+    },
+    {
+      "id": "bench",
+      "name": "BENCH",
+      "color": "#737373",
+      "position": [
+        15.0,
+        -84
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 1
+    },
+    {
+      "id": "test",
+      "name": "TEST",
+      "color": "#525252",
+      "position": [
+        45.0,
+        -84
+      ],
+      "size": [
+        14.4,
+        14.4
+      ],
+      "buildingCount": 13
+    },
+    {
+      "id": "other",
+      "name": "OTHER",
+      "color": "#404040",
+      "position": [
+        -75.0,
+        -112
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    }
+  ],
+  "buildings": [
+    {
+      "id": "base58_h",
+      "name": "src/base58.h",
+      "path": "src/base58.h",
+      "subsystem": "crypto",
+      "loc": 210,
+      "classes": 0,
+      "functions": 13,
+      "enums": 0
+    },
+    {
+      "id": "bench_data_block413567_raw_h",
+      "name": "src/bench/data/block413567.raw.h",
+      "path": "src/bench/data/block413567.raw.h",
+      "subsystem": "bench",
+      "loc": 124988,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "bignum_h",
+      "name": "src/bignum.h",
+      "path": "src/bignum.h",
+      "subsystem": "crypto",
+      "loc": 537,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "config_bitcoin-config_h",
+      "name": "src/config/bitcoin-config.h",
+      "path": "src/config/bitcoin-config.h",
+      "subsystem": "other",
+      "loc": 328,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_config_h",
+      "name": "src/cryptopp/config.h",
+      "path": "src/cryptopp/config.h",
+      "subsystem": "crypto",
+      "loc": 462,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_cpu_cpp",
+      "name": "src/cryptopp/cpu.cpp",
+      "path": "src/cryptopp/cpu.cpp",
+      "subsystem": "crypto",
+      "loc": 199,
+      "classes": 0,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_cpu_h",
+      "name": "src/cryptopp/cpu.h",
+      "path": "src/cryptopp/cpu.h",
+      "subsystem": "crypto",
+      "loc": 263,
+      "classes": 0,
+      "functions": 7,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_cryptlib_h",
+      "name": "src/cryptopp/cryptlib.h",
+      "path": "src/cryptopp/cryptlib.h",
+      "subsystem": "crypto",
+      "loc": 1668,
+      "classes": 59,
+      "functions": 0,
+      "enums": 6
+    },
+    {
+      "id": "cryptopp_iterhash_h",
+      "name": "src/cryptopp/iterhash.h",
+      "path": "src/cryptopp/iterhash.h",
+      "subsystem": "crypto",
+      "loc": 29,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_misc_h",
+      "name": "src/cryptopp/misc.h",
+      "path": "src/cryptopp/misc.h",
+      "subsystem": "crypto",
+      "loc": 1134,
+      "classes": 11,
+      "functions": 62,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_pch_h",
+      "name": "src/cryptopp/pch.h",
+      "path": "src/cryptopp/pch.h",
+      "subsystem": "crypto",
+      "loc": 21,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_secblock_h",
+      "name": "src/cryptopp/secblock.h",
+      "path": "src/cryptopp/secblock.h",
+      "subsystem": "crypto",
+      "loc": 501,
+      "classes": 8,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_sha_cpp",
+      "name": "src/cryptopp/sha.cpp",
+      "path": "src/cryptopp/sha.cpp",
+      "subsystem": "crypto",
+      "loc": 899,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_sha_h",
+      "name": "src/cryptopp/sha.h",
+      "path": "src/cryptopp/sha.h",
+      "subsystem": "crypto",
+      "loc": 63,
+      "classes": 5,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_simple_h",
+      "name": "src/cryptopp/simple.h",
+      "path": "src/cryptopp/simple.h",
+      "subsystem": "crypto",
+      "loc": 1,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_smartptr_h",
+      "name": "src/cryptopp/smartptr.h",
+      "path": "src/cryptopp/smartptr.h",
+      "subsystem": "crypto",
+      "loc": 223,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "cryptopp_stdcpp_h",
+      "name": "src/cryptopp/stdcpp.h",
+      "path": "src/cryptopp/stdcpp.h",
+      "subsystem": "crypto",
+      "loc": 27,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "db_cpp",
+      "name": "src/db.cpp",
+      "path": "src/db.cpp",
+      "subsystem": "util",
+      "loc": 939,
+      "classes": 1,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "db_h",
+      "name": "src/db.h",
+      "path": "src/db.h",
+      "subsystem": "util",
+      "loc": 456,
+      "classes": 5,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "headers_h",
+      "name": "src/headers.h",
+      "path": "src/headers.h",
+      "subsystem": "util",
+      "loc": 117,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "init_cpp",
+      "name": "src/init.cpp",
+      "path": "src/init.cpp",
+      "subsystem": "init",
+      "loc": 554,
+      "classes": 0,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "init_h",
+      "name": "src/init.h",
+      "path": "src/init.h",
+      "subsystem": "init",
+      "loc": 13,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "irc_cpp",
+      "name": "src/irc.cpp",
+      "path": "src/irc.cpp",
+      "subsystem": "network",
+      "loc": 448,
+      "classes": 1,
+      "functions": 12,
+      "enums": 0
+    },
+    {
+      "id": "irc_h",
+      "name": "src/irc.h",
+      "path": "src/irc.h",
+      "subsystem": "network",
+      "loc": 13,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_h",
+      "name": "src/json/json_spirit.h",
+      "path": "src/json/json_spirit.h",
+      "subsystem": "util",
+      "loc": 18,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_error_position_h",
+      "name": "src/json/json_spirit_error_position.h",
+      "path": "src/json/json_spirit_error_position.h",
+      "subsystem": "util",
+      "loc": 54,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_cpp",
+      "name": "src/json/json_spirit_reader.cpp",
+      "path": "src/json/json_spirit_reader.cpp",
+      "subsystem": "util",
+      "loc": 137,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_h",
+      "name": "src/json/json_spirit_reader.h",
+      "path": "src/json/json_spirit_reader.h",
+      "subsystem": "util",
+      "loc": 62,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_template_h",
+      "name": "src/json/json_spirit_reader_template.h",
+      "path": "src/json/json_spirit_reader_template.h",
+      "subsystem": "util",
+      "loc": 612,
+      "classes": 4,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_stream_reader_h",
+      "name": "src/json/json_spirit_stream_reader.h",
+      "path": "src/json/json_spirit_stream_reader.h",
+      "subsystem": "util",
+      "loc": 70,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_utils_h",
+      "name": "src/json/json_spirit_utils.h",
+      "path": "src/json/json_spirit_utils.h",
+      "subsystem": "util",
+      "loc": 61,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_value_cpp",
+      "name": "src/json/json_spirit_value.cpp",
+      "path": "src/json/json_spirit_value.cpp",
+      "subsystem": "util",
+      "loc": 8,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_value_h",
+      "name": "src/json/json_spirit_value.h",
+      "path": "src/json/json_spirit_value.h",
+      "subsystem": "util",
+      "loc": 534,
+      "classes": 5,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "json_json_spirit_writer_cpp",
+      "name": "src/json/json_spirit_writer.cpp",
+      "path": "src/json/json_spirit_writer.cpp",
+      "subsystem": "util",
+      "loc": 95,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_writer_h",
+      "name": "src/json/json_spirit_writer.h",
+      "path": "src/json/json_spirit_writer.h",
+      "subsystem": "util",
+      "loc": 50,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_writer_template_h",
+      "name": "src/json/json_spirit_writer_template.h",
+      "path": "src/json/json_spirit_writer_template.h",
+      "subsystem": "util",
+      "loc": 248,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "key_h",
+      "name": "src/key.h",
+      "path": "src/key.h",
+      "subsystem": "crypto",
+      "loc": 175,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "keystore_cpp",
+      "name": "src/keystore.cpp",
+      "path": "src/keystore.cpp",
+      "subsystem": "crypto",
+      "loc": 33,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "keystore_h",
+      "name": "src/keystore.h",
+      "path": "src/keystore.h",
+      "subsystem": "crypto",
+      "loc": 30,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "main_cpp",
+      "name": "src/main.cpp",
+      "path": "src/main.cpp",
+      "subsystem": "consensus",
+      "loc": 3119,
+      "classes": 2,
+      "functions": 43,
+      "enums": 0
+    },
+    {
+      "id": "main_h",
+      "name": "src/main.h",
+      "path": "src/main.h",
+      "subsystem": "consensus",
+      "loc": 1573,
+      "classes": 14,
+      "functions": 1,
+      "enums": 1
+    },
+    {
+      "id": "net_cpp",
+      "name": "src/net.cpp",
+      "path": "src/net.cpp",
+      "subsystem": "network",
+      "loc": 1768,
+      "classes": 1,
+      "functions": 28,
+      "enums": 0
+    },
+    {
+      "id": "net_h",
+      "name": "src/net.h",
+      "path": "src/net.h",
+      "subsystem": "network",
+      "loc": 1068,
+      "classes": 6,
+      "functions": 5,
+      "enums": 3
+    },
+    {
+      "id": "noui_h",
+      "name": "src/noui.h",
+      "path": "src/noui.h",
+      "subsystem": "init",
+      "loc": 69,
+      "classes": 0,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "obj_build_h",
+      "name": "src/obj/build.h",
+      "path": "src/obj/build.h",
+      "subsystem": "other",
+      "loc": 1,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "rpc_cpp",
+      "name": "src/rpc.cpp",
+      "path": "src/rpc.cpp",
+      "subsystem": "rpc",
+      "loc": 2226,
+      "classes": 2,
+      "functions": 64,
+      "enums": 0
+    },
+    {
+      "id": "rpc_h",
+      "name": "src/rpc.h",
+      "path": "src/rpc.h",
+      "subsystem": "rpc",
+      "loc": 6,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "script_cpp",
+      "name": "src/script.cpp",
+      "path": "src/script.cpp",
+      "subsystem": "script",
+      "loc": 1205,
+      "classes": 0,
+      "functions": 15,
+      "enums": 0
+    },
+    {
+      "id": "script_h",
+      "name": "src/script.h",
+      "path": "src/script.h",
+      "subsystem": "script",
+      "loc": 718,
+      "classes": 1,
+      "functions": 3,
+      "enums": 2
+    },
+    {
+      "id": "serialize_h",
+      "name": "src/serialize.h",
+      "path": "src/serialize.h",
+      "subsystem": "util",
+      "loc": 1271,
+      "classes": 6,
+      "functions": 40,
+      "enums": 1
+    },
+    {
+      "id": "strlcpy_h",
+      "name": "src/strlcpy.h",
+      "path": "src/strlcpy.h",
+      "subsystem": "util",
+      "loc": 86,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "test_data_asmap_raw_h",
+      "name": "src/test/data/asmap.raw.h",
+      "path": "src/test/data/asmap.raw.h",
+      "subsystem": "test",
+      "loc": 10,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_base58_encode_decode_json_h",
+      "name": "src/test/data/base58_encode_decode.json.h",
+      "path": "src/test/data/base58_encode_decode.json.h",
+      "subsystem": "test",
+      "loc": 187,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_bip341_wallet_vectors_json_h",
+      "name": "src/test/data/bip341_wallet_vectors.json.h",
+      "path": "src/test/data/bip341_wallet_vectors.json.h",
+      "subsystem": "test",
+      "loc": 3666,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_blockfilters_json_h",
+      "name": "src/test/data/blockfilters.json.h",
+      "path": "src/test/data/blockfilters.json.h",
+      "subsystem": "test",
+      "loc": 2231,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_key_io_invalid_json_h",
+      "name": "src/test/data/key_io_invalid.json.h",
+      "path": "src/test/data/key_io_invalid.json.h",
+      "subsystem": "test",
+      "loc": 654,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_key_io_valid_json_h",
+      "name": "src/test/data/key_io_valid.json.h",
+      "path": "src/test/data/key_io_valid.json.h",
+      "subsystem": "test",
+      "loc": 2139,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_script_tests_json_h",
+      "name": "src/test/data/script_tests.json.h",
+      "path": "src/test/data/script_tests.json.h",
+      "subsystem": "test",
+      "loc": 26958,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_sighash_json_h",
+      "name": "src/test/data/sighash.json.h",
+      "path": "src/test/data/sighash.json.h",
+      "subsystem": "test",
+      "loc": 26315,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_tx_invalid_json_h",
+      "name": "src/test/data/tx_invalid.json.h",
+      "path": "src/test/data/tx_invalid.json.h",
+      "subsystem": "test",
+      "loc": 6681,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_tx_valid_json_h",
+      "name": "src/test/data/tx_valid.json.h",
+      "path": "src/test/data/tx_valid.json.h",
+      "subsystem": "test",
+      "loc": 10742,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_test_bitcoin_cpp",
+      "name": "src/test/test_bitcoin.cpp",
+      "path": "src/test/test_bitcoin.cpp",
+      "subsystem": "test",
+      "loc": 6,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_uint160_tests_cpp",
+      "name": "src/test/uint160_tests.cpp",
+      "path": "src/test/uint160_tests.cpp",
+      "subsystem": "test",
+      "loc": 16,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_uint256_tests_cpp",
+      "name": "src/test/uint256_tests.cpp",
+      "path": "src/test/uint256_tests.cpp",
+      "subsystem": "test",
+      "loc": 16,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "ui_cpp",
+      "name": "src/ui.cpp",
+      "path": "src/ui.cpp",
+      "subsystem": "gui",
+      "loc": 2964,
+      "classes": 2,
+      "functions": 34,
+      "enums": 1
+    },
+    {
+      "id": "ui_h",
+      "name": "src/ui.h",
+      "path": "src/ui.h",
+      "subsystem": "gui",
+      "loc": 350,
+      "classes": 9,
+      "functions": 1,
+      "enums": 2
+    },
+    {
+      "id": "uibase_cpp",
+      "name": "src/uibase.cpp",
+      "path": "src/uibase.cpp",
+      "subsystem": "gui",
+      "loc": 1008,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "uibase_h",
+      "name": "src/uibase.h",
+      "path": "src/uibase.h",
+      "subsystem": "gui",
+      "loc": 421,
+      "classes": 9,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "uint256_h",
+      "name": "src/uint256.h",
+      "path": "src/uint256.h",
+      "subsystem": "util",
+      "loc": 765,
+      "classes": 3,
+      "functions": 1,
+      "enums": 1
+    },
+    {
+      "id": "util_cpp",
+      "name": "src/util.cpp",
+      "path": "src/util.cpp",
+      "subsystem": "util",
+      "loc": 909,
+      "classes": 1,
+      "functions": 38,
+      "enums": 0
+    },
+    {
+      "id": "util_h",
+      "name": "src/util.h",
+      "path": "src/util.h",
+      "subsystem": "util",
+      "loc": 681,
+      "classes": 3,
+      "functions": 38,
+      "enums": 0
+    },
+    {
+      "id": "wallet_cpp",
+      "name": "src/wallet.cpp",
+      "path": "src/wallet.cpp",
+      "subsystem": "wallet",
+      "loc": 1139,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "wallet_h",
+      "name": "src/wallet.h",
+      "path": "src/wallet.h",
+      "subsystem": "wallet",
+      "loc": 614,
+      "classes": 6,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "store_blk_dat",
+      "name": "blk*.dat",
+      "subsystem": "storage",
+      "loc": 500,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_rev_dat",
+      "name": "rev*.dat",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_chainstate",
+      "name": "chainstate/",
+      "subsystem": "storage",
+      "loc": 400,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_block_index",
+      "name": "blocks/index/",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_wallet_db",
+      "name": "wallets/*.sqlite",
+      "subsystem": "storage",
+      "loc": 350,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_mempool_dat",
+      "name": "mempool.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_peers_dat",
+      "name": "peers.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_banlist",
+      "name": "banlist.json",
+      "subsystem": "storage",
+      "loc": 100,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "base58_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "bignum_h",
+      "to": "util_h"
+    },
+    {
+      "from": "cryptopp_cpu_cpp",
+      "to": "cryptopp_pch_h"
+    },
+    {
+      "from": "cryptopp_cpu_cpp",
+      "to": "cryptopp_cpu_h"
+    },
+    {
+      "from": "cryptopp_cpu_cpp",
+      "to": "cryptopp_misc_h"
+    },
+    {
+      "from": "cryptopp_cpu_h",
+      "to": "cryptopp_config_h"
+    },
+    {
+      "from": "cryptopp_cryptlib_h",
+      "to": "cryptopp_config_h"
+    },
+    {
+      "from": "cryptopp_cryptlib_h",
+      "to": "cryptopp_stdcpp_h"
+    },
+    {
+      "from": "cryptopp_iterhash_h",
+      "to": "cryptopp_secblock_h"
+    },
+    {
+      "from": "cryptopp_misc_h",
+      "to": "cryptopp_cryptlib_h"
+    },
+    {
+      "from": "cryptopp_misc_h",
+      "to": "cryptopp_smartptr_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_cpu_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_config_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_simple_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_secblock_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_misc_h"
+    },
+    {
+      "from": "cryptopp_pch_h",
+      "to": "cryptopp_smartptr_h"
+    },
+    {
+      "from": "cryptopp_secblock_h",
+      "to": "cryptopp_config_h"
+    },
+    {
+      "from": "cryptopp_secblock_h",
+      "to": "cryptopp_misc_h"
+    },
+    {
+      "from": "cryptopp_sha_cpp",
+      "to": "cryptopp_pch_h"
+    },
+    {
+      "from": "cryptopp_sha_cpp",
+      "to": "cryptopp_sha_h"
+    },
+    {
+      "from": "cryptopp_sha_cpp",
+      "to": "cryptopp_misc_h"
+    },
+    {
+      "from": "cryptopp_sha_cpp",
+      "to": "cryptopp_cpu_h"
+    },
+    {
+      "from": "cryptopp_sha_h",
+      "to": "cryptopp_iterhash_h"
+    },
+    {
+      "from": "cryptopp_smartptr_h",
+      "to": "cryptopp_config_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "db_h",
+      "to": "key_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "util_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "base58_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "main_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "uibase_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "ui_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "noui_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "rpc_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "strlcpy_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "irc_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "strlcpy_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_reader_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_writer_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "json_json_spirit_reader_cpp",
+      "to": "json_json_spirit_reader_h"
+    },
+    {
+      "from": "json_json_spirit_reader_cpp",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "json_json_spirit_reader_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_reader_h",
+      "to": "json_json_spirit_error_position_h"
+    },
+    {
+      "from": "json_json_spirit_reader_template_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_reader_template_h",
+      "to": "json_json_spirit_error_position_h"
+    },
+    {
+      "from": "json_json_spirit_stream_reader_h",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "json_json_spirit_utils_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_value_cpp",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_writer_cpp",
+      "to": "json_json_spirit_writer_h"
+    },
+    {
+      "from": "json_json_spirit_writer_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "json_json_spirit_writer_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_writer_template_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "keystore_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "keystore_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "cryptopp_sha_h"
+    },
+    {
+      "from": "main_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "main_h",
+      "to": "net_h"
+    },
+    {
+      "from": "main_h",
+      "to": "key_h"
+    },
+    {
+      "from": "main_h",
+      "to": "script_h"
+    },
+    {
+      "from": "main_h",
+      "to": "db_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "irc_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "strlcpy_h"
+    },
+    {
+      "from": "noui_h",
+      "to": "wallet_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "cryptopp_sha_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "rpc_cpp",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "script_h",
+      "to": "base58_h"
+    },
+    {
+      "from": "script_h",
+      "to": "keystore_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "test_uint160_tests_cpp"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "test_uint256_tests_cpp"
+    },
+    {
+      "from": "test_uint160_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_uint256_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "ui_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "ui_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "ui_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "ui_cpp",
+      "to": "strlcpy_h"
+    },
+    {
+      "from": "ui_h",
+      "to": "wallet_h"
+    },
+    {
+      "from": "uibase_cpp",
+      "to": "uibase_h"
+    },
+    {
+      "from": "uint256_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "strlcpy_h"
+    },
+    {
+      "from": "util_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "cryptopp_sha_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "key_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "script_h"
+    }
+  ]
+}

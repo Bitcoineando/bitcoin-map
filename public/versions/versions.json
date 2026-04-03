@@ -1,0 +1,83 @@
+[
+  {
+    "version": "v0.1.5",
+    "date": "2009-02-04",
+    "label": "Genesis",
+    "era": "satoshi",
+    "fileCount": 34,
+    "depCount": 25,
+    "description": "Satoshi's earliest tagged release — 26 source files, no directories"
+  },
+  {
+    "version": "v0.3.24",
+    "date": "2011-07-08",
+    "label": "Satoshi's Last",
+    "era": "satoshi",
+    "fileCount": 81,
+    "depCount": 115,
+    "description": "Last release of the Satoshi era — src/ directory appears"
+  },
+  {
+    "version": "v0.8.0",
+    "date": "2013-02-19",
+    "label": "LevelDB",
+    "era": "growth",
+    "fileCount": 199,
+    "depCount": 468,
+    "description": "BerkeleyDB → LevelDB migration, the accidental hard fork"
+  },
+  {
+    "version": "v0.9.0",
+    "date": "2014-03-19",
+    "label": "Bitcoin Core",
+    "era": "growth",
+    "fileCount": 254,
+    "depCount": 739,
+    "description": "Rebranded to 'Bitcoin Core' — major refactoring begins"
+  },
+  {
+    "version": "v0.13.0",
+    "date": "2016-08-23",
+    "label": "SegWit",
+    "era": "war",
+    "fileCount": 397,
+    "depCount": 1555,
+    "description": "Segregated Witness code included — the code people fought over"
+  },
+  {
+    "version": "v0.16.0",
+    "date": "2018-02-26",
+    "label": "Post-War",
+    "era": "war",
+    "fileCount": 462,
+    "depCount": 1948,
+    "description": "Full SegWit wallet support — the blocksize war is over"
+  },
+  {
+    "version": "v22.0",
+    "date": "2021-09-13",
+    "label": "Taproot",
+    "era": "modern",
+    "fileCount": 843,
+    "depCount": 4152,
+    "description": "Taproot activation — last major consensus change"
+  },
+  {
+    "version": "v24.0",
+    "date": "2022-11-24",
+    "label": "Kernel",
+    "era": "modern",
+    "fileCount": 948,
+    "depCount": 4981,
+    "description": "libbitcoinkernel begins — separating consensus from the node"
+  },
+  {
+    "version": "v28.4",
+    "date": "2025-03-27",
+    "label": "Current",
+    "era": "modern",
+    "fileCount": 1084,
+    "depCount": 6275,
+    "description": "Current release — the full metropolis"
+  }
+]

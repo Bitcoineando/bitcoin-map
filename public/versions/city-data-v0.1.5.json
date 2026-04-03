@@ -1,0 +1,565 @@
+{
+  "version": "v0.1.5",
+  "github_base": "https://github.com/bitcoin/bitcoin/blob/v0.1.5",
+  "generated": "2026-04-03T16:57:26",
+  "file_count": 34,
+  "dependency_count": 25,
+  "districts": [
+    {
+      "id": "network",
+      "name": "NETWORK",
+      "color": "#f59e0b",
+      "position": [
+        -45.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 4
+    },
+    {
+      "id": "consensus",
+      "name": "CONSENSUS",
+      "color": "#3b82f6",
+      "position": [
+        15.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "script",
+      "name": "SCRIPT",
+      "color": "#818cf8",
+      "position": [
+        45.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "storage",
+      "name": "STORAGE",
+      "color": "#78716c",
+      "position": [
+        -15.0,
+        -56
+      ],
+      "size": [
+        10.4,
+        10.4
+      ],
+      "buildingCount": 8
+    },
+    {
+      "id": "crypto",
+      "name": "CRYPTO",
+      "color": "#d946ef",
+      "position": [
+        15.0,
+        -56
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 5
+    },
+    {
+      "id": "util",
+      "name": "UTIL",
+      "color": "#6b7280",
+      "position": [
+        45.0,
+        -56
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 7
+    },
+    {
+      "id": "gui",
+      "name": "GUI",
+      "color": "#f43f5e",
+      "position": [
+        -15.0,
+        -84
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 4
+    },
+    {
+      "id": "other",
+      "name": "OTHER",
+      "color": "#404040",
+      "position": [
+        -75.0,
+        -112
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    }
+  ],
+  "buildings": [
+    {
+      "id": "base58_h",
+      "name": "base58.h",
+      "path": "base58.h",
+      "subsystem": "crypto",
+      "loc": 201,
+      "classes": 0,
+      "functions": 13,
+      "enums": 0
+    },
+    {
+      "id": "bignum_h",
+      "name": "bignum.h",
+      "path": "bignum.h",
+      "subsystem": "crypto",
+      "loc": 498,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "db_cpp",
+      "name": "db.cpp",
+      "path": "db.cpp",
+      "subsystem": "util",
+      "loc": 614,
+      "classes": 1,
+      "functions": 4,
+      "enums": 0
+    },
+    {
+      "id": "db_h",
+      "name": "db.h",
+      "path": "db.h",
+      "subsystem": "util",
+      "loc": 420,
+      "classes": 6,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "headers_h",
+      "name": "headers.h",
+      "path": "headers.h",
+      "subsystem": "util",
+      "loc": 71,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "irc_cpp",
+      "name": "irc.cpp",
+      "path": "irc.cpp",
+      "subsystem": "network",
+      "loc": 314,
+      "classes": 1,
+      "functions": 9,
+      "enums": 0
+    },
+    {
+      "id": "irc_h",
+      "name": "irc.h",
+      "path": "irc.h",
+      "subsystem": "network",
+      "loc": 10,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "key_h",
+      "name": "key.h",
+      "path": "key.h",
+      "subsystem": "crypto",
+      "loc": 156,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "main_cpp",
+      "name": "main.cpp",
+      "path": "main.cpp",
+      "subsystem": "consensus",
+      "loc": 2692,
+      "classes": 2,
+      "functions": 32,
+      "enums": 0
+    },
+    {
+      "id": "main_h",
+      "name": "main.h",
+      "path": "main.h",
+      "subsystem": "consensus",
+      "loc": 1329,
+      "classes": 13,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "market_cpp",
+      "name": "market.cpp",
+      "path": "market.cpp",
+      "subsystem": "other",
+      "loc": 264,
+      "classes": 0,
+      "functions": 4,
+      "enums": 0
+    },
+    {
+      "id": "market_h",
+      "name": "market.h",
+      "path": "market.h",
+      "subsystem": "other",
+      "loc": 182,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "net_cpp",
+      "name": "net.cpp",
+      "path": "net.cpp",
+      "subsystem": "network",
+      "loc": 1100,
+      "classes": 0,
+      "functions": 19,
+      "enums": 0
+    },
+    {
+      "id": "net_h",
+      "name": "net.h",
+      "path": "net.h",
+      "subsystem": "network",
+      "loc": 856,
+      "classes": 6,
+      "functions": 5,
+      "enums": 3
+    },
+    {
+      "id": "script_cpp",
+      "name": "script.cpp",
+      "path": "script.cpp",
+      "subsystem": "script",
+      "loc": 1127,
+      "classes": 0,
+      "functions": 10,
+      "enums": 0
+    },
+    {
+      "id": "script_h",
+      "name": "script.h",
+      "path": "script.h",
+      "subsystem": "script",
+      "loc": 597,
+      "classes": 1,
+      "functions": 3,
+      "enums": 2
+    },
+    {
+      "id": "serialize_h",
+      "name": "serialize.h",
+      "path": "serialize.h",
+      "subsystem": "util",
+      "loc": 1158,
+      "classes": 6,
+      "functions": 34,
+      "enums": 1
+    },
+    {
+      "id": "sha_cpp",
+      "name": "sha.cpp",
+      "path": "sha.cpp",
+      "subsystem": "crypto",
+      "loc": 554,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "sha_h",
+      "name": "sha.h",
+      "path": "sha.h",
+      "subsystem": "crypto",
+      "loc": 177,
+      "classes": 5,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "ui_cpp",
+      "name": "ui.cpp",
+      "path": "ui.cpp",
+      "subsystem": "gui",
+      "loc": 3290,
+      "classes": 1,
+      "functions": 38,
+      "enums": 0
+    },
+    {
+      "id": "ui_h",
+      "name": "ui.h",
+      "path": "ui.h",
+      "subsystem": "gui",
+      "loc": 420,
+      "classes": 14,
+      "functions": 0,
+      "enums": 3
+    },
+    {
+      "id": "uibase_cpp",
+      "name": "uibase.cpp",
+      "path": "uibase.cpp",
+      "subsystem": "gui",
+      "loc": 1825,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "uibase_h",
+      "name": "uibase.h",
+      "path": "uibase.h",
+      "subsystem": "gui",
+      "loc": 723,
+      "classes": 16,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "uint256_h",
+      "name": "uint256.h",
+      "path": "uint256.h",
+      "subsystem": "util",
+      "loc": 750,
+      "classes": 3,
+      "functions": 1,
+      "enums": 1
+    },
+    {
+      "id": "util_cpp",
+      "name": "util.cpp",
+      "path": "util.cpp",
+      "subsystem": "util",
+      "loc": 383,
+      "classes": 1,
+      "functions": 15,
+      "enums": 0
+    },
+    {
+      "id": "util_h",
+      "name": "util.h",
+      "path": "util.h",
+      "subsystem": "util",
+      "loc": 399,
+      "classes": 3,
+      "functions": 15,
+      "enums": 0
+    },
+    {
+      "id": "store_blk_dat",
+      "name": "blk*.dat",
+      "subsystem": "storage",
+      "loc": 500,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_rev_dat",
+      "name": "rev*.dat",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_chainstate",
+      "name": "chainstate/",
+      "subsystem": "storage",
+      "loc": 400,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_block_index",
+      "name": "blocks/index/",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_wallet_db",
+      "name": "wallets/*.sqlite",
+      "subsystem": "storage",
+      "loc": 350,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_mempool_dat",
+      "name": "mempool.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_peers_dat",
+      "name": "peers.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_banlist",
+      "name": "banlist.json",
+      "subsystem": "storage",
+      "loc": 100,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "db_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "util_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "key_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "base58_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "script_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "db_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "net_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "irc_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "main_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "market_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "uibase_h"
+    },
+    {
+      "from": "headers_h",
+      "to": "ui_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "sha_h"
+    },
+    {
+      "from": "market_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "sha_cpp",
+      "to": "sha_h"
+    },
+    {
+      "from": "ui_cpp",
+      "to": "headers_h"
+    },
+    {
+      "from": "uibase_cpp",
+      "to": "uibase_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "headers_h"
+    }
+  ]
+}

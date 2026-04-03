@@ -1,0 +1,4057 @@
+{
+  "version": "v0.8.0",
+  "github_base": "https://github.com/bitcoin/bitcoin/blob/v0.8.0",
+  "generated": "2026-04-03T16:57:28",
+  "file_count": 199,
+  "dependency_count": 468,
+  "districts": [
+    {
+      "id": "init",
+      "name": "INIT",
+      "color": "#e0e0e0",
+      "position": [
+        -75.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 3
+    },
+    {
+      "id": "network",
+      "name": "NETWORK",
+      "color": "#f59e0b",
+      "position": [
+        -45.0,
+        0
+      ],
+      "size": [
+        15.200000000000001,
+        15.200000000000001
+      ],
+      "buildingCount": 14
+    },
+    {
+      "id": "consensus",
+      "name": "CONSENSUS",
+      "color": "#3b82f6",
+      "position": [
+        15.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 7
+    },
+    {
+      "id": "script",
+      "name": "SCRIPT",
+      "color": "#818cf8",
+      "position": [
+        45.0,
+        0
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 2
+    },
+    {
+      "id": "wallet",
+      "name": "WALLET",
+      "color": "#22c55e",
+      "position": [
+        -15.0,
+        -28
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 6
+    },
+    {
+      "id": "rpc",
+      "name": "RPC",
+      "color": "#14b8a6",
+      "position": [
+        15.0,
+        -28
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 5
+    },
+    {
+      "id": "storage",
+      "name": "STORAGE",
+      "color": "#78716c",
+      "position": [
+        -15.0,
+        -56
+      ],
+      "size": [
+        10.4,
+        10.4
+      ],
+      "buildingCount": 8
+    },
+    {
+      "id": "crypto",
+      "name": "CRYPTO",
+      "color": "#d946ef",
+      "position": [
+        15.0,
+        -56
+      ],
+      "size": [
+        10.4,
+        10.4
+      ],
+      "buildingCount": 8
+    },
+    {
+      "id": "util",
+      "name": "UTIL",
+      "color": "#6b7280",
+      "position": [
+        45.0,
+        -56
+      ],
+      "size": [
+        24.8,
+        24.8
+      ],
+      "buildingCount": 26
+    },
+    {
+      "id": "gui",
+      "name": "GUI",
+      "color": "#f43f5e",
+      "position": [
+        -15.0,
+        -84
+      ],
+      "size": [
+        40,
+        40
+      ],
+      "buildingCount": 71
+    },
+    {
+      "id": "bench",
+      "name": "BENCH",
+      "color": "#737373",
+      "position": [
+        15.0,
+        -84
+      ],
+      "size": [
+        10,
+        10
+      ],
+      "buildingCount": 1
+    },
+    {
+      "id": "test",
+      "name": "TEST",
+      "color": "#525252",
+      "position": [
+        45.0,
+        -84
+      ],
+      "size": [
+        35.2,
+        35.2
+      ],
+      "buildingCount": 39
+    },
+    {
+      "id": "other",
+      "name": "OTHER",
+      "color": "#404040",
+      "position": [
+        -75.0,
+        -112
+      ],
+      "size": [
+        11.2,
+        11.2
+      ],
+      "buildingCount": 9
+    }
+  ],
+  "buildings": [
+    {
+      "id": "addrman_cpp",
+      "name": "src/addrman.cpp",
+      "path": "src/addrman.cpp",
+      "subsystem": "network",
+      "loc": 528,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "addrman_h",
+      "name": "src/addrman.h",
+      "path": "src/addrman.h",
+      "subsystem": "network",
+      "loc": 503,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "alert_cpp",
+      "name": "src/alert.cpp",
+      "path": "src/alert.cpp",
+      "subsystem": "network",
+      "loc": 239,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "alert_h",
+      "name": "src/alert.h",
+      "path": "src/alert.h",
+      "subsystem": "network",
+      "loc": 102,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "allocators_h",
+      "name": "src/allocators.h",
+      "path": "src/allocators.h",
+      "subsystem": "util",
+      "loc": 258,
+      "classes": 4,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "base58_h",
+      "name": "src/base58.h",
+      "path": "src/base58.h",
+      "subsystem": "crypto",
+      "loc": 456,
+      "classes": 4,
+      "functions": 7,
+      "enums": 1
+    },
+    {
+      "id": "bench_data_block413567_raw_h",
+      "name": "src/bench/data/block413567.raw.h",
+      "path": "src/bench/data/block413567.raw.h",
+      "subsystem": "bench",
+      "loc": 124988,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "bignum_h",
+      "name": "src/bignum.h",
+      "path": "src/bignum.h",
+      "subsystem": "crypto",
+      "loc": 590,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "bitcoinrpc_cpp",
+      "name": "src/bitcoinrpc.cpp",
+      "path": "src/bitcoinrpc.cpp",
+      "subsystem": "other",
+      "loc": 1330,
+      "classes": 4,
+      "functions": 28,
+      "enums": 0
+    },
+    {
+      "id": "bitcoinrpc_h",
+      "name": "src/bitcoinrpc.h",
+      "path": "src/bitcoinrpc.h",
+      "subsystem": "other",
+      "loc": 198,
+      "classes": 2,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "bloom_cpp",
+      "name": "src/bloom.cpp",
+      "path": "src/bloom.cpp",
+      "subsystem": "network",
+      "loc": 156,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "bloom_h",
+      "name": "src/bloom.h",
+      "path": "src/bloom.h",
+      "subsystem": "network",
+      "loc": 88,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "checkpoints_cpp",
+      "name": "src/checkpoints.cpp",
+      "path": "src/checkpoints.cpp",
+      "subsystem": "consensus",
+      "loc": 80,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "checkpoints_h",
+      "name": "src/checkpoints.h",
+      "path": "src/checkpoints.h",
+      "subsystem": "consensus",
+      "loc": 27,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "checkqueue_h",
+      "name": "src/checkqueue.h",
+      "path": "src/checkqueue.h",
+      "subsystem": "consensus",
+      "loc": 210,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "clientversion_h",
+      "name": "src/clientversion.h",
+      "path": "src/clientversion.h",
+      "subsystem": "util",
+      "loc": 22,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "compat_h",
+      "name": "src/compat.h",
+      "path": "src/compat.h",
+      "subsystem": "other",
+      "loc": 63,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "config_bitcoin-config_h",
+      "name": "src/config/bitcoin-config.h",
+      "path": "src/config/bitcoin-config.h",
+      "subsystem": "other",
+      "loc": 328,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "crypter_cpp",
+      "name": "src/crypter.cpp",
+      "path": "src/crypter.cpp",
+      "subsystem": "wallet",
+      "loc": 121,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "crypter_h",
+      "name": "src/crypter.h",
+      "path": "src/crypter.h",
+      "subsystem": "wallet",
+      "loc": 107,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "db_cpp",
+      "name": "src/db.cpp",
+      "path": "src/db.cpp",
+      "subsystem": "util",
+      "loc": 575,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "db_h",
+      "name": "src/db.h",
+      "path": "src/db.h",
+      "subsystem": "util",
+      "loc": 327,
+      "classes": 3,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "hash_cpp",
+      "name": "src/hash.cpp",
+      "path": "src/hash.cpp",
+      "subsystem": "crypto",
+      "loc": 58,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "hash_h",
+      "name": "src/hash.h",
+      "path": "src/hash.h",
+      "subsystem": "crypto",
+      "loc": 119,
+      "classes": 1,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "init_cpp",
+      "name": "src/init.cpp",
+      "path": "src/init.cpp",
+      "subsystem": "init",
+      "loc": 1053,
+      "classes": 2,
+      "functions": 13,
+      "enums": 3
+    },
+    {
+      "id": "init_h",
+      "name": "src/init.h",
+      "path": "src/init.h",
+      "subsystem": "init",
+      "loc": 17,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "irc_cpp",
+      "name": "src/irc.cpp",
+      "path": "src/irc.cpp",
+      "subsystem": "network",
+      "loc": 403,
+      "classes": 1,
+      "functions": 11,
+      "enums": 0
+    },
+    {
+      "id": "irc_h",
+      "name": "src/irc.h",
+      "path": "src/irc.h",
+      "subsystem": "network",
+      "loc": 12,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_h",
+      "name": "src/json/json_spirit.h",
+      "path": "src/json/json_spirit.h",
+      "subsystem": "util",
+      "loc": 18,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_error_position_h",
+      "name": "src/json/json_spirit_error_position.h",
+      "path": "src/json/json_spirit_error_position.h",
+      "subsystem": "util",
+      "loc": 54,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_cpp",
+      "name": "src/json/json_spirit_reader.cpp",
+      "path": "src/json/json_spirit_reader.cpp",
+      "subsystem": "util",
+      "loc": 137,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_h",
+      "name": "src/json/json_spirit_reader.h",
+      "path": "src/json/json_spirit_reader.h",
+      "subsystem": "util",
+      "loc": 62,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_reader_template_h",
+      "name": "src/json/json_spirit_reader_template.h",
+      "path": "src/json/json_spirit_reader_template.h",
+      "subsystem": "util",
+      "loc": 612,
+      "classes": 4,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_stream_reader_h",
+      "name": "src/json/json_spirit_stream_reader.h",
+      "path": "src/json/json_spirit_stream_reader.h",
+      "subsystem": "util",
+      "loc": 70,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_utils_h",
+      "name": "src/json/json_spirit_utils.h",
+      "path": "src/json/json_spirit_utils.h",
+      "subsystem": "util",
+      "loc": 61,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_value_cpp",
+      "name": "src/json/json_spirit_value.cpp",
+      "path": "src/json/json_spirit_value.cpp",
+      "subsystem": "util",
+      "loc": 8,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_value_h",
+      "name": "src/json/json_spirit_value.h",
+      "path": "src/json/json_spirit_value.h",
+      "subsystem": "util",
+      "loc": 534,
+      "classes": 5,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "json_json_spirit_writer_cpp",
+      "name": "src/json/json_spirit_writer.cpp",
+      "path": "src/json/json_spirit_writer.cpp",
+      "subsystem": "util",
+      "loc": 95,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_writer_h",
+      "name": "src/json/json_spirit_writer.h",
+      "path": "src/json/json_spirit_writer.h",
+      "subsystem": "util",
+      "loc": 50,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "json_json_spirit_writer_template_h",
+      "name": "src/json/json_spirit_writer_template.h",
+      "path": "src/json/json_spirit_writer_template.h",
+      "subsystem": "util",
+      "loc": 248,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "key_cpp",
+      "name": "src/key.cpp",
+      "path": "src/key.cpp",
+      "subsystem": "crypto",
+      "loc": 406,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "key_h",
+      "name": "src/key.h",
+      "path": "src/key.h",
+      "subsystem": "crypto",
+      "loc": 161,
+      "classes": 5,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "keystore_cpp",
+      "name": "src/keystore.cpp",
+      "path": "src/keystore.cpp",
+      "subsystem": "crypto",
+      "loc": 221,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "keystore_h",
+      "name": "src/keystore.h",
+      "path": "src/keystore.h",
+      "subsystem": "crypto",
+      "loc": 184,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "leveldb_cpp",
+      "name": "src/leveldb.cpp",
+      "path": "src/leveldb.cpp",
+      "subsystem": "other",
+      "loc": 80,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "leveldb_h",
+      "name": "src/leveldb.h",
+      "path": "src/leveldb.h",
+      "subsystem": "other",
+      "loc": 153,
+      "classes": 3,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "main_cpp",
+      "name": "src/main.cpp",
+      "path": "src/main.cpp",
+      "subsystem": "consensus",
+      "loc": 4726,
+      "classes": 3,
+      "functions": 61,
+      "enums": 1
+    },
+    {
+      "id": "main_h",
+      "name": "src/main.h",
+      "path": "src/main.h",
+      "subsystem": "consensus",
+      "loc": 2247,
+      "classes": 31,
+      "functions": 1,
+      "enums": 4
+    },
+    {
+      "id": "mruset_h",
+      "name": "src/mruset.h",
+      "path": "src/mruset.h",
+      "subsystem": "util",
+      "loc": 64,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "net_cpp",
+      "name": "src/net.cpp",
+      "path": "src/net.cpp",
+      "subsystem": "network",
+      "loc": 2066,
+      "classes": 2,
+      "functions": 48,
+      "enums": 1
+    },
+    {
+      "id": "net_h",
+      "name": "src/net.h",
+      "path": "src/net.h",
+      "subsystem": "network",
+      "loc": 579,
+      "classes": 2,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "netbase_cpp",
+      "name": "src/netbase.cpp",
+      "path": "src/netbase.cpp",
+      "subsystem": "network",
+      "loc": 1146,
+      "classes": 0,
+      "functions": 20,
+      "enums": 3
+    },
+    {
+      "id": "netbase_h",
+      "name": "src/netbase.h",
+      "path": "src/netbase.h",
+      "subsystem": "network",
+      "loc": 151,
+      "classes": 2,
+      "functions": 0,
+      "enums": 3
+    },
+    {
+      "id": "noui_cpp",
+      "name": "src/noui.cpp",
+      "path": "src/noui.cpp",
+      "subsystem": "init",
+      "loc": 51,
+      "classes": 0,
+      "functions": 4,
+      "enums": 0
+    },
+    {
+      "id": "obj_build_h",
+      "name": "src/obj/build.h",
+      "path": "src/obj/build.h",
+      "subsystem": "other",
+      "loc": 1,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "protocol_cpp",
+      "name": "src/protocol.cpp",
+      "path": "src/protocol.cpp",
+      "subsystem": "network",
+      "loc": 157,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "protocol_h",
+      "name": "src/protocol.h",
+      "path": "src/protocol.h",
+      "subsystem": "network",
+      "loc": 146,
+      "classes": 3,
+      "functions": 1,
+      "enums": 3
+    },
+    {
+      "id": "qt_aboutdialog_cpp",
+      "name": "src/qt/aboutdialog.cpp",
+      "path": "src/qt/aboutdialog.cpp",
+      "subsystem": "gui",
+      "loc": 36,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_aboutdialog_h",
+      "name": "src/qt/aboutdialog.h",
+      "path": "src/qt/aboutdialog.h",
+      "subsystem": "gui",
+      "loc": 29,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_addressbookpage_cpp",
+      "name": "src/qt/addressbookpage.cpp",
+      "path": "src/qt/addressbookpage.cpp",
+      "subsystem": "gui",
+      "loc": 372,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_addressbookpage_h",
+      "name": "src/qt/addressbookpage.h",
+      "path": "src/qt/addressbookpage.h",
+      "subsystem": "gui",
+      "loc": 90,
+      "classes": 1,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "qt_addresstablemodel_cpp",
+      "name": "src/qt/addresstablemodel.cpp",
+      "path": "src/qt/addresstablemodel.cpp",
+      "subsystem": "gui",
+      "loc": 426,
+      "classes": 3,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_addresstablemodel_h",
+      "name": "src/qt/addresstablemodel.h",
+      "path": "src/qt/addresstablemodel.h",
+      "subsystem": "gui",
+      "loc": 92,
+      "classes": 1,
+      "functions": 0,
+      "enums": 3
+    },
+    {
+      "id": "qt_askpassphrasedialog_cpp",
+      "name": "src/qt/askpassphrasedialog.cpp",
+      "path": "src/qt/askpassphrasedialog.cpp",
+      "subsystem": "gui",
+      "loc": 248,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_askpassphrasedialog_h",
+      "name": "src/qt/askpassphrasedialog.h",
+      "path": "src/qt/askpassphrasedialog.h",
+      "subsystem": "gui",
+      "loc": 45,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_bitcoin_cpp",
+      "name": "src/qt/bitcoin.cpp",
+      "path": "src/qt/bitcoin.cpp",
+      "subsystem": "gui",
+      "loc": 280,
+      "classes": 0,
+      "functions": 8,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinaddressvalidator_cpp",
+      "name": "src/qt/bitcoinaddressvalidator.cpp",
+      "path": "src/qt/bitcoinaddressvalidator.cpp",
+      "subsystem": "gui",
+      "loc": 77,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinaddressvalidator_h",
+      "name": "src/qt/bitcoinaddressvalidator.h",
+      "path": "src/qt/bitcoinaddressvalidator.h",
+      "subsystem": "gui",
+      "loc": 24,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinamountfield_cpp",
+      "name": "src/qt/bitcoinamountfield.cpp",
+      "path": "src/qt/bitcoinamountfield.cpp",
+      "subsystem": "gui",
+      "loc": 168,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinamountfield_h",
+      "name": "src/qt/bitcoinamountfield.h",
+      "path": "src/qt/bitcoinamountfield.h",
+      "subsystem": "gui",
+      "loc": 60,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoingui_cpp",
+      "name": "src/qt/bitcoingui.cpp",
+      "path": "src/qt/bitcoingui.cpp",
+      "subsystem": "gui",
+      "loc": 953,
+      "classes": 0,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_bitcoingui_h",
+      "name": "src/qt/bitcoingui.h",
+      "path": "src/qt/bitcoingui.h",
+      "subsystem": "gui",
+      "loc": 188,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinstrings_cpp",
+      "name": "src/qt/bitcoinstrings.cpp",
+      "path": "src/qt/bitcoinstrings.cpp",
+      "subsystem": "gui",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinunits_cpp",
+      "name": "src/qt/bitcoinunits.cpp",
+      "path": "src/qt/bitcoinunits.cpp",
+      "subsystem": "gui",
+      "loc": 181,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_bitcoinunits_h",
+      "name": "src/qt/bitcoinunits.h",
+      "path": "src/qt/bitcoinunits.h",
+      "subsystem": "gui",
+      "loc": 66,
+      "classes": 1,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "qt_clientmodel_cpp",
+      "name": "src/qt/clientmodel.cpp",
+      "path": "src/qt/clientmodel.cpp",
+      "subsystem": "gui",
+      "loc": 191,
+      "classes": 0,
+      "functions": 3,
+      "enums": 1
+    },
+    {
+      "id": "qt_clientmodel_h",
+      "name": "src/qt/clientmodel.h",
+      "path": "src/qt/clientmodel.h",
+      "subsystem": "gui",
+      "loc": 82,
+      "classes": 1,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "qt_csvmodelwriter_cpp",
+      "name": "src/qt/csvmodelwriter.cpp",
+      "path": "src/qt/csvmodelwriter.cpp",
+      "subsystem": "gui",
+      "loc": 88,
+      "classes": 0,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "qt_csvmodelwriter_h",
+      "name": "src/qt/csvmodelwriter.h",
+      "path": "src/qt/csvmodelwriter.h",
+      "subsystem": "gui",
+      "loc": 46,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_editaddressdialog_cpp",
+      "name": "src/qt/editaddressdialog.cpp",
+      "path": "src/qt/editaddressdialog.cpp",
+      "subsystem": "gui",
+      "loc": 136,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_editaddressdialog_h",
+      "name": "src/qt/editaddressdialog.h",
+      "path": "src/qt/editaddressdialog.h",
+      "subsystem": "gui",
+      "loc": 52,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_guiconstants_h",
+      "name": "src/qt/guiconstants.h",
+      "path": "src/qt/guiconstants.h",
+      "subsystem": "gui",
+      "loc": 34,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_guiutil_cpp",
+      "name": "src/qt/guiutil.cpp",
+      "path": "src/qt/guiutil.cpp",
+      "subsystem": "gui",
+      "loc": 458,
+      "classes": 0,
+      "functions": 21,
+      "enums": 0
+    },
+    {
+      "id": "qt_guiutil_h",
+      "name": "src/qt/guiutil.h",
+      "path": "src/qt/guiutil.h",
+      "subsystem": "gui",
+      "loc": 120,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_macdockiconhandler_h",
+      "name": "src/qt/macdockiconhandler.h",
+      "path": "src/qt/macdockiconhandler.h",
+      "subsystem": "gui",
+      "loc": 44,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_monitoreddatamapper_cpp",
+      "name": "src/qt/monitoreddatamapper.cpp",
+      "path": "src/qt/monitoreddatamapper.cpp",
+      "subsystem": "gui",
+      "loc": 36,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_monitoreddatamapper_h",
+      "name": "src/qt/monitoreddatamapper.h",
+      "path": "src/qt/monitoreddatamapper.h",
+      "subsystem": "gui",
+      "loc": 31,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_notificator_cpp",
+      "name": "src/qt/notificator.cpp",
+      "path": "src/qt/notificator.cpp",
+      "subsystem": "gui",
+      "loc": 302,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_notificator_h",
+      "name": "src/qt/notificator.h",
+      "path": "src/qt/notificator.h",
+      "subsystem": "gui",
+      "loc": 69,
+      "classes": 1,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "qt_optionsdialog_cpp",
+      "name": "src/qt/optionsdialog.cpp",
+      "path": "src/qt/optionsdialog.cpp",
+      "subsystem": "gui",
+      "loc": 282,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_optionsdialog_h",
+      "name": "src/qt/optionsdialog.h",
+      "path": "src/qt/optionsdialog.h",
+      "subsystem": "gui",
+      "loc": 61,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_optionsmodel_cpp",
+      "name": "src/qt/optionsmodel.cpp",
+      "path": "src/qt/optionsmodel.cpp",
+      "subsystem": "gui",
+      "loc": 292,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "qt_optionsmodel_h",
+      "name": "src/qt/optionsmodel.h",
+      "path": "src/qt/optionsmodel.h",
+      "subsystem": "gui",
+      "loc": 64,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_overviewpage_cpp",
+      "name": "src/qt/overviewpage.cpp",
+      "path": "src/qt/overviewpage.cpp",
+      "subsystem": "gui",
+      "loc": 220,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_overviewpage_h",
+      "name": "src/qt/overviewpage.h",
+      "path": "src/qt/overviewpage.h",
+      "subsystem": "gui",
+      "loc": 55,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qrcodedialog_cpp",
+      "name": "src/qt/qrcodedialog.cpp",
+      "path": "src/qt/qrcodedialog.cpp",
+      "subsystem": "gui",
+      "loc": 171,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qrcodedialog_h",
+      "name": "src/qt/qrcodedialog.h",
+      "path": "src/qt/qrcodedialog.h",
+      "subsystem": "gui",
+      "loc": 41,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qtipcserver_cpp",
+      "name": "src/qt/qtipcserver.cpp",
+      "path": "src/qt/qtipcserver.cpp",
+      "subsystem": "gui",
+      "loc": 165,
+      "classes": 0,
+      "functions": 5,
+      "enums": 0
+    },
+    {
+      "id": "qt_qtipcserver_h",
+      "name": "src/qt/qtipcserver.h",
+      "path": "src/qt/qtipcserver.h",
+      "subsystem": "gui",
+      "loc": 16,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qvalidatedlineedit_cpp",
+      "name": "src/qt/qvalidatedlineedit.cpp",
+      "path": "src/qt/qvalidatedlineedit.cpp",
+      "subsystem": "gui",
+      "loc": 45,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qvalidatedlineedit_h",
+      "name": "src/qt/qvalidatedlineedit.h",
+      "path": "src/qt/qvalidatedlineedit.h",
+      "subsystem": "gui",
+      "loc": 29,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qvaluecombobox_cpp",
+      "name": "src/qt/qvaluecombobox.cpp",
+      "path": "src/qt/qvaluecombobox.cpp",
+      "subsystem": "gui",
+      "loc": 27,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_qvaluecombobox_h",
+      "name": "src/qt/qvaluecombobox.h",
+      "path": "src/qt/qvaluecombobox.h",
+      "subsystem": "gui",
+      "loc": 33,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_rpcconsole_cpp",
+      "name": "src/qt/rpcconsole.cpp",
+      "path": "src/qt/rpcconsole.cpp",
+      "subsystem": "gui",
+      "loc": 433,
+      "classes": 1,
+      "functions": 2,
+      "enums": 1
+    },
+    {
+      "id": "qt_rpcconsole_h",
+      "name": "src/qt/rpcconsole.h",
+      "path": "src/qt/rpcconsole.h",
+      "subsystem": "gui",
+      "loc": 66,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_sendcoinsdialog_cpp",
+      "name": "src/qt/sendcoinsdialog.cpp",
+      "path": "src/qt/sendcoinsdialog.cpp",
+      "subsystem": "gui",
+      "loc": 305,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_sendcoinsdialog_h",
+      "name": "src/qt/sendcoinsdialog.h",
+      "path": "src/qt/sendcoinsdialog.h",
+      "subsystem": "gui",
+      "loc": 54,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_sendcoinsentry_cpp",
+      "name": "src/qt/sendcoinsentry.cpp",
+      "path": "src/qt/sendcoinsentry.cpp",
+      "subsystem": "gui",
+      "loc": 172,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_sendcoinsentry_h",
+      "name": "src/qt/sendcoinsentry.h",
+      "path": "src/qt/sendcoinsentry.h",
+      "subsystem": "gui",
+      "loc": 55,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_signverifymessagedialog_cpp",
+      "name": "src/qt/signverifymessagedialog.cpp",
+      "path": "src/qt/signverifymessagedialog.cpp",
+      "subsystem": "gui",
+      "loc": 274,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_signverifymessagedialog_h",
+      "name": "src/qt/signverifymessagedialog.h",
+      "path": "src/qt/signverifymessagedialog.h",
+      "subsystem": "gui",
+      "loc": 49,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_test_test_main_cpp",
+      "name": "src/qt/test/test_main.cpp",
+      "path": "src/qt/test/test_main.cpp",
+      "subsystem": "gui",
+      "loc": 16,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "qt_test_uritests_cpp",
+      "name": "src/qt/test/uritests.cpp",
+      "path": "src/qt/test/uritests.cpp",
+      "subsystem": "gui",
+      "loc": 71,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_test_uritests_h",
+      "name": "src/qt/test/uritests.h",
+      "path": "src/qt/test/uritests.h",
+      "subsystem": "gui",
+      "loc": 15,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactiondesc_cpp",
+      "name": "src/qt/transactiondesc.cpp",
+      "path": "src/qt/transactiondesc.cpp",
+      "subsystem": "gui",
+      "loc": 273,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactiondesc_h",
+      "name": "src/qt/transactiondesc.h",
+      "path": "src/qt/transactiondesc.h",
+      "subsystem": "gui",
+      "loc": 24,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactiondescdialog_cpp",
+      "name": "src/qt/transactiondescdialog.cpp",
+      "path": "src/qt/transactiondescdialog.cpp",
+      "subsystem": "gui",
+      "loc": 20,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactiondescdialog_h",
+      "name": "src/qt/transactiondescdialog.h",
+      "path": "src/qt/transactiondescdialog.h",
+      "subsystem": "gui",
+      "loc": 26,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactionfilterproxy_cpp",
+      "name": "src/qt/transactionfilterproxy.cpp",
+      "path": "src/qt/transactionfilterproxy.cpp",
+      "subsystem": "gui",
+      "loc": 86,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactionfilterproxy_h",
+      "name": "src/qt/transactionfilterproxy.h",
+      "path": "src/qt/transactionfilterproxy.h",
+      "subsystem": "gui",
+      "loc": 52,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactionrecord_cpp",
+      "name": "src/qt/transactionrecord.cpp",
+      "path": "src/qt/transactionrecord.cpp",
+      "subsystem": "gui",
+      "loc": 231,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactionrecord_h",
+      "name": "src/qt/transactionrecord.h",
+      "path": "src/qt/transactionrecord.h",
+      "subsystem": "gui",
+      "loc": 131,
+      "classes": 2,
+      "functions": 0,
+      "enums": 3
+    },
+    {
+      "id": "qt_transactiontablemodel_cpp",
+      "name": "src/qt/transactiontablemodel.cpp",
+      "path": "src/qt/transactiontablemodel.cpp",
+      "subsystem": "gui",
+      "loc": 633,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactiontablemodel_h",
+      "name": "src/qt/transactiontablemodel.h",
+      "path": "src/qt/transactiontablemodel.h",
+      "subsystem": "gui",
+      "loc": 84,
+      "classes": 1,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "qt_transactionview_cpp",
+      "name": "src/qt/transactionview.cpp",
+      "path": "src/qt/transactionview.cpp",
+      "subsystem": "gui",
+      "loc": 431,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "qt_transactionview_h",
+      "name": "src/qt/transactionview.h",
+      "path": "src/qt/transactionview.h",
+      "subsystem": "gui",
+      "loc": 82,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "qt_walletmodel_cpp",
+      "name": "src/qt/walletmodel.cpp",
+      "path": "src/qt/walletmodel.cpp",
+      "subsystem": "gui",
+      "loc": 376,
+      "classes": 0,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "qt_walletmodel_h",
+      "name": "src/qt/walletmodel.h",
+      "path": "src/qt/walletmodel.h",
+      "subsystem": "gui",
+      "loc": 165,
+      "classes": 4,
+      "functions": 0,
+      "enums": 2
+    },
+    {
+      "id": "rpcblockchain_cpp",
+      "name": "src/rpcblockchain.cpp",
+      "path": "src/rpcblockchain.cpp",
+      "subsystem": "rpc",
+      "loc": 228,
+      "classes": 0,
+      "functions": 10,
+      "enums": 0
+    },
+    {
+      "id": "rpcdump_cpp",
+      "name": "src/rpcdump.cpp",
+      "path": "src/rpcdump.cpp",
+      "subsystem": "other",
+      "loc": 99,
+      "classes": 1,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "rpcmining_cpp",
+      "name": "src/rpcmining.cpp",
+      "path": "src/rpcmining.cpp",
+      "subsystem": "rpc",
+      "loc": 374,
+      "classes": 0,
+      "functions": 7,
+      "enums": 0
+    },
+    {
+      "id": "rpcnet_cpp",
+      "name": "src/rpcnet.cpp",
+      "path": "src/rpcnet.cpp",
+      "subsystem": "rpc",
+      "loc": 201,
+      "classes": 0,
+      "functions": 5,
+      "enums": 0
+    },
+    {
+      "id": "rpcrawtransaction_cpp",
+      "name": "src/rpcrawtransaction.cpp",
+      "path": "src/rpcrawtransaction.cpp",
+      "subsystem": "rpc",
+      "loc": 569,
+      "classes": 0,
+      "functions": 12,
+      "enums": 0
+    },
+    {
+      "id": "rpcwallet_cpp",
+      "name": "src/rpcwallet.cpp",
+      "path": "src/rpcwallet.cpp",
+      "subsystem": "rpc",
+      "loc": 1574,
+      "classes": 2,
+      "functions": 47,
+      "enums": 0
+    },
+    {
+      "id": "script_cpp",
+      "name": "src/script.cpp",
+      "path": "src/script.cpp",
+      "subsystem": "script",
+      "loc": 2071,
+      "classes": 3,
+      "functions": 23,
+      "enums": 0
+    },
+    {
+      "id": "script_h",
+      "name": "src/script.h",
+      "path": "src/script.h",
+      "subsystem": "script",
+      "loc": 685,
+      "classes": 3,
+      "functions": 2,
+      "enums": 4
+    },
+    {
+      "id": "serialize_h",
+      "name": "src/serialize.h",
+      "path": "src/serialize.h",
+      "subsystem": "util",
+      "loc": 1368,
+      "classes": 6,
+      "functions": 43,
+      "enums": 1
+    },
+    {
+      "id": "sync_cpp",
+      "name": "src/sync.cpp",
+      "path": "src/sync.cpp",
+      "subsystem": "util",
+      "loc": 128,
+      "classes": 1,
+      "functions": 6,
+      "enums": 0
+    },
+    {
+      "id": "sync_h",
+      "name": "src/sync.h",
+      "path": "src/sync.h",
+      "subsystem": "util",
+      "loc": 213,
+      "classes": 4,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_Checkpoints_tests_cpp",
+      "name": "src/test/Checkpoints_tests.cpp",
+      "path": "src/test/Checkpoints_tests.cpp",
+      "subsystem": "test",
+      "loc": 34,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_DoS_tests_cpp",
+      "name": "src/test/DoS_tests.cpp",
+      "path": "src/test/DoS_tests.cpp",
+      "subsystem": "test",
+      "loc": 314,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "test_accounting_tests_cpp",
+      "name": "src/test/accounting_tests.cpp",
+      "path": "src/test/accounting_tests.cpp",
+      "subsystem": "test",
+      "loc": 123,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_allocator_tests_cpp",
+      "name": "src/test/allocator_tests.cpp",
+      "path": "src/test/allocator_tests.cpp",
+      "subsystem": "test",
+      "loc": 115,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_base32_tests_cpp",
+      "name": "src/test/base32_tests.cpp",
+      "path": "src/test/base32_tests.cpp",
+      "subsystem": "test",
+      "loc": 20,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_base58_tests_cpp",
+      "name": "src/test/base58_tests.cpp",
+      "path": "src/test/base58_tests.cpp",
+      "subsystem": "test",
+      "loc": 259,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_base64_tests_cpp",
+      "name": "src/test/base64_tests.cpp",
+      "path": "src/test/base64_tests.cpp",
+      "subsystem": "test",
+      "loc": 22,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_bignum_tests_cpp",
+      "name": "src/test/bignum_tests.cpp",
+      "path": "src/test/bignum_tests.cpp",
+      "subsystem": "test",
+      "loc": 178,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "test_bloom_tests_cpp",
+      "name": "src/test/bloom_tests.cpp",
+      "path": "src/test/bloom_tests.cpp",
+      "subsystem": "test",
+      "loc": 447,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_canonical_tests_cpp",
+      "name": "src/test/canonical_tests.cpp",
+      "path": "src/test/canonical_tests.cpp",
+      "subsystem": "test",
+      "loc": 87,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "test_compress_tests_cpp",
+      "name": "src/test/compress_tests.cpp",
+      "path": "src/test/compress_tests.cpp",
+      "subsystem": "test",
+      "loc": 62,
+      "classes": 0,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "test_data_asmap_raw_h",
+      "name": "src/test/data/asmap.raw.h",
+      "path": "src/test/data/asmap.raw.h",
+      "subsystem": "test",
+      "loc": 10,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_base58_encode_decode_json_h",
+      "name": "src/test/data/base58_encode_decode.json.h",
+      "path": "src/test/data/base58_encode_decode.json.h",
+      "subsystem": "test",
+      "loc": 187,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_bip341_wallet_vectors_json_h",
+      "name": "src/test/data/bip341_wallet_vectors.json.h",
+      "path": "src/test/data/bip341_wallet_vectors.json.h",
+      "subsystem": "test",
+      "loc": 3666,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_blockfilters_json_h",
+      "name": "src/test/data/blockfilters.json.h",
+      "path": "src/test/data/blockfilters.json.h",
+      "subsystem": "test",
+      "loc": 2231,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_key_io_invalid_json_h",
+      "name": "src/test/data/key_io_invalid.json.h",
+      "path": "src/test/data/key_io_invalid.json.h",
+      "subsystem": "test",
+      "loc": 654,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_key_io_valid_json_h",
+      "name": "src/test/data/key_io_valid.json.h",
+      "path": "src/test/data/key_io_valid.json.h",
+      "subsystem": "test",
+      "loc": 2139,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_script_tests_json_h",
+      "name": "src/test/data/script_tests.json.h",
+      "path": "src/test/data/script_tests.json.h",
+      "subsystem": "test",
+      "loc": 26958,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_sighash_json_h",
+      "name": "src/test/data/sighash.json.h",
+      "path": "src/test/data/sighash.json.h",
+      "subsystem": "test",
+      "loc": 26315,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_tx_invalid_json_h",
+      "name": "src/test/data/tx_invalid.json.h",
+      "path": "src/test/data/tx_invalid.json.h",
+      "subsystem": "test",
+      "loc": 6681,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_data_tx_valid_json_h",
+      "name": "src/test/data/tx_valid.json.h",
+      "path": "src/test/data/tx_valid.json.h",
+      "subsystem": "test",
+      "loc": 10742,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_getarg_tests_cpp",
+      "name": "src/test/getarg_tests.cpp",
+      "path": "src/test/getarg_tests.cpp",
+      "subsystem": "test",
+      "loc": 167,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_key_tests_cpp",
+      "name": "src/test/key_tests.cpp",
+      "path": "src/test/key_tests.cpp",
+      "subsystem": "test",
+      "loc": 147,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "test_miner_tests_cpp",
+      "name": "src/test/miner_tests.cpp",
+      "path": "src/test/miner_tests.cpp",
+      "subsystem": "test",
+      "loc": 230,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_mruset_tests_cpp",
+      "name": "src/test/mruset_tests.cpp",
+      "path": "src/test/mruset_tests.cpp",
+      "subsystem": "test",
+      "loc": 90,
+      "classes": 1,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "test_multisig_tests_cpp",
+      "name": "src/test/multisig_tests.cpp",
+      "path": "src/test/multisig_tests.cpp",
+      "subsystem": "test",
+      "loc": 296,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_netbase_tests_cpp",
+      "name": "src/test/netbase_tests.cpp",
+      "path": "src/test/netbase_tests.cpp",
+      "subsystem": "test",
+      "loc": 102,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "test_pmt_tests_cpp",
+      "name": "src/test/pmt_tests.cpp",
+      "path": "src/test/pmt_tests.cpp",
+      "subsystem": "test",
+      "loc": 98,
+      "classes": 1,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_rpc_tests_cpp",
+      "name": "src/test/rpc_tests.cpp",
+      "path": "src/test/rpc_tests.cpp",
+      "subsystem": "test",
+      "loc": 150,
+      "classes": 0,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "test_script_P2SH_tests_cpp",
+      "name": "src/test/script_P2SH_tests.cpp",
+      "path": "src/test/script_P2SH_tests.cpp",
+      "subsystem": "test",
+      "loc": 336,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_script_tests_cpp",
+      "name": "src/test/script_tests.cpp",
+      "path": "src/test/script_tests.cpp",
+      "subsystem": "test",
+      "loc": 445,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_serialize_tests_cpp",
+      "name": "src/test/serialize_tests.cpp",
+      "path": "src/test/serialize_tests.cpp",
+      "subsystem": "test",
+      "loc": 45,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_sigopcount_tests_cpp",
+      "name": "src/test/sigopcount_tests.cpp",
+      "path": "src/test/sigopcount_tests.cpp",
+      "subsystem": "test",
+      "loc": 60,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_test_bitcoin_cpp",
+      "name": "src/test/test_bitcoin.cpp",
+      "path": "src/test/test_bitcoin.cpp",
+      "subsystem": "test",
+      "loc": 64,
+      "classes": 1,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "test_transaction_tests_cpp",
+      "name": "src/test/transaction_tests.cpp",
+      "path": "src/test/transaction_tests.cpp",
+      "subsystem": "test",
+      "loc": 265,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_uint160_tests_cpp",
+      "name": "src/test/uint160_tests.cpp",
+      "path": "src/test/uint160_tests.cpp",
+      "subsystem": "test",
+      "loc": 18,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_uint256_tests_cpp",
+      "name": "src/test/uint256_tests.cpp",
+      "path": "src/test/uint256_tests.cpp",
+      "subsystem": "test",
+      "loc": 18,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_util_tests_cpp",
+      "name": "src/test/util_tests.cpp",
+      "path": "src/test/util_tests.cpp",
+      "subsystem": "test",
+      "loc": 264,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "test_wallet_tests_cpp",
+      "name": "src/test/wallet_tests.cpp",
+      "path": "src/test/wallet_tests.cpp",
+      "subsystem": "test",
+      "loc": 295,
+      "classes": 0,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "threadsafety_h",
+      "name": "src/threadsafety.h",
+      "path": "src/threadsafety.h",
+      "subsystem": "util",
+      "loc": 53,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "txdb_cpp",
+      "name": "src/txdb.cpp",
+      "path": "src/txdb.cpp",
+      "subsystem": "consensus",
+      "loc": 225,
+      "classes": 0,
+      "functions": 2,
+      "enums": 0
+    },
+    {
+      "id": "txdb_h",
+      "name": "src/txdb.h",
+      "path": "src/txdb.h",
+      "subsystem": "consensus",
+      "loc": 53,
+      "classes": 2,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "ui_interface_h",
+      "name": "src/ui_interface.h",
+      "path": "src/ui_interface.h",
+      "subsystem": "other",
+      "loc": 113,
+      "classes": 1,
+      "functions": 1,
+      "enums": 2
+    },
+    {
+      "id": "uint256_h",
+      "name": "src/uint256.h",
+      "path": "src/uint256.h",
+      "subsystem": "util",
+      "loc": 773,
+      "classes": 3,
+      "functions": 1,
+      "enums": 1
+    },
+    {
+      "id": "util_cpp",
+      "name": "src/util.cpp",
+      "path": "src/util.cpp",
+      "subsystem": "util",
+      "loc": 1388,
+      "classes": 1,
+      "functions": 61,
+      "enums": 0
+    },
+    {
+      "id": "util_h",
+      "name": "src/util.h",
+      "path": "src/util.h",
+      "subsystem": "util",
+      "loc": 510,
+      "classes": 0,
+      "functions": 24,
+      "enums": 0
+    },
+    {
+      "id": "version_cpp",
+      "name": "src/version.cpp",
+      "path": "src/version.cpp",
+      "subsystem": "util",
+      "loc": 65,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "version_h",
+      "name": "src/version.h",
+      "path": "src/version.h",
+      "subsystem": "util",
+      "loc": 47,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0
+    },
+    {
+      "id": "wallet_cpp",
+      "name": "src/wallet.cpp",
+      "path": "src/wallet.cpp",
+      "subsystem": "wallet",
+      "loc": 1817,
+      "classes": 2,
+      "functions": 1,
+      "enums": 0
+    },
+    {
+      "id": "wallet_h",
+      "name": "src/wallet.h",
+      "path": "src/wallet.h",
+      "subsystem": "wallet",
+      "loc": 861,
+      "classes": 8,
+      "functions": 2,
+      "enums": 1
+    },
+    {
+      "id": "walletdb_cpp",
+      "name": "src/walletdb.cpp",
+      "path": "src/walletdb.cpp",
+      "subsystem": "wallet",
+      "loc": 676,
+      "classes": 0,
+      "functions": 3,
+      "enums": 0
+    },
+    {
+      "id": "walletdb_h",
+      "name": "src/walletdb.h",
+      "path": "src/walletdb.h",
+      "subsystem": "wallet",
+      "loc": 163,
+      "classes": 1,
+      "functions": 0,
+      "enums": 1
+    },
+    {
+      "id": "store_blk_dat",
+      "name": "blk*.dat",
+      "subsystem": "storage",
+      "loc": 500,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_rev_dat",
+      "name": "rev*.dat",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_chainstate",
+      "name": "chainstate/",
+      "subsystem": "storage",
+      "loc": 400,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_block_index",
+      "name": "blocks/index/",
+      "subsystem": "storage",
+      "loc": 300,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_wallet_db",
+      "name": "wallets/*.sqlite",
+      "subsystem": "storage",
+      "loc": 350,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_mempool_dat",
+      "name": "mempool.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_peers_dat",
+      "name": "peers.dat",
+      "subsystem": "storage",
+      "loc": 200,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    },
+    {
+      "id": "store_banlist",
+      "name": "banlist.json",
+      "subsystem": "storage",
+      "loc": 100,
+      "classes": 0,
+      "functions": 0,
+      "enums": 0,
+      "path": ""
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "addrman_cpp",
+      "to": "addrman_h"
+    },
+    {
+      "from": "addrman_cpp",
+      "to": "hash_h"
+    },
+    {
+      "from": "addrman_h",
+      "to": "netbase_h"
+    },
+    {
+      "from": "addrman_h",
+      "to": "protocol_h"
+    },
+    {
+      "from": "addrman_h",
+      "to": "util_h"
+    },
+    {
+      "from": "addrman_h",
+      "to": "sync_h"
+    },
+    {
+      "from": "alert_cpp",
+      "to": "alert_h"
+    },
+    {
+      "from": "alert_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "alert_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "alert_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "alert_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "alert_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "alert_h",
+      "to": "util_h"
+    },
+    {
+      "from": "base58_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "base58_h",
+      "to": "key_h"
+    },
+    {
+      "from": "base58_h",
+      "to": "script_h"
+    },
+    {
+      "from": "base58_h",
+      "to": "allocators_h"
+    },
+    {
+      "from": "bignum_h",
+      "to": "util_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "bitcoinrpc_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "bitcoinrpc_h",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "bitcoinrpc_h",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "bitcoinrpc_h",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "bitcoinrpc_h",
+      "to": "util_h"
+    },
+    {
+      "from": "bloom_cpp",
+      "to": "bloom_h"
+    },
+    {
+      "from": "bloom_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "bloom_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "bloom_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "bloom_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "checkpoints_cpp",
+      "to": "checkpoints_h"
+    },
+    {
+      "from": "checkpoints_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "checkpoints_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "crypter_cpp",
+      "to": "crypter_h"
+    },
+    {
+      "from": "crypter_h",
+      "to": "allocators_h"
+    },
+    {
+      "from": "crypter_h",
+      "to": "key_h"
+    },
+    {
+      "from": "crypter_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "db_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "db_h",
+      "to": "main_h"
+    },
+    {
+      "from": "hash_cpp",
+      "to": "hash_h"
+    },
+    {
+      "from": "hash_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "hash_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "txdb_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "init_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "init_h",
+      "to": "wallet_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "irc_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "irc_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_reader_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_writer_h"
+    },
+    {
+      "from": "json_json_spirit_h",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "json_json_spirit_reader_cpp",
+      "to": "json_json_spirit_reader_h"
+    },
+    {
+      "from": "json_json_spirit_reader_cpp",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "json_json_spirit_reader_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_reader_h",
+      "to": "json_json_spirit_error_position_h"
+    },
+    {
+      "from": "json_json_spirit_reader_template_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_reader_template_h",
+      "to": "json_json_spirit_error_position_h"
+    },
+    {
+      "from": "json_json_spirit_stream_reader_h",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "json_json_spirit_utils_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_value_cpp",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_writer_cpp",
+      "to": "json_json_spirit_writer_h"
+    },
+    {
+      "from": "json_json_spirit_writer_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "json_json_spirit_writer_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "json_json_spirit_writer_template_h",
+      "to": "json_json_spirit_value_h"
+    },
+    {
+      "from": "key_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "key_h",
+      "to": "allocators_h"
+    },
+    {
+      "from": "key_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "key_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "key_h",
+      "to": "hash_h"
+    },
+    {
+      "from": "keystore_cpp",
+      "to": "keystore_h"
+    },
+    {
+      "from": "keystore_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "keystore_h",
+      "to": "crypter_h"
+    },
+    {
+      "from": "keystore_h",
+      "to": "sync_h"
+    },
+    {
+      "from": "leveldb_cpp",
+      "to": "leveldb_h"
+    },
+    {
+      "from": "leveldb_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "leveldb_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "alert_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "checkpoints_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "txdb_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "main_cpp",
+      "to": "checkqueue_h"
+    },
+    {
+      "from": "main_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "main_h",
+      "to": "sync_h"
+    },
+    {
+      "from": "main_h",
+      "to": "net_h"
+    },
+    {
+      "from": "main_h",
+      "to": "script_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "irc_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "addrman_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "net_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "net_h",
+      "to": "mruset_h"
+    },
+    {
+      "from": "net_h",
+      "to": "netbase_h"
+    },
+    {
+      "from": "net_h",
+      "to": "protocol_h"
+    },
+    {
+      "from": "net_h",
+      "to": "addrman_h"
+    },
+    {
+      "from": "net_h",
+      "to": "hash_h"
+    },
+    {
+      "from": "net_h",
+      "to": "bloom_h"
+    },
+    {
+      "from": "netbase_cpp",
+      "to": "netbase_h"
+    },
+    {
+      "from": "netbase_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "netbase_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "netbase_cpp",
+      "to": "hash_h"
+    },
+    {
+      "from": "netbase_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "netbase_h",
+      "to": "compat_h"
+    },
+    {
+      "from": "noui_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "noui_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "noui_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "protocol_cpp",
+      "to": "protocol_h"
+    },
+    {
+      "from": "protocol_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "protocol_cpp",
+      "to": "netbase_h"
+    },
+    {
+      "from": "protocol_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "protocol_h",
+      "to": "serialize_h"
+    },
+    {
+      "from": "protocol_h",
+      "to": "netbase_h"
+    },
+    {
+      "from": "protocol_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "qt_aboutdialog_cpp",
+      "to": "qt_aboutdialog_h"
+    },
+    {
+      "from": "qt_aboutdialog_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_addressbookpage_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_bitcoingui_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_editaddressdialog_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_csvmodelwriter_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_addressbookpage_cpp",
+      "to": "qt_qrcodedialog_h"
+    },
+    {
+      "from": "qt_addresstablemodel_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_addresstablemodel_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_addresstablemodel_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_addresstablemodel_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_addresstablemodel_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_askpassphrasedialog_cpp",
+      "to": "qt_askpassphrasedialog_h"
+    },
+    {
+      "from": "qt_askpassphrasedialog_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_askpassphrasedialog_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_bitcoingui_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_bitcoin_cpp",
+      "to": "qt_qtipcserver_h"
+    },
+    {
+      "from": "qt_bitcoinaddressvalidator_cpp",
+      "to": "qt_bitcoinaddressvalidator_h"
+    },
+    {
+      "from": "qt_bitcoinamountfield_cpp",
+      "to": "qt_bitcoinamountfield_h"
+    },
+    {
+      "from": "qt_bitcoinamountfield_cpp",
+      "to": "qt_qvaluecombobox_h"
+    },
+    {
+      "from": "qt_bitcoinamountfield_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_bitcoinamountfield_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_bitcoingui_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_addressbookpage_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_sendcoinsdialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_signverifymessagedialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_optionsdialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_aboutdialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_editaddressdialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_transactiondescdialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_transactionview_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_overviewpage_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_askpassphrasedialog_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_notificator_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_rpcconsole_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_bitcoingui_cpp",
+      "to": "qt_macdockiconhandler_h"
+    },
+    {
+      "from": "qt_bitcoinunits_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "alert_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "qt_clientmodel_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_csvmodelwriter_cpp",
+      "to": "qt_csvmodelwriter_h"
+    },
+    {
+      "from": "qt_editaddressdialog_cpp",
+      "to": "qt_editaddressdialog_h"
+    },
+    {
+      "from": "qt_editaddressdialog_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_editaddressdialog_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "qt_bitcoinaddressvalidator_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "qt_guiutil_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "qt_monitoreddatamapper_cpp",
+      "to": "qt_monitoreddatamapper_h"
+    },
+    {
+      "from": "qt_notificator_cpp",
+      "to": "qt_notificator_h"
+    },
+    {
+      "from": "qt_optionsdialog_cpp",
+      "to": "qt_optionsdialog_h"
+    },
+    {
+      "from": "qt_optionsdialog_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_optionsdialog_cpp",
+      "to": "qt_monitoreddatamapper_h"
+    },
+    {
+      "from": "qt_optionsdialog_cpp",
+      "to": "netbase_h"
+    },
+    {
+      "from": "qt_optionsdialog_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_optionsmodel_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_optionsmodel_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_optionsmodel_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "qt_optionsmodel_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "qt_optionsmodel_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_overviewpage_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_transactionfilterproxy_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_overviewpage_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_qrcodedialog_cpp",
+      "to": "qt_qrcodedialog_h"
+    },
+    {
+      "from": "qt_qrcodedialog_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_qrcodedialog_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_qrcodedialog_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_qrcodedialog_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_qtipcserver_cpp",
+      "to": "qt_qtipcserver_h"
+    },
+    {
+      "from": "qt_qtipcserver_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_qtipcserver_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_qtipcserver_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "qt_qvalidatedlineedit_cpp",
+      "to": "qt_qvalidatedlineedit_h"
+    },
+    {
+      "from": "qt_qvalidatedlineedit_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_qvaluecombobox_cpp",
+      "to": "qt_qvaluecombobox_h"
+    },
+    {
+      "from": "qt_rpcconsole_cpp",
+      "to": "qt_rpcconsole_h"
+    },
+    {
+      "from": "qt_rpcconsole_cpp",
+      "to": "qt_clientmodel_h"
+    },
+    {
+      "from": "qt_rpcconsole_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "qt_rpcconsole_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_sendcoinsdialog_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_addressbookpage_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_sendcoinsentry_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "qt_askpassphrasedialog_h"
+    },
+    {
+      "from": "qt_sendcoinsdialog_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_sendcoinsentry_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_addressbookpage_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_sendcoinsentry_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "qt_signverifymessagedialog_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "qt_addressbookpage_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_signverifymessagedialog_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_test_test_main_cpp",
+      "to": "qt_test_uritests_h"
+    },
+    {
+      "from": "qt_test_uritests_cpp",
+      "to": "qt_test_uritests_h"
+    },
+    {
+      "from": "qt_test_uritests_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_test_uritests_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "qt_transactiondesc_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_transactiondesc_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_transactiondescdialog_cpp",
+      "to": "qt_transactiondescdialog_h"
+    },
+    {
+      "from": "qt_transactiondescdialog_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_transactionfilterproxy_cpp",
+      "to": "qt_transactionfilterproxy_h"
+    },
+    {
+      "from": "qt_transactionfilterproxy_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_transactionrecord_cpp",
+      "to": "qt_transactionrecord_h"
+    },
+    {
+      "from": "qt_transactionrecord_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_transactionrecord_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_transactionrecord_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_transactionrecord_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_transactiondesc_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_transactiontablemodel_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_transactionview_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_transactionfilterproxy_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_transactionrecord_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_bitcoinunits_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_csvmodelwriter_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_transactiondescdialog_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_editaddressdialog_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_transactionview_cpp",
+      "to": "qt_guiutil_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "qt_walletmodel_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "qt_guiconstants_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "qt_optionsmodel_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "qt_addresstablemodel_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "qt_transactiontablemodel_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "qt_walletmodel_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "qt_walletmodel_h",
+      "to": "allocators_h"
+    },
+    {
+      "from": "rpcblockchain_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "rpcblockchain_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcdump_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "rpcdump_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcdump_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "rpcdump_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "rpcmining_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "rpcmining_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "rpcmining_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "rpcmining_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcnet_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "rpcnet_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "rpcrawtransaction_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "rpcwallet_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "rpcwallet_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "rpcwallet_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "rpcwallet_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "rpcwallet_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "keystore_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "bignum_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "script_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "script_h",
+      "to": "keystore_h"
+    },
+    {
+      "from": "script_h",
+      "to": "bignum_h"
+    },
+    {
+      "from": "serialize_h",
+      "to": "allocators_h"
+    },
+    {
+      "from": "serialize_h",
+      "to": "version_h"
+    },
+    {
+      "from": "sync_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "sync_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "sync_h",
+      "to": "threadsafety_h"
+    },
+    {
+      "from": "test_Checkpoints_tests_cpp",
+      "to": "checkpoints_h"
+    },
+    {
+      "from": "test_Checkpoints_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_DoS_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_DoS_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_DoS_tests_cpp",
+      "to": "net_h"
+    },
+    {
+      "from": "test_DoS_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_accounting_tests_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "test_accounting_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_accounting_tests_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "test_allocator_tests_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "test_allocator_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_allocator_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_base32_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_base58_tests_cpp",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "test_base58_tests_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "test_base58_tests_cpp",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "test_base58_tests_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "test_base58_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_base64_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_base64_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_base64_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_bignum_tests_cpp",
+      "to": "bignum_h"
+    },
+    {
+      "from": "test_bignum_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_bloom_tests_cpp",
+      "to": "bloom_h"
+    },
+    {
+      "from": "test_bloom_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_bloom_tests_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "test_bloom_tests_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "test_bloom_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_canonical_tests_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "test_canonical_tests_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "test_canonical_tests_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "test_canonical_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_compress_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_getarg_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_key_tests_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "test_key_tests_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "test_key_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_key_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_miner_tests_cpp",
+      "to": "init_h"
+    },
+    {
+      "from": "test_miner_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_miner_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_miner_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_miner_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_mruset_tests_cpp",
+      "to": "mruset_h"
+    },
+    {
+      "from": "test_mruset_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_multisig_tests_cpp",
+      "to": "keystore_h"
+    },
+    {
+      "from": "test_multisig_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_multisig_tests_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "test_multisig_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_netbase_tests_cpp",
+      "to": "netbase_h"
+    },
+    {
+      "from": "test_pmt_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_pmt_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_rpc_tests_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "test_rpc_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_rpc_tests_cpp",
+      "to": "bitcoinrpc_h"
+    },
+    {
+      "from": "test_script_P2SH_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_script_P2SH_tests_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "test_script_P2SH_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_script_tests_cpp",
+      "to": "json_json_spirit_reader_template_h"
+    },
+    {
+      "from": "test_script_tests_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "test_script_tests_cpp",
+      "to": "json_json_spirit_utils_h"
+    },
+    {
+      "from": "test_script_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_script_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_serialize_tests_cpp",
+      "to": "serialize_h"
+    },
+    {
+      "from": "test_sigopcount_tests_cpp",
+      "to": "script_h"
+    },
+    {
+      "from": "test_sigopcount_tests_cpp",
+      "to": "key_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "db_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "txdb_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_test_bitcoin_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_transaction_tests_cpp",
+      "to": "json_json_spirit_writer_template_h"
+    },
+    {
+      "from": "test_transaction_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_transaction_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_uint160_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_uint256_tests_cpp",
+      "to": "uint256_h"
+    },
+    {
+      "from": "test_util_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_util_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "test_util_tests_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "test_wallet_tests_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "test_wallet_tests_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "txdb_cpp",
+      "to": "txdb_h"
+    },
+    {
+      "from": "txdb_cpp",
+      "to": "main_h"
+    },
+    {
+      "from": "txdb_h",
+      "to": "main_h"
+    },
+    {
+      "from": "txdb_h",
+      "to": "leveldb_h"
+    },
+    {
+      "from": "ui_interface_h",
+      "to": "util_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "util_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "sync_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "version_h"
+    },
+    {
+      "from": "util_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "util_h",
+      "to": "uint256_h"
+    },
+    {
+      "from": "util_h",
+      "to": "netbase_h"
+    },
+    {
+      "from": "version_cpp",
+      "to": "version_h"
+    },
+    {
+      "from": "version_h",
+      "to": "clientversion_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "crypter_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "wallet_cpp",
+      "to": "base58_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "main_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "key_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "keystore_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "script_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "ui_interface_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "util_h"
+    },
+    {
+      "from": "wallet_h",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "walletdb_cpp",
+      "to": "walletdb_h"
+    },
+    {
+      "from": "walletdb_cpp",
+      "to": "wallet_h"
+    },
+    {
+      "from": "walletdb_h",
+      "to": "db_h"
+    },
+    {
+      "from": "walletdb_h",
+      "to": "base58_h"
+    },
+    {
+      "from": "txdb_cpp",
+      "to": "store_chainstate"
+    },
+    {
+      "from": "store_chainstate",
+      "to": "txdb_cpp"
+    }
+  ]
+}
