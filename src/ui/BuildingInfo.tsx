@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { buildings, dependencies } from '../data/city-data';
+import { buildings, dependencies, GITHUB_BASE } from '../data/city-data';
 import { useStore } from '../store';
 
 export function BuildingInfo() {
@@ -61,6 +61,18 @@ export function BuildingInfo() {
           <span style={styles.label}>Functions</span>
           <span style={styles.value}>{building.functions}</span>
         </div>
+      )}
+
+      {/* GitHub link */}
+      {building.path && (
+        <a
+          href={`${GITHUB_BASE}/${building.path}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.githubLink}
+        >
+          View on GitHub &rarr;
+        </a>
       )}
 
       {/* Depends on (this file includes...) */}
@@ -184,5 +196,18 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#555',
     fontSize: 10,
     paddingTop: 2,
+  },
+  githubLink: {
+    display: 'block',
+    marginTop: 8,
+    padding: '6px 10px',
+    background: 'rgba(255,255,255,0.05)',
+    border: '1px solid rgba(255,255,255,0.1)',
+    borderRadius: 4,
+    color: '#8b9cf7',
+    fontSize: 11,
+    fontFamily: 'inherit',
+    textDecoration: 'none',
+    textAlign: 'center' as const,
   },
 };
