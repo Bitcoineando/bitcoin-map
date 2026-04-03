@@ -3,20 +3,18 @@
 // Generated: 2026-04-03T00:55:23
 // Files: 1084, Dependencies: 6275
 
+export const GITHUB_BASE = "https://github.com/bitcoin/bitcoin/blob/v28.4";
+export const BITCOIN_VERSION = "v28.4";
+
 export interface Building {
   id: string;
   name: string;
+  path: string;
   subsystem: string;
   loc: number;
   classes: number;
   functions: number;
   enums: number;
-  /** Present on synthetic storage / index “buildings” in the city data. */
-  description?: string;
-  crud?: {
-    write: string[];
-    read: string[];
-  };
 }
 
 export interface District {
@@ -354,6 +352,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_bitcoin-tidy_cpp",
     "name": "contrib/devtools/bitcoin-tidy/bitcoin-tidy.cpp",
+    "path": "contrib/devtools/bitcoin-tidy/bitcoin-tidy.cpp",
     "subsystem": "test",
     "loc": 24,
     "classes": 1,
@@ -363,6 +362,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_example_logprintf_cpp",
     "name": "contrib/devtools/bitcoin-tidy/example_logprintf.cpp",
+    "path": "contrib/devtools/bitcoin-tidy/example_logprintf.cpp",
     "subsystem": "test",
     "loc": 108,
     "classes": 2,
@@ -372,6 +372,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_example_nontrivial-threadlocal_cpp",
     "name": "contrib/devtools/bitcoin-tidy/example_nontrivial-threadlocal.cpp",
+    "path": "contrib/devtools/bitcoin-tidy/example_nontrivial-threadlocal.cpp",
     "subsystem": "test",
     "loc": 2,
     "classes": 0,
@@ -381,6 +382,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_logprintf_cpp",
     "name": "contrib/devtools/bitcoin-tidy/logprintf.cpp",
+    "path": "contrib/devtools/bitcoin-tidy/logprintf.cpp",
     "subsystem": "test",
     "loc": 60,
     "classes": 0,
@@ -390,6 +392,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_logprintf_h",
     "name": "contrib/devtools/bitcoin-tidy/logprintf.h",
+    "path": "contrib/devtools/bitcoin-tidy/logprintf.h",
     "subsystem": "test",
     "loc": 29,
     "classes": 1,
@@ -399,6 +402,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_cpp",
     "name": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.cpp",
+    "path": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.cpp",
     "subsystem": "test",
     "loc": 44,
     "classes": 0,
@@ -408,6 +412,7 @@ export const buildings: Building[] =
   {
     "id": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_h",
     "name": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.h",
+    "path": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.h",
     "subsystem": "test",
     "loc": 29,
     "classes": 1,
@@ -417,6 +422,7 @@ export const buildings: Building[] =
   {
     "id": "addrdb_cpp",
     "name": "addrdb.cpp",
+    "path": "src/addrdb.cpp",
     "subsystem": "network",
     "loc": 241,
     "classes": 1,
@@ -426,6 +432,7 @@ export const buildings: Building[] =
   {
     "id": "addrdb_h",
     "name": "addrdb.h",
+    "path": "src/addrdb.h",
     "subsystem": "network",
     "loc": 70,
     "classes": 6,
@@ -435,6 +442,7 @@ export const buildings: Building[] =
   {
     "id": "addresstype_cpp",
     "name": "addresstype.cpp",
+    "path": "src/addresstype.cpp",
     "subsystem": "other",
     "loc": 173,
     "classes": 2,
@@ -444,6 +452,7 @@ export const buildings: Building[] =
   {
     "id": "addresstype_h",
     "name": "addresstype.h",
+    "path": "src/addresstype.h",
     "subsystem": "other",
     "loc": 164,
     "classes": 10,
@@ -453,6 +462,7 @@ export const buildings: Building[] =
   {
     "id": "addrman_cpp",
     "name": "addrman.cpp",
+    "path": "src/addrman.cpp",
     "subsystem": "network",
     "loc": 1347,
     "classes": 0,
@@ -462,6 +472,7 @@ export const buildings: Building[] =
   {
     "id": "addrman_h",
     "name": "addrman.h",
+    "path": "src/addrman.h",
     "subsystem": "network",
     "loc": 213,
     "classes": 5,
@@ -471,6 +482,7 @@ export const buildings: Building[] =
   {
     "id": "addrman_impl_h",
     "name": "addrman_impl.h",
+    "path": "src/addrman_impl.h",
     "subsystem": "other",
     "loc": 295,
     "classes": 2,
@@ -480,6 +492,7 @@ export const buildings: Building[] =
   {
     "id": "arith_uint256_cpp",
     "name": "arith_uint256.cpp",
+    "path": "src/arith_uint256.cpp",
     "subsystem": "consensus",
     "loc": 231,
     "classes": 0,
@@ -489,6 +502,7 @@ export const buildings: Building[] =
   {
     "id": "arith_uint256_h",
     "name": "arith_uint256.h",
+    "path": "src/arith_uint256.h",
     "subsystem": "consensus",
     "loc": 283,
     "classes": 4,
@@ -498,6 +512,7 @@ export const buildings: Building[] =
   {
     "id": "attributes_h",
     "name": "attributes.h",
+    "path": "src/attributes.h",
     "subsystem": "other",
     "loc": 27,
     "classes": 0,
@@ -507,6 +522,7 @@ export const buildings: Building[] =
   {
     "id": "banman_cpp",
     "name": "banman.cpp",
+    "path": "src/banman.cpp",
     "subsystem": "network",
     "loc": 206,
     "classes": 0,
@@ -516,6 +532,7 @@ export const buildings: Building[] =
   {
     "id": "banman_h",
     "name": "banman.h",
+    "path": "src/banman.h",
     "subsystem": "network",
     "loc": 96,
     "classes": 4,
@@ -525,6 +542,7 @@ export const buildings: Building[] =
   {
     "id": "base58_cpp",
     "name": "base58.cpp",
+    "path": "src/base58.cpp",
     "subsystem": "other",
     "loc": 169,
     "classes": 0,
@@ -534,6 +552,7 @@ export const buildings: Building[] =
   {
     "id": "base58_h",
     "name": "base58.h",
+    "path": "src/base58.h",
     "subsystem": "other",
     "loc": 44,
     "classes": 0,
@@ -543,6 +562,7 @@ export const buildings: Building[] =
   {
     "id": "bech32_cpp",
     "name": "bech32.cpp",
+    "path": "src/bech32.cpp",
     "subsystem": "other",
     "loc": 574,
     "classes": 0,
@@ -552,6 +572,7 @@ export const buildings: Building[] =
   {
     "id": "bech32_h",
     "name": "bech32.h",
+    "path": "src/bech32.h",
     "subsystem": "other",
     "loc": 64,
     "classes": 1,
@@ -561,6 +582,7 @@ export const buildings: Building[] =
   {
     "id": "bench_addrman_cpp",
     "name": "bench/addrman.cpp",
+    "path": "src/bench/addrman.cpp",
     "subsystem": "bench",
     "loc": 177,
     "classes": 0,
@@ -570,6 +592,7 @@ export const buildings: Building[] =
   {
     "id": "bench_base58_cpp",
     "name": "bench/base58.cpp",
+    "path": "src/bench/base58.cpp",
     "subsystem": "bench",
     "loc": 55,
     "classes": 0,
@@ -579,6 +602,7 @@ export const buildings: Building[] =
   {
     "id": "bench_bech32_cpp",
     "name": "bench/bech32.cpp",
+    "path": "src/bench/bech32.cpp",
     "subsystem": "bench",
     "loc": 36,
     "classes": 0,
@@ -588,6 +612,7 @@ export const buildings: Building[] =
   {
     "id": "bench_bench_cpp",
     "name": "bench/bench.cpp",
+    "path": "src/bench/bench.cpp",
     "subsystem": "bench",
     "loc": 142,
     "classes": 0,
@@ -597,6 +622,7 @@ export const buildings: Building[] =
   {
     "id": "bench_bench_h",
     "name": "bench/bench.h",
+    "path": "src/bench/bench.h",
     "subsystem": "bench",
     "loc": 82,
     "classes": 2,
@@ -606,6 +632,7 @@ export const buildings: Building[] =
   {
     "id": "bench_bench_bitcoin_cpp",
     "name": "bench/bench_bitcoin.cpp",
+    "path": "src/bench/bench_bitcoin.cpp",
     "subsystem": "bench",
     "loc": 141,
     "classes": 0,
@@ -615,6 +642,7 @@ export const buildings: Building[] =
   {
     "id": "bench_bip324_ecdh_cpp",
     "name": "bench/bip324_ecdh.cpp",
+    "path": "src/bench/bip324_ecdh.cpp",
     "subsystem": "bench",
     "loc": 49,
     "classes": 0,
@@ -624,6 +652,7 @@ export const buildings: Building[] =
   {
     "id": "bench_block_assemble_cpp",
     "name": "bench/block_assemble.cpp",
+    "path": "src/bench/block_assemble.cpp",
     "subsystem": "bench",
     "loc": 64,
     "classes": 0,
@@ -633,6 +662,7 @@ export const buildings: Building[] =
   {
     "id": "bench_ccoins_caching_cpp",
     "name": "bench/ccoins_caching.cpp",
+    "path": "src/bench/ccoins_caching.cpp",
     "subsystem": "bench",
     "loc": 52,
     "classes": 0,
@@ -642,6 +672,7 @@ export const buildings: Building[] =
   {
     "id": "bench_chacha20_cpp",
     "name": "bench/chacha20.cpp",
+    "path": "src/bench/chacha20.cpp",
     "subsystem": "bench",
     "loc": 74,
     "classes": 0,
@@ -651,6 +682,7 @@ export const buildings: Building[] =
   {
     "id": "bench_checkblock_cpp",
     "name": "bench/checkblock.cpp",
+    "path": "src/bench/checkblock.cpp",
     "subsystem": "bench",
     "loc": 55,
     "classes": 0,
@@ -660,6 +692,7 @@ export const buildings: Building[] =
   {
     "id": "bench_checkblockindex_cpp",
     "name": "bench/checkblockindex.cpp",
+    "path": "src/bench/checkblockindex.cpp",
     "subsystem": "bench",
     "loc": 20,
     "classes": 0,
@@ -669,6 +702,7 @@ export const buildings: Building[] =
   {
     "id": "bench_checkqueue_cpp",
     "name": "bench/checkqueue.cpp",
+    "path": "src/bench/checkqueue.cpp",
     "subsystem": "bench",
     "loc": 66,
     "classes": 0,
@@ -678,6 +712,7 @@ export const buildings: Building[] =
   {
     "id": "bench_cluster_linearize_cpp",
     "name": "bench/cluster_linearize.cpp",
+    "path": "src/bench/cluster_linearize.cpp",
     "subsystem": "bench",
     "loc": 274,
     "classes": 0,
@@ -687,6 +722,7 @@ export const buildings: Building[] =
   {
     "id": "bench_coin_selection_cpp",
     "name": "bench/coin_selection.cpp",
+    "path": "src/bench/coin_selection.cpp",
     "subsystem": "bench",
     "loc": 128,
     "classes": 0,
@@ -696,6 +732,7 @@ export const buildings: Building[] =
   {
     "id": "bench_crypto_hash_cpp",
     "name": "bench/crypto_hash.cpp",
+    "path": "src/bench/crypto_hash.cpp",
     "subsystem": "bench",
     "loc": 265,
     "classes": 0,
@@ -705,6 +742,7 @@ export const buildings: Building[] =
   {
     "id": "bench_data_cpp",
     "name": "bench/data.cpp",
+    "path": "src/bench/data.cpp",
     "subsystem": "bench",
     "loc": 14,
     "classes": 0,
@@ -714,6 +752,7 @@ export const buildings: Building[] =
   {
     "id": "bench_data_h",
     "name": "bench/data.h",
+    "path": "src/bench/data.h",
     "subsystem": "bench",
     "loc": 19,
     "classes": 0,
@@ -723,6 +762,7 @@ export const buildings: Building[] =
   {
     "id": "bench_data_block413567_raw_h",
     "name": "bench/data/block413567.raw.h",
+    "path": "src/bench/data/block413567.raw.h",
     "subsystem": "bench",
     "loc": 124988,
     "classes": 0,
@@ -732,6 +772,7 @@ export const buildings: Building[] =
   {
     "id": "bench_descriptors_cpp",
     "name": "bench/descriptors.cpp",
+    "path": "src/bench/descriptors.cpp",
     "subsystem": "bench",
     "loc": 32,
     "classes": 0,
@@ -741,6 +782,7 @@ export const buildings: Building[] =
   {
     "id": "bench_disconnected_transactions_cpp",
     "name": "bench/disconnected_transactions.cpp",
+    "path": "src/bench/disconnected_transactions.cpp",
     "subsystem": "bench",
     "loc": 130,
     "classes": 1,
@@ -750,6 +792,7 @@ export const buildings: Building[] =
   {
     "id": "bench_duplicate_inputs_cpp",
     "name": "bench/duplicate_inputs.cpp",
+    "path": "src/bench/duplicate_inputs.cpp",
     "subsystem": "bench",
     "loc": 66,
     "classes": 0,
@@ -759,6 +802,7 @@ export const buildings: Building[] =
   {
     "id": "bench_ellswift_cpp",
     "name": "bench/ellswift.cpp",
+    "path": "src/bench/ellswift.cpp",
     "subsystem": "bench",
     "loc": 27,
     "classes": 0,
@@ -768,6 +812,7 @@ export const buildings: Building[] =
   {
     "id": "bench_examples_cpp",
     "name": "bench/examples.cpp",
+    "path": "src/bench/examples.cpp",
     "subsystem": "bench",
     "loc": 21,
     "classes": 0,
@@ -777,6 +822,7 @@ export const buildings: Building[] =
   {
     "id": "bench_gcs_filter_cpp",
     "name": "bench/gcs_filter.cpp",
+    "path": "src/bench/gcs_filter.cpp",
     "subsystem": "bench",
     "loc": 88,
     "classes": 0,
@@ -786,6 +832,7 @@ export const buildings: Building[] =
   {
     "id": "bench_hashpadding_cpp",
     "name": "bench/hashpadding.cpp",
+    "path": "src/bench/hashpadding.cpp",
     "subsystem": "bench",
     "loc": 47,
     "classes": 0,
@@ -795,6 +842,7 @@ export const buildings: Building[] =
   {
     "id": "bench_index_blockfilter_cpp",
     "name": "bench/index_blockfilter.cpp",
+    "path": "src/bench/index_blockfilter.cpp",
     "subsystem": "bench",
     "loc": 43,
     "classes": 0,
@@ -804,6 +852,7 @@ export const buildings: Building[] =
   {
     "id": "bench_load_external_cpp",
     "name": "bench/load_external.cpp",
+    "path": "src/bench/load_external.cpp",
     "subsystem": "bench",
     "loc": 64,
     "classes": 0,
@@ -813,6 +862,7 @@ export const buildings: Building[] =
   {
     "id": "bench_lockedpool_cpp",
     "name": "bench/lockedpool.cpp",
+    "path": "src/bench/lockedpool.cpp",
     "subsystem": "bench",
     "loc": 40,
     "classes": 0,
@@ -822,6 +872,7 @@ export const buildings: Building[] =
   {
     "id": "bench_logging_cpp",
     "name": "bench/logging.cpp",
+    "path": "src/bench/logging.cpp",
     "subsystem": "bench",
     "loc": 92,
     "classes": 0,
@@ -831,6 +882,7 @@ export const buildings: Building[] =
   {
     "id": "bench_mempool_eviction_cpp",
     "name": "bench/mempool_eviction.cpp",
+    "path": "src/bench/mempool_eviction.cpp",
     "subsystem": "bench",
     "loc": 137,
     "classes": 0,
@@ -840,6 +892,7 @@ export const buildings: Building[] =
   {
     "id": "bench_mempool_stress_cpp",
     "name": "bench/mempool_stress.cpp",
+    "path": "src/bench/mempool_stress.cpp",
     "subsystem": "bench",
     "loc": 122,
     "classes": 1,
@@ -849,6 +902,7 @@ export const buildings: Building[] =
   {
     "id": "bench_merkle_root_cpp",
     "name": "bench/merkle_root.cpp",
+    "path": "src/bench/merkle_root.cpp",
     "subsystem": "bench",
     "loc": 26,
     "classes": 0,
@@ -858,6 +912,7 @@ export const buildings: Building[] =
   {
     "id": "bench_nanobench_cpp",
     "name": "bench/nanobench.cpp",
+    "path": "src/bench/nanobench.cpp",
     "subsystem": "bench",
     "loc": 6,
     "classes": 0,
@@ -867,6 +922,7 @@ export const buildings: Building[] =
   {
     "id": "bench_nanobench_h",
     "name": "bench/nanobench.h",
+    "path": "src/bench/nanobench.h",
     "subsystem": "bench",
     "loc": 3484,
     "classes": 30,
@@ -876,6 +932,7 @@ export const buildings: Building[] =
   {
     "id": "bench_parse_hex_cpp",
     "name": "bench/parse_hex.cpp",
+    "path": "src/bench/parse_hex.cpp",
     "subsystem": "bench",
     "loc": 36,
     "classes": 0,
@@ -885,6 +942,7 @@ export const buildings: Building[] =
   {
     "id": "bench_peer_eviction_cpp",
     "name": "bench/peer_eviction.cpp",
+    "path": "src/bench/peer_eviction.cpp",
     "subsystem": "bench",
     "loc": 155,
     "classes": 0,
@@ -894,6 +952,7 @@ export const buildings: Building[] =
   {
     "id": "bench_poly1305_cpp",
     "name": "bench/poly1305.cpp",
+    "path": "src/bench/poly1305.cpp",
     "subsystem": "bench",
     "loc": 43,
     "classes": 0,
@@ -903,6 +962,7 @@ export const buildings: Building[] =
   {
     "id": "bench_pool_cpp",
     "name": "bench/pool.cpp",
+    "path": "src/bench/pool.cpp",
     "subsystem": "bench",
     "loc": 49,
     "classes": 0,
@@ -912,6 +972,7 @@ export const buildings: Building[] =
   {
     "id": "bench_prevector_cpp",
     "name": "bench/prevector.cpp",
+    "path": "src/bench/prevector.cpp",
     "subsystem": "bench",
     "loc": 124,
     "classes": 1,
@@ -921,6 +982,7 @@ export const buildings: Building[] =
   {
     "id": "bench_random_cpp",
     "name": "bench/random.cpp",
+    "path": "src/bench/random.cpp",
     "subsystem": "bench",
     "loc": 103,
     "classes": 0,
@@ -930,6 +992,7 @@ export const buildings: Building[] =
   {
     "id": "bench_readblock_cpp",
     "name": "bench/readblock.cpp",
+    "path": "src/bench/readblock.cpp",
     "subsystem": "bench",
     "loc": 53,
     "classes": 0,
@@ -939,6 +1002,7 @@ export const buildings: Building[] =
   {
     "id": "bench_rollingbloom_cpp",
     "name": "bench/rollingbloom.cpp",
+    "path": "src/bench/rollingbloom.cpp",
     "subsystem": "bench",
     "loc": 36,
     "classes": 0,
@@ -948,6 +1012,7 @@ export const buildings: Building[] =
   {
     "id": "bench_rpc_blockchain_cpp",
     "name": "bench/rpc_blockchain.cpp",
+    "path": "src/bench/rpc_blockchain.cpp",
     "subsystem": "bench",
     "loc": 61,
     "classes": 1,
@@ -957,6 +1022,7 @@ export const buildings: Building[] =
   {
     "id": "bench_rpc_mempool_cpp",
     "name": "bench/rpc_mempool.cpp",
+    "path": "src/bench/rpc_mempool.cpp",
     "subsystem": "bench",
     "loc": 45,
     "classes": 0,
@@ -966,6 +1032,7 @@ export const buildings: Building[] =
   {
     "id": "bench_sign_transaction_cpp",
     "name": "bench/sign_transaction.cpp",
+    "path": "src/bench/sign_transaction.cpp",
     "subsystem": "bench",
     "loc": 99,
     "classes": 0,
@@ -975,6 +1042,7 @@ export const buildings: Building[] =
   {
     "id": "bench_streams_findbyte_cpp",
     "name": "bench/streams_findbyte.cpp",
+    "path": "src/bench/streams_findbyte.cpp",
     "subsystem": "bench",
     "loc": 35,
     "classes": 0,
@@ -984,6 +1052,7 @@ export const buildings: Building[] =
   {
     "id": "bench_strencodings_cpp",
     "name": "bench/strencodings.cpp",
+    "path": "src/bench/strencodings.cpp",
     "subsystem": "bench",
     "loc": 18,
     "classes": 0,
@@ -993,6 +1062,7 @@ export const buildings: Building[] =
   {
     "id": "bench_util_time_cpp",
     "name": "bench/util_time.cpp",
+    "path": "src/bench/util_time.cpp",
     "subsystem": "bench",
     "loc": 42,
     "classes": 0,
@@ -1002,6 +1072,7 @@ export const buildings: Building[] =
   {
     "id": "bench_verify_script_cpp",
     "name": "bench/verify_script.cpp",
+    "path": "src/bench/verify_script.cpp",
     "subsystem": "bench",
     "loc": 84,
     "classes": 0,
@@ -1011,6 +1082,7 @@ export const buildings: Building[] =
   {
     "id": "bench_wallet_balance_cpp",
     "name": "bench/wallet_balance.cpp",
+    "path": "src/bench/wallet_balance.cpp",
     "subsystem": "bench",
     "loc": 63,
     "classes": 0,
@@ -1020,6 +1092,7 @@ export const buildings: Building[] =
   {
     "id": "bench_wallet_create_cpp",
     "name": "bench/wallet_create.cpp",
+    "path": "src/bench/wallet_create.cpp",
     "subsystem": "bench",
     "loc": 58,
     "classes": 0,
@@ -1029,6 +1102,7 @@ export const buildings: Building[] =
   {
     "id": "bench_wallet_create_tx_cpp",
     "name": "bench/wallet_create_tx.cpp",
+    "path": "src/bench/wallet_create_tx.cpp",
     "subsystem": "bench",
     "loc": 186,
     "classes": 2,
@@ -1038,6 +1112,7 @@ export const buildings: Building[] =
   {
     "id": "bench_wallet_ismine_cpp",
     "name": "bench/wallet_ismine.cpp",
+    "path": "src/bench/wallet_ismine.cpp",
     "subsystem": "bench",
     "loc": 75,
     "classes": 0,
@@ -1047,6 +1122,7 @@ export const buildings: Building[] =
   {
     "id": "bench_wallet_loading_cpp",
     "name": "bench/wallet_loading.cpp",
+    "path": "src/bench/wallet_loading.cpp",
     "subsystem": "bench",
     "loc": 76,
     "classes": 0,
@@ -1056,6 +1132,7 @@ export const buildings: Building[] =
   {
     "id": "bench_xor_cpp",
     "name": "bench/xor.cpp",
+    "path": "src/bench/xor.cpp",
     "subsystem": "bench",
     "loc": 24,
     "classes": 0,
@@ -1065,6 +1142,7 @@ export const buildings: Building[] =
   {
     "id": "bip324_cpp",
     "name": "bip324.cpp",
+    "path": "src/bip324.cpp",
     "subsystem": "other",
     "loc": 109,
     "classes": 0,
@@ -1074,6 +1152,7 @@ export const buildings: Building[] =
   {
     "id": "bip324_h",
     "name": "bip324.h",
+    "path": "src/bip324.h",
     "subsystem": "other",
     "loc": 96,
     "classes": 1,
@@ -1083,6 +1162,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoin-chainstate_cpp",
     "name": "bitcoin-chainstate.cpp",
+    "path": "src/bitcoin-chainstate.cpp",
     "subsystem": "other",
     "loc": 298,
     "classes": 0,
@@ -1092,6 +1172,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoin-cli_cpp",
     "name": "bitcoin-cli.cpp",
+    "path": "src/bitcoin-cli.cpp",
     "subsystem": "init",
     "loc": 1316,
     "classes": 8,
@@ -1101,6 +1182,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoin-tx_cpp",
     "name": "bitcoin-tx.cpp",
+    "path": "src/bitcoin-tx.cpp",
     "subsystem": "init",
     "loc": 889,
     "classes": 0,
@@ -1110,6 +1192,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoin-util_cpp",
     "name": "bitcoin-util.cpp",
+    "path": "src/bitcoin-util.cpp",
     "subsystem": "other",
     "loc": 192,
     "classes": 0,
@@ -1119,6 +1202,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoin-wallet_cpp",
     "name": "bitcoin-wallet.cpp",
+    "path": "src/bitcoin-wallet.cpp",
     "subsystem": "init",
     "loc": 139,
     "classes": 0,
@@ -1128,6 +1212,7 @@ export const buildings: Building[] =
   {
     "id": "bitcoind_cpp",
     "name": "bitcoind.cpp",
+    "path": "src/bitcoind.cpp",
     "subsystem": "init",
     "loc": 283,
     "classes": 0,
@@ -1137,6 +1222,7 @@ export const buildings: Building[] =
   {
     "id": "blockencodings_cpp",
     "name": "blockencodings.cpp",
+    "path": "src/blockencodings.cpp",
     "subsystem": "mining",
     "loc": 228,
     "classes": 0,
@@ -1146,6 +1232,7 @@ export const buildings: Building[] =
   {
     "id": "blockencodings_h",
     "name": "blockencodings.h",
+    "path": "src/blockencodings.h",
     "subsystem": "mining",
     "loc": 155,
     "classes": 9,
@@ -1155,6 +1242,7 @@ export const buildings: Building[] =
   {
     "id": "blockfilter_cpp",
     "name": "blockfilter.cpp",
+    "path": "src/blockfilter.cpp",
     "subsystem": "mining",
     "loc": 254,
     "classes": 0,
@@ -1164,6 +1252,7 @@ export const buildings: Building[] =
   {
     "id": "blockfilter_h",
     "name": "blockfilter.h",
+    "path": "src/blockfilter.h",
     "subsystem": "mining",
     "loc": 175,
     "classes": 4,
@@ -1173,6 +1262,7 @@ export const buildings: Building[] =
   {
     "id": "chain_cpp",
     "name": "chain.cpp",
+    "path": "src/chain.cpp",
     "subsystem": "consensus",
     "loc": 180,
     "classes": 0,
@@ -1182,6 +1272,7 @@ export const buildings: Building[] =
   {
     "id": "chain_h",
     "name": "chain.h",
+    "path": "src/chain.h",
     "subsystem": "consensus",
     "loc": 486,
     "classes": 4,
@@ -1191,6 +1282,7 @@ export const buildings: Building[] =
   {
     "id": "chainparams_cpp",
     "name": "chainparams.cpp",
+    "path": "src/chainparams.cpp",
     "subsystem": "other",
     "loc": 138,
     "classes": 0,
@@ -1200,6 +1292,7 @@ export const buildings: Building[] =
   {
     "id": "chainparams_h",
     "name": "chainparams.h",
+    "path": "src/chainparams.h",
     "subsystem": "other",
     "loc": 31,
     "classes": 1,
@@ -1209,6 +1302,7 @@ export const buildings: Building[] =
   {
     "id": "chainparamsbase_cpp",
     "name": "chainparamsbase.cpp",
+    "path": "src/chainparamsbase.cpp",
     "subsystem": "other",
     "loc": 61,
     "classes": 0,
@@ -1218,6 +1312,7 @@ export const buildings: Building[] =
   {
     "id": "chainparamsbase_h",
     "name": "chainparamsbase.h",
+    "path": "src/chainparamsbase.h",
     "subsystem": "other",
     "loc": 57,
     "classes": 2,
@@ -1227,6 +1322,7 @@ export const buildings: Building[] =
   {
     "id": "chainparamsseeds_h",
     "name": "chainparamsseeds.h",
+    "path": "src/chainparamsseeds.h",
     "subsystem": "other",
     "loc": 2393,
     "classes": 0,
@@ -1236,6 +1332,7 @@ export const buildings: Building[] =
   {
     "id": "checkqueue_h",
     "name": "checkqueue.h",
+    "path": "src/checkqueue.h",
     "subsystem": "other",
     "loc": 236,
     "classes": 2,
@@ -1245,6 +1342,7 @@ export const buildings: Building[] =
   {
     "id": "clientversion_cpp",
     "name": "clientversion.cpp",
+    "path": "src/clientversion.cpp",
     "subsystem": "other",
     "loc": 101,
     "classes": 0,
@@ -1254,6 +1352,7 @@ export const buildings: Building[] =
   {
     "id": "clientversion_h",
     "name": "clientversion.h",
+    "path": "src/clientversion.h",
     "subsystem": "other",
     "loc": 49,
     "classes": 0,
@@ -1263,6 +1362,7 @@ export const buildings: Building[] =
   {
     "id": "cluster_linearize_h",
     "name": "cluster_linearize.h",
+    "path": "src/cluster_linearize.h",
     "subsystem": "other",
     "loc": 1052,
     "classes": 5,
@@ -1272,6 +1372,7 @@ export const buildings: Building[] =
   {
     "id": "coins_cpp",
     "name": "coins.cpp",
+    "path": "src/coins.cpp",
     "subsystem": "consensus",
     "loc": 390,
     "classes": 0,
@@ -1281,6 +1382,7 @@ export const buildings: Building[] =
   {
     "id": "coins_h",
     "name": "coins.h",
+    "path": "src/coins.h",
     "subsystem": "consensus",
     "loc": 526,
     "classes": 9,
@@ -1290,6 +1392,7 @@ export const buildings: Building[] =
   {
     "id": "common_args_cpp",
     "name": "common/args.cpp",
+    "path": "src/common/args.cpp",
     "subsystem": "util",
     "loc": 868,
     "classes": 0,
@@ -1299,6 +1402,7 @@ export const buildings: Building[] =
   {
     "id": "common_args_h",
     "name": "common/args.h",
+    "path": "src/common/args.h",
     "subsystem": "util",
     "loc": 489,
     "classes": 5,
@@ -1308,6 +1412,7 @@ export const buildings: Building[] =
   {
     "id": "common_bloom_cpp",
     "name": "common/bloom.cpp",
+    "path": "src/common/bloom.cpp",
     "subsystem": "util",
     "loc": 246,
     "classes": 0,
@@ -1317,6 +1422,7 @@ export const buildings: Building[] =
   {
     "id": "common_bloom_h",
     "name": "common/bloom.h",
+    "path": "src/common/bloom.h",
     "subsystem": "util",
     "loc": 127,
     "classes": 4,
@@ -1326,6 +1432,7 @@ export const buildings: Building[] =
   {
     "id": "common_config_cpp",
     "name": "common/config.cpp",
+    "path": "src/common/config.cpp",
     "subsystem": "util",
     "loc": 220,
     "classes": 0,
@@ -1335,6 +1442,7 @@ export const buildings: Building[] =
   {
     "id": "common_init_cpp",
     "name": "common/init.cpp",
+    "path": "src/common/init.cpp",
     "subsystem": "util",
     "loc": 114,
     "classes": 0,
@@ -1344,6 +1452,7 @@ export const buildings: Building[] =
   {
     "id": "common_init_h",
     "name": "common/init.h",
+    "path": "src/common/init.h",
     "subsystem": "util",
     "loc": 39,
     "classes": 2,
@@ -1353,6 +1462,7 @@ export const buildings: Building[] =
   {
     "id": "common_interfaces_cpp",
     "name": "common/interfaces.cpp",
+    "path": "src/common/interfaces.cpp",
     "subsystem": "util",
     "loc": 53,
     "classes": 3,
@@ -1362,6 +1472,7 @@ export const buildings: Building[] =
   {
     "id": "common_messages_cpp",
     "name": "common/messages.cpp",
+    "path": "src/common/messages.cpp",
     "subsystem": "util",
     "loc": 167,
     "classes": 0,
@@ -1371,6 +1482,7 @@ export const buildings: Building[] =
   {
     "id": "common_messages_h",
     "name": "common/messages.h",
+    "path": "src/common/messages.h",
     "subsystem": "util",
     "loc": 40,
     "classes": 1,
@@ -1380,6 +1492,7 @@ export const buildings: Building[] =
   {
     "id": "common_run_command_cpp",
     "name": "common/run_command.cpp",
+    "path": "src/common/run_command.cpp",
     "subsystem": "util",
     "loc": 48,
     "classes": 0,
@@ -1389,6 +1502,7 @@ export const buildings: Building[] =
   {
     "id": "common_run_command_h",
     "name": "common/run_command.h",
+    "path": "src/common/run_command.h",
     "subsystem": "util",
     "loc": 21,
     "classes": 1,
@@ -1398,6 +1512,7 @@ export const buildings: Building[] =
   {
     "id": "common_settings_cpp",
     "name": "common/settings.cpp",
+    "path": "src/common/settings.cpp",
     "subsystem": "util",
     "loc": 276,
     "classes": 0,
@@ -1407,6 +1522,7 @@ export const buildings: Building[] =
   {
     "id": "common_settings_h",
     "name": "common/settings.h",
+    "path": "src/common/settings.h",
     "subsystem": "util",
     "loc": 115,
     "classes": 3,
@@ -1416,6 +1532,7 @@ export const buildings: Building[] =
   {
     "id": "common_signmessage_cpp",
     "name": "common/signmessage.cpp",
+    "path": "src/common/signmessage.cpp",
     "subsystem": "util",
     "loc": 93,
     "classes": 0,
@@ -1425,6 +1542,7 @@ export const buildings: Building[] =
   {
     "id": "common_signmessage_h",
     "name": "common/signmessage.h",
+    "path": "src/common/signmessage.h",
     "subsystem": "util",
     "loc": 77,
     "classes": 1,
@@ -1434,6 +1552,7 @@ export const buildings: Building[] =
   {
     "id": "common_system_cpp",
     "name": "common/system.cpp",
+    "path": "src/common/system.cpp",
     "subsystem": "util",
     "loc": 112,
     "classes": 0,
@@ -1443,6 +1562,7 @@ export const buildings: Building[] =
   {
     "id": "common_system_h",
     "name": "common/system.h",
+    "path": "src/common/system.h",
     "subsystem": "util",
     "loc": 32,
     "classes": 0,
@@ -1452,6 +1572,7 @@ export const buildings: Building[] =
   {
     "id": "common_types_h",
     "name": "common/types.h",
+    "path": "src/common/types.h",
     "subsystem": "util",
     "loc": 26,
     "classes": 0,
@@ -1461,6 +1582,7 @@ export const buildings: Building[] =
   {
     "id": "common_url_cpp",
     "name": "common/url.cpp",
+    "path": "src/common/url.cpp",
     "subsystem": "util",
     "loc": 39,
     "classes": 0,
@@ -1470,6 +1592,7 @@ export const buildings: Building[] =
   {
     "id": "common_url_h",
     "name": "common/url.h",
+    "path": "src/common/url.h",
     "subsystem": "util",
     "loc": 17,
     "classes": 0,
@@ -1479,6 +1602,7 @@ export const buildings: Building[] =
   {
     "id": "compat_assumptions_h",
     "name": "compat/assumptions.h",
+    "path": "src/compat/assumptions.h",
     "subsystem": "other",
     "loc": 44,
     "classes": 0,
@@ -1488,6 +1612,7 @@ export const buildings: Building[] =
   {
     "id": "compat_byteswap_h",
     "name": "compat/byteswap.h",
+    "path": "src/compat/byteswap.h",
     "subsystem": "other",
     "loc": 79,
     "classes": 0,
@@ -1497,6 +1622,7 @@ export const buildings: Building[] =
   {
     "id": "compat_compat_h",
     "name": "compat/compat.h",
+    "path": "src/compat/compat.h",
     "subsystem": "other",
     "loc": 115,
     "classes": 0,
@@ -1506,6 +1632,7 @@ export const buildings: Building[] =
   {
     "id": "compat_cpuid_h",
     "name": "compat/cpuid.h",
+    "path": "src/compat/cpuid.h",
     "subsystem": "other",
     "loc": 26,
     "classes": 0,
@@ -1515,6 +1642,7 @@ export const buildings: Building[] =
   {
     "id": "compat_endian_h",
     "name": "compat/endian.h",
+    "path": "src/compat/endian.h",
     "subsystem": "other",
     "loc": 74,
     "classes": 0,
@@ -1524,6 +1652,7 @@ export const buildings: Building[] =
   {
     "id": "compat_stdin_cpp",
     "name": "compat/stdin.cpp",
+    "path": "src/compat/stdin.cpp",
     "subsystem": "other",
     "loc": 68,
     "classes": 0,
@@ -1533,6 +1662,7 @@ export const buildings: Building[] =
   {
     "id": "compat_stdin_h",
     "name": "compat/stdin.h",
+    "path": "src/compat/stdin.h",
     "subsystem": "other",
     "loc": 18,
     "classes": 1,
@@ -1542,6 +1672,7 @@ export const buildings: Building[] =
   {
     "id": "compressor_cpp",
     "name": "compressor.cpp",
+    "path": "src/compressor.cpp",
     "subsystem": "other",
     "loc": 192,
     "classes": 0,
@@ -1551,6 +1682,7 @@ export const buildings: Building[] =
   {
     "id": "compressor_h",
     "name": "compressor.h",
+    "path": "src/compressor.h",
     "subsystem": "other",
     "loc": 118,
     "classes": 3,
@@ -1560,6 +1692,7 @@ export const buildings: Building[] =
   {
     "id": "config_bitcoin-config_h",
     "name": "config/bitcoin-config.h",
+    "path": "src/config/bitcoin-config.h",
     "subsystem": "other",
     "loc": 328,
     "classes": 0,
@@ -1569,6 +1702,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_amount_h",
     "name": "consensus/amount.h",
+    "path": "src/consensus/amount.h",
     "subsystem": "consensus",
     "loc": 29,
     "classes": 0,
@@ -1578,6 +1712,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_consensus_h",
     "name": "consensus/consensus.h",
+    "path": "src/consensus/consensus.h",
     "subsystem": "consensus",
     "loc": 37,
     "classes": 0,
@@ -1587,6 +1722,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_merkle_cpp",
     "name": "consensus/merkle.cpp",
+    "path": "src/consensus/merkle.cpp",
     "subsystem": "consensus",
     "loc": 85,
     "classes": 0,
@@ -1596,6 +1732,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_merkle_h",
     "name": "consensus/merkle.h",
+    "path": "src/consensus/merkle.h",
     "subsystem": "consensus",
     "loc": 27,
     "classes": 0,
@@ -1605,6 +1742,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_params_h",
     "name": "consensus/params.h",
+    "path": "src/consensus/params.h",
     "subsystem": "consensus",
     "loc": 156,
     "classes": 2,
@@ -1614,6 +1752,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_tx_check_cpp",
     "name": "consensus/tx_check.cpp",
+    "path": "src/consensus/tx_check.cpp",
     "subsystem": "consensus",
     "loc": 60,
     "classes": 0,
@@ -1623,6 +1762,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_tx_check_h",
     "name": "consensus/tx_check.h",
+    "path": "src/consensus/tx_check.h",
     "subsystem": "consensus",
     "loc": 20,
     "classes": 2,
@@ -1632,6 +1772,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_tx_verify_cpp",
     "name": "consensus/tx_verify.cpp",
+    "path": "src/consensus/tx_verify.cpp",
     "subsystem": "consensus",
     "loc": 205,
     "classes": 0,
@@ -1641,6 +1782,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_tx_verify_h",
     "name": "consensus/tx_verify.h",
+    "path": "src/consensus/tx_verify.h",
     "subsystem": "consensus",
     "loc": 78,
     "classes": 4,
@@ -1650,6 +1792,7 @@ export const buildings: Building[] =
   {
     "id": "consensus_validation_h",
     "name": "consensus/validation.h",
+    "path": "src/consensus/validation.h",
     "subsystem": "consensus",
     "loc": 184,
     "classes": 3,
@@ -1659,6 +1802,7 @@ export const buildings: Building[] =
   {
     "id": "core_io_h",
     "name": "core_io.h",
+    "path": "src/core_io.h",
     "subsystem": "other",
     "loc": 50,
     "classes": 9,
@@ -1668,6 +1812,7 @@ export const buildings: Building[] =
   {
     "id": "core_memusage_h",
     "name": "core_memusage.h",
+    "path": "src/core_memusage.h",
     "subsystem": "other",
     "loc": 71,
     "classes": 0,
@@ -1677,6 +1822,7 @@ export const buildings: Building[] =
   {
     "id": "core_read_cpp",
     "name": "core_read.cpp",
+    "path": "src/core_read.cpp",
     "subsystem": "other",
     "loc": 254,
     "classes": 1,
@@ -1686,6 +1832,7 @@ export const buildings: Building[] =
   {
     "id": "core_write_cpp",
     "name": "core_write.cpp",
+    "path": "src/core_write.cpp",
     "subsystem": "other",
     "loc": 267,
     "classes": 0,
@@ -1695,6 +1842,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_aes_cpp",
     "name": "crypto/aes.cpp",
+    "path": "src/crypto/aes.cpp",
     "subsystem": "crypto",
     "loc": 152,
     "classes": 0,
@@ -1704,6 +1852,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_aes_h",
     "name": "crypto/aes.h",
+    "path": "src/crypto/aes.h",
     "subsystem": "crypto",
     "loc": 67,
     "classes": 4,
@@ -1713,6 +1862,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_chacha20_cpp",
     "name": "crypto/chacha20.cpp",
+    "path": "src/crypto/chacha20.cpp",
     "subsystem": "crypto",
     "loc": 372,
     "classes": 0,
@@ -1722,6 +1872,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_chacha20_h",
     "name": "crypto/chacha20.h",
+    "path": "src/crypto/chacha20.h",
     "subsystem": "crypto",
     "loc": 159,
     "classes": 3,
@@ -1731,6 +1882,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_chacha20poly1305_cpp",
     "name": "crypto/chacha20poly1305.cpp",
+    "path": "src/crypto/chacha20poly1305.cpp",
     "subsystem": "crypto",
     "loc": 135,
     "classes": 0,
@@ -1740,6 +1892,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_chacha20poly1305_h",
     "name": "crypto/chacha20poly1305.h",
+    "path": "src/crypto/chacha20poly1305.h",
     "subsystem": "crypto",
     "loc": 148,
     "classes": 2,
@@ -1749,6 +1902,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_common_h",
     "name": "crypto/common.h",
+    "path": "src/crypto/common.h",
     "subsystem": "crypto",
     "loc": 85,
     "classes": 0,
@@ -1758,6 +1912,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_ctaes_ctaes_h",
     "name": "crypto/ctaes/ctaes.h",
+    "path": "src/crypto/ctaes/ctaes.h",
     "subsystem": "crypto",
     "loc": 41,
     "classes": 0,
@@ -1767,6 +1922,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hex_base_cpp",
     "name": "crypto/hex_base.cpp",
+    "path": "src/crypto/hex_base.cpp",
     "subsystem": "crypto",
     "loc": 67,
     "classes": 0,
@@ -1776,6 +1932,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hex_base_h",
     "name": "crypto/hex_base.h",
+    "path": "src/crypto/hex_base.h",
     "subsystem": "crypto",
     "loc": 23,
     "classes": 0,
@@ -1785,6 +1942,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hkdf_sha256_32_cpp",
     "name": "crypto/hkdf_sha256_32.cpp",
+    "path": "src/crypto/hkdf_sha256_32.cpp",
     "subsystem": "crypto",
     "loc": 21,
     "classes": 0,
@@ -1794,6 +1952,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hkdf_sha256_32_h",
     "name": "crypto/hkdf_sha256_32.h",
+    "path": "src/crypto/hkdf_sha256_32.h",
     "subsystem": "crypto",
     "loc": 25,
     "classes": 1,
@@ -1803,6 +1962,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hmac_sha256_cpp",
     "name": "crypto/hmac_sha256.cpp",
+    "path": "src/crypto/hmac_sha256.cpp",
     "subsystem": "crypto",
     "loc": 34,
     "classes": 0,
@@ -1812,6 +1972,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hmac_sha256_h",
     "name": "crypto/hmac_sha256.h",
+    "path": "src/crypto/hmac_sha256.h",
     "subsystem": "crypto",
     "loc": 32,
     "classes": 1,
@@ -1821,6 +1982,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hmac_sha512_cpp",
     "name": "crypto/hmac_sha512.cpp",
+    "path": "src/crypto/hmac_sha512.cpp",
     "subsystem": "crypto",
     "loc": 34,
     "classes": 0,
@@ -1830,6 +1992,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_hmac_sha512_h",
     "name": "crypto/hmac_sha512.h",
+    "path": "src/crypto/hmac_sha512.h",
     "subsystem": "crypto",
     "loc": 32,
     "classes": 1,
@@ -1839,6 +2002,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_muhash_cpp",
     "name": "crypto/muhash.cpp",
+    "path": "src/crypto/muhash.cpp",
     "subsystem": "crypto",
     "loc": 347,
     "classes": 0,
@@ -1848,6 +2012,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_muhash_h",
     "name": "crypto/muhash.h",
+    "path": "src/crypto/muhash.h",
     "subsystem": "crypto",
     "loc": 127,
     "classes": 2,
@@ -1857,6 +2022,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_poly1305_cpp",
     "name": "crypto/poly1305.cpp",
+    "path": "src/crypto/poly1305.cpp",
     "subsystem": "crypto",
     "loc": 223,
     "classes": 0,
@@ -1866,6 +2032,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_poly1305_h",
     "name": "crypto/poly1305.h",
+    "path": "src/crypto/poly1305.h",
     "subsystem": "crypto",
     "loc": 70,
     "classes": 1,
@@ -1875,6 +2042,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_ripemd160_cpp",
     "name": "crypto/ripemd160.cpp",
+    "path": "src/crypto/ripemd160.cpp",
     "subsystem": "crypto",
     "loc": 292,
     "classes": 0,
@@ -1884,6 +2052,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_ripemd160_h",
     "name": "crypto/ripemd160.h",
+    "path": "src/crypto/ripemd160.h",
     "subsystem": "crypto",
     "loc": 28,
     "classes": 1,
@@ -1893,6 +2062,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha1_cpp",
     "name": "crypto/sha1.cpp",
+    "path": "src/crypto/sha1.cpp",
     "subsystem": "crypto",
     "loc": 199,
     "classes": 0,
@@ -1902,6 +2072,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha1_h",
     "name": "crypto/sha1.h",
+    "path": "src/crypto/sha1.h",
     "subsystem": "crypto",
     "loc": 28,
     "classes": 1,
@@ -1911,6 +2082,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_cpp",
     "name": "crypto/sha256.cpp",
+    "path": "src/crypto/sha256.cpp",
     "subsystem": "crypto",
     "loc": 783,
     "classes": 0,
@@ -1920,6 +2092,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_h",
     "name": "crypto/sha256.h",
+    "path": "src/crypto/sha256.h",
     "subsystem": "crypto",
     "loc": 53,
     "classes": 1,
@@ -1929,6 +2102,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_arm_shani_cpp",
     "name": "crypto/sha256_arm_shani.cpp",
+    "path": "src/crypto/sha256_arm_shani.cpp",
     "subsystem": "crypto",
     "loc": 899,
     "classes": 0,
@@ -1938,6 +2112,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_avx2_cpp",
     "name": "crypto/sha256_avx2.cpp",
+    "path": "src/crypto/sha256_avx2.cpp",
     "subsystem": "crypto",
     "loc": 329,
     "classes": 0,
@@ -1947,6 +2122,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_sse4_cpp",
     "name": "crypto/sha256_sse4.cpp",
+    "path": "src/crypto/sha256_sse4.cpp",
     "subsystem": "crypto",
     "loc": 1513,
     "classes": 0,
@@ -1956,6 +2132,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_sse41_cpp",
     "name": "crypto/sha256_sse41.cpp",
+    "path": "src/crypto/sha256_sse41.cpp",
     "subsystem": "crypto",
     "loc": 321,
     "classes": 0,
@@ -1965,6 +2142,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha256_x86_shani_cpp",
     "name": "crypto/sha256_x86_shani.cpp",
+    "path": "src/crypto/sha256_x86_shani.cpp",
     "subsystem": "crypto",
     "loc": 358,
     "classes": 0,
@@ -1974,6 +2152,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha3_cpp",
     "name": "crypto/sha3.cpp",
+    "path": "src/crypto/sha3.cpp",
     "subsystem": "crypto",
     "loc": 156,
     "classes": 0,
@@ -1983,6 +2162,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha3_h",
     "name": "crypto/sha3.h",
+    "path": "src/crypto/sha3.h",
     "subsystem": "crypto",
     "loc": 41,
     "classes": 1,
@@ -1992,6 +2172,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha512_cpp",
     "name": "crypto/sha512.cpp",
+    "path": "src/crypto/sha512.cpp",
     "subsystem": "crypto",
     "loc": 207,
     "classes": 0,
@@ -2001,6 +2182,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_sha512_h",
     "name": "crypto/sha512.h",
+    "path": "src/crypto/sha512.h",
     "subsystem": "crypto",
     "loc": 29,
     "classes": 1,
@@ -2010,6 +2192,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_siphash_cpp",
     "name": "crypto/siphash.cpp",
+    "path": "src/crypto/siphash.cpp",
     "subsystem": "crypto",
     "loc": 174,
     "classes": 0,
@@ -2019,6 +2202,7 @@ export const buildings: Building[] =
   {
     "id": "crypto_siphash_h",
     "name": "crypto/siphash.h",
+    "path": "src/crypto/siphash.h",
     "subsystem": "crypto",
     "loc": 48,
     "classes": 1,
@@ -2028,6 +2212,7 @@ export const buildings: Building[] =
   {
     "id": "cuckoocache_h",
     "name": "cuckoocache.h",
+    "path": "src/cuckoocache.h",
     "subsystem": "other",
     "loc": 488,
     "classes": 2,
@@ -2037,6 +2222,7 @@ export const buildings: Building[] =
   {
     "id": "dbwrapper_cpp",
     "name": "dbwrapper.cpp",
+    "path": "src/dbwrapper.cpp",
     "subsystem": "util",
     "loc": 426,
     "classes": 2,
@@ -2046,6 +2232,7 @@ export const buildings: Building[] =
   {
     "id": "dbwrapper_h",
     "name": "dbwrapper.h",
+    "path": "src/dbwrapper.h",
     "subsystem": "util",
     "loc": 297,
     "classes": 8,
@@ -2055,6 +2242,7 @@ export const buildings: Building[] =
   {
     "id": "deploymentinfo_cpp",
     "name": "deploymentinfo.cpp",
+    "path": "src/deploymentinfo.cpp",
     "subsystem": "other",
     "loc": 54,
     "classes": 1,
@@ -2064,6 +2252,7 @@ export const buildings: Building[] =
   {
     "id": "deploymentinfo_h",
     "name": "deploymentinfo.h",
+    "path": "src/deploymentinfo.h",
     "subsystem": "other",
     "loc": 32,
     "classes": 1,
@@ -2073,6 +2262,7 @@ export const buildings: Building[] =
   {
     "id": "deploymentstatus_cpp",
     "name": "deploymentstatus.cpp",
+    "path": "src/deploymentstatus.cpp",
     "subsystem": "consensus",
     "loc": 32,
     "classes": 0,
@@ -2082,6 +2272,7 @@ export const buildings: Building[] =
   {
     "id": "deploymentstatus_h",
     "name": "deploymentstatus.h",
+    "path": "src/deploymentstatus.h",
     "subsystem": "consensus",
     "loc": 52,
     "classes": 0,
@@ -2091,6 +2282,7 @@ export const buildings: Building[] =
   {
     "id": "dummywallet_cpp",
     "name": "dummywallet.cpp",
+    "path": "src/dummywallet.cpp",
     "subsystem": "other",
     "loc": 69,
     "classes": 6,
@@ -2100,6 +2292,7 @@ export const buildings: Building[] =
   {
     "id": "external_signer_cpp",
     "name": "external_signer.cpp",
+    "path": "src/external_signer.cpp",
     "subsystem": "other",
     "loc": 121,
     "classes": 0,
@@ -2109,6 +2302,7 @@ export const buildings: Building[] =
   {
     "id": "external_signer_h",
     "name": "external_signer.h",
+    "path": "src/external_signer.h",
     "subsystem": "other",
     "loc": 66,
     "classes": 2,
@@ -2118,6 +2312,7 @@ export const buildings: Building[] =
   {
     "id": "flatfile_cpp",
     "name": "flatfile.cpp",
+    "path": "src/flatfile.cpp",
     "subsystem": "other",
     "loc": 102,
     "classes": 0,
@@ -2127,6 +2322,7 @@ export const buildings: Building[] =
   {
     "id": "flatfile_h",
     "name": "flatfile.h",
+    "path": "src/flatfile.h",
     "subsystem": "other",
     "loc": 89,
     "classes": 2,
@@ -2136,6 +2332,7 @@ export const buildings: Building[] =
   {
     "id": "hash_cpp",
     "name": "hash.cpp",
+    "path": "src/hash.cpp",
     "subsystem": "crypto",
     "loc": 92,
     "classes": 0,
@@ -2145,6 +2342,7 @@ export const buildings: Building[] =
   {
     "id": "hash_h",
     "name": "hash.h",
+    "path": "src/hash.h",
     "subsystem": "crypto",
     "loc": 229,
     "classes": 5,
@@ -2154,6 +2352,7 @@ export const buildings: Building[] =
   {
     "id": "headerssync_cpp",
     "name": "headerssync.cpp",
+    "path": "src/headerssync.cpp",
     "subsystem": "other",
     "loc": 318,
     "classes": 0,
@@ -2163,6 +2362,7 @@ export const buildings: Building[] =
   {
     "id": "headerssync_h",
     "name": "headerssync.h",
+    "path": "src/headerssync.h",
     "subsystem": "other",
     "loc": 278,
     "classes": 2,
@@ -2172,6 +2372,7 @@ export const buildings: Building[] =
   {
     "id": "httprpc_cpp",
     "name": "httprpc.cpp",
+    "path": "src/httprpc.cpp",
     "subsystem": "rpc",
     "loc": 392,
     "classes": 2,
@@ -2181,6 +2382,7 @@ export const buildings: Building[] =
   {
     "id": "httprpc_h",
     "name": "httprpc.h",
+    "path": "src/httprpc.h",
     "subsystem": "rpc",
     "loc": 34,
     "classes": 0,
@@ -2190,6 +2392,7 @@ export const buildings: Building[] =
   {
     "id": "httpserver_cpp",
     "name": "httpserver.cpp",
+    "path": "src/httpserver.cpp",
     "subsystem": "rpc",
     "loc": 763,
     "classes": 6,
@@ -2199,6 +2402,7 @@ export const buildings: Building[] =
   {
     "id": "httpserver_h",
     "name": "httpserver.h",
+    "path": "src/httpserver.h",
     "subsystem": "rpc",
     "loc": 185,
     "classes": 9,
@@ -2208,6 +2412,7 @@ export const buildings: Building[] =
   {
     "id": "i2p_cpp",
     "name": "i2p.cpp",
+    "path": "src/i2p.cpp",
     "subsystem": "network",
     "loc": 494,
     "classes": 0,
@@ -2217,6 +2422,7 @@ export const buildings: Building[] =
   {
     "id": "i2p_h",
     "name": "i2p.h",
+    "path": "src/i2p.h",
     "subsystem": "network",
     "loc": 283,
     "classes": 2,
@@ -2226,6 +2432,7 @@ export const buildings: Building[] =
   {
     "id": "index_base_cpp",
     "name": "index/base.cpp",
+    "path": "src/index/base.cpp",
     "subsystem": "index",
     "loc": 452,
     "classes": 0,
@@ -2235,6 +2442,7 @@ export const buildings: Building[] =
   {
     "id": "index_base_h",
     "name": "index/base.h",
+    "path": "src/index/base.h",
     "subsystem": "index",
     "loc": 165,
     "classes": 7,
@@ -2244,6 +2452,7 @@ export const buildings: Building[] =
   {
     "id": "index_blockfilterindex_cpp",
     "name": "index/blockfilterindex.cpp",
+    "path": "src/index/blockfilterindex.cpp",
     "subsystem": "index",
     "loc": 525,
     "classes": 3,
@@ -2253,6 +2462,7 @@ export const buildings: Building[] =
   {
     "id": "index_blockfilterindex_h",
     "name": "index/blockfilterindex.h",
+    "path": "src/index/blockfilterindex.h",
     "subsystem": "index",
     "loc": 113,
     "classes": 1,
@@ -2262,6 +2472,7 @@ export const buildings: Building[] =
   {
     "id": "index_coinstatsindex_cpp",
     "name": "index/coinstatsindex.cpp",
+    "path": "src/index/coinstatsindex.cpp",
     "subsystem": "index",
     "loc": 510,
     "classes": 3,
@@ -2271,6 +2482,7 @@ export const buildings: Building[] =
   {
     "id": "index_coinstatsindex_h",
     "name": "index/coinstatsindex.h",
+    "path": "src/index/coinstatsindex.h",
     "subsystem": "index",
     "loc": 67,
     "classes": 4,
@@ -2280,6 +2492,7 @@ export const buildings: Building[] =
   {
     "id": "index_disktxpos_h",
     "name": "index/disktxpos.h",
+    "path": "src/index/disktxpos.h",
     "subsystem": "index",
     "loc": 26,
     "classes": 1,
@@ -2289,6 +2502,7 @@ export const buildings: Building[] =
   {
     "id": "index_txindex_cpp",
     "name": "index/txindex.cpp",
+    "path": "src/index/txindex.cpp",
     "subsystem": "index",
     "loc": 102,
     "classes": 0,
@@ -2298,6 +2512,7 @@ export const buildings: Building[] =
   {
     "id": "index_txindex_h",
     "name": "index/txindex.h",
+    "path": "src/index/txindex.h",
     "subsystem": "index",
     "loc": 51,
     "classes": 1,
@@ -2307,6 +2522,7 @@ export const buildings: Building[] =
   {
     "id": "indirectmap_h",
     "name": "indirectmap.h",
+    "path": "src/indirectmap.h",
     "subsystem": "other",
     "loc": 58,
     "classes": 2,
@@ -2316,6 +2532,7 @@ export const buildings: Building[] =
   {
     "id": "init_cpp",
     "name": "init.cpp",
+    "path": "src/init.cpp",
     "subsystem": "init",
     "loc": 2065,
     "classes": 0,
@@ -2325,6 +2542,7 @@ export const buildings: Building[] =
   {
     "id": "init_h",
     "name": "init.h",
+    "path": "src/init.h",
     "subsystem": "init",
     "loc": 82,
     "classes": 4,
@@ -2334,6 +2552,7 @@ export const buildings: Building[] =
   {
     "id": "init_bitcoin-gui_cpp",
     "name": "init/bitcoin-gui.cpp",
+    "path": "src/init/bitcoin-gui.cpp",
     "subsystem": "other",
     "loc": 48,
     "classes": 1,
@@ -2343,6 +2562,7 @@ export const buildings: Building[] =
   {
     "id": "init_bitcoin-node_cpp",
     "name": "init/bitcoin-node.cpp",
+    "path": "src/init/bitcoin-node.cpp",
     "subsystem": "other",
     "loc": 58,
     "classes": 1,
@@ -2352,6 +2572,7 @@ export const buildings: Building[] =
   {
     "id": "init_bitcoin-qt_cpp",
     "name": "init/bitcoin-qt.cpp",
+    "path": "src/init/bitcoin-qt.cpp",
     "subsystem": "other",
     "loc": 45,
     "classes": 1,
@@ -2361,6 +2582,7 @@ export const buildings: Building[] =
   {
     "id": "init_bitcoin-wallet_cpp",
     "name": "init/bitcoin-wallet.cpp",
+    "path": "src/init/bitcoin-wallet.cpp",
     "subsystem": "other",
     "loc": 14,
     "classes": 0,
@@ -2370,6 +2592,7 @@ export const buildings: Building[] =
   {
     "id": "init_bitcoind_cpp",
     "name": "init/bitcoind.cpp",
+    "path": "src/init/bitcoind.cpp",
     "subsystem": "other",
     "loc": 47,
     "classes": 1,
@@ -2379,6 +2602,7 @@ export const buildings: Building[] =
   {
     "id": "init_common_cpp",
     "name": "init/common.cpp",
+    "path": "src/init/common.cpp",
     "subsystem": "other",
     "loc": 151,
     "classes": 0,
@@ -2388,6 +2612,7 @@ export const buildings: Building[] =
   {
     "id": "init_common_h",
     "name": "init/common.h",
+    "path": "src/init/common.h",
     "subsystem": "other",
     "loc": 24,
     "classes": 1,
@@ -2397,6 +2622,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_chain_h",
     "name": "interfaces/chain.h",
+    "path": "src/interfaces/chain.h",
     "subsystem": "interfaces",
     "loc": 424,
     "classes": 19,
@@ -2406,6 +2632,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_echo_h",
     "name": "interfaces/echo.h",
+    "path": "src/interfaces/echo.h",
     "subsystem": "interfaces",
     "loc": 26,
     "classes": 1,
@@ -2415,6 +2642,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_handler_h",
     "name": "interfaces/handler.h",
+    "path": "src/interfaces/handler.h",
     "subsystem": "interfaces",
     "loc": 39,
     "classes": 2,
@@ -2424,6 +2652,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_init_h",
     "name": "interfaces/init.h",
+    "path": "src/interfaces/init.h",
     "subsystem": "interfaces",
     "loc": 57,
     "classes": 3,
@@ -2433,6 +2662,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_ipc_h",
     "name": "interfaces/ipc.h",
+    "path": "src/interfaces/ipc.h",
     "subsystem": "interfaces",
     "loc": 78,
     "classes": 3,
@@ -2442,6 +2672,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_mining_h",
     "name": "interfaces/mining.h",
+    "path": "src/interfaces/mining.h",
     "subsystem": "interfaces",
     "loc": 86,
     "classes": 6,
@@ -2451,6 +2682,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_node_h",
     "name": "interfaces/node.h",
+    "path": "src/interfaces/node.h",
     "subsystem": "interfaces",
     "loc": 290,
     "classes": 18,
@@ -2460,6 +2692,7 @@ export const buildings: Building[] =
   {
     "id": "interfaces_wallet_h",
     "name": "interfaces/wallet.h",
+    "path": "src/interfaces/wallet.h",
     "subsystem": "interfaces",
     "loc": 459,
     "classes": 23,
@@ -2469,6 +2702,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_capnp_common-types_h",
     "name": "ipc/capnp/common-types.h",
+    "path": "src/ipc/capnp/common-types.h",
     "subsystem": "other",
     "loc": 108,
     "classes": 2,
@@ -2478,6 +2712,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_capnp_context_h",
     "name": "ipc/capnp/context.h",
+    "path": "src/ipc/capnp/context.h",
     "subsystem": "other",
     "loc": 23,
     "classes": 1,
@@ -2487,6 +2722,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_capnp_init-types_h",
     "name": "ipc/capnp/init-types.h",
+    "path": "src/ipc/capnp/init-types.h",
     "subsystem": "other",
     "loc": 10,
     "classes": 0,
@@ -2496,6 +2732,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_capnp_protocol_cpp",
     "name": "ipc/capnp/protocol.cpp",
+    "path": "src/ipc/capnp/protocol.cpp",
     "subsystem": "other",
     "loc": 93,
     "classes": 1,
@@ -2505,6 +2742,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_capnp_protocol_h",
     "name": "ipc/capnp/protocol.h",
+    "path": "src/ipc/capnp/protocol.h",
     "subsystem": "other",
     "loc": 17,
     "classes": 1,
@@ -2514,6 +2752,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_context_h",
     "name": "ipc/context.h",
+    "path": "src/ipc/context.h",
     "subsystem": "other",
     "loc": 19,
     "classes": 1,
@@ -2523,6 +2762,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_exception_h",
     "name": "ipc/exception.h",
+    "path": "src/ipc/exception.h",
     "subsystem": "other",
     "loc": 20,
     "classes": 1,
@@ -2532,6 +2772,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_interfaces_cpp",
     "name": "ipc/interfaces.cpp",
+    "path": "src/ipc/interfaces.cpp",
     "subsystem": "other",
     "loc": 78,
     "classes": 1,
@@ -2541,6 +2782,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_process_cpp",
     "name": "ipc/process.cpp",
+    "path": "src/ipc/process.cpp",
     "subsystem": "other",
     "loc": 61,
     "classes": 1,
@@ -2550,6 +2792,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_process_h",
     "name": "ipc/process.h",
+    "path": "src/ipc/process.h",
     "subsystem": "other",
     "loc": 44,
     "classes": 2,
@@ -2559,6 +2802,7 @@ export const buildings: Building[] =
   {
     "id": "ipc_protocol_h",
     "name": "ipc/protocol.h",
+    "path": "src/ipc/protocol.h",
     "subsystem": "other",
     "loc": 44,
     "classes": 2,
@@ -2568,6 +2812,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_bitcoinkernel_cpp",
     "name": "kernel/bitcoinkernel.cpp",
+    "path": "src/kernel/bitcoinkernel.cpp",
     "subsystem": "kernel",
     "loc": 10,
     "classes": 0,
@@ -2577,6 +2822,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_blockmanager_opts_h",
     "name": "kernel/blockmanager_opts.h",
+    "path": "src/kernel/blockmanager_opts.h",
     "subsystem": "kernel",
     "loc": 34,
     "classes": 2,
@@ -2586,6 +2832,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_chain_cpp",
     "name": "kernel/chain.cpp",
+    "path": "src/kernel/chain.cpp",
     "subsystem": "kernel",
     "loc": 38,
     "classes": 1,
@@ -2595,6 +2842,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_chain_h",
     "name": "kernel/chain.h",
+    "path": "src/kernel/chain.h",
     "subsystem": "kernel",
     "loc": 39,
     "classes": 3,
@@ -2604,6 +2852,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_chainparams_cpp",
     "name": "kernel/chainparams.cpp",
+    "path": "src/kernel/chainparams.cpp",
     "subsystem": "kernel",
     "loc": 708,
     "classes": 5,
@@ -2613,6 +2862,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_chainparams_h",
     "name": "kernel/chainparams.h",
+    "path": "src/kernel/chainparams.h",
     "subsystem": "kernel",
     "loc": 190,
     "classes": 5,
@@ -2622,6 +2872,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_chainstatemanager_opts_h",
     "name": "kernel/chainstatemanager_opts.h",
+    "path": "src/kernel/chainstatemanager_opts.h",
     "subsystem": "kernel",
     "loc": 58,
     "classes": 3,
@@ -2631,6 +2882,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_checks_cpp",
     "name": "kernel/checks.cpp",
+    "path": "src/kernel/checks.cpp",
     "subsystem": "kernel",
     "loc": 24,
     "classes": 0,
@@ -2640,6 +2892,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_checks_h",
     "name": "kernel/checks.h",
+    "path": "src/kernel/checks.h",
     "subsystem": "kernel",
     "loc": 20,
     "classes": 1,
@@ -2649,6 +2902,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_coinstats_cpp",
     "name": "kernel/coinstats.cpp",
+    "path": "src/kernel/coinstats.cpp",
     "subsystem": "kernel",
     "loc": 194,
     "classes": 0,
@@ -2658,6 +2912,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_coinstats_h",
     "name": "kernel/coinstats.h",
+    "path": "src/kernel/coinstats.h",
     "subsystem": "kernel",
     "loc": 82,
     "classes": 6,
@@ -2667,6 +2922,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_context_cpp",
     "name": "kernel/context.cpp",
+    "path": "src/kernel/context.cpp",
     "subsystem": "kernel",
     "loc": 26,
     "classes": 0,
@@ -2676,6 +2932,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_context_h",
     "name": "kernel/context.h",
+    "path": "src/kernel/context.h",
     "subsystem": "kernel",
     "loc": 21,
     "classes": 1,
@@ -2685,6 +2942,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_cs_main_cpp",
     "name": "kernel/cs_main.cpp",
+    "path": "src/kernel/cs_main.cpp",
     "subsystem": "kernel",
     "loc": 8,
     "classes": 0,
@@ -2694,6 +2952,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_cs_main_h",
     "name": "kernel/cs_main.h",
+    "path": "src/kernel/cs_main.h",
     "subsystem": "kernel",
     "loc": 22,
     "classes": 0,
@@ -2703,6 +2962,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_disconnected_transactions_cpp",
     "name": "kernel/disconnected_transactions.cpp",
+    "path": "src/kernel/disconnected_transactions.cpp",
     "subsystem": "kernel",
     "loc": 90,
     "classes": 0,
@@ -2712,6 +2972,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_disconnected_transactions_h",
     "name": "kernel/disconnected_transactions.h",
+    "path": "src/kernel/disconnected_transactions.h",
     "subsystem": "kernel",
     "loc": 76,
     "classes": 1,
@@ -2721,6 +2982,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_mempool_entry_h",
     "name": "kernel/mempool_entry.h",
+    "path": "src/kernel/mempool_entry.h",
     "subsystem": "kernel",
     "loc": 252,
     "classes": 7,
@@ -2730,6 +2992,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_mempool_limits_h",
     "name": "kernel/mempool_limits.h",
+    "path": "src/kernel/mempool_limits.h",
     "subsystem": "kernel",
     "loc": 39,
     "classes": 1,
@@ -2739,6 +3002,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_mempool_options_h",
     "name": "kernel/mempool_options.h",
+    "path": "src/kernel/mempool_options.h",
     "subsystem": "kernel",
     "loc": 66,
     "classes": 2,
@@ -2748,6 +3012,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_mempool_removal_reason_cpp",
     "name": "kernel/mempool_removal_reason.cpp",
+    "path": "src/kernel/mempool_removal_reason.cpp",
     "subsystem": "kernel",
     "loc": 21,
     "classes": 0,
@@ -2757,6 +3022,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_mempool_removal_reason_h",
     "name": "kernel/mempool_removal_reason.h",
+    "path": "src/kernel/mempool_removal_reason.h",
     "subsystem": "kernel",
     "loc": 24,
     "classes": 0,
@@ -2766,6 +3032,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_messagestartchars_h",
     "name": "kernel/messagestartchars.h",
+    "path": "src/kernel/messagestartchars.h",
     "subsystem": "kernel",
     "loc": 13,
     "classes": 0,
@@ -2775,6 +3042,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_notifications_interface_h",
     "name": "kernel/notifications_interface.h",
+    "path": "src/kernel/notifications_interface.h",
     "subsystem": "kernel",
     "loc": 65,
     "classes": 4,
@@ -2784,6 +3052,7 @@ export const buildings: Building[] =
   {
     "id": "kernel_warning_h",
     "name": "kernel/warning.h",
+    "path": "src/kernel/warning.h",
     "subsystem": "kernel",
     "loc": 14,
     "classes": 0,
@@ -2793,6 +3062,7 @@ export const buildings: Building[] =
   {
     "id": "key_cpp",
     "name": "key.cpp",
+    "path": "src/key.cpp",
     "subsystem": "crypto",
     "loc": 484,
     "classes": 0,
@@ -2802,6 +3072,7 @@ export const buildings: Building[] =
   {
     "id": "key_h",
     "name": "key.h",
+    "path": "src/key.h",
     "subsystem": "crypto",
     "loc": 328,
     "classes": 5,
@@ -2811,6 +3082,7 @@ export const buildings: Building[] =
   {
     "id": "key_io_cpp",
     "name": "key_io.cpp",
+    "path": "src/key_io.cpp",
     "subsystem": "crypto",
     "loc": 319,
     "classes": 1,
@@ -2820,6 +3092,7 @@ export const buildings: Building[] =
   {
     "id": "key_io_h",
     "name": "key_io.h",
+    "path": "src/key_io.h",
     "subsystem": "crypto",
     "loc": 30,
     "classes": 0,
@@ -2829,6 +3102,7 @@ export const buildings: Building[] =
   {
     "id": "logging_cpp",
     "name": "logging.cpp",
+    "path": "src/logging.cpp",
     "subsystem": "util",
     "loc": 528,
     "classes": 0,
@@ -2838,6 +3112,7 @@ export const buildings: Building[] =
   {
     "id": "logging_h",
     "name": "logging.h",
+    "path": "src/logging.h",
     "subsystem": "util",
     "loc": 295,
     "classes": 2,
@@ -2847,6 +3122,7 @@ export const buildings: Building[] =
   {
     "id": "logging_timer_h",
     "name": "logging/timer.h",
+    "path": "src/logging/timer.h",
     "subsystem": "other",
     "loc": 111,
     "classes": 1,
@@ -2856,6 +3132,7 @@ export const buildings: Building[] =
   {
     "id": "mapport_cpp",
     "name": "mapport.cpp",
+    "path": "src/mapport.cpp",
     "subsystem": "other",
     "loc": 334,
     "classes": 0,
@@ -2865,6 +3142,7 @@ export const buildings: Building[] =
   {
     "id": "mapport_h",
     "name": "mapport.h",
+    "path": "src/mapport.h",
     "subsystem": "other",
     "loc": 22,
     "classes": 0,
@@ -2874,6 +3152,7 @@ export const buildings: Building[] =
   {
     "id": "memusage_h",
     "name": "memusage.h",
+    "path": "src/memusage.h",
     "subsystem": "other",
     "loc": 207,
     "classes": 4,
@@ -2883,6 +3162,7 @@ export const buildings: Building[] =
   {
     "id": "merkleblock_cpp",
     "name": "merkleblock.cpp",
+    "path": "src/merkleblock.cpp",
     "subsystem": "other",
     "loc": 183,
     "classes": 0,
@@ -2892,6 +3172,7 @@ export const buildings: Building[] =
   {
     "id": "merkleblock_h",
     "name": "merkleblock.h",
+    "path": "src/merkleblock.h",
     "subsystem": "other",
     "loc": 159,
     "classes": 2,
@@ -2901,6 +3182,7 @@ export const buildings: Building[] =
   {
     "id": "net_cpp",
     "name": "net.cpp",
+    "path": "src/net.cpp",
     "subsystem": "network",
     "loc": 3959,
     "classes": 2,
@@ -2910,6 +3192,7 @@ export const buildings: Building[] =
   {
     "id": "net_h",
     "name": "net.h",
+    "path": "src/net.h",
     "subsystem": "network",
     "loc": 1667,
     "classes": 21,
@@ -2919,6 +3202,7 @@ export const buildings: Building[] =
   {
     "id": "net_permissions_cpp",
     "name": "net_permissions.cpp",
+    "path": "src/net_permissions.cpp",
     "subsystem": "other",
     "loc": 146,
     "classes": 0,
@@ -2928,6 +3212,7 @@ export const buildings: Building[] =
   {
     "id": "net_permissions_h",
     "name": "net_permissions.h",
+    "path": "src/net_permissions.h",
     "subsystem": "other",
     "loc": 96,
     "classes": 4,
@@ -2937,6 +3222,7 @@ export const buildings: Building[] =
   {
     "id": "net_processing_cpp",
     "name": "net_processing.cpp",
+    "path": "src/net_processing.cpp",
     "subsystem": "network",
     "loc": 6377,
     "classes": 5,
@@ -2946,6 +3232,7 @@ export const buildings: Building[] =
   {
     "id": "net_processing_h",
     "name": "net_processing.h",
+    "path": "src/net_processing.h",
     "subsystem": "network",
     "loc": 148,
     "classes": 8,
@@ -2955,6 +3242,7 @@ export const buildings: Building[] =
   {
     "id": "net_types_cpp",
     "name": "net_types.cpp",
+    "path": "src/net_types.cpp",
     "subsystem": "other",
     "loc": 74,
     "classes": 0,
@@ -2964,6 +3252,7 @@ export const buildings: Building[] =
   {
     "id": "net_types_h",
     "name": "net_types.h",
+    "path": "src/net_types.h",
     "subsystem": "other",
     "loc": 60,
     "classes": 3,
@@ -2973,6 +3262,7 @@ export const buildings: Building[] =
   {
     "id": "netaddress_cpp",
     "name": "netaddress.cpp",
+    "path": "src/netaddress.cpp",
     "subsystem": "network",
     "loc": 1095,
     "classes": 0,
@@ -2982,6 +3272,7 @@ export const buildings: Building[] =
   {
     "id": "netaddress_h",
     "name": "netaddress.h",
+    "path": "src/netaddress.h",
     "subsystem": "network",
     "loc": 591,
     "classes": 4,
@@ -2991,6 +3282,7 @@ export const buildings: Building[] =
   {
     "id": "netbase_cpp",
     "name": "netbase.cpp",
+    "path": "src/netbase.cpp",
     "subsystem": "network",
     "loc": 888,
     "classes": 0,
@@ -3000,6 +3292,7 @@ export const buildings: Building[] =
   {
     "id": "netbase_h",
     "name": "netbase.h",
+    "path": "src/netbase.h",
     "subsystem": "network",
     "loc": 347,
     "classes": 3,
@@ -3009,6 +3302,7 @@ export const buildings: Building[] =
   {
     "id": "netgroup_cpp",
     "name": "netgroup.cpp",
+    "path": "src/netgroup.cpp",
     "subsystem": "network",
     "loc": 132,
     "classes": 0,
@@ -3018,6 +3312,7 @@ export const buildings: Building[] =
   {
     "id": "netgroup_h",
     "name": "netgroup.h",
+    "path": "src/netgroup.h",
     "subsystem": "network",
     "loc": 76,
     "classes": 1,
@@ -3027,6 +3322,7 @@ export const buildings: Building[] =
   {
     "id": "netmessagemaker_h",
     "name": "netmessagemaker.h",
+    "path": "src/netmessagemaker.h",
     "subsystem": "other",
     "loc": 23,
     "classes": 0,
@@ -3036,6 +3332,7 @@ export const buildings: Building[] =
   {
     "id": "node_abort_cpp",
     "name": "node/abort.cpp",
+    "path": "src/node/abort.cpp",
     "subsystem": "node",
     "loc": 27,
     "classes": 0,
@@ -3045,6 +3342,7 @@ export const buildings: Building[] =
   {
     "id": "node_abort_h",
     "name": "node/abort.h",
+    "path": "src/node/abort.h",
     "subsystem": "node",
     "loc": 21,
     "classes": 3,
@@ -3054,6 +3352,7 @@ export const buildings: Building[] =
   {
     "id": "node_blockmanager_args_cpp",
     "name": "node/blockmanager_args.cpp",
+    "path": "src/node/blockmanager_args.cpp",
     "subsystem": "node",
     "loc": 39,
     "classes": 0,
@@ -3063,6 +3362,7 @@ export const buildings: Building[] =
   {
     "id": "node_blockmanager_args_h",
     "name": "node/blockmanager_args.h",
+    "path": "src/node/blockmanager_args.h",
     "subsystem": "node",
     "loc": 18,
     "classes": 1,
@@ -3072,6 +3372,7 @@ export const buildings: Building[] =
   {
     "id": "node_blockstorage_cpp",
     "name": "node/blockstorage.cpp",
+    "path": "src/node/blockstorage.cpp",
     "subsystem": "mining",
     "loc": 1290,
     "classes": 1,
@@ -3081,6 +3382,7 @@ export const buildings: Building[] =
   {
     "id": "node_blockstorage_h",
     "name": "node/blockstorage.h",
+    "path": "src/node/blockstorage.h",
     "subsystem": "mining",
     "loc": 435,
     "classes": 12,
@@ -3090,6 +3392,7 @@ export const buildings: Building[] =
   {
     "id": "node_caches_cpp",
     "name": "node/caches.cpp",
+    "path": "src/node/caches.cpp",
     "subsystem": "node",
     "loc": 34,
     "classes": 0,
@@ -3099,6 +3402,7 @@ export const buildings: Building[] =
   {
     "id": "node_caches_h",
     "name": "node/caches.h",
+    "path": "src/node/caches.h",
     "subsystem": "node",
     "loc": 24,
     "classes": 2,
@@ -3108,6 +3412,7 @@ export const buildings: Building[] =
   {
     "id": "node_chainstate_cpp",
     "name": "node/chainstate.cpp",
+    "path": "src/node/chainstate.cpp",
     "subsystem": "node",
     "loc": 287,
     "classes": 0,
@@ -3117,6 +3422,7 @@ export const buildings: Building[] =
   {
     "id": "node_chainstate_h",
     "name": "node/chainstate.h",
+    "path": "src/node/chainstate.h",
     "subsystem": "node",
     "loc": 77,
     "classes": 3,
@@ -3126,6 +3432,7 @@ export const buildings: Building[] =
   {
     "id": "node_chainstatemanager_args_cpp",
     "name": "node/chainstatemanager_args.cpp",
+    "path": "src/node/chainstatemanager_args.cpp",
     "subsystem": "node",
     "loc": 71,
     "classes": 0,
@@ -3135,6 +3442,7 @@ export const buildings: Building[] =
   {
     "id": "node_chainstatemanager_args_h",
     "name": "node/chainstatemanager_args.h",
+    "path": "src/node/chainstatemanager_args.h",
     "subsystem": "node",
     "loc": 22,
     "classes": 1,
@@ -3144,6 +3452,7 @@ export const buildings: Building[] =
   {
     "id": "node_coin_cpp",
     "name": "node/coin.cpp",
+    "path": "src/node/coin.cpp",
     "subsystem": "node",
     "loc": 26,
     "classes": 0,
@@ -3153,6 +3462,7 @@ export const buildings: Building[] =
   {
     "id": "node_coin_h",
     "name": "node/coin.h",
+    "path": "src/node/coin.h",
     "subsystem": "node",
     "loc": 27,
     "classes": 3,
@@ -3162,6 +3472,7 @@ export const buildings: Building[] =
   {
     "id": "node_coins_view_args_cpp",
     "name": "node/coins_view_args.cpp",
+    "path": "src/node/coins_view_args.cpp",
     "subsystem": "node",
     "loc": 16,
     "classes": 0,
@@ -3171,6 +3482,7 @@ export const buildings: Building[] =
   {
     "id": "node_coins_view_args_h",
     "name": "node/coins_view_args.h",
+    "path": "src/node/coins_view_args.h",
     "subsystem": "node",
     "loc": 15,
     "classes": 2,
@@ -3180,6 +3492,7 @@ export const buildings: Building[] =
   {
     "id": "node_connection_types_cpp",
     "name": "node/connection_types.cpp",
+    "path": "src/node/connection_types.cpp",
     "subsystem": "node",
     "loc": 40,
     "classes": 0,
@@ -3189,6 +3502,7 @@ export const buildings: Building[] =
   {
     "id": "node_connection_types_h",
     "name": "node/connection_types.h",
+    "path": "src/node/connection_types.h",
     "subsystem": "node",
     "loc": 93,
     "classes": 0,
@@ -3198,6 +3512,7 @@ export const buildings: Building[] =
   {
     "id": "node_context_cpp",
     "name": "node/context.cpp",
+    "path": "src/node/context.cpp",
     "subsystem": "node",
     "loc": 27,
     "classes": 0,
@@ -3207,6 +3522,7 @@ export const buildings: Building[] =
   {
     "id": "node_context_h",
     "name": "node/context.h",
+    "path": "src/node/context.h",
     "subsystem": "node",
     "loc": 98,
     "classes": 23,
@@ -3216,6 +3532,7 @@ export const buildings: Building[] =
   {
     "id": "node_database_args_cpp",
     "name": "node/database_args.cpp",
+    "path": "src/node/database_args.cpp",
     "subsystem": "node",
     "loc": 18,
     "classes": 0,
@@ -3225,6 +3542,7 @@ export const buildings: Building[] =
   {
     "id": "node_database_args_h",
     "name": "node/database_args.h",
+    "path": "src/node/database_args.h",
     "subsystem": "node",
     "loc": 15,
     "classes": 2,
@@ -3234,6 +3552,7 @@ export const buildings: Building[] =
   {
     "id": "node_eviction_cpp",
     "name": "node/eviction.cpp",
+    "path": "src/node/eviction.cpp",
     "subsystem": "node",
     "loc": 240,
     "classes": 1,
@@ -3243,6 +3562,7 @@ export const buildings: Building[] =
   {
     "id": "node_eviction_h",
     "name": "node/eviction.h",
+    "path": "src/node/eviction.h",
     "subsystem": "node",
     "loc": 69,
     "classes": 1,
@@ -3252,6 +3572,7 @@ export const buildings: Building[] =
   {
     "id": "node_interface_ui_cpp",
     "name": "node/interface_ui.cpp",
+    "path": "src/node/interface_ui.cpp",
     "subsystem": "node",
     "loc": 83,
     "classes": 1,
@@ -3261,6 +3582,7 @@ export const buildings: Building[] =
   {
     "id": "node_interface_ui_h",
     "name": "node/interface_ui.h",
+    "path": "src/node/interface_ui.h",
     "subsystem": "node",
     "loc": 124,
     "classes": 4,
@@ -3270,6 +3592,7 @@ export const buildings: Building[] =
   {
     "id": "node_interfaces_cpp",
     "name": "node/interfaces.cpp",
+    "path": "src/node/interfaces.cpp",
     "subsystem": "node",
     "loc": 930,
     "classes": 7,
@@ -3279,6 +3602,7 @@ export const buildings: Building[] =
   {
     "id": "node_kernel_notifications_cpp",
     "name": "node/kernel_notifications.cpp",
+    "path": "src/node/kernel_notifications.cpp",
     "subsystem": "node",
     "loc": 101,
     "classes": 0,
@@ -3288,6 +3612,7 @@ export const buildings: Building[] =
   {
     "id": "node_kernel_notifications_h",
     "name": "node/kernel_notifications.h",
+    "path": "src/node/kernel_notifications.h",
     "subsystem": "node",
     "loc": 65,
     "classes": 6,
@@ -3297,6 +3622,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_args_cpp",
     "name": "node/mempool_args.cpp",
+    "path": "src/node/mempool_args.cpp",
     "subsystem": "node",
     "loc": 106,
     "classes": 0,
@@ -3306,6 +3632,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_args_h",
     "name": "node/mempool_args.h",
+    "path": "src/node/mempool_args.h",
     "subsystem": "node",
     "loc": 27,
     "classes": 4,
@@ -3315,6 +3642,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_persist_cpp",
     "name": "node/mempool_persist.cpp",
+    "path": "src/node/mempool_persist.cpp",
     "subsystem": "node",
     "loc": 221,
     "classes": 0,
@@ -3324,6 +3652,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_persist_h",
     "name": "node/mempool_persist.h",
+    "path": "src/node/mempool_persist.h",
     "subsystem": "node",
     "loc": 34,
     "classes": 3,
@@ -3333,6 +3662,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_persist_args_cpp",
     "name": "node/mempool_persist_args.cpp",
+    "path": "src/node/mempool_persist_args.cpp",
     "subsystem": "node",
     "loc": 23,
     "classes": 0,
@@ -3342,6 +3672,7 @@ export const buildings: Building[] =
   {
     "id": "node_mempool_persist_args_h",
     "name": "node/mempool_persist_args.h",
+    "path": "src/node/mempool_persist_args.h",
     "subsystem": "node",
     "loc": 25,
     "classes": 1,
@@ -3351,6 +3682,7 @@ export const buildings: Building[] =
   {
     "id": "node_miner_cpp",
     "name": "node/miner.cpp",
+    "path": "src/node/miner.cpp",
     "subsystem": "mining",
     "loc": 433,
     "classes": 0,
@@ -3360,6 +3692,7 @@ export const buildings: Building[] =
   {
     "id": "node_miner_h",
     "name": "node/miner.h",
+    "path": "src/node/miner.h",
     "subsystem": "mining",
     "loc": 216,
     "classes": 15,
@@ -3369,6 +3702,7 @@ export const buildings: Building[] =
   {
     "id": "node_mini_miner_cpp",
     "name": "node/mini_miner.cpp",
+    "path": "src/node/mini_miner.cpp",
     "subsystem": "node",
     "loc": 433,
     "classes": 1,
@@ -3378,6 +3712,7 @@ export const buildings: Building[] =
   {
     "id": "node_mini_miner_h",
     "name": "node/mini_miner.h",
+    "path": "src/node/mini_miner.h",
     "subsystem": "node",
     "loc": 172,
     "classes": 5,
@@ -3387,6 +3722,7 @@ export const buildings: Building[] =
   {
     "id": "node_minisketchwrapper_cpp",
     "name": "node/minisketchwrapper.cpp",
+    "path": "src/node/minisketchwrapper.cpp",
     "subsystem": "node",
     "loc": 79,
     "classes": 0,
@@ -3396,6 +3732,7 @@ export const buildings: Building[] =
   {
     "id": "node_minisketchwrapper_h",
     "name": "node/minisketchwrapper.h",
+    "path": "src/node/minisketchwrapper.h",
     "subsystem": "node",
     "loc": 20,
     "classes": 0,
@@ -3405,6 +3742,7 @@ export const buildings: Building[] =
   {
     "id": "node_peerman_args_cpp",
     "name": "node/peerman_args.cpp",
+    "path": "src/node/peerman_args.cpp",
     "subsystem": "node",
     "loc": 29,
     "classes": 0,
@@ -3414,6 +3752,7 @@ export const buildings: Building[] =
   {
     "id": "node_peerman_args_h",
     "name": "node/peerman_args.h",
+    "path": "src/node/peerman_args.h",
     "subsystem": "node",
     "loc": 12,
     "classes": 1,
@@ -3423,6 +3762,7 @@ export const buildings: Building[] =
   {
     "id": "node_protocol_version_h",
     "name": "node/protocol_version.h",
+    "path": "src/node/protocol_version.h",
     "subsystem": "node",
     "loc": 38,
     "classes": 0,
@@ -3432,6 +3772,7 @@ export const buildings: Building[] =
   {
     "id": "node_psbt_cpp",
     "name": "node/psbt.cpp",
+    "path": "src/node/psbt.cpp",
     "subsystem": "node",
     "loc": 151,
     "classes": 0,
@@ -3441,6 +3782,7 @@ export const buildings: Building[] =
   {
     "id": "node_psbt_h",
     "name": "node/psbt.h",
+    "path": "src/node/psbt.h",
     "subsystem": "node",
     "loc": 58,
     "classes": 2,
@@ -3450,6 +3792,7 @@ export const buildings: Building[] =
   {
     "id": "node_timeoffsets_cpp",
     "name": "node/timeoffsets.cpp",
+    "path": "src/node/timeoffsets.cpp",
     "subsystem": "node",
     "loc": 66,
     "classes": 0,
@@ -3459,6 +3802,7 @@ export const buildings: Building[] =
   {
     "id": "node_timeoffsets_h",
     "name": "node/timeoffsets.h",
+    "path": "src/node/timeoffsets.h",
     "subsystem": "node",
     "loc": 49,
     "classes": 2,
@@ -3468,6 +3812,7 @@ export const buildings: Building[] =
   {
     "id": "node_transaction_cpp",
     "name": "node/transaction.cpp",
+    "path": "src/node/transaction.cpp",
     "subsystem": "node",
     "loc": 158,
     "classes": 0,
@@ -3477,6 +3822,7 @@ export const buildings: Building[] =
   {
     "id": "node_transaction_h",
     "name": "node/transaction.h",
+    "path": "src/node/transaction.h",
     "subsystem": "node",
     "loc": 69,
     "classes": 5,
@@ -3486,6 +3832,7 @@ export const buildings: Building[] =
   {
     "id": "node_txreconciliation_cpp",
     "name": "node/txreconciliation.cpp",
+    "path": "src/node/txreconciliation.cpp",
     "subsystem": "node",
     "loc": 170,
     "classes": 1,
@@ -3495,6 +3842,7 @@ export const buildings: Building[] =
   {
     "id": "node_txreconciliation_h",
     "name": "node/txreconciliation.h",
+    "path": "src/node/txreconciliation.h",
     "subsystem": "node",
     "loc": 89,
     "classes": 1,
@@ -3504,6 +3852,7 @@ export const buildings: Building[] =
   {
     "id": "node_types_h",
     "name": "node/types.h",
+    "path": "src/node/types.h",
     "subsystem": "node",
     "loc": 49,
     "classes": 1,
@@ -3513,6 +3862,7 @@ export const buildings: Building[] =
   {
     "id": "node_utxo_snapshot_cpp",
     "name": "node/utxo_snapshot.cpp",
+    "path": "src/node/utxo_snapshot.cpp",
     "subsystem": "node",
     "loc": 97,
     "classes": 0,
@@ -3522,6 +3872,7 @@ export const buildings: Building[] =
   {
     "id": "node_utxo_snapshot_h",
     "name": "node/utxo_snapshot.h",
+    "path": "src/node/utxo_snapshot.h",
     "subsystem": "node",
     "loc": 132,
     "classes": 2,
@@ -3531,6 +3882,7 @@ export const buildings: Building[] =
   {
     "id": "node_warnings_cpp",
     "name": "node/warnings.cpp",
+    "path": "src/node/warnings.cpp",
     "subsystem": "node",
     "loc": 67,
     "classes": 0,
@@ -3540,6 +3892,7 @@ export const buildings: Building[] =
   {
     "id": "node_warnings_h",
     "name": "node/warnings.h",
+    "path": "src/node/warnings.h",
     "subsystem": "node",
     "loc": 90,
     "classes": 2,
@@ -3549,6 +3902,7 @@ export const buildings: Building[] =
   {
     "id": "noui_cpp",
     "name": "noui.cpp",
+    "path": "src/noui.cpp",
     "subsystem": "init",
     "loc": 100,
     "classes": 0,
@@ -3558,6 +3912,7 @@ export const buildings: Building[] =
   {
     "id": "noui_h",
     "name": "noui.h",
+    "path": "src/noui.h",
     "subsystem": "init",
     "loc": 28,
     "classes": 1,
@@ -3567,6 +3922,7 @@ export const buildings: Building[] =
   {
     "id": "obj_build_h",
     "name": "obj/build.h",
+    "path": "src/obj/build.h",
     "subsystem": "other",
     "loc": 1,
     "classes": 0,
@@ -3576,6 +3932,7 @@ export const buildings: Building[] =
   {
     "id": "outputtype_cpp",
     "name": "outputtype.cpp",
+    "path": "src/outputtype.cpp",
     "subsystem": "other",
     "loc": 124,
     "classes": 0,
@@ -3585,6 +3942,7 @@ export const buildings: Building[] =
   {
     "id": "outputtype_h",
     "name": "outputtype.h",
+    "path": "src/outputtype.h",
     "subsystem": "other",
     "loc": 54,
     "classes": 0,
@@ -3594,6 +3952,7 @@ export const buildings: Building[] =
   {
     "id": "policy_feerate_cpp",
     "name": "policy/feerate.cpp",
+    "path": "src/policy/feerate.cpp",
     "subsystem": "mempool",
     "loc": 45,
     "classes": 0,
@@ -3603,6 +3962,7 @@ export const buildings: Building[] =
   {
     "id": "policy_feerate_h",
     "name": "policy/feerate.h",
+    "path": "src/policy/feerate.h",
     "subsystem": "mempool",
     "loc": 76,
     "classes": 1,
@@ -3612,6 +3972,7 @@ export const buildings: Building[] =
   {
     "id": "policy_fees_cpp",
     "name": "policy/fees.cpp",
+    "path": "src/policy/fees.cpp",
     "subsystem": "mempool",
     "loc": 1102,
     "classes": 2,
@@ -3621,6 +3982,7 @@ export const buildings: Building[] =
   {
     "id": "policy_fees_h",
     "name": "policy/fees.h",
+    "path": "src/policy/fees.h",
     "subsystem": "mempool",
     "loc": 345,
     "classes": 9,
@@ -3630,6 +3992,7 @@ export const buildings: Building[] =
   {
     "id": "policy_fees_args_cpp",
     "name": "policy/fees_args.cpp",
+    "path": "src/policy/fees_args.cpp",
     "subsystem": "mempool",
     "loc": 16,
     "classes": 0,
@@ -3639,6 +4002,7 @@ export const buildings: Building[] =
   {
     "id": "policy_fees_args_h",
     "name": "policy/fees_args.h",
+    "path": "src/policy/fees_args.h",
     "subsystem": "mempool",
     "loc": 15,
     "classes": 1,
@@ -3648,6 +4012,7 @@ export const buildings: Building[] =
   {
     "id": "policy_packages_cpp",
     "name": "policy/packages.cpp",
+    "path": "src/policy/packages.cpp",
     "subsystem": "mempool",
     "loc": 170,
     "classes": 0,
@@ -3657,6 +4022,7 @@ export const buildings: Building[] =
   {
     "id": "policy_packages_h",
     "name": "policy/packages.h",
+    "path": "src/policy/packages.h",
     "subsystem": "mempool",
     "loc": 96,
     "classes": 1,
@@ -3666,6 +4032,7 @@ export const buildings: Building[] =
   {
     "id": "policy_policy_cpp",
     "name": "policy/policy.cpp",
+    "path": "src/policy/policy.cpp",
     "subsystem": "mempool",
     "loc": 313,
     "classes": 0,
@@ -3675,6 +4042,7 @@ export const buildings: Building[] =
   {
     "id": "policy_policy_h",
     "name": "policy/policy.h",
+    "path": "src/policy/policy.h",
     "subsystem": "mempool",
     "loc": 171,
     "classes": 3,
@@ -3684,6 +4052,7 @@ export const buildings: Building[] =
   {
     "id": "policy_rbf_cpp",
     "name": "policy/rbf.cpp",
+    "path": "src/policy/rbf.cpp",
     "subsystem": "mempool",
     "loc": 204,
     "classes": 0,
@@ -3693,6 +4062,7 @@ export const buildings: Building[] =
   {
     "id": "policy_rbf_h",
     "name": "policy/rbf.h",
+    "path": "src/policy/rbf.h",
     "subsystem": "mempool",
     "loc": 135,
     "classes": 2,
@@ -3702,6 +4072,7 @@ export const buildings: Building[] =
   {
     "id": "policy_settings_cpp",
     "name": "policy/settings.cpp",
+    "path": "src/policy/settings.cpp",
     "subsystem": "mempool",
     "loc": 10,
     "classes": 0,
@@ -3711,6 +4082,7 @@ export const buildings: Building[] =
   {
     "id": "policy_settings_h",
     "name": "policy/settings.h",
+    "path": "src/policy/settings.h",
     "subsystem": "mempool",
     "loc": 11,
     "classes": 0,
@@ -3720,6 +4092,7 @@ export const buildings: Building[] =
   {
     "id": "policy_truc_policy_cpp",
     "name": "policy/truc_policy.cpp",
+    "path": "src/policy/truc_policy.cpp",
     "subsystem": "mempool",
     "loc": 243,
     "classes": 1,
@@ -3729,6 +4102,7 @@ export const buildings: Building[] =
   {
     "id": "policy_truc_policy_h",
     "name": "policy/truc_policy.h",
+    "path": "src/policy/truc_policy.h",
     "subsystem": "mempool",
     "loc": 94,
     "classes": 0,
@@ -3738,6 +4112,7 @@ export const buildings: Building[] =
   {
     "id": "pow_cpp",
     "name": "pow.cpp",
+    "path": "src/pow.cpp",
     "subsystem": "consensus",
     "loc": 154,
     "classes": 0,
@@ -3747,6 +4122,7 @@ export const buildings: Building[] =
   {
     "id": "pow_h",
     "name": "pow.h",
+    "path": "src/pow.h",
     "subsystem": "consensus",
     "loc": 37,
     "classes": 3,
@@ -3756,6 +4132,7 @@ export const buildings: Building[] =
   {
     "id": "prevector_h",
     "name": "prevector.h",
+    "path": "src/prevector.h",
     "subsystem": "other",
     "loc": 541,
     "classes": 1,
@@ -3765,6 +4142,7 @@ export const buildings: Building[] =
   {
     "id": "primitives_block_cpp",
     "name": "primitives/block.cpp",
+    "path": "src/primitives/block.cpp",
     "subsystem": "primitives",
     "loc": 30,
     "classes": 0,
@@ -3774,6 +4152,7 @@ export const buildings: Building[] =
   {
     "id": "primitives_block_h",
     "name": "primitives/block.h",
+    "path": "src/primitives/block.h",
     "subsystem": "primitives",
     "loc": 158,
     "classes": 3,
@@ -3783,6 +4162,7 @@ export const buildings: Building[] =
   {
     "id": "primitives_transaction_cpp",
     "name": "primitives/transaction.cpp",
+    "path": "src/primitives/transaction.cpp",
     "subsystem": "primitives",
     "loc": 131,
     "classes": 0,
@@ -3792,6 +4172,7 @@ export const buildings: Building[] =
   {
     "id": "primitives_transaction_h",
     "name": "primitives/transaction.h",
+    "path": "src/primitives/transaction.h",
     "subsystem": "primitives",
     "loc": 442,
     "classes": 8,
@@ -3801,6 +4182,7 @@ export const buildings: Building[] =
   {
     "id": "protocol_cpp",
     "name": "protocol.cpp",
+    "path": "src/protocol.cpp",
     "subsystem": "other",
     "loc": 125,
     "classes": 0,
@@ -3810,6 +4192,7 @@ export const buildings: Building[] =
   {
     "id": "protocol_h",
     "name": "protocol.h",
+    "path": "src/protocol.h",
     "subsystem": "other",
     "loc": 531,
     "classes": 3,
@@ -3819,6 +4202,7 @@ export const buildings: Building[] =
   {
     "id": "psbt_cpp",
     "name": "psbt.cpp",
+    "path": "src/psbt.cpp",
     "subsystem": "other",
     "loc": 568,
     "classes": 0,
@@ -3828,6 +4212,7 @@ export const buildings: Building[] =
   {
     "id": "psbt_h",
     "name": "psbt.h",
+    "path": "src/psbt.h",
     "subsystem": "other",
     "loc": 1284,
     "classes": 4,
@@ -3837,6 +4222,7 @@ export const buildings: Building[] =
   {
     "id": "pubkey_cpp",
     "name": "pubkey.cpp",
+    "path": "src/pubkey.cpp",
     "subsystem": "crypto",
     "loc": 423,
     "classes": 1,
@@ -3846,6 +4232,7 @@ export const buildings: Building[] =
   {
     "id": "pubkey_h",
     "name": "pubkey.h",
+    "path": "src/pubkey.h",
     "subsystem": "crypto",
     "loc": 381,
     "classes": 5,
@@ -3855,6 +4242,7 @@ export const buildings: Building[] =
   {
     "id": "qt_addressbookpage_cpp",
     "name": "qt/addressbookpage.cpp",
+    "path": "src/qt/addressbookpage.cpp",
     "subsystem": "gui",
     "loc": 330,
     "classes": 1,
@@ -3864,6 +4252,7 @@ export const buildings: Building[] =
   {
     "id": "qt_addressbookpage_h",
     "name": "qt/addressbookpage.h",
+    "path": "src/qt/addressbookpage.h",
     "subsystem": "gui",
     "loc": 86,
     "classes": 6,
@@ -3873,6 +4262,7 @@ export const buildings: Building[] =
   {
     "id": "qt_addresstablemodel_cpp",
     "name": "qt/addresstablemodel.cpp",
+    "path": "src/qt/addresstablemodel.cpp",
     "subsystem": "gui",
     "loc": 456,
     "classes": 3,
@@ -3882,6 +4272,7 @@ export const buildings: Building[] =
   {
     "id": "qt_addresstablemodel_h",
     "name": "qt/addresstablemodel.h",
+    "path": "src/qt/addresstablemodel.h",
     "subsystem": "gui",
     "loc": 112,
     "classes": 4,
@@ -3891,6 +4282,7 @@ export const buildings: Building[] =
   {
     "id": "qt_askpassphrasedialog_cpp",
     "name": "qt/askpassphrasedialog.cpp",
+    "path": "src/qt/askpassphrasedialog.cpp",
     "subsystem": "gui",
     "loc": 307,
     "classes": 0,
@@ -3900,6 +4292,7 @@ export const buildings: Building[] =
   {
     "id": "qt_askpassphrasedialog_h",
     "name": "qt/askpassphrasedialog.h",
+    "path": "src/qt/askpassphrasedialog.h",
     "subsystem": "gui",
     "loc": 56,
     "classes": 3,
@@ -3909,6 +4302,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bantablemodel_cpp",
     "name": "qt/bantablemodel.cpp",
+    "path": "src/qt/bantablemodel.cpp",
     "subsystem": "gui",
     "loc": 186,
     "classes": 1,
@@ -3918,6 +4312,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bantablemodel_h",
     "name": "qt/bantablemodel.h",
+    "path": "src/qt/bantablemodel.h",
     "subsystem": "gui",
     "loc": 82,
     "classes": 5,
@@ -3927,6 +4322,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoin_cpp",
     "name": "qt/bitcoin.cpp",
+    "path": "src/qt/bitcoin.cpp",
     "subsystem": "gui",
     "loc": 719,
     "classes": 0,
@@ -3936,6 +4332,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoin_h",
     "name": "qt/bitcoin.h",
+    "path": "src/qt/bitcoin.h",
     "subsystem": "gui",
     "loc": 112,
     "classes": 11,
@@ -3945,6 +4342,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinaddressvalidator_cpp",
     "name": "qt/bitcoinaddressvalidator.cpp",
+    "path": "src/qt/bitcoinaddressvalidator.cpp",
     "subsystem": "gui",
     "loc": 97,
     "classes": 0,
@@ -3954,6 +4352,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinaddressvalidator_h",
     "name": "qt/bitcoinaddressvalidator.h",
+    "path": "src/qt/bitcoinaddressvalidator.h",
     "subsystem": "gui",
     "loc": 35,
     "classes": 2,
@@ -3963,6 +4362,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinamountfield_cpp",
     "name": "qt/bitcoinamountfield.cpp",
+    "path": "src/qt/bitcoinamountfield.cpp",
     "subsystem": "gui",
     "loc": 343,
     "classes": 0,
@@ -3972,6 +4372,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinamountfield_h",
     "name": "qt/bitcoinamountfield.h",
+    "path": "src/qt/bitcoinamountfield.h",
     "subsystem": "gui",
     "loc": 85,
     "classes": 1,
@@ -3981,6 +4382,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoingui_cpp",
     "name": "qt/bitcoingui.cpp",
+    "path": "src/qt/bitcoingui.cpp",
     "subsystem": "gui",
     "loc": 1683,
     "classes": 0,
@@ -3990,6 +4392,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoingui_h",
     "name": "qt/bitcoingui.h",
+    "path": "src/qt/bitcoingui.h",
     "subsystem": "gui",
     "loc": 356,
     "classes": 21,
@@ -3999,6 +4402,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinstrings_cpp",
     "name": "qt/bitcoinstrings.cpp",
+    "path": "src/qt/bitcoinstrings.cpp",
     "subsystem": "gui",
     "loc": 438,
     "classes": 0,
@@ -4008,6 +4412,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinunits_cpp",
     "name": "qt/bitcoinunits.cpp",
+    "path": "src/qt/bitcoinunits.cpp",
     "subsystem": "gui",
     "loc": 266,
     "classes": 0,
@@ -4017,6 +4422,7 @@ export const buildings: Building[] =
   {
     "id": "qt_bitcoinunits_h",
     "name": "qt/bitcoinunits.h",
+    "path": "src/qt/bitcoinunits.h",
     "subsystem": "gui",
     "loc": 116,
     "classes": 1,
@@ -4026,6 +4432,7 @@ export const buildings: Building[] =
   {
     "id": "qt_clientmodel_cpp",
     "name": "qt/clientmodel.cpp",
+    "path": "src/qt/clientmodel.cpp",
     "subsystem": "gui",
     "loc": 296,
     "classes": 0,
@@ -4035,6 +4442,7 @@ export const buildings: Building[] =
   {
     "id": "qt_clientmodel_h",
     "name": "qt/clientmodel.h",
+    "path": "src/qt/clientmodel.h",
     "subsystem": "gui",
     "loc": 132,
     "classes": 10,
@@ -4044,6 +4452,7 @@ export const buildings: Building[] =
   {
     "id": "qt_coincontroldialog_cpp",
     "name": "qt/coincontroldialog.cpp",
+    "path": "src/qt/coincontroldialog.cpp",
     "subsystem": "gui",
     "loc": 682,
     "classes": 0,
@@ -4053,6 +4462,7 @@ export const buildings: Building[] =
   {
     "id": "qt_coincontroldialog_h",
     "name": "qt/coincontroldialog.h",
+    "path": "src/qt/coincontroldialog.h",
     "subsystem": "gui",
     "loc": 118,
     "classes": 6,
@@ -4062,6 +4472,7 @@ export const buildings: Building[] =
   {
     "id": "qt_coincontroltreewidget_cpp",
     "name": "qt/coincontroltreewidget.cpp",
+    "path": "src/qt/coincontroltreewidget.cpp",
     "subsystem": "gui",
     "loc": 34,
     "classes": 0,
@@ -4071,6 +4482,7 @@ export const buildings: Building[] =
   {
     "id": "qt_coincontroltreewidget_h",
     "name": "qt/coincontroltreewidget.h",
+    "path": "src/qt/coincontroltreewidget.h",
     "subsystem": "gui",
     "loc": 22,
     "classes": 1,
@@ -4080,6 +4492,7 @@ export const buildings: Building[] =
   {
     "id": "qt_createwalletdialog_cpp",
     "name": "qt/createwalletdialog.cpp",
+    "path": "src/qt/createwalletdialog.cpp",
     "subsystem": "gui",
     "loc": 144,
     "classes": 0,
@@ -4089,6 +4502,7 @@ export const buildings: Building[] =
   {
     "id": "qt_createwalletdialog_h",
     "name": "qt/createwalletdialog.h",
+    "path": "src/qt/createwalletdialog.h",
     "subsystem": "gui",
     "loc": 45,
     "classes": 4,
@@ -4098,6 +4512,7 @@ export const buildings: Building[] =
   {
     "id": "qt_csvmodelwriter_cpp",
     "name": "qt/csvmodelwriter.cpp",
+    "path": "src/qt/csvmodelwriter.cpp",
     "subsystem": "gui",
     "loc": 91,
     "classes": 0,
@@ -4107,6 +4522,7 @@ export const buildings: Building[] =
   {
     "id": "qt_csvmodelwriter_h",
     "name": "qt/csvmodelwriter.h",
+    "path": "src/qt/csvmodelwriter.h",
     "subsystem": "gui",
     "loc": 46,
     "classes": 0,
@@ -4116,6 +4532,7 @@ export const buildings: Building[] =
   {
     "id": "qt_editaddressdialog_cpp",
     "name": "qt/editaddressdialog.cpp",
+    "path": "src/qt/editaddressdialog.cpp",
     "subsystem": "gui",
     "loc": 166,
     "classes": 0,
@@ -4125,6 +4542,7 @@ export const buildings: Building[] =
   {
     "id": "qt_editaddressdialog_h",
     "name": "qt/editaddressdialog.h",
+    "path": "src/qt/editaddressdialog.h",
     "subsystem": "gui",
     "loc": 59,
     "classes": 2,
@@ -4134,6 +4552,7 @@ export const buildings: Building[] =
   {
     "id": "qt_guiconstants_h",
     "name": "qt/guiconstants.h",
+    "path": "src/qt/guiconstants.h",
     "subsystem": "gui",
     "loc": 63,
     "classes": 0,
@@ -4143,6 +4562,7 @@ export const buildings: Building[] =
   {
     "id": "qt_guiutil_cpp",
     "name": "qt/guiutil.cpp",
+    "path": "src/qt/guiutil.cpp",
     "subsystem": "gui",
     "loc": 1020,
     "classes": 0,
@@ -4152,6 +4572,7 @@ export const buildings: Building[] =
   {
     "id": "qt_guiutil_h",
     "name": "qt/guiutil.h",
+    "path": "src/qt/guiutil.h",
     "subsystem": "gui",
     "loc": 444,
     "classes": 16,
@@ -4161,6 +4582,7 @@ export const buildings: Building[] =
   {
     "id": "qt_initexecutor_cpp",
     "name": "qt/initexecutor.cpp",
+    "path": "src/qt/initexecutor.cpp",
     "subsystem": "gui",
     "loc": 71,
     "classes": 0,
@@ -4170,6 +4592,7 @@ export const buildings: Building[] =
   {
     "id": "qt_initexecutor_h",
     "name": "qt/initexecutor.h",
+    "path": "src/qt/initexecutor.h",
     "subsystem": "gui",
     "loc": 47,
     "classes": 0,
@@ -4179,6 +4602,7 @@ export const buildings: Building[] =
   {
     "id": "qt_intro_cpp",
     "name": "qt/intro.cpp",
+    "path": "src/qt/intro.cpp",
     "subsystem": "gui",
     "loc": 397,
     "classes": 1,
@@ -4188,6 +4612,7 @@ export const buildings: Building[] =
   {
     "id": "qt_intro_h",
     "name": "qt/intro.h",
+    "path": "src/qt/intro.h",
     "subsystem": "gui",
     "loc": 88,
     "classes": 4,
@@ -4197,6 +4622,7 @@ export const buildings: Building[] =
   {
     "id": "qt_macdockiconhandler_h",
     "name": "qt/macdockiconhandler.h",
+    "path": "src/qt/macdockiconhandler.h",
     "subsystem": "gui",
     "loc": 27,
     "classes": 1,
@@ -4206,6 +4632,7 @@ export const buildings: Building[] =
   {
     "id": "qt_macnotificationhandler_h",
     "name": "qt/macnotificationhandler.h",
+    "path": "src/qt/macnotificationhandler.h",
     "subsystem": "gui",
     "loc": 27,
     "classes": 1,
@@ -4215,6 +4642,7 @@ export const buildings: Building[] =
   {
     "id": "qt_macos_appnap_h",
     "name": "qt/macos_appnap.h",
+    "path": "src/qt/macos_appnap.h",
     "subsystem": "gui",
     "loc": 24,
     "classes": 1,
@@ -4224,6 +4652,7 @@ export const buildings: Building[] =
   {
     "id": "qt_main_cpp",
     "name": "qt/main.cpp",
+    "path": "src/qt/main.cpp",
     "subsystem": "gui",
     "loc": 25,
     "classes": 0,
@@ -4233,6 +4662,7 @@ export const buildings: Building[] =
   {
     "id": "qt_modaloverlay_cpp",
     "name": "qt/modaloverlay.cpp",
+    "path": "src/qt/modaloverlay.cpp",
     "subsystem": "gui",
     "loc": 206,
     "classes": 0,
@@ -4242,6 +4672,7 @@ export const buildings: Building[] =
   {
     "id": "qt_modaloverlay_h",
     "name": "qt/modaloverlay.h",
+    "path": "src/qt/modaloverlay.h",
     "subsystem": "gui",
     "loc": 58,
     "classes": 2,
@@ -4251,6 +4682,7 @@ export const buildings: Building[] =
   {
     "id": "qt_networkstyle_cpp",
     "name": "qt/networkstyle.cpp",
+    "path": "src/qt/networkstyle.cpp",
     "subsystem": "gui",
     "loc": 94,
     "classes": 0,
@@ -4260,6 +4692,7 @@ export const buildings: Building[] =
   {
     "id": "qt_networkstyle_h",
     "name": "qt/networkstyle.h",
+    "path": "src/qt/networkstyle.h",
     "subsystem": "gui",
     "loc": 35,
     "classes": 1,
@@ -4269,6 +4702,7 @@ export const buildings: Building[] =
   {
     "id": "qt_notificator_cpp",
     "name": "qt/notificator.cpp",
+    "path": "src/qt/notificator.cpp",
     "subsystem": "gui",
     "loc": 244,
     "classes": 1,
@@ -4278,6 +4712,7 @@ export const buildings: Building[] =
   {
     "id": "qt_notificator_h",
     "name": "qt/notificator.h",
+    "path": "src/qt/notificator.h",
     "subsystem": "gui",
     "loc": 75,
     "classes": 1,
@@ -4287,6 +4722,7 @@ export const buildings: Building[] =
   {
     "id": "qt_openuridialog_cpp",
     "name": "qt/openuridialog.cpp",
+    "path": "src/qt/openuridialog.cpp",
     "subsystem": "gui",
     "loc": 55,
     "classes": 0,
@@ -4296,6 +4732,7 @@ export const buildings: Building[] =
   {
     "id": "qt_openuridialog_h",
     "name": "qt/openuridialog.h",
+    "path": "src/qt/openuridialog.h",
     "subsystem": "gui",
     "loc": 36,
     "classes": 3,
@@ -4305,6 +4742,7 @@ export const buildings: Building[] =
   {
     "id": "qt_optionsdialog_cpp",
     "name": "qt/optionsdialog.cpp",
+    "path": "src/qt/optionsdialog.cpp",
     "subsystem": "gui",
     "loc": 496,
     "classes": 0,
@@ -4314,6 +4752,7 @@ export const buildings: Building[] =
   {
     "id": "qt_optionsdialog_h",
     "name": "qt/optionsdialog.h",
+    "path": "src/qt/optionsdialog.h",
     "subsystem": "gui",
     "loc": 82,
     "classes": 5,
@@ -4323,6 +4762,7 @@ export const buildings: Building[] =
   {
     "id": "qt_optionsmodel_cpp",
     "name": "qt/optionsmodel.cpp",
+    "path": "src/qt/optionsmodel.cpp",
     "subsystem": "gui",
     "loc": 809,
     "classes": 1,
@@ -4332,6 +4772,7 @@ export const buildings: Building[] =
   {
     "id": "qt_optionsmodel_h",
     "name": "qt/optionsmodel.h",
+    "path": "src/qt/optionsmodel.h",
     "subsystem": "gui",
     "loc": 160,
     "classes": 3,
@@ -4341,6 +4782,7 @@ export const buildings: Building[] =
   {
     "id": "qt_overviewpage_cpp",
     "name": "qt/overviewpage.cpp",
+    "path": "src/qt/overviewpage.cpp",
     "subsystem": "gui",
     "loc": 353,
     "classes": 0,
@@ -4350,6 +4792,7 @@ export const buildings: Building[] =
   {
     "id": "qt_overviewpage_h",
     "name": "qt/overviewpage.h",
+    "path": "src/qt/overviewpage.h",
     "subsystem": "gui",
     "loc": 71,
     "classes": 6,
@@ -4359,6 +4802,7 @@ export const buildings: Building[] =
   {
     "id": "qt_paymentserver_cpp",
     "name": "qt/paymentserver.cpp",
+    "path": "src/qt/paymentserver.cpp",
     "subsystem": "gui",
     "loc": 264,
     "classes": 0,
@@ -4368,6 +4812,7 @@ export const buildings: Building[] =
   {
     "id": "qt_paymentserver_h",
     "name": "qt/paymentserver.h",
+    "path": "src/qt/paymentserver.h",
     "subsystem": "gui",
     "loc": 107,
     "classes": 6,
@@ -4377,6 +4822,7 @@ export const buildings: Building[] =
   {
     "id": "qt_peertablemodel_cpp",
     "name": "qt/peertablemodel.cpp",
+    "path": "src/qt/peertablemodel.cpp",
     "subsystem": "gui",
     "loc": 190,
     "classes": 0,
@@ -4386,6 +4832,7 @@ export const buildings: Building[] =
   {
     "id": "qt_peertablemodel_h",
     "name": "qt/peertablemodel.h",
+    "path": "src/qt/peertablemodel.h",
     "subsystem": "gui",
     "loc": 116,
     "classes": 3,
@@ -4395,6 +4842,7 @@ export const buildings: Building[] =
   {
     "id": "qt_peertablesortproxy_cpp",
     "name": "qt/peertablesortproxy.cpp",
+    "path": "src/qt/peertablesortproxy.cpp",
     "subsystem": "gui",
     "loc": 47,
     "classes": 0,
@@ -4404,6 +4852,7 @@ export const buildings: Building[] =
   {
     "id": "qt_peertablesortproxy_h",
     "name": "qt/peertablesortproxy.h",
+    "path": "src/qt/peertablesortproxy.h",
     "subsystem": "gui",
     "loc": 25,
     "classes": 0,
@@ -4413,6 +4862,7 @@ export const buildings: Building[] =
   {
     "id": "qt_platformstyle_cpp",
     "name": "qt/platformstyle.cpp",
+    "path": "src/qt/platformstyle.cpp",
     "subsystem": "gui",
     "loc": 137,
     "classes": 0,
@@ -4422,6 +4872,7 @@ export const buildings: Building[] =
   {
     "id": "qt_platformstyle_h",
     "name": "qt/platformstyle.h",
+    "path": "src/qt/platformstyle.h",
     "subsystem": "gui",
     "loc": 49,
     "classes": 1,
@@ -4431,6 +4882,7 @@ export const buildings: Building[] =
   {
     "id": "qt_psbtoperationsdialog_cpp",
     "name": "qt/psbtoperationsdialog.cpp",
+    "path": "src/qt/psbtoperationsdialog.cpp",
     "subsystem": "gui",
     "loc": 297,
     "classes": 0,
@@ -4440,6 +4892,7 @@ export const buildings: Building[] =
   {
     "id": "qt_psbtoperationsdialog_h",
     "name": "qt/psbtoperationsdialog.h",
+    "path": "src/qt/psbtoperationsdialog.h",
     "subsystem": "gui",
     "loc": 55,
     "classes": 2,
@@ -4449,6 +4902,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qrimagewidget_cpp",
     "name": "qt/qrimagewidget.cpp",
+    "path": "src/qt/qrimagewidget.cpp",
     "subsystem": "gui",
     "loc": 140,
     "classes": 0,
@@ -4458,6 +4912,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qrimagewidget_h",
     "name": "qt/qrimagewidget.h",
+    "path": "src/qt/qrimagewidget.h",
     "subsystem": "gui",
     "loc": 47,
     "classes": 0,
@@ -4467,6 +4922,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qvalidatedlineedit_cpp",
     "name": "qt/qvalidatedlineedit.cpp",
+    "path": "src/qt/qvalidatedlineedit.cpp",
     "subsystem": "gui",
     "loc": 128,
     "classes": 0,
@@ -4476,6 +4932,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qvalidatedlineedit_h",
     "name": "qt/qvalidatedlineedit.h",
+    "path": "src/qt/qvalidatedlineedit.h",
     "subsystem": "gui",
     "loc": 44,
     "classes": 1,
@@ -4485,6 +4942,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qvaluecombobox_cpp",
     "name": "qt/qvaluecombobox.cpp",
+    "path": "src/qt/qvaluecombobox.cpp",
     "subsystem": "gui",
     "loc": 31,
     "classes": 0,
@@ -4494,6 +4952,7 @@ export const buildings: Building[] =
   {
     "id": "qt_qvaluecombobox_h",
     "name": "qt/qvaluecombobox.h",
+    "path": "src/qt/qvaluecombobox.h",
     "subsystem": "gui",
     "loc": 37,
     "classes": 1,
@@ -4503,6 +4962,7 @@ export const buildings: Building[] =
   {
     "id": "qt_receivecoinsdialog_cpp",
     "name": "qt/receivecoinsdialog.cpp",
+    "path": "src/qt/receivecoinsdialog.cpp",
     "subsystem": "gui",
     "loc": 315,
     "classes": 0,
@@ -4512,6 +4972,7 @@ export const buildings: Building[] =
   {
     "id": "qt_receivecoinsdialog_h",
     "name": "qt/receivecoinsdialog.h",
+    "path": "src/qt/receivecoinsdialog.h",
     "subsystem": "gui",
     "loc": 79,
     "classes": 3,
@@ -4521,6 +4982,7 @@ export const buildings: Building[] =
   {
     "id": "qt_receiverequestdialog_cpp",
     "name": "qt/receiverequestdialog.cpp",
+    "path": "src/qt/receiverequestdialog.cpp",
     "subsystem": "gui",
     "loc": 111,
     "classes": 0,
@@ -4530,6 +4992,7 @@ export const buildings: Building[] =
   {
     "id": "qt_receiverequestdialog_h",
     "name": "qt/receiverequestdialog.h",
+    "path": "src/qt/receiverequestdialog.h",
     "subsystem": "gui",
     "loc": 40,
     "classes": 3,
@@ -4539,6 +5002,7 @@ export const buildings: Building[] =
   {
     "id": "qt_recentrequeststablemodel_cpp",
     "name": "qt/recentrequeststablemodel.cpp",
+    "path": "src/qt/recentrequeststablemodel.cpp",
     "subsystem": "gui",
     "loc": 246,
     "classes": 0,
@@ -4548,6 +5012,7 @@ export const buildings: Building[] =
   {
     "id": "qt_recentrequeststablemodel_h",
     "name": "qt/recentrequeststablemodel.h",
+    "path": "src/qt/recentrequeststablemodel.h",
     "subsystem": "gui",
     "loc": 101,
     "classes": 4,
@@ -4557,6 +5022,7 @@ export const buildings: Building[] =
   {
     "id": "qt_rpcconsole_cpp",
     "name": "qt/rpcconsole.cpp",
+    "path": "src/qt/rpcconsole.cpp",
     "subsystem": "gui",
     "loc": 1418,
     "classes": 4,
@@ -4566,6 +5032,7 @@ export const buildings: Building[] =
   {
     "id": "qt_rpcconsole_h",
     "name": "qt/rpcconsole.h",
+    "path": "src/qt/rpcconsole.h",
     "subsystem": "gui",
     "loc": 196,
     "classes": 8,
@@ -4575,6 +5042,7 @@ export const buildings: Building[] =
   {
     "id": "qt_sendcoinsdialog_cpp",
     "name": "qt/sendcoinsdialog.cpp",
+    "path": "src/qt/sendcoinsdialog.cpp",
     "subsystem": "gui",
     "loc": 1115,
     "classes": 0,
@@ -4584,6 +5052,7 @@ export const buildings: Building[] =
   {
     "id": "qt_sendcoinsdialog_h",
     "name": "qt/sendcoinsdialog.h",
+    "path": "src/qt/sendcoinsdialog.h",
     "subsystem": "gui",
     "loc": 151,
     "classes": 6,
@@ -4593,6 +5062,7 @@ export const buildings: Building[] =
   {
     "id": "qt_sendcoinsentry_cpp",
     "name": "qt/sendcoinsentry.cpp",
+    "path": "src/qt/sendcoinsentry.cpp",
     "subsystem": "gui",
     "loc": 240,
     "classes": 0,
@@ -4602,6 +5072,7 @@ export const buildings: Building[] =
   {
     "id": "qt_sendcoinsentry_h",
     "name": "qt/sendcoinsentry.h",
+    "path": "src/qt/sendcoinsentry.h",
     "subsystem": "gui",
     "loc": 82,
     "classes": 5,
@@ -4611,6 +5082,7 @@ export const buildings: Building[] =
   {
     "id": "qt_sendcoinsrecipient_h",
     "name": "qt/sendcoinsrecipient.h",
+    "path": "src/qt/sendcoinsrecipient.h",
     "subsystem": "gui",
     "loc": 61,
     "classes": 1,
@@ -4620,6 +5092,7 @@ export const buildings: Building[] =
   {
     "id": "qt_signverifymessagedialog_cpp",
     "name": "qt/signverifymessagedialog.cpp",
+    "path": "src/qt/signverifymessagedialog.cpp",
     "subsystem": "gui",
     "loc": 298,
     "classes": 0,
@@ -4629,6 +5102,7 @@ export const buildings: Building[] =
   {
     "id": "qt_signverifymessagedialog_h",
     "name": "qt/signverifymessagedialog.h",
+    "path": "src/qt/signverifymessagedialog.h",
     "subsystem": "gui",
     "loc": 54,
     "classes": 4,
@@ -4638,6 +5112,7 @@ export const buildings: Building[] =
   {
     "id": "qt_splashscreen_cpp",
     "name": "qt/splashscreen.cpp",
+    "path": "src/qt/splashscreen.cpp",
     "subsystem": "gui",
     "loc": 232,
     "classes": 0,
@@ -4647,6 +5122,7 @@ export const buildings: Building[] =
   {
     "id": "qt_splashscreen_h",
     "name": "qt/splashscreen.h",
+    "path": "src/qt/splashscreen.h",
     "subsystem": "gui",
     "loc": 72,
     "classes": 5,
@@ -4656,6 +5132,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_addressbooktests_cpp",
     "name": "qt/test/addressbooktests.cpp",
+    "path": "src/qt/test/addressbooktests.cpp",
     "subsystem": "gui",
     "loc": 231,
     "classes": 0,
@@ -4665,6 +5142,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_addressbooktests_h",
     "name": "qt/test/addressbooktests.h",
+    "path": "src/qt/test/addressbooktests.h",
     "subsystem": "gui",
     "loc": 27,
     "classes": 2,
@@ -4674,6 +5152,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_apptests_cpp",
     "name": "qt/test/apptests.cpp",
+    "path": "src/qt/test/apptests.cpp",
     "subsystem": "gui",
     "loc": 114,
     "classes": 0,
@@ -4683,6 +5162,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_apptests_h",
     "name": "qt/test/apptests.h",
+    "path": "src/qt/test/apptests.h",
     "subsystem": "gui",
     "loc": 50,
     "classes": 4,
@@ -4692,6 +5172,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_optiontests_cpp",
     "name": "qt/test/optiontests.cpp",
+    "path": "src/qt/test/optiontests.cpp",
     "subsystem": "gui",
     "loc": 151,
     "classes": 0,
@@ -4701,6 +5182,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_optiontests_h",
     "name": "qt/test/optiontests.h",
+    "path": "src/qt/test/optiontests.h",
     "subsystem": "gui",
     "loc": 32,
     "classes": 1,
@@ -4710,6 +5192,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_rpcnestedtests_cpp",
     "name": "qt/test/rpcnestedtests.cpp",
+    "path": "src/qt/test/rpcnestedtests.cpp",
     "subsystem": "gui",
     "loc": 139,
     "classes": 0,
@@ -4719,6 +5202,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_rpcnestedtests_h",
     "name": "qt/test/rpcnestedtests.h",
+    "path": "src/qt/test/rpcnestedtests.h",
     "subsystem": "gui",
     "loc": 27,
     "classes": 2,
@@ -4728,6 +5212,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_test_main_cpp",
     "name": "qt/test/test_main.cpp",
+    "path": "src/qt/test/test_main.cpp",
     "subsystem": "gui",
     "loc": 129,
     "classes": 0,
@@ -4737,6 +5222,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_uritests_cpp",
     "name": "qt/test/uritests.cpp",
+    "path": "src/qt/test/uritests.cpp",
     "subsystem": "gui",
     "loc": 92,
     "classes": 0,
@@ -4746,6 +5232,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_uritests_h",
     "name": "qt/test/uritests.h",
+    "path": "src/qt/test/uritests.h",
     "subsystem": "gui",
     "loc": 19,
     "classes": 1,
@@ -4755,6 +5242,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_util_cpp",
     "name": "qt/test/util.cpp",
+    "path": "src/qt/test/util.cpp",
     "subsystem": "gui",
     "loc": 27,
     "classes": 0,
@@ -4764,6 +5252,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_util_h",
     "name": "qt/test/util.h",
+    "path": "src/qt/test/util.h",
     "subsystem": "gui",
     "loc": 24,
     "classes": 0,
@@ -4773,6 +5262,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_wallettests_cpp",
     "name": "qt/test/wallettests.cpp",
+    "path": "src/qt/test/wallettests.cpp",
     "subsystem": "gui",
     "loc": 482,
     "classes": 1,
@@ -4782,6 +5272,7 @@ export const buildings: Building[] =
   {
     "id": "qt_test_wallettests_h",
     "name": "qt/test/wallettests.h",
+    "path": "src/qt/test/wallettests.h",
     "subsystem": "gui",
     "loc": 27,
     "classes": 2,
@@ -4791,6 +5282,7 @@ export const buildings: Building[] =
   {
     "id": "qt_trafficgraphwidget_cpp",
     "name": "qt/trafficgraphwidget.cpp",
+    "path": "src/qt/trafficgraphwidget.cpp",
     "subsystem": "gui",
     "loc": 171,
     "classes": 0,
@@ -4800,6 +5292,7 @@ export const buildings: Building[] =
   {
     "id": "qt_trafficgraphwidget_h",
     "name": "qt/trafficgraphwidget.h",
+    "path": "src/qt/trafficgraphwidget.h",
     "subsystem": "gui",
     "loc": 50,
     "classes": 2,
@@ -4809,6 +5302,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiondesc_cpp",
     "name": "qt/transactiondesc.cpp",
+    "path": "src/qt/transactiondesc.cpp",
     "subsystem": "gui",
     "loc": 383,
     "classes": 0,
@@ -4818,6 +5312,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiondesc_h",
     "name": "qt/transactiondesc.h",
+    "path": "src/qt/transactiondesc.h",
     "subsystem": "gui",
     "loc": 37,
     "classes": 6,
@@ -4827,6 +5322,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiondescdialog_cpp",
     "name": "qt/transactiondescdialog.cpp",
+    "path": "src/qt/transactiondescdialog.cpp",
     "subsystem": "gui",
     "loc": 28,
     "classes": 0,
@@ -4836,6 +5332,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiondescdialog_h",
     "name": "qt/transactiondescdialog.h",
+    "path": "src/qt/transactiondescdialog.h",
     "subsystem": "gui",
     "loc": 31,
     "classes": 1,
@@ -4845,6 +5342,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionfilterproxy_cpp",
     "name": "qt/transactionfilterproxy.cpp",
+    "path": "src/qt/transactionfilterproxy.cpp",
     "subsystem": "gui",
     "loc": 95,
     "classes": 0,
@@ -4854,6 +5352,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionfilterproxy_h",
     "name": "qt/transactionfilterproxy.h",
+    "path": "src/qt/transactionfilterproxy.h",
     "subsystem": "gui",
     "loc": 61,
     "classes": 1,
@@ -4863,6 +5362,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionoverviewwidget_cpp",
     "name": "qt/transactionoverviewwidget.cpp",
+    "path": "src/qt/transactionoverviewwidget.cpp",
     "subsystem": "gui",
     "loc": 27,
     "classes": 0,
@@ -4872,6 +5372,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionoverviewwidget_h",
     "name": "qt/transactionoverviewwidget.h",
+    "path": "src/qt/transactionoverviewwidget.h",
     "subsystem": "gui",
     "loc": 28,
     "classes": 1,
@@ -4881,6 +5382,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionrecord_cpp",
     "name": "qt/transactionrecord.cpp",
+    "path": "src/qt/transactionrecord.cpp",
     "subsystem": "gui",
     "loc": 234,
     "classes": 0,
@@ -4890,6 +5392,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionrecord_h",
     "name": "qt/transactionrecord.h",
+    "path": "src/qt/transactionrecord.h",
     "subsystem": "gui",
     "loc": 135,
     "classes": 6,
@@ -4899,6 +5402,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiontablemodel_cpp",
     "name": "qt/transactiontablemodel.cpp",
+    "path": "src/qt/transactiontablemodel.cpp",
     "subsystem": "gui",
     "loc": 754,
     "classes": 3,
@@ -4908,6 +5412,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactiontablemodel_h",
     "name": "qt/transactiontablemodel.h",
+    "path": "src/qt/transactiontablemodel.h",
     "subsystem": "gui",
     "loc": 123,
     "classes": 6,
@@ -4917,6 +5422,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionview_cpp",
     "name": "qt/transactionview.cpp",
+    "path": "src/qt/transactionview.cpp",
     "subsystem": "gui",
     "loc": 665,
     "classes": 0,
@@ -4926,6 +5432,7 @@ export const buildings: Building[] =
   {
     "id": "qt_transactionview_h",
     "name": "qt/transactionview.h",
+    "path": "src/qt/transactionview.h",
     "subsystem": "gui",
     "loc": 132,
     "classes": 10,
@@ -4935,6 +5442,7 @@ export const buildings: Building[] =
   {
     "id": "qt_utilitydialog_cpp",
     "name": "qt/utilitydialog.cpp",
+    "path": "src/qt/utilitydialog.cpp",
     "subsystem": "gui",
     "loc": 169,
     "classes": 0,
@@ -4944,6 +5452,7 @@ export const buildings: Building[] =
   {
     "id": "qt_utilitydialog_h",
     "name": "qt/utilitydialog.h",
+    "path": "src/qt/utilitydialog.h",
     "subsystem": "gui",
     "loc": 53,
     "classes": 2,
@@ -4953,6 +5462,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletcontroller_cpp",
     "name": "qt/walletcontroller.cpp",
+    "path": "src/qt/walletcontroller.cpp",
     "subsystem": "gui",
     "loc": 498,
     "classes": 0,
@@ -4962,6 +5472,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletcontroller_h",
     "name": "qt/walletcontroller.h",
+    "path": "src/qt/walletcontroller.h",
     "subsystem": "gui",
     "loc": 201,
     "classes": 21,
@@ -4971,6 +5482,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletframe_cpp",
     "name": "qt/walletframe.cpp",
+    "path": "src/qt/walletframe.cpp",
     "subsystem": "gui",
     "loc": 289,
     "classes": 0,
@@ -4980,6 +5492,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletframe_h",
     "name": "qt/walletframe.h",
+    "path": "src/qt/walletframe.h",
     "subsystem": "gui",
     "loc": 102,
     "classes": 5,
@@ -4989,6 +5502,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletmodel_cpp",
     "name": "qt/walletmodel.cpp",
+    "path": "src/qt/walletmodel.cpp",
     "subsystem": "gui",
     "loc": 630,
     "classes": 0,
@@ -4998,6 +5512,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletmodel_h",
     "name": "qt/walletmodel.h",
+    "path": "src/qt/walletmodel.h",
     "subsystem": "gui",
     "loc": 241,
     "classes": 14,
@@ -5007,6 +5522,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletmodeltransaction_cpp",
     "name": "qt/walletmodeltransaction.cpp",
+    "path": "src/qt/walletmodeltransaction.cpp",
     "subsystem": "gui",
     "loc": 68,
     "classes": 0,
@@ -5016,6 +5532,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletmodeltransaction_h",
     "name": "qt/walletmodeltransaction.h",
+    "path": "src/qt/walletmodeltransaction.h",
     "subsystem": "gui",
     "loc": 47,
     "classes": 3,
@@ -5025,6 +5542,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletview_cpp",
     "name": "qt/walletview.cpp",
+    "path": "src/qt/walletview.cpp",
     "subsystem": "gui",
     "loc": 286,
     "classes": 0,
@@ -5034,6 +5552,7 @@ export const buildings: Building[] =
   {
     "id": "qt_walletview_h",
     "name": "qt/walletview.h",
+    "path": "src/qt/walletview.h",
     "subsystem": "gui",
     "loc": 127,
     "classes": 10,
@@ -5043,6 +5562,7 @@ export const buildings: Building[] =
   {
     "id": "qt_winshutdownmonitor_cpp",
     "name": "qt/winshutdownmonitor.cpp",
+    "path": "src/qt/winshutdownmonitor.cpp",
     "subsystem": "gui",
     "loc": 56,
     "classes": 0,
@@ -5052,6 +5572,7 @@ export const buildings: Building[] =
   {
     "id": "qt_winshutdownmonitor_h",
     "name": "qt/winshutdownmonitor.h",
+    "path": "src/qt/winshutdownmonitor.h",
     "subsystem": "gui",
     "loc": 33,
     "classes": 1,
@@ -5061,6 +5582,7 @@ export const buildings: Building[] =
   {
     "id": "random_cpp",
     "name": "random.cpp",
+    "path": "src/random.cpp",
     "subsystem": "util",
     "loc": 789,
     "classes": 1,
@@ -5070,6 +5592,7 @@ export const buildings: Building[] =
   {
     "id": "random_h",
     "name": "random.h",
+    "path": "src/random.h",
     "subsystem": "util",
     "loc": 468,
     "classes": 4,
@@ -5079,6 +5602,7 @@ export const buildings: Building[] =
   {
     "id": "randomenv_cpp",
     "name": "randomenv.cpp",
+    "path": "src/randomenv.cpp",
     "subsystem": "other",
     "loc": 511,
     "classes": 0,
@@ -5088,6 +5612,7 @@ export const buildings: Building[] =
   {
     "id": "randomenv_h",
     "name": "randomenv.h",
+    "path": "src/randomenv.h",
     "subsystem": "other",
     "loc": 17,
     "classes": 0,
@@ -5097,6 +5622,7 @@ export const buildings: Building[] =
   {
     "id": "rest_cpp",
     "name": "rest.cpp",
+    "path": "src/rest.cpp",
     "subsystem": "rpc",
     "loc": 1041,
     "classes": 1,
@@ -5106,6 +5632,7 @@ export const buildings: Building[] =
   {
     "id": "rest_h",
     "name": "rest.h",
+    "path": "src/rest.h",
     "subsystem": "rpc",
     "loc": 28,
     "classes": 0,
@@ -5115,6 +5642,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_blockchain_cpp",
     "name": "rpc/blockchain.cpp",
+    "path": "src/rpc/blockchain.cpp",
     "subsystem": "rpc",
     "loc": 2994,
     "classes": 4,
@@ -5124,6 +5652,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_blockchain_h",
     "name": "rpc/blockchain.h",
+    "path": "src/rpc/blockchain.h",
     "subsystem": "rpc",
     "loc": 64,
     "classes": 6,
@@ -5133,6 +5662,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_client_cpp",
     "name": "rpc/client.cpp",
+    "path": "src/rpc/client.cpp",
     "subsystem": "rpc",
     "loc": 401,
     "classes": 2,
@@ -5142,6 +5672,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_client_h",
     "name": "rpc/client.h",
+    "path": "src/rpc/client.h",
     "subsystem": "rpc",
     "loc": 20,
     "classes": 0,
@@ -5151,6 +5682,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_external_signer_cpp",
     "name": "rpc/external_signer.cpp",
+    "path": "src/rpc/external_signer.cpp",
     "subsystem": "rpc",
     "loc": 78,
     "classes": 0,
@@ -5160,6 +5692,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_fees_cpp",
     "name": "rpc/fees.cpp",
+    "path": "src/rpc/fees.cpp",
     "subsystem": "rpc",
     "loc": 226,
     "classes": 0,
@@ -5169,6 +5702,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_mempool_cpp",
     "name": "rpc/mempool.cpp",
+    "path": "src/rpc/mempool.cpp",
     "subsystem": "rpc",
     "loc": 1035,
     "classes": 0,
@@ -5178,6 +5712,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_mempool_h",
     "name": "rpc/mempool.h",
+    "path": "src/rpc/mempool.h",
     "subsystem": "rpc",
     "loc": 17,
     "classes": 2,
@@ -5187,6 +5722,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_mining_cpp",
     "name": "rpc/mining.cpp",
+    "path": "src/rpc/mining.cpp",
     "subsystem": "rpc",
     "loc": 1128,
     "classes": 1,
@@ -5196,6 +5732,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_mining_h",
     "name": "rpc/mining.h",
+    "path": "src/rpc/mining.h",
     "subsystem": "rpc",
     "loc": 11,
     "classes": 0,
@@ -5205,6 +5742,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_net_cpp",
     "name": "rpc/net.cpp",
+    "path": "src/rpc/net.cpp",
     "subsystem": "rpc",
     "loc": 1207,
     "classes": 0,
@@ -5214,6 +5752,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_node_cpp",
     "name": "rpc/node.cpp",
+    "path": "src/rpc/node.cpp",
     "subsystem": "rpc",
     "loc": 418,
     "classes": 0,
@@ -5223,6 +5762,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_output_script_cpp",
     "name": "rpc/output_script.cpp",
+    "path": "src/rpc/output_script.cpp",
     "subsystem": "rpc",
     "loc": 311,
     "classes": 0,
@@ -5232,6 +5772,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_protocol_h",
     "name": "rpc/protocol.h",
+    "path": "src/rpc/protocol.h",
     "subsystem": "rpc",
     "loc": 92,
     "classes": 0,
@@ -5241,6 +5782,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_rawtransaction_cpp",
     "name": "rpc/rawtransaction.cpp",
+    "path": "src/rpc/rawtransaction.cpp",
     "subsystem": "rpc",
     "loc": 2032,
     "classes": 0,
@@ -5250,6 +5792,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_rawtransaction_util_cpp",
     "name": "rpc/rawtransaction_util.cpp",
+    "path": "src/rpc/rawtransaction_util.cpp",
     "subsystem": "rpc",
     "loc": 336,
     "classes": 0,
@@ -5259,6 +5802,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_rawtransaction_util_h",
     "name": "rpc/rawtransaction_util.h",
+    "path": "src/rpc/rawtransaction_util.h",
     "subsystem": "rpc",
     "loc": 58,
     "classes": 7,
@@ -5268,6 +5812,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_register_h",
     "name": "rpc/register.h",
+    "path": "src/rpc/register.h",
     "subsystem": "rpc",
     "loc": 43,
     "classes": 1,
@@ -5277,6 +5822,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_request_cpp",
     "name": "rpc/request.cpp",
+    "path": "src/rpc/request.cpp",
     "subsystem": "rpc",
     "loc": 242,
     "classes": 0,
@@ -5286,6 +5832,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_request_h",
     "name": "rpc/request.h",
+    "path": "src/rpc/request.h",
     "subsystem": "rpc",
     "loc": 52,
     "classes": 1,
@@ -5295,6 +5842,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_server_cpp",
     "name": "rpc/server.cpp",
+    "path": "src/rpc/server.cpp",
     "subsystem": "rpc",
     "loc": 590,
     "classes": 4,
@@ -5304,6 +5852,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_server_h",
     "name": "rpc/server.h",
+    "path": "src/rpc/server.h",
     "subsystem": "rpc",
     "loc": 184,
     "classes": 5,
@@ -5313,6 +5862,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_server_util_cpp",
     "name": "rpc/server_util.cpp",
+    "path": "src/rpc/server_util.cpp",
     "subsystem": "rpc",
     "loc": 131,
     "classes": 0,
@@ -5322,6 +5872,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_server_util_h",
     "name": "rpc/server_util.h",
+    "path": "src/rpc/server_util.h",
     "subsystem": "rpc",
     "loc": 42,
     "classes": 10,
@@ -5331,6 +5882,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_signmessage_cpp",
     "name": "rpc/signmessage.cpp",
+    "path": "src/rpc/signmessage.cpp",
     "subsystem": "rpc",
     "loc": 113,
     "classes": 0,
@@ -5340,6 +5892,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_txoutproof_cpp",
     "name": "rpc/txoutproof.cpp",
+    "path": "src/rpc/txoutproof.cpp",
     "subsystem": "rpc",
     "loc": 180,
     "classes": 0,
@@ -5349,6 +5902,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_util_cpp",
     "name": "rpc/util.cpp",
+    "path": "src/rpc/util.cpp",
     "subsystem": "rpc",
     "loc": 1391,
     "classes": 3,
@@ -5358,6 +5912,7 @@ export const buildings: Building[] =
   {
     "id": "rpc_util_h",
     "name": "rpc/util.h",
+    "path": "src/rpc/util.h",
     "subsystem": "rpc",
     "loc": 506,
     "classes": 13,
@@ -5367,6 +5922,7 @@ export const buildings: Building[] =
   {
     "id": "scheduler_cpp",
     "name": "scheduler.cpp",
+    "path": "src/scheduler.cpp",
     "subsystem": "other",
     "loc": 200,
     "classes": 0,
@@ -5376,6 +5932,7 @@ export const buildings: Building[] =
   {
     "id": "scheduler_h",
     "name": "scheduler.h",
+    "path": "src/scheduler.h",
     "subsystem": "other",
     "loc": 160,
     "classes": 2,
@@ -5385,6 +5942,7 @@ export const buildings: Building[] =
   {
     "id": "script_descriptor_cpp",
     "name": "script/descriptor.cpp",
+    "path": "src/script/descriptor.cpp",
     "subsystem": "script",
     "loc": 2198,
     "classes": 21,
@@ -5394,6 +5952,7 @@ export const buildings: Building[] =
   {
     "id": "script_descriptor_h",
     "name": "script/descriptor.h",
+    "path": "src/script/descriptor.h",
     "subsystem": "script",
     "loc": 209,
     "classes": 2,
@@ -5403,6 +5962,7 @@ export const buildings: Building[] =
   {
     "id": "script_interpreter_cpp",
     "name": "script/interpreter.cpp",
+    "path": "src/script/interpreter.cpp",
     "subsystem": "script",
     "loc": 2124,
     "classes": 2,
@@ -5412,6 +5972,7 @@ export const buildings: Building[] =
   {
     "id": "script_interpreter_h",
     "name": "script/interpreter.h",
+    "path": "src/script/interpreter.h",
     "subsystem": "script",
     "loc": 354,
     "classes": 10,
@@ -5421,6 +5982,7 @@ export const buildings: Building[] =
   {
     "id": "script_keyorigin_h",
     "name": "script/keyorigin.h",
+    "path": "src/script/keyorigin.h",
     "subsystem": "script",
     "loc": 49,
     "classes": 1,
@@ -5430,6 +5992,7 @@ export const buildings: Building[] =
   {
     "id": "script_miniscript_cpp",
     "name": "script/miniscript.cpp",
+    "path": "src/script/miniscript.cpp",
     "subsystem": "script",
     "loc": 433,
     "classes": 0,
@@ -5439,6 +6002,7 @@ export const buildings: Building[] =
   {
     "id": "script_miniscript_h",
     "name": "script/miniscript.h",
+    "path": "src/script/miniscript.h",
     "subsystem": "script",
     "loc": 2637,
     "classes": 11,
@@ -5448,6 +6012,7 @@ export const buildings: Building[] =
   {
     "id": "script_parsing_cpp",
     "name": "script/parsing.cpp",
+    "path": "src/script/parsing.cpp",
     "subsystem": "script",
     "loc": 52,
     "classes": 0,
@@ -5457,6 +6022,7 @@ export const buildings: Building[] =
   {
     "id": "script_parsing_h",
     "name": "script/parsing.h",
+    "path": "src/script/parsing.h",
     "subsystem": "script",
     "loc": 40,
     "classes": 0,
@@ -5466,6 +6032,7 @@ export const buildings: Building[] =
   {
     "id": "script_script_cpp",
     "name": "script/script.cpp",
+    "path": "src/script/script.cpp",
     "subsystem": "script",
     "loc": 389,
     "classes": 0,
@@ -5475,6 +6042,7 @@ export const buildings: Building[] =
   {
     "id": "script_script_h",
     "name": "script/script.h",
+    "path": "src/script/script.h",
     "subsystem": "script",
     "loc": 628,
     "classes": 5,
@@ -5484,6 +6052,7 @@ export const buildings: Building[] =
   {
     "id": "script_script_error_cpp",
     "name": "script/script_error.cpp",
+    "path": "src/script/script_error.cpp",
     "subsystem": "script",
     "loc": 123,
     "classes": 0,
@@ -5493,6 +6062,7 @@ export const buildings: Building[] =
   {
     "id": "script_script_error_h",
     "name": "script/script_error.h",
+    "path": "src/script/script_error.h",
     "subsystem": "script",
     "loc": 92,
     "classes": 0,
@@ -5502,6 +6072,7 @@ export const buildings: Building[] =
   {
     "id": "script_sigcache_cpp",
     "name": "script/sigcache.cpp",
+    "path": "src/script/sigcache.cpp",
     "subsystem": "script",
     "loc": 84,
     "classes": 0,
@@ -5511,6 +6082,7 @@ export const buildings: Building[] =
   {
     "id": "script_sigcache_h",
     "name": "script/sigcache.h",
+    "path": "src/script/sigcache.h",
     "subsystem": "script",
     "loc": 76,
     "classes": 5,
@@ -5520,6 +6092,7 @@ export const buildings: Building[] =
   {
     "id": "script_sign_cpp",
     "name": "script/sign.cpp",
+    "path": "src/script/sign.cpp",
     "subsystem": "script",
     "loc": 853,
     "classes": 7,
@@ -5529,6 +6102,7 @@ export const buildings: Building[] =
   {
     "id": "script_sign_h",
     "name": "script/sign.h",
+    "path": "src/script/sign.h",
     "subsystem": "script",
     "loc": 129,
     "classes": 10,
@@ -5538,6 +6112,7 @@ export const buildings: Building[] =
   {
     "id": "script_signingprovider_cpp",
     "name": "script/signingprovider.cpp",
+    "path": "src/script/signingprovider.cpp",
     "subsystem": "script",
     "loc": 578,
     "classes": 0,
@@ -5547,6 +6122,7 @@ export const buildings: Building[] =
   {
     "id": "script_signingprovider_h",
     "name": "script/signingprovider.h",
+    "path": "src/script/signingprovider.h",
     "subsystem": "script",
     "loc": 316,
     "classes": 8,
@@ -5556,6 +6132,7 @@ export const buildings: Building[] =
   {
     "id": "script_solver_cpp",
     "name": "script/solver.cpp",
+    "path": "src/script/solver.cpp",
     "subsystem": "script",
     "loc": 228,
     "classes": 0,
@@ -5565,6 +6142,7 @@ export const buildings: Building[] =
   {
     "id": "script_solver_h",
     "name": "script/solver.h",
+    "path": "src/script/solver.h",
     "subsystem": "script",
     "loc": 67,
     "classes": 2,
@@ -5574,6 +6152,7 @@ export const buildings: Building[] =
   {
     "id": "serialize_h",
     "name": "serialize.h",
+    "path": "src/serialize.h",
     "subsystem": "util",
     "loc": 1230,
     "classes": 17,
@@ -5583,6 +6162,7 @@ export const buildings: Building[] =
   {
     "id": "signet_cpp",
     "name": "signet.cpp",
+    "path": "src/signet.cpp",
     "subsystem": "other",
     "loc": 151,
     "classes": 0,
@@ -5592,6 +6172,7 @@ export const buildings: Building[] =
   {
     "id": "signet_h",
     "name": "signet.h",
+    "path": "src/signet.h",
     "subsystem": "other",
     "loc": 37,
     "classes": 1,
@@ -5601,6 +6182,7 @@ export const buildings: Building[] =
   {
     "id": "span_h",
     "name": "span.h",
+    "path": "src/span.h",
     "subsystem": "other",
     "loc": 306,
     "classes": 1,
@@ -5610,6 +6192,7 @@ export const buildings: Building[] =
   {
     "id": "streams_cpp",
     "name": "streams.cpp",
+    "path": "src/streams.cpp",
     "subsystem": "util",
     "loc": 117,
     "classes": 0,
@@ -5619,6 +6202,7 @@ export const buildings: Building[] =
   {
     "id": "streams_h",
     "name": "streams.h",
+    "path": "src/streams.h",
     "subsystem": "util",
     "loc": 609,
     "classes": 7,
@@ -5628,6 +6212,7 @@ export const buildings: Building[] =
   {
     "id": "support_allocators_pool_h",
     "name": "support/allocators/pool.h",
+    "path": "src/support/allocators/pool.h",
     "subsystem": "util",
     "loc": 349,
     "classes": 2,
@@ -5637,6 +6222,7 @@ export const buildings: Building[] =
   {
     "id": "support_allocators_secure_h",
     "name": "support/allocators/secure.h",
+    "path": "src/support/allocators/secure.h",
     "subsystem": "util",
     "loc": 84,
     "classes": 2,
@@ -5646,6 +6232,7 @@ export const buildings: Building[] =
   {
     "id": "support_allocators_zeroafterfree_h",
     "name": "support/allocators/zeroafterfree.h",
+    "path": "src/support/allocators/zeroafterfree.h",
     "subsystem": "util",
     "loc": 51,
     "classes": 1,
@@ -5655,6 +6242,7 @@ export const buildings: Building[] =
   {
     "id": "support_cleanse_cpp",
     "name": "support/cleanse.cpp",
+    "path": "src/support/cleanse.cpp",
     "subsystem": "util",
     "loc": 35,
     "classes": 0,
@@ -5664,6 +6252,7 @@ export const buildings: Building[] =
   {
     "id": "support_cleanse_h",
     "name": "support/cleanse.h",
+    "path": "src/support/cleanse.h",
     "subsystem": "util",
     "loc": 15,
     "classes": 0,
@@ -5673,6 +6262,7 @@ export const buildings: Building[] =
   {
     "id": "support_events_h",
     "name": "support/events.h",
+    "path": "src/support/events.h",
     "subsystem": "util",
     "loc": 56,
     "classes": 0,
@@ -5682,6 +6272,7 @@ export const buildings: Building[] =
   {
     "id": "support_lockedpool_cpp",
     "name": "support/lockedpool.cpp",
+    "path": "src/support/lockedpool.cpp",
     "subsystem": "util",
     "loc": 402,
     "classes": 2,
@@ -5691,6 +6282,7 @@ export const buildings: Building[] =
   {
     "id": "support_lockedpool_h",
     "name": "support/lockedpool.h",
+    "path": "src/support/lockedpool.h",
     "subsystem": "util",
     "loc": 240,
     "classes": 4,
@@ -5700,6 +6292,7 @@ export const buildings: Building[] =
   {
     "id": "sync_cpp",
     "name": "sync.cpp",
+    "path": "src/sync.cpp",
     "subsystem": "other",
     "loc": 322,
     "classes": 2,
@@ -5709,6 +6302,7 @@ export const buildings: Building[] =
   {
     "id": "sync_h",
     "name": "sync.h",
+    "path": "src/sync.h",
     "subsystem": "other",
     "loc": 430,
     "classes": 3,
@@ -5718,6 +6312,7 @@ export const buildings: Building[] =
   {
     "id": "test_addrman_tests_cpp",
     "name": "test/addrman_tests.cpp",
+    "path": "src/test/addrman_tests.cpp",
     "subsystem": "test",
     "loc": 1165,
     "classes": 0,
@@ -5727,6 +6322,7 @@ export const buildings: Building[] =
   {
     "id": "test_allocator_tests_cpp",
     "name": "test/allocator_tests.cpp",
+    "path": "src/test/allocator_tests.cpp",
     "subsystem": "test",
     "loc": 239,
     "classes": 1,
@@ -5736,6 +6332,7 @@ export const buildings: Building[] =
   {
     "id": "test_amount_tests_cpp",
     "name": "test/amount_tests.cpp",
+    "path": "src/test/amount_tests.cpp",
     "subsystem": "test",
     "loc": 142,
     "classes": 0,
@@ -5745,6 +6342,7 @@ export const buildings: Building[] =
   {
     "id": "test_argsman_tests_cpp",
     "name": "test/argsman_tests.cpp",
+    "path": "src/test/argsman_tests.cpp",
     "subsystem": "test",
     "loc": 1054,
     "classes": 5,
@@ -5754,6 +6352,7 @@ export const buildings: Building[] =
   {
     "id": "test_arith_uint256_tests_cpp",
     "name": "test/arith_uint256_tests.cpp",
+    "path": "src/test/arith_uint256_tests.cpp",
     "subsystem": "test",
     "loc": 574,
     "classes": 0,
@@ -5763,6 +6362,7 @@ export const buildings: Building[] =
   {
     "id": "test_banman_tests_cpp",
     "name": "test/banman_tests.cpp",
+    "path": "src/test/banman_tests.cpp",
     "subsystem": "test",
     "loc": 43,
     "classes": 0,
@@ -5772,6 +6372,7 @@ export const buildings: Building[] =
   {
     "id": "test_base32_tests_cpp",
     "name": "test/base32_tests.cpp",
+    "path": "src/test/base32_tests.cpp",
     "subsystem": "test",
     "loc": 37,
     "classes": 0,
@@ -5781,6 +6382,7 @@ export const buildings: Building[] =
   {
     "id": "test_base58_tests_cpp",
     "name": "test/base58_tests.cpp",
+    "path": "src/test/base58_tests.cpp",
     "subsystem": "test",
     "loc": 100,
     "classes": 0,
@@ -5790,6 +6392,7 @@ export const buildings: Building[] =
   {
     "id": "test_base64_tests_cpp",
     "name": "test/base64_tests.cpp",
+    "path": "src/test/base64_tests.cpp",
     "subsystem": "test",
     "loc": 44,
     "classes": 0,
@@ -5799,6 +6402,7 @@ export const buildings: Building[] =
   {
     "id": "test_bech32_tests_cpp",
     "name": "test/bech32_tests.cpp",
+    "path": "src/test/bech32_tests.cpp",
     "subsystem": "test",
     "loc": 159,
     "classes": 0,
@@ -5808,6 +6412,7 @@ export const buildings: Building[] =
   {
     "id": "test_bip324_tests_cpp",
     "name": "test/bip324_tests.cpp",
+    "path": "src/test/bip324_tests.cpp",
     "subsystem": "test",
     "loc": 300,
     "classes": 0,
@@ -5817,6 +6422,7 @@ export const buildings: Building[] =
   {
     "id": "test_bip32_tests_cpp",
     "name": "test/bip32_tests.cpp",
+    "path": "src/test/bip32_tests.cpp",
     "subsystem": "test",
     "loc": 205,
     "classes": 2,
@@ -5826,6 +6432,7 @@ export const buildings: Building[] =
   {
     "id": "test_blockchain_tests_cpp",
     "name": "test/blockchain_tests.cpp",
+    "path": "src/test/blockchain_tests.cpp",
     "subsystem": "test",
     "loc": 120,
     "classes": 0,
@@ -5835,6 +6442,7 @@ export const buildings: Building[] =
   {
     "id": "test_blockencodings_tests_cpp",
     "name": "test/blockencodings_tests.cpp",
+    "path": "src/test/blockencodings_tests.cpp",
     "subsystem": "test",
     "loc": 426,
     "classes": 1,
@@ -5844,6 +6452,7 @@ export const buildings: Building[] =
   {
     "id": "test_blockfilter_index_tests_cpp",
     "name": "test/blockfilter_index_tests.cpp",
+    "path": "src/test/blockfilter_index_tests.cpp",
     "subsystem": "test",
     "loc": 310,
     "classes": 1,
@@ -5853,6 +6462,7 @@ export const buildings: Building[] =
   {
     "id": "test_blockfilter_tests_cpp",
     "name": "test/blockfilter_tests.cpp",
+    "path": "src/test/blockfilter_tests.cpp",
     "subsystem": "test",
     "loc": 191,
     "classes": 0,
@@ -5862,6 +6472,7 @@ export const buildings: Building[] =
   {
     "id": "test_blockmanager_tests_cpp",
     "name": "test/blockmanager_tests.cpp",
+    "path": "src/test/blockmanager_tests.cpp",
     "subsystem": "test",
     "loc": 201,
     "classes": 0,
@@ -5871,6 +6482,7 @@ export const buildings: Building[] =
   {
     "id": "test_bloom_tests_cpp",
     "name": "test/bloom_tests.cpp",
+    "path": "src/test/bloom_tests.cpp",
     "subsystem": "test",
     "loc": 534,
     "classes": 0,
@@ -5880,6 +6492,7 @@ export const buildings: Building[] =
   {
     "id": "test_bswap_tests_cpp",
     "name": "test/bswap_tests.cpp",
+    "path": "src/test/bswap_tests.cpp",
     "subsystem": "test",
     "loc": 24,
     "classes": 0,
@@ -5889,6 +6502,7 @@ export const buildings: Building[] =
   {
     "id": "test_checkqueue_tests_cpp",
     "name": "test/checkqueue_tests.cpp",
+    "path": "src/test/checkqueue_tests.cpp",
     "subsystem": "test",
     "loc": 417,
     "classes": 7,
@@ -5898,6 +6512,7 @@ export const buildings: Building[] =
   {
     "id": "test_cluster_linearize_tests_cpp",
     "name": "test/cluster_linearize_tests.cpp",
+    "path": "src/test/cluster_linearize_tests.cpp",
     "subsystem": "test",
     "loc": 138,
     "classes": 0,
@@ -5907,6 +6522,7 @@ export const buildings: Building[] =
   {
     "id": "test_coins_tests_cpp",
     "name": "test/coins_tests.cpp",
+    "path": "src/test/coins_tests.cpp",
     "subsystem": "test",
     "loc": 1117,
     "classes": 3,
@@ -5916,6 +6532,7 @@ export const buildings: Building[] =
   {
     "id": "test_coinscachepair_tests_cpp",
     "name": "test/coinscachepair_tests.cpp",
+    "path": "src/test/coinscachepair_tests.cpp",
     "subsystem": "test",
     "loc": 219,
     "classes": 0,
@@ -5925,6 +6542,7 @@ export const buildings: Building[] =
   {
     "id": "test_coinstatsindex_tests_cpp",
     "name": "test/coinstatsindex_tests.cpp",
+    "path": "src/test/coinstatsindex_tests.cpp",
     "subsystem": "test",
     "loc": 121,
     "classes": 0,
@@ -5934,6 +6552,7 @@ export const buildings: Building[] =
   {
     "id": "test_common_url_tests_cpp",
     "name": "test/common_url_tests.cpp",
+    "path": "src/test/common_url_tests.cpp",
     "subsystem": "test",
     "loc": 75,
     "classes": 0,
@@ -5943,6 +6562,7 @@ export const buildings: Building[] =
   {
     "id": "test_compilerbug_tests_cpp",
     "name": "test/compilerbug_tests.cpp",
+    "path": "src/test/compilerbug_tests.cpp",
     "subsystem": "test",
     "loc": 42,
     "classes": 0,
@@ -5952,6 +6572,7 @@ export const buildings: Building[] =
   {
     "id": "test_compress_tests_cpp",
     "name": "test/compress_tests.cpp",
+    "path": "src/test/compress_tests.cpp",
     "subsystem": "test",
     "loc": 167,
     "classes": 0,
@@ -5961,6 +6582,7 @@ export const buildings: Building[] =
   {
     "id": "test_crypto_tests_cpp",
     "name": "test/crypto_tests.cpp",
+    "path": "src/test/crypto_tests.cpp",
     "subsystem": "test",
     "loc": 1273,
     "classes": 0,
@@ -5970,6 +6592,7 @@ export const buildings: Building[] =
   {
     "id": "test_cuckoocache_tests_cpp",
     "name": "test/cuckoocache_tests.cpp",
+    "path": "src/test/cuckoocache_tests.cpp",
     "subsystem": "test",
     "loc": 373,
     "classes": 0,
@@ -5979,6 +6602,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_asmap_raw_h",
     "name": "test/data/asmap.raw.h",
+    "path": "src/test/data/asmap.raw.h",
     "subsystem": "test",
     "loc": 10,
     "classes": 0,
@@ -5988,6 +6612,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_base58_encode_decode_json_h",
     "name": "test/data/base58_encode_decode.json.h",
+    "path": "src/test/data/base58_encode_decode.json.h",
     "subsystem": "test",
     "loc": 187,
     "classes": 0,
@@ -5997,6 +6622,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_bip341_wallet_vectors_json_h",
     "name": "test/data/bip341_wallet_vectors.json.h",
+    "path": "src/test/data/bip341_wallet_vectors.json.h",
     "subsystem": "test",
     "loc": 3666,
     "classes": 0,
@@ -6006,6 +6632,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_blockfilters_json_h",
     "name": "test/data/blockfilters.json.h",
+    "path": "src/test/data/blockfilters.json.h",
     "subsystem": "test",
     "loc": 2231,
     "classes": 0,
@@ -6015,6 +6642,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_key_io_invalid_json_h",
     "name": "test/data/key_io_invalid.json.h",
+    "path": "src/test/data/key_io_invalid.json.h",
     "subsystem": "test",
     "loc": 654,
     "classes": 0,
@@ -6024,6 +6652,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_key_io_valid_json_h",
     "name": "test/data/key_io_valid.json.h",
+    "path": "src/test/data/key_io_valid.json.h",
     "subsystem": "test",
     "loc": 2139,
     "classes": 0,
@@ -6033,6 +6662,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_script_tests_json_h",
     "name": "test/data/script_tests.json.h",
+    "path": "src/test/data/script_tests.json.h",
     "subsystem": "test",
     "loc": 26958,
     "classes": 0,
@@ -6042,6 +6672,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_sighash_json_h",
     "name": "test/data/sighash.json.h",
+    "path": "src/test/data/sighash.json.h",
     "subsystem": "test",
     "loc": 26315,
     "classes": 0,
@@ -6051,6 +6682,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_tx_invalid_json_h",
     "name": "test/data/tx_invalid.json.h",
+    "path": "src/test/data/tx_invalid.json.h",
     "subsystem": "test",
     "loc": 6681,
     "classes": 0,
@@ -6060,6 +6692,7 @@ export const buildings: Building[] =
   {
     "id": "test_data_tx_valid_json_h",
     "name": "test/data/tx_valid.json.h",
+    "path": "src/test/data/tx_valid.json.h",
     "subsystem": "test",
     "loc": 10742,
     "classes": 0,
@@ -6069,6 +6702,7 @@ export const buildings: Building[] =
   {
     "id": "test_dbwrapper_tests_cpp",
     "name": "test/dbwrapper_tests.cpp",
+    "path": "src/test/dbwrapper_tests.cpp",
     "subsystem": "test",
     "loc": 403,
     "classes": 1,
@@ -6078,6 +6712,7 @@ export const buildings: Building[] =
   {
     "id": "test_denialofservice_tests_cpp",
     "name": "test/denialofservice_tests.cpp",
+    "path": "src/test/denialofservice_tests.cpp",
     "subsystem": "test",
     "loc": 432,
     "classes": 0,
@@ -6087,6 +6722,7 @@ export const buildings: Building[] =
   {
     "id": "test_descriptor_tests_cpp",
     "name": "test/descriptor_tests.cpp",
+    "path": "src/test/descriptor_tests.cpp",
     "subsystem": "test",
     "loc": 662,
     "classes": 0,
@@ -6096,6 +6732,7 @@ export const buildings: Building[] =
   {
     "id": "test_disconnected_transactions_cpp",
     "name": "test/disconnected_transactions.cpp",
+    "path": "src/test/disconnected_transactions.cpp",
     "subsystem": "test",
     "loc": 95,
     "classes": 0,
@@ -6105,6 +6742,7 @@ export const buildings: Building[] =
   {
     "id": "test_feefrac_tests_cpp",
     "name": "test/feefrac_tests.cpp",
+    "path": "src/test/feefrac_tests.cpp",
     "subsystem": "test",
     "loc": 85,
     "classes": 0,
@@ -6114,6 +6752,7 @@ export const buildings: Building[] =
   {
     "id": "test_flatfile_tests_cpp",
     "name": "test/flatfile_tests.cpp",
+    "path": "src/test/flatfile_tests.cpp",
     "subsystem": "test",
     "loc": 129,
     "classes": 0,
@@ -6123,6 +6762,7 @@ export const buildings: Building[] =
   {
     "id": "test_fs_tests_cpp",
     "name": "test/fs_tests.cpp",
+    "path": "src/test/fs_tests.cpp",
     "subsystem": "test",
     "loc": 166,
     "classes": 0,
@@ -6132,6 +6772,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_FuzzedDataProvider_h",
     "name": "test/fuzz/FuzzedDataProvider.h",
+    "path": "src/test/fuzz/FuzzedDataProvider.h",
     "subsystem": "test",
     "loc": 398,
     "classes": 1,
@@ -6141,6 +6782,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_addition_overflow_cpp",
     "name": "test/fuzz/addition_overflow.cpp",
+    "path": "src/test/fuzz/addition_overflow.cpp",
     "subsystem": "test",
     "loc": 57,
     "classes": 0,
@@ -6150,6 +6792,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_addrman_cpp",
     "name": "test/fuzz/addrman.cpp",
+    "path": "src/test/fuzz/addrman.cpp",
     "subsystem": "test",
     "loc": 304,
     "classes": 1,
@@ -6159,6 +6802,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_asmap_cpp",
     "name": "test/fuzz/asmap.cpp",
+    "path": "src/test/fuzz/asmap.cpp",
     "subsystem": "test",
     "loc": 62,
     "classes": 0,
@@ -6168,6 +6812,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_asmap_direct_cpp",
     "name": "test/fuzz/asmap_direct.cpp",
+    "path": "src/test/fuzz/asmap_direct.cpp",
     "subsystem": "test",
     "loc": 49,
     "classes": 0,
@@ -6177,6 +6822,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_autofile_cpp",
     "name": "test/fuzz/autofile.cpp",
+    "path": "src/test/fuzz/autofile.cpp",
     "subsystem": "test",
     "loc": 66,
     "classes": 0,
@@ -6186,6 +6832,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_banman_cpp",
     "name": "test/fuzz/banman.cpp",
+    "path": "src/test/fuzz/banman.cpp",
     "subsystem": "test",
     "loc": 131,
     "classes": 0,
@@ -6195,6 +6842,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_base_encode_decode_cpp",
     "name": "test/fuzz/base_encode_decode.cpp",
+    "path": "src/test/fuzz/base_encode_decode.cpp",
     "subsystem": "test",
     "loc": 54,
     "classes": 0,
@@ -6204,6 +6852,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_bech32_cpp",
     "name": "test/fuzz/bech32.cpp",
+    "path": "src/test/fuzz/bech32.cpp",
     "subsystem": "test",
     "loc": 44,
     "classes": 0,
@@ -6213,6 +6862,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_bip324_cpp",
     "name": "test/fuzz/bip324.cpp",
+    "path": "src/test/fuzz/bip324.cpp",
     "subsystem": "test",
     "loc": 128,
     "classes": 0,
@@ -6222,6 +6872,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_bitdeque_cpp",
     "name": "test/fuzz/bitdeque.cpp",
+    "path": "src/test/fuzz/bitdeque.cpp",
     "subsystem": "test",
     "loc": 541,
     "classes": 0,
@@ -6231,6 +6882,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_bitset_cpp",
     "name": "test/fuzz/bitset.cpp",
+    "path": "src/test/fuzz/bitset.cpp",
     "subsystem": "test",
     "loc": 316,
     "classes": 0,
@@ -6240,6 +6892,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_block_cpp",
     "name": "test/fuzz/block.cpp",
+    "path": "src/test/fuzz/block.cpp",
     "subsystem": "test",
     "loc": 68,
     "classes": 0,
@@ -6249,6 +6902,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_block_header_cpp",
     "name": "test/fuzz/block_header.cpp",
+    "path": "src/test/fuzz/block_header.cpp",
     "subsystem": "test",
     "loc": 49,
     "classes": 0,
@@ -6258,6 +6912,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_block_index_cpp",
     "name": "test/fuzz/block_index.cpp",
+    "path": "src/test/fuzz/block_index.cpp",
     "subsystem": "test",
     "loc": 133,
     "classes": 0,
@@ -6267,6 +6922,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_blockfilter_cpp",
     "name": "test/fuzz/blockfilter.cpp",
+    "path": "src/test/fuzz/blockfilter.cpp",
     "subsystem": "test",
     "loc": 45,
     "classes": 0,
@@ -6276,6 +6932,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_bloom_filter_cpp",
     "name": "test/fuzz/bloom_filter.cpp",
+    "path": "src/test/fuzz/bloom_filter.cpp",
     "subsystem": "test",
     "loc": 71,
     "classes": 0,
@@ -6285,6 +6942,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_buffered_file_cpp",
     "name": "test/fuzz/buffered_file.cpp",
+    "path": "src/test/fuzz/buffered_file.cpp",
     "subsystem": "test",
     "loc": 68,
     "classes": 0,
@@ -6294,6 +6952,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_chain_cpp",
     "name": "test/fuzz/chain.cpp",
+    "path": "src/test/fuzz/chain.cpp",
     "subsystem": "test",
     "loc": 67,
     "classes": 0,
@@ -6303,6 +6962,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_checkqueue_cpp",
     "name": "test/fuzz/checkqueue.cpp",
+    "path": "src/test/fuzz/checkqueue.cpp",
     "subsystem": "test",
     "loc": 58,
     "classes": 1,
@@ -6312,6 +6972,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_cluster_linearize_cpp",
     "name": "test/fuzz/cluster_linearize.cpp",
+    "path": "src/test/fuzz/cluster_linearize.cpp",
     "subsystem": "test",
     "loc": 957,
     "classes": 2,
@@ -6321,6 +6982,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_coins_view_cpp",
     "name": "test/fuzz/coins_view.cpp",
+    "path": "src/test/fuzz/coins_view.cpp",
     "subsystem": "test",
     "loc": 290,
     "classes": 0,
@@ -6330,6 +6992,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_coinscache_sim_cpp",
     "name": "test/fuzz/coinscache_sim.cpp",
+    "path": "src/test/fuzz/coinscache_sim.cpp",
     "subsystem": "test",
     "loc": 480,
     "classes": 4,
@@ -6339,6 +7002,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_connman_cpp",
     "name": "test/fuzz/connman.cpp",
+    "path": "src/test/fuzz/connman.cpp",
     "subsystem": "test",
     "loc": 147,
     "classes": 0,
@@ -6348,6 +7012,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_cpp",
     "name": "test/fuzz/crypto.cpp",
+    "path": "src/test/fuzz/crypto.cpp",
     "subsystem": "test",
     "loc": 127,
     "classes": 0,
@@ -6357,6 +7022,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_aes256_cpp",
     "name": "test/fuzz/crypto_aes256.cpp",
+    "path": "src/test/fuzz/crypto_aes256.cpp",
     "subsystem": "test",
     "loc": 30,
     "classes": 0,
@@ -6366,6 +7032,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_aes256cbc_cpp",
     "name": "test/fuzz/crypto_aes256cbc.cpp",
+    "path": "src/test/fuzz/crypto_aes256cbc.cpp",
     "subsystem": "test",
     "loc": 34,
     "classes": 0,
@@ -6375,6 +7042,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_chacha20_cpp",
     "name": "test/fuzz/crypto_chacha20.cpp",
+    "path": "src/test/fuzz/crypto_chacha20.cpp",
     "subsystem": "test",
     "loc": 155,
     "classes": 0,
@@ -6384,6 +7052,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_chacha20poly1305_cpp",
     "name": "test/fuzz/crypto_chacha20poly1305.cpp",
+    "path": "src/test/fuzz/crypto_chacha20poly1305.cpp",
     "subsystem": "test",
     "loc": 200,
     "classes": 0,
@@ -6393,6 +7062,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_common_cpp",
     "name": "test/fuzz/crypto_common.cpp",
+    "path": "src/test/fuzz/crypto_common.cpp",
     "subsystem": "test",
     "loc": 70,
     "classes": 0,
@@ -6402,6 +7072,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
     "name": "test/fuzz/crypto_diff_fuzz_chacha20.cpp",
+    "path": "src/test/fuzz/crypto_diff_fuzz_chacha20.cpp",
     "subsystem": "test",
     "loc": 342,
     "classes": 0,
@@ -6411,6 +7082,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
     "name": "test/fuzz/crypto_hkdf_hmac_sha256_l32.cpp",
+    "path": "src/test/fuzz/crypto_hkdf_hmac_sha256_l32.cpp",
     "subsystem": "test",
     "loc": 25,
     "classes": 0,
@@ -6420,6 +7092,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_crypto_poly1305_cpp",
     "name": "test/fuzz/crypto_poly1305.cpp",
+    "path": "src/test/fuzz/crypto_poly1305.cpp",
     "subsystem": "test",
     "loc": 52,
     "classes": 0,
@@ -6429,6 +7102,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_cuckoocache_cpp",
     "name": "test/fuzz/cuckoocache.cpp",
+    "path": "src/test/fuzz/cuckoocache.cpp",
     "subsystem": "test",
     "loc": 48,
     "classes": 1,
@@ -6438,6 +7112,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_decode_tx_cpp",
     "name": "test/fuzz/decode_tx.cpp",
+    "path": "src/test/fuzz/decode_tx.cpp",
     "subsystem": "test",
     "loc": 32,
     "classes": 0,
@@ -6447,6 +7122,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_descriptor_parse_cpp",
     "name": "test/fuzz/descriptor_parse.cpp",
+    "path": "src/test/fuzz/descriptor_parse.cpp",
     "subsystem": "test",
     "loc": 106,
     "classes": 0,
@@ -6456,6 +7132,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_deserialize_cpp",
     "name": "test/fuzz/deserialize.cpp",
+    "path": "src/test/fuzz/deserialize.cpp",
     "subsystem": "test",
     "loc": 336,
     "classes": 1,
@@ -6465,6 +7142,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_eval_script_cpp",
     "name": "test/fuzz/eval_script.cpp",
+    "path": "src/test/fuzz/eval_script.cpp",
     "subsystem": "test",
     "loc": 31,
     "classes": 0,
@@ -6474,6 +7152,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_fee_rate_cpp",
     "name": "test/fuzz/fee_rate.cpp",
+    "path": "src/test/fuzz/fee_rate.cpp",
     "subsystem": "test",
     "loc": 40,
     "classes": 0,
@@ -6483,6 +7162,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_feefrac_cpp",
     "name": "test/fuzz/feefrac.cpp",
+    "path": "src/test/fuzz/feefrac.cpp",
     "subsystem": "test",
     "loc": 123,
     "classes": 0,
@@ -6492,6 +7172,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_feeratediagram_cpp",
     "name": "test/fuzz/feeratediagram.cpp",
+    "path": "src/test/fuzz/feeratediagram.cpp",
     "subsystem": "test",
     "loc": 133,
     "classes": 0,
@@ -6501,6 +7182,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_fees_cpp",
     "name": "test/fuzz/fees.cpp",
+    "path": "src/test/fuzz/fees.cpp",
     "subsystem": "test",
     "loc": 31,
     "classes": 0,
@@ -6510,6 +7192,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_flatfile_cpp",
     "name": "test/fuzz/flatfile.cpp",
+    "path": "src/test/fuzz/flatfile.cpp",
     "subsystem": "test",
     "loc": 28,
     "classes": 0,
@@ -6519,6 +7202,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_float_cpp",
     "name": "test/fuzz/float.cpp",
+    "path": "src/test/fuzz/float.cpp",
     "subsystem": "test",
     "loc": 61,
     "classes": 0,
@@ -6528,6 +7212,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_fuzz_cpp",
     "name": "test/fuzz/fuzz.cpp",
+    "path": "src/test/fuzz/fuzz.cpp",
     "subsystem": "test",
     "loc": 270,
     "classes": 1,
@@ -6537,6 +7222,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_fuzz_h",
     "name": "test/fuzz/fuzz.h",
+    "path": "src/test/fuzz/fuzz.h",
     "subsystem": "test",
     "loc": 47,
     "classes": 1,
@@ -6546,6 +7232,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_golomb_rice_cpp",
     "name": "test/fuzz/golomb_rice.cpp",
+    "path": "src/test/fuzz/golomb_rice.cpp",
     "subsystem": "test",
     "loc": 98,
     "classes": 0,
@@ -6555,6 +7242,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_headerssync_cpp",
     "name": "test/fuzz/headerssync.cpp",
+    "path": "src/test/fuzz/headerssync.cpp",
     "subsystem": "test",
     "loc": 118,
     "classes": 1,
@@ -6564,6 +7252,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_hex_cpp",
     "name": "test/fuzz/hex.cpp",
+    "path": "src/test/fuzz/hex.cpp",
     "subsystem": "test",
     "loc": 45,
     "classes": 0,
@@ -6573,6 +7262,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_http_request_cpp",
     "name": "test/fuzz/http_request.cpp",
+    "path": "src/test/fuzz/http_request.cpp",
     "subsystem": "test",
     "loc": 68,
     "classes": 0,
@@ -6582,6 +7272,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_i2p_cpp",
     "name": "test/fuzz/i2p.cpp",
+    "path": "src/test/fuzz/i2p.cpp",
     "subsystem": "test",
     "loc": 63,
     "classes": 0,
@@ -6591,6 +7282,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_integer_cpp",
     "name": "test/fuzz/integer.cpp",
+    "path": "src/test/fuzz/integer.cpp",
     "subsystem": "test",
     "loc": 263,
     "classes": 0,
@@ -6600,6 +7292,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_key_cpp",
     "name": "test/fuzz/key.cpp",
+    "path": "src/test/fuzz/key.cpp",
     "subsystem": "test",
     "loc": 370,
     "classes": 0,
@@ -6609,6 +7302,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_key_io_cpp",
     "name": "test/fuzz/key_io.cpp",
+    "path": "src/test/fuzz/key_io.cpp",
     "subsystem": "test",
     "loc": 39,
     "classes": 0,
@@ -6618,6 +7312,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_kitchen_sink_cpp",
     "name": "test/fuzz/kitchen_sink.cpp",
+    "path": "src/test/fuzz/kitchen_sink.cpp",
     "subsystem": "test",
     "loc": 58,
     "classes": 0,
@@ -6627,6 +7322,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_load_external_block_file_cpp",
     "name": "test/fuzz/load_external_block_file.cpp",
+    "path": "src/test/fuzz/load_external_block_file.cpp",
     "subsystem": "test",
     "loc": 44,
     "classes": 0,
@@ -6636,6 +7332,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_locale_cpp",
     "name": "test/fuzz/locale.cpp",
+    "path": "src/test/fuzz/locale.cpp",
     "subsystem": "test",
     "loc": 87,
     "classes": 0,
@@ -6645,6 +7342,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_merkleblock_cpp",
     "name": "test/fuzz/merkleblock.cpp",
+    "path": "src/test/fuzz/merkleblock.cpp",
     "subsystem": "test",
     "loc": 49,
     "classes": 0,
@@ -6654,6 +7352,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_message_cpp",
     "name": "test/fuzz/message.cpp",
+    "path": "src/test/fuzz/message.cpp",
     "subsystem": "test",
     "loc": 45,
     "classes": 0,
@@ -6663,6 +7362,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_mini_miner_cpp",
     "name": "test/fuzz/mini_miner.cpp",
+    "path": "src/test/fuzz/mini_miner.cpp",
     "subsystem": "test",
     "loc": 199,
     "classes": 0,
@@ -6672,6 +7372,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_miniscript_cpp",
     "name": "test/fuzz/miniscript.cpp",
+    "path": "src/test/fuzz/miniscript.cpp",
     "subsystem": "test",
     "loc": 1265,
     "classes": 8,
@@ -6681,6 +7382,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_minisketch_cpp",
     "name": "test/fuzz/minisketch.cpp",
+    "path": "src/test/fuzz/minisketch.cpp",
     "subsystem": "test",
     "loc": 82,
     "classes": 0,
@@ -6690,6 +7392,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_muhash_cpp",
     "name": "test/fuzz/muhash.cpp",
+    "path": "src/test/fuzz/muhash.cpp",
     "subsystem": "test",
     "loc": 70,
     "classes": 0,
@@ -6699,6 +7402,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_multiplication_overflow_cpp",
     "name": "test/fuzz/multiplication_overflow.cpp",
+    "path": "src/test/fuzz/multiplication_overflow.cpp",
     "subsystem": "test",
     "loc": 47,
     "classes": 0,
@@ -6708,6 +7412,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_net_cpp",
     "name": "test/fuzz/net.cpp",
+    "path": "src/test/fuzz/net.cpp",
     "subsystem": "test",
     "loc": 114,
     "classes": 0,
@@ -6717,6 +7422,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_net_permissions_cpp",
     "name": "test/fuzz/net_permissions.cpp",
+    "path": "src/test/fuzz/net_permissions.cpp",
     "subsystem": "test",
     "loc": 44,
     "classes": 0,
@@ -6726,6 +7432,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_netaddress_cpp",
     "name": "test/fuzz/netaddress.cpp",
+    "path": "src/test/fuzz/netaddress.cpp",
     "subsystem": "test",
     "loc": 112,
     "classes": 0,
@@ -6735,6 +7442,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_netbase_dns_lookup_cpp",
     "name": "test/fuzz/netbase_dns_lookup.cpp",
+    "path": "src/test/fuzz/netbase_dns_lookup.cpp",
     "subsystem": "test",
     "loc": 64,
     "classes": 0,
@@ -6744,6 +7452,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_node_eviction_cpp",
     "name": "test/fuzz/node_eviction.cpp",
+    "path": "src/test/fuzz/node_eviction.cpp",
     "subsystem": "test",
     "loc": 47,
     "classes": 0,
@@ -6753,6 +7462,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_p2p_handshake_cpp",
     "name": "test/fuzz/p2p_handshake.cpp",
+    "path": "src/test/fuzz/p2p_handshake.cpp",
     "subsystem": "test",
     "loc": 107,
     "classes": 0,
@@ -6762,6 +7472,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_p2p_transport_serialization_cpp",
     "name": "test/fuzz/p2p_transport_serialization.cpp",
+    "path": "src/test/fuzz/p2p_transport_serialization.cpp",
     "subsystem": "test",
     "loc": 405,
     "classes": 0,
@@ -6771,6 +7482,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_package_eval_cpp",
     "name": "test/fuzz/package_eval.cpp",
+    "path": "src/test/fuzz/package_eval.cpp",
     "subsystem": "test",
     "loc": 330,
     "classes": 3,
@@ -6780,6 +7492,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_parse_hd_keypath_cpp",
     "name": "test/fuzz/parse_hd_keypath.cpp",
+    "path": "src/test/fuzz/parse_hd_keypath.cpp",
     "subsystem": "test",
     "loc": 23,
     "classes": 0,
@@ -6789,6 +7502,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_parse_numbers_cpp",
     "name": "test/fuzz/parse_numbers.cpp",
+    "path": "src/test/fuzz/parse_numbers.cpp",
     "subsystem": "test",
     "loc": 37,
     "classes": 0,
@@ -6798,6 +7512,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_parse_script_cpp",
     "name": "test/fuzz/parse_script.cpp",
+    "path": "src/test/fuzz/parse_script.cpp",
     "subsystem": "test",
     "loc": 16,
     "classes": 0,
@@ -6807,6 +7522,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_parse_univalue_cpp",
     "name": "test/fuzz/parse_univalue.cpp",
+    "path": "src/test/fuzz/parse_univalue.cpp",
     "subsystem": "test",
     "loc": 94,
     "classes": 0,
@@ -6816,6 +7532,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_partially_downloaded_block_cpp",
     "name": "test/fuzz/partially_downloaded_block.cpp",
+    "path": "src/test/fuzz/partially_downloaded_block.cpp",
     "subsystem": "test",
     "loc": 146,
     "classes": 0,
@@ -6825,6 +7542,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_policy_estimator_cpp",
     "name": "test/fuzz/policy_estimator.cpp",
+    "path": "src/test/fuzz/policy_estimator.cpp",
     "subsystem": "test",
     "loc": 99,
     "classes": 0,
@@ -6834,6 +7552,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_policy_estimator_io_cpp",
     "name": "test/fuzz/policy_estimator_io.cpp",
+    "path": "src/test/fuzz/policy_estimator_io.cpp",
     "subsystem": "test",
     "loc": 35,
     "classes": 0,
@@ -6843,6 +7562,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_poolresource_cpp",
     "name": "test/fuzz/poolresource.cpp",
+    "path": "src/test/fuzz/poolresource.cpp",
     "subsystem": "test",
     "loc": 147,
     "classes": 1,
@@ -6852,6 +7572,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_pow_cpp",
     "name": "test/fuzz/pow.cpp",
+    "path": "src/test/fuzz/pow.cpp",
     "subsystem": "test",
     "loc": 124,
     "classes": 0,
@@ -6861,6 +7582,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_prevector_cpp",
     "name": "test/fuzz/prevector.cpp",
+    "path": "src/test/fuzz/prevector.cpp",
     "subsystem": "test",
     "loc": 283,
     "classes": 1,
@@ -6870,6 +7592,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_primitives_transaction_cpp",
     "name": "test/fuzz/primitives_transaction.cpp",
+    "path": "src/test/fuzz/primitives_transaction.cpp",
     "subsystem": "test",
     "loc": 34,
     "classes": 0,
@@ -6879,6 +7602,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_process_message_cpp",
     "name": "test/fuzz/process_message.cpp",
+    "path": "src/test/fuzz/process_message.cpp",
     "subsystem": "test",
     "loc": 94,
     "classes": 0,
@@ -6888,6 +7612,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_process_messages_cpp",
     "name": "test/fuzz/process_messages.cpp",
+    "path": "src/test/fuzz/process_messages.cpp",
     "subsystem": "test",
     "loc": 94,
     "classes": 0,
@@ -6897,6 +7622,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_protocol_cpp",
     "name": "test/fuzz/protocol.cpp",
+    "path": "src/test/fuzz/protocol.cpp",
     "subsystem": "test",
     "loc": 32,
     "classes": 0,
@@ -6906,6 +7632,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_psbt_cpp",
     "name": "test/fuzz/psbt.cpp",
+    "path": "src/test/fuzz/psbt.cpp",
     "subsystem": "test",
     "loc": 93,
     "classes": 0,
@@ -6915,6 +7642,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_random_cpp",
     "name": "test/fuzz/random.cpp",
+    "path": "src/test/fuzz/random.cpp",
     "subsystem": "test",
     "loc": 30,
     "classes": 0,
@@ -6924,6 +7652,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_rbf_cpp",
     "name": "test/fuzz/rbf.cpp",
+    "path": "src/test/fuzz/rbf.cpp",
     "subsystem": "test",
     "loc": 210,
     "classes": 0,
@@ -6933,6 +7662,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_rolling_bloom_filter_cpp",
     "name": "test/fuzz/rolling_bloom_filter.cpp",
+    "path": "src/test/fuzz/rolling_bloom_filter.cpp",
     "subsystem": "test",
     "loc": 46,
     "classes": 0,
@@ -6942,6 +7672,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_rpc_cpp",
     "name": "test/fuzz/rpc.cpp",
+    "path": "src/test/fuzz/rpc.cpp",
     "subsystem": "test",
     "loc": 391,
     "classes": 1,
@@ -6951,6 +7682,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_cpp",
     "name": "test/fuzz/script.cpp",
+    "path": "src/test/fuzz/script.cpp",
     "subsystem": "test",
     "loc": 171,
     "classes": 0,
@@ -6960,6 +7692,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_assets_test_minimizer_cpp",
     "name": "test/fuzz/script_assets_test_minimizer.cpp",
+    "path": "src/test/fuzz/script_assets_test_minimizer.cpp",
     "subsystem": "test",
     "loc": 201,
     "classes": 0,
@@ -6969,6 +7702,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_descriptor_cache_cpp",
     "name": "test/fuzz/script_descriptor_cache.cpp",
+    "path": "src/test/fuzz/script_descriptor_cache.cpp",
     "subsystem": "test",
     "loc": 42,
     "classes": 0,
@@ -6978,6 +7712,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_flags_cpp",
     "name": "test/fuzz/script_flags.cpp",
+    "path": "src/test/fuzz/script_flags.cpp",
     "subsystem": "test",
     "loc": 71,
     "classes": 0,
@@ -6987,6 +7722,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_format_cpp",
     "name": "test/fuzz/script_format.cpp",
+    "path": "src/test/fuzz/script_format.cpp",
     "subsystem": "test",
     "loc": 34,
     "classes": 0,
@@ -6996,6 +7732,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_interpreter_cpp",
     "name": "test/fuzz/script_interpreter.cpp",
+    "path": "src/test/fuzz/script_interpreter.cpp",
     "subsystem": "test",
     "loc": 41,
     "classes": 0,
@@ -7005,6 +7742,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_ops_cpp",
     "name": "test/fuzz/script_ops.cpp",
+    "path": "src/test/fuzz/script_ops.cpp",
     "subsystem": "test",
     "loc": 67,
     "classes": 0,
@@ -7014,6 +7752,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_parsing_cpp",
     "name": "test/fuzz/script_parsing.cpp",
+    "path": "src/test/fuzz/script_parsing.cpp",
     "subsystem": "test",
     "loc": 33,
     "classes": 0,
@@ -7023,6 +7762,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_sigcache_cpp",
     "name": "test/fuzz/script_sigcache.cpp",
+    "path": "src/test/fuzz/script_sigcache.cpp",
     "subsystem": "test",
     "loc": 55,
     "classes": 0,
@@ -7032,6 +7772,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_script_sign_cpp",
     "name": "test/fuzz/script_sign.cpp",
+    "path": "src/test/fuzz/script_sign.cpp",
     "subsystem": "test",
     "loc": 139,
     "classes": 0,
@@ -7041,6 +7782,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_scriptnum_ops_cpp",
     "name": "test/fuzz/scriptnum_ops.cpp",
+    "path": "src/test/fuzz/scriptnum_ops.cpp",
     "subsystem": "test",
     "loc": 128,
     "classes": 0,
@@ -7050,6 +7792,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
     "name": "test/fuzz/secp256k1_ec_seckey_import_export_der.cpp",
+    "path": "src/test/fuzz/secp256k1_ec_seckey_import_export_der.cpp",
     "subsystem": "test",
     "loc": 38,
     "classes": 0,
@@ -7059,6 +7802,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
     "name": "test/fuzz/secp256k1_ecdsa_signature_parse_der_lax.cpp",
+    "path": "src/test/fuzz/secp256k1_ecdsa_signature_parse_der_lax.cpp",
     "subsystem": "test",
     "loc": 30,
     "classes": 0,
@@ -7068,6 +7812,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_signature_checker_cpp",
     "name": "test/fuzz/signature_checker.cpp",
+    "path": "src/test/fuzz/signature_checker.cpp",
     "subsystem": "test",
     "loc": 64,
     "classes": 1,
@@ -7077,6 +7822,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_signet_cpp",
     "name": "test/fuzz/signet.cpp",
+    "path": "src/test/fuzz/signet.cpp",
     "subsystem": "test",
     "loc": 34,
     "classes": 0,
@@ -7086,6 +7832,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_socks5_cpp",
     "name": "test/fuzz/socks5.cpp",
+    "path": "src/test/fuzz/socks5.cpp",
     "subsystem": "test",
     "loc": 48,
     "classes": 0,
@@ -7095,6 +7842,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_span_cpp",
     "name": "test/fuzz/span.cpp",
+    "path": "src/test/fuzz/span.cpp",
     "subsystem": "test",
     "loc": 39,
     "classes": 0,
@@ -7104,6 +7852,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_string_cpp",
     "name": "test/fuzz/string.cpp",
+    "path": "src/test/fuzz/string.cpp",
     "subsystem": "test",
     "loc": 150,
     "classes": 0,
@@ -7113,6 +7862,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_strprintf_cpp",
     "name": "test/fuzz/strprintf.cpp",
+    "path": "src/test/fuzz/strprintf.cpp",
     "subsystem": "test",
     "loc": 134,
     "classes": 0,
@@ -7122,6 +7872,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_system_cpp",
     "name": "test/fuzz/system.cpp",
+    "path": "src/test/fuzz/system.cpp",
     "subsystem": "test",
     "loc": 122,
     "classes": 0,
@@ -7131,6 +7882,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_timeoffsets_cpp",
     "name": "test/fuzz/timeoffsets.cpp",
+    "path": "src/test/fuzz/timeoffsets.cpp",
     "subsystem": "test",
     "loc": 30,
     "classes": 0,
@@ -7140,6 +7892,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_torcontrol_cpp",
     "name": "test/fuzz/torcontrol.cpp",
+    "path": "src/test/fuzz/torcontrol.cpp",
     "subsystem": "test",
     "loc": 80,
     "classes": 1,
@@ -7149,6 +7902,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_transaction_cpp",
     "name": "test/fuzz/transaction.cpp",
+    "path": "src/test/fuzz/transaction.cpp",
     "subsystem": "test",
     "loc": 103,
     "classes": 0,
@@ -7158,6 +7912,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_tx_in_cpp",
     "name": "test/fuzz/tx_in.cpp",
+    "path": "src/test/fuzz/tx_in.cpp",
     "subsystem": "test",
     "loc": 29,
     "classes": 0,
@@ -7167,6 +7922,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_tx_out_cpp",
     "name": "test/fuzz/tx_out.cpp",
+    "path": "src/test/fuzz/tx_out.cpp",
     "subsystem": "test",
     "loc": 32,
     "classes": 0,
@@ -7176,6 +7932,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_tx_pool_cpp",
     "name": "test/fuzz/tx_pool.cpp",
+    "path": "src/test/fuzz/tx_pool.cpp",
     "subsystem": "test",
     "loc": 427,
     "classes": 2,
@@ -7185,6 +7942,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_txorphan_cpp",
     "name": "test/fuzz/txorphan.cpp",
+    "path": "src/test/fuzz/txorphan.cpp",
     "subsystem": "test",
     "loc": 158,
     "classes": 0,
@@ -7194,6 +7952,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_txrequest_cpp",
     "name": "test/fuzz/txrequest.cpp",
+    "path": "src/test/fuzz/txrequest.cpp",
     "subsystem": "test",
     "loc": 374,
     "classes": 2,
@@ -7203,6 +7962,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_cpp",
     "name": "test/fuzz/util.cpp",
+    "path": "src/test/fuzz/util.cpp",
     "subsystem": "test",
     "loc": 356,
     "classes": 0,
@@ -7212,6 +7972,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_h",
     "name": "test/fuzz/util.h",
+    "path": "src/test/fuzz/util.h",
     "subsystem": "test",
     "loc": 325,
     "classes": 2,
@@ -7221,6 +7982,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_descriptor_cpp",
     "name": "test/fuzz/util/descriptor.cpp",
+    "path": "src/test/fuzz/util/descriptor.cpp",
     "subsystem": "test",
     "loc": 145,
     "classes": 0,
@@ -7230,6 +7992,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_descriptor_h",
     "name": "test/fuzz/util/descriptor.h",
+    "path": "src/test/fuzz/util/descriptor.h",
     "subsystem": "test",
     "loc": 79,
     "classes": 1,
@@ -7239,6 +8002,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_mempool_cpp",
     "name": "test/fuzz/util/mempool.cpp",
+    "path": "src/test/fuzz/util/mempool.cpp",
     "subsystem": "test",
     "loc": 31,
     "classes": 0,
@@ -7248,6 +8012,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_mempool_h",
     "name": "test/fuzz/util/mempool.h",
+    "path": "src/test/fuzz/util/mempool.h",
     "subsystem": "test",
     "loc": 26,
     "classes": 4,
@@ -7257,6 +8022,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_net_cpp",
     "name": "test/fuzz/util/net.cpp",
+    "path": "src/test/fuzz/util/net.cpp",
     "subsystem": "test",
     "loc": 423,
     "classes": 1,
@@ -7266,6 +8032,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_util_net_h",
     "name": "test/fuzz/util/net.h",
+    "path": "src/test/fuzz/util/net.h",
     "subsystem": "test",
     "loc": 149,
     "classes": 1,
@@ -7275,6 +8042,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_utxo_snapshot_cpp",
     "name": "test/fuzz/utxo_snapshot.cpp",
+    "path": "src/test/fuzz/utxo_snapshot.cpp",
     "subsystem": "test",
     "loc": 200,
     "classes": 0,
@@ -7284,6 +8052,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_utxo_total_supply_cpp",
     "name": "test/fuzz/utxo_total_supply.cpp",
+    "path": "src/test/fuzz/utxo_total_supply.cpp",
     "subsystem": "test",
     "loc": 167,
     "classes": 0,
@@ -7293,6 +8062,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_validation_load_mempool_cpp",
     "name": "test/fuzz/validation_load_mempool.cpp",
+    "path": "src/test/fuzz/validation_load_mempool.cpp",
     "subsystem": "test",
     "loc": 61,
     "classes": 0,
@@ -7302,6 +8072,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_vecdeque_cpp",
     "name": "test/fuzz/vecdeque.cpp",
+    "path": "src/test/fuzz/vecdeque.cpp",
     "subsystem": "test",
     "loc": 491,
     "classes": 1,
@@ -7311,6 +8082,7 @@ export const buildings: Building[] =
   {
     "id": "test_fuzz_versionbits_cpp",
     "name": "test/fuzz/versionbits.cpp",
+    "path": "src/test/fuzz/versionbits.cpp",
     "subsystem": "test",
     "loc": 365,
     "classes": 2,
@@ -7320,6 +8092,7 @@ export const buildings: Building[] =
   {
     "id": "test_getarg_tests_cpp",
     "name": "test/getarg_tests.cpp",
+    "path": "src/test/getarg_tests.cpp",
     "subsystem": "test",
     "loc": 457,
     "classes": 0,
@@ -7329,6 +8102,7 @@ export const buildings: Building[] =
   {
     "id": "test_hash_tests_cpp",
     "name": "test/hash_tests.cpp",
+    "path": "src/test/hash_tests.cpp",
     "subsystem": "test",
     "loc": 151,
     "classes": 0,
@@ -7338,6 +8112,7 @@ export const buildings: Building[] =
   {
     "id": "test_headers_sync_chainwork_tests_cpp",
     "name": "test/headers_sync_chainwork_tests.cpp",
+    "path": "src/test/headers_sync_chainwork_tests.cpp",
     "subsystem": "test",
     "loc": 146,
     "classes": 1,
@@ -7347,6 +8122,7 @@ export const buildings: Building[] =
   {
     "id": "test_httpserver_tests_cpp",
     "name": "test/httpserver_tests.cpp",
+    "path": "src/test/httpserver_tests.cpp",
     "subsystem": "test",
     "loc": 42,
     "classes": 0,
@@ -7356,6 +8132,7 @@ export const buildings: Building[] =
   {
     "id": "test_i2p_tests_cpp",
     "name": "test/i2p_tests.cpp",
+    "path": "src/test/i2p_tests.cpp",
     "subsystem": "test",
     "loc": 174,
     "classes": 1,
@@ -7365,6 +8142,7 @@ export const buildings: Building[] =
   {
     "id": "test_interfaces_tests_cpp",
     "name": "test/interfaces_tests.cpp",
+    "path": "src/test/interfaces_tests.cpp",
     "subsystem": "test",
     "loc": 165,
     "classes": 0,
@@ -7374,6 +8152,7 @@ export const buildings: Building[] =
   {
     "id": "test_ipc_test_cpp",
     "name": "test/ipc_test.cpp",
+    "path": "src/test/ipc_test.cpp",
     "subsystem": "test",
     "loc": 67,
     "classes": 0,
@@ -7383,6 +8162,7 @@ export const buildings: Building[] =
   {
     "id": "test_ipc_test_h",
     "name": "test/ipc_test.h",
+    "path": "src/test/ipc_test.h",
     "subsystem": "test",
     "loc": 21,
     "classes": 1,
@@ -7392,6 +8172,7 @@ export const buildings: Building[] =
   {
     "id": "test_ipc_tests_cpp",
     "name": "test/ipc_tests.cpp",
+    "path": "src/test/ipc_tests.cpp",
     "subsystem": "test",
     "loc": 13,
     "classes": 0,
@@ -7401,6 +8182,7 @@ export const buildings: Building[] =
   {
     "id": "test_key_io_tests_cpp",
     "name": "test/key_io_tests.cpp",
+    "path": "src/test/key_io_tests.cpp",
     "subsystem": "test",
     "loc": 149,
     "classes": 0,
@@ -7410,6 +8192,7 @@ export const buildings: Building[] =
   {
     "id": "test_key_tests_cpp",
     "name": "test/key_tests.cpp",
+    "path": "src/test/key_tests.cpp",
     "subsystem": "test",
     "loc": 389,
     "classes": 0,
@@ -7419,6 +8202,7 @@ export const buildings: Building[] =
   {
     "id": "test_logging_tests_cpp",
     "name": "test/logging_tests.cpp",
+    "path": "src/test/logging_tests.cpp",
     "subsystem": "test",
     "loc": 283,
     "classes": 1,
@@ -7428,6 +8212,7 @@ export const buildings: Building[] =
   {
     "id": "test_main_cpp",
     "name": "test/main.cpp",
+    "path": "src/test/main.cpp",
     "subsystem": "test",
     "loc": 48,
     "classes": 0,
@@ -7437,6 +8222,7 @@ export const buildings: Building[] =
   {
     "id": "test_mempool_tests_cpp",
     "name": "test/mempool_tests.cpp",
+    "path": "src/test/mempool_tests.cpp",
     "subsystem": "test",
     "loc": 807,
     "classes": 1,
@@ -7446,6 +8232,7 @@ export const buildings: Building[] =
   {
     "id": "test_merkle_tests_cpp",
     "name": "test/merkle_tests.cpp",
+    "path": "src/test/merkle_tests.cpp",
     "subsystem": "test",
     "loc": 352,
     "classes": 0,
@@ -7455,6 +8242,7 @@ export const buildings: Building[] =
   {
     "id": "test_merkleblock_tests_cpp",
     "name": "test/merkleblock_tests.cpp",
+    "path": "src/test/merkleblock_tests.cpp",
     "subsystem": "test",
     "loc": 80,
     "classes": 0,
@@ -7464,6 +8252,7 @@ export const buildings: Building[] =
   {
     "id": "test_miner_tests_cpp",
     "name": "test/miner_tests.cpp",
+    "path": "src/test/miner_tests.cpp",
     "subsystem": "test",
     "loc": 665,
     "classes": 1,
@@ -7473,6 +8262,7 @@ export const buildings: Building[] =
   {
     "id": "test_miniminer_tests_cpp",
     "name": "test/miniminer_tests.cpp",
+    "path": "src/test/miniminer_tests.cpp",
     "subsystem": "test",
     "loc": 712,
     "classes": 0,
@@ -7482,6 +8272,7 @@ export const buildings: Building[] =
   {
     "id": "test_miniscript_tests_cpp",
     "name": "test/miniscript_tests.cpp",
+    "path": "src/test/miniscript_tests.cpp",
     "subsystem": "test",
     "loc": 724,
     "classes": 4,
@@ -7491,6 +8282,7 @@ export const buildings: Building[] =
   {
     "id": "test_minisketch_tests_cpp",
     "name": "test/minisketch_tests.cpp",
+    "path": "src/test/minisketch_tests.cpp",
     "subsystem": "test",
     "loc": 52,
     "classes": 0,
@@ -7500,6 +8292,7 @@ export const buildings: Building[] =
   {
     "id": "test_multisig_tests_cpp",
     "name": "test/multisig_tests.cpp",
+    "path": "src/test/multisig_tests.cpp",
     "subsystem": "test",
     "loc": 226,
     "classes": 0,
@@ -7509,6 +8302,7 @@ export const buildings: Building[] =
   {
     "id": "test_net_peer_connection_tests_cpp",
     "name": "test/net_peer_connection_tests.cpp",
+    "path": "src/test/net_peer_connection_tests.cpp",
     "subsystem": "test",
     "loc": 163,
     "classes": 1,
@@ -7518,6 +8312,7 @@ export const buildings: Building[] =
   {
     "id": "test_net_peer_eviction_tests_cpp",
     "name": "test/net_peer_eviction_tests.cpp",
+    "path": "src/test/net_peer_eviction_tests.cpp",
     "subsystem": "test",
     "loc": 685,
     "classes": 0,
@@ -7527,6 +8322,7 @@ export const buildings: Building[] =
   {
     "id": "test_net_tests_cpp",
     "name": "test/net_tests.cpp",
+    "path": "src/test/net_tests.cpp",
     "subsystem": "test",
     "loc": 1563,
     "classes": 1,
@@ -7536,6 +8332,7 @@ export const buildings: Building[] =
   {
     "id": "test_netbase_tests_cpp",
     "name": "test/netbase_tests.cpp",
+    "path": "src/test/netbase_tests.cpp",
     "subsystem": "test",
     "loc": 616,
     "classes": 0,
@@ -7545,6 +8342,7 @@ export const buildings: Building[] =
   {
     "id": "test_node_warnings_tests_cpp",
     "name": "test/node_warnings_tests.cpp",
+    "path": "src/test/node_warnings_tests.cpp",
     "subsystem": "test",
     "loc": 52,
     "classes": 0,
@@ -7554,6 +8352,7 @@ export const buildings: Building[] =
   {
     "id": "test_orphanage_tests_cpp",
     "name": "test/orphanage_tests.cpp",
+    "path": "src/test/orphanage_tests.cpp",
     "subsystem": "test",
     "loc": 369,
     "classes": 1,
@@ -7563,6 +8362,7 @@ export const buildings: Building[] =
   {
     "id": "test_peerman_tests_cpp",
     "name": "test/peerman_tests.cpp",
+    "path": "src/test/peerman_tests.cpp",
     "subsystem": "test",
     "loc": 77,
     "classes": 0,
@@ -7572,6 +8372,7 @@ export const buildings: Building[] =
   {
     "id": "test_pmt_tests_cpp",
     "name": "test/pmt_tests.cpp",
+    "path": "src/test/pmt_tests.cpp",
     "subsystem": "test",
     "loc": 124,
     "classes": 1,
@@ -7581,6 +8382,7 @@ export const buildings: Building[] =
   {
     "id": "test_policy_fee_tests_cpp",
     "name": "test/policy_fee_tests.cpp",
+    "path": "src/test/policy_fee_tests.cpp",
     "subsystem": "test",
     "loc": 35,
     "classes": 0,
@@ -7590,6 +8392,7 @@ export const buildings: Building[] =
   {
     "id": "test_policyestimator_tests_cpp",
     "name": "test/policyestimator_tests.cpp",
+    "path": "src/test/policyestimator_tests.cpp",
     "subsystem": "test",
     "loc": 268,
     "classes": 0,
@@ -7599,6 +8402,7 @@ export const buildings: Building[] =
   {
     "id": "test_pool_tests_cpp",
     "name": "test/pool_tests.cpp",
+    "path": "src/test/pool_tests.cpp",
     "subsystem": "test",
     "loc": 194,
     "classes": 0,
@@ -7608,6 +8412,7 @@ export const buildings: Building[] =
   {
     "id": "test_pow_tests_cpp",
     "name": "test/pow_tests.cpp",
+    "path": "src/test/pow_tests.cpp",
     "subsystem": "test",
     "loc": 211,
     "classes": 0,
@@ -7617,6 +8422,7 @@ export const buildings: Building[] =
   {
     "id": "test_prevector_tests_cpp",
     "name": "test/prevector_tests.cpp",
+    "path": "src/test/prevector_tests.cpp",
     "subsystem": "test",
     "loc": 296,
     "classes": 1,
@@ -7626,6 +8432,7 @@ export const buildings: Building[] =
   {
     "id": "test_raii_event_tests_cpp",
     "name": "test/raii_event_tests.cpp",
+    "path": "src/test/raii_event_tests.cpp",
     "subsystem": "test",
     "loc": 99,
     "classes": 0,
@@ -7635,6 +8442,7 @@ export const buildings: Building[] =
   {
     "id": "test_random_tests_cpp",
     "name": "test/random_tests.cpp",
+    "path": "src/test/random_tests.cpp",
     "subsystem": "test",
     "loc": 259,
     "classes": 0,
@@ -7644,6 +8452,7 @@ export const buildings: Building[] =
   {
     "id": "test_rbf_tests_cpp",
     "name": "test/rbf_tests.cpp",
+    "path": "src/test/rbf_tests.cpp",
     "subsystem": "test",
     "loc": 625,
     "classes": 0,
@@ -7653,6 +8462,7 @@ export const buildings: Building[] =
   {
     "id": "test_rest_tests_cpp",
     "name": "test/rest_tests.cpp",
+    "path": "src/test/rest_tests.cpp",
     "subsystem": "test",
     "loc": 48,
     "classes": 0,
@@ -7662,6 +8472,7 @@ export const buildings: Building[] =
   {
     "id": "test_result_tests_cpp",
     "name": "test/result_tests.cpp",
+    "path": "src/test/result_tests.cpp",
     "subsystem": "test",
     "loc": 96,
     "classes": 1,
@@ -7671,6 +8482,7 @@ export const buildings: Building[] =
   {
     "id": "test_reverselock_tests_cpp",
     "name": "test/reverselock_tests.cpp",
+    "path": "src/test/reverselock_tests.cpp",
     "subsystem": "test",
     "loc": 93,
     "classes": 0,
@@ -7680,6 +8492,7 @@ export const buildings: Building[] =
   {
     "id": "test_rpc_tests_cpp",
     "name": "test/rpc_tests.cpp",
+    "path": "src/test/rpc_tests.cpp",
     "subsystem": "test",
     "loc": 641,
     "classes": 2,
@@ -7689,6 +8502,7 @@ export const buildings: Building[] =
   {
     "id": "test_sanity_tests_cpp",
     "name": "test/sanity_tests.cpp",
+    "path": "src/test/sanity_tests.cpp",
     "subsystem": "test",
     "loc": 17,
     "classes": 0,
@@ -7698,6 +8512,7 @@ export const buildings: Building[] =
   {
     "id": "test_scheduler_tests_cpp",
     "name": "test/scheduler_tests.cpp",
+    "path": "src/test/scheduler_tests.cpp",
     "subsystem": "test",
     "loc": 215,
     "classes": 0,
@@ -7707,6 +8522,7 @@ export const buildings: Building[] =
   {
     "id": "test_script_p2sh_tests_cpp",
     "name": "test/script_p2sh_tests.cpp",
+    "path": "src/test/script_p2sh_tests.cpp",
     "subsystem": "test",
     "loc": 391,
     "classes": 0,
@@ -7716,6 +8532,7 @@ export const buildings: Building[] =
   {
     "id": "test_script_parse_tests_cpp",
     "name": "test/script_parse_tests.cpp",
+    "path": "src/test/script_parse_tests.cpp",
     "subsystem": "test",
     "loc": 55,
     "classes": 0,
@@ -7725,6 +8542,7 @@ export const buildings: Building[] =
   {
     "id": "test_script_segwit_tests_cpp",
     "name": "test/script_segwit_tests.cpp",
+    "path": "src/test/script_segwit_tests.cpp",
     "subsystem": "test",
     "loc": 164,
     "classes": 0,
@@ -7734,6 +8552,7 @@ export const buildings: Building[] =
   {
     "id": "test_script_standard_tests_cpp",
     "name": "test/script_standard_tests.cpp",
+    "path": "src/test/script_standard_tests.cpp",
     "subsystem": "test",
     "loc": 452,
     "classes": 0,
@@ -7743,6 +8562,7 @@ export const buildings: Building[] =
   {
     "id": "test_script_tests_cpp",
     "name": "test/script_tests.cpp",
+    "path": "src/test/script_tests.cpp",
     "subsystem": "test",
     "loc": 1711,
     "classes": 3,
@@ -7752,6 +8572,7 @@ export const buildings: Building[] =
   {
     "id": "test_scriptnum10_h",
     "name": "test/scriptnum10.h",
+    "path": "src/test/scriptnum10.h",
     "subsystem": "test",
     "loc": 182,
     "classes": 2,
@@ -7761,6 +8582,7 @@ export const buildings: Building[] =
   {
     "id": "test_scriptnum_tests_cpp",
     "name": "test/scriptnum_tests.cpp",
+    "path": "src/test/scriptnum_tests.cpp",
     "subsystem": "test",
     "loc": 200,
     "classes": 0,
@@ -7770,6 +8592,7 @@ export const buildings: Building[] =
   {
     "id": "test_serfloat_tests_cpp",
     "name": "test/serfloat_tests.cpp",
+    "path": "src/test/serfloat_tests.cpp",
     "subsystem": "test",
     "loc": 153,
     "classes": 0,
@@ -7779,6 +8602,7 @@ export const buildings: Building[] =
   {
     "id": "test_serialize_tests_cpp",
     "name": "test/serialize_tests.cpp",
+    "path": "src/test/serialize_tests.cpp",
     "subsystem": "test",
     "loc": 499,
     "classes": 9,
@@ -7788,6 +8612,7 @@ export const buildings: Building[] =
   {
     "id": "test_settings_tests_cpp",
     "name": "test/settings_tests.cpp",
+    "path": "src/test/settings_tests.cpp",
     "subsystem": "test",
     "loc": 269,
     "classes": 1,
@@ -7797,6 +8622,7 @@ export const buildings: Building[] =
   {
     "id": "test_sighash_tests_cpp",
     "name": "test/sighash_tests.cpp",
+    "path": "src/test/sighash_tests.cpp",
     "subsystem": "test",
     "loc": 208,
     "classes": 0,
@@ -7806,6 +8632,7 @@ export const buildings: Building[] =
   {
     "id": "test_sigopcount_tests_cpp",
     "name": "test/sigopcount_tests.cpp",
+    "path": "src/test/sigopcount_tests.cpp",
     "subsystem": "test",
     "loc": 231,
     "classes": 0,
@@ -7815,6 +8642,7 @@ export const buildings: Building[] =
   {
     "id": "test_skiplist_tests_cpp",
     "name": "test/skiplist_tests.cpp",
+    "path": "src/test/skiplist_tests.cpp",
     "subsystem": "test",
     "loc": 191,
     "classes": 0,
@@ -7824,6 +8652,7 @@ export const buildings: Building[] =
   {
     "id": "test_sock_tests_cpp",
     "name": "test/sock_tests.cpp",
+    "path": "src/test/sock_tests.cpp",
     "subsystem": "test",
     "loc": 174,
     "classes": 0,
@@ -7833,6 +8662,7 @@ export const buildings: Building[] =
   {
     "id": "test_span_tests_cpp",
     "name": "test/span_tests.cpp",
+    "path": "src/test/span_tests.cpp",
     "subsystem": "test",
     "loc": 73,
     "classes": 3,
@@ -7842,6 +8672,7 @@ export const buildings: Building[] =
   {
     "id": "test_streams_tests_cpp",
     "name": "test/streams_tests.cpp",
+    "path": "src/test/streams_tests.cpp",
     "subsystem": "test",
     "loc": 570,
     "classes": 0,
@@ -7851,6 +8682,7 @@ export const buildings: Building[] =
   {
     "id": "test_sync_tests_cpp",
     "name": "test/sync_tests.cpp",
+    "path": "src/test/sync_tests.cpp",
     "subsystem": "test",
     "loc": 143,
     "classes": 0,
@@ -7860,6 +8692,7 @@ export const buildings: Building[] =
   {
     "id": "test_system_tests_cpp",
     "name": "test/system_tests.cpp",
+    "path": "src/test/system_tests.cpp",
     "subsystem": "test",
     "loc": 82,
     "classes": 0,
@@ -7869,6 +8702,7 @@ export const buildings: Building[] =
   {
     "id": "test_timeoffsets_tests_cpp",
     "name": "test/timeoffsets_tests.cpp",
+    "path": "src/test/timeoffsets_tests.cpp",
     "subsystem": "test",
     "loc": 72,
     "classes": 0,
@@ -7878,6 +8712,7 @@ export const buildings: Building[] =
   {
     "id": "test_torcontrol_tests_cpp",
     "name": "test/torcontrol_tests.cpp",
+    "path": "src/test/torcontrol_tests.cpp",
     "subsystem": "test",
     "loc": 202,
     "classes": 0,
@@ -7887,6 +8722,7 @@ export const buildings: Building[] =
   {
     "id": "test_transaction_tests_cpp",
     "name": "test/transaction_tests.cpp",
+    "path": "src/test/transaction_tests.cpp",
     "subsystem": "test",
     "loc": 1039,
     "classes": 0,
@@ -7896,6 +8732,7 @@ export const buildings: Building[] =
   {
     "id": "test_translation_tests_cpp",
     "name": "test/translation_tests.cpp",
+    "path": "src/test/translation_tests.cpp",
     "subsystem": "test",
     "loc": 21,
     "classes": 0,
@@ -7905,6 +8742,7 @@ export const buildings: Building[] =
   {
     "id": "test_txindex_tests_cpp",
     "name": "test/txindex_tests.cpp",
+    "path": "src/test/txindex_tests.cpp",
     "subsystem": "test",
     "loc": 80,
     "classes": 0,
@@ -7914,6 +8752,7 @@ export const buildings: Building[] =
   {
     "id": "test_txpackage_tests_cpp",
     "name": "test/txpackage_tests.cpp",
+    "path": "src/test/txpackage_tests.cpp",
     "subsystem": "test",
     "loc": 1078,
     "classes": 0,
@@ -7923,6 +8762,7 @@ export const buildings: Building[] =
   {
     "id": "test_txreconciliation_tests_cpp",
     "name": "test/txreconciliation_tests.cpp",
+    "path": "src/test/txreconciliation_tests.cpp",
     "subsystem": "test",
     "loc": 84,
     "classes": 0,
@@ -7932,6 +8772,7 @@ export const buildings: Building[] =
   {
     "id": "test_txrequest_tests_cpp",
     "name": "test/txrequest_tests.cpp",
+    "path": "src/test/txrequest_tests.cpp",
     "subsystem": "test",
     "loc": 740,
     "classes": 2,
@@ -7941,6 +8782,7 @@ export const buildings: Building[] =
   {
     "id": "test_txvalidation_tests_cpp",
     "name": "test/txvalidation_tests.cpp",
+    "path": "src/test/txvalidation_tests.cpp",
     "subsystem": "test",
     "loc": 390,
     "classes": 0,
@@ -7950,6 +8792,7 @@ export const buildings: Building[] =
   {
     "id": "test_txvalidationcache_tests_cpp",
     "name": "test/txvalidationcache_tests.cpp",
+    "path": "src/test/txvalidationcache_tests.cpp",
     "subsystem": "test",
     "loc": 388,
     "classes": 1,
@@ -7959,6 +8802,7 @@ export const buildings: Building[] =
   {
     "id": "test_uint256_tests_cpp",
     "name": "test/uint256_tests.cpp",
+    "path": "src/test/uint256_tests.cpp",
     "subsystem": "test",
     "loc": 409,
     "classes": 0,
@@ -7968,6 +8812,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_blockfilter_cpp",
     "name": "test/util/blockfilter.cpp",
+    "path": "src/test/util/blockfilter.cpp",
     "subsystem": "test",
     "loc": 31,
     "classes": 0,
@@ -7977,6 +8822,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_blockfilter_h",
     "name": "test/util/blockfilter.h",
+    "path": "src/test/util/blockfilter.h",
     "subsystem": "test",
     "loc": 17,
     "classes": 2,
@@ -7986,6 +8832,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_chainstate_h",
     "name": "test/util/chainstate.h",
+    "path": "src/test/util/chainstate.h",
     "subsystem": "test",
     "loc": 135,
     "classes": 0,
@@ -7995,6 +8842,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_cluster_linearize_h",
     "name": "test/util/cluster_linearize.h",
+    "path": "src/test/util/cluster_linearize.h",
     "subsystem": "test",
     "loc": 353,
     "classes": 1,
@@ -8004,6 +8852,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_coins_cpp",
     "name": "test/util/coins.cpp",
+    "path": "src/test/util/coins.cpp",
     "subsystem": "test",
     "loc": 26,
     "classes": 0,
@@ -8013,6 +8862,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_coins_h",
     "name": "test/util/coins.h",
+    "path": "src/test/util/coins.h",
     "subsystem": "test",
     "loc": 19,
     "classes": 1,
@@ -8022,6 +8872,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_index_cpp",
     "name": "test/util/index.cpp",
+    "path": "src/test/util/index.cpp",
     "subsystem": "test",
     "loc": 22,
     "classes": 0,
@@ -8031,6 +8882,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_index_h",
     "name": "test/util/index.h",
+    "path": "src/test/util/index.h",
     "subsystem": "test",
     "loc": 16,
     "classes": 2,
@@ -8040,6 +8892,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_json_cpp",
     "name": "test/util/json.cpp",
+    "path": "src/test/util/json.cpp",
     "subsystem": "test",
     "loc": 17,
     "classes": 0,
@@ -8049,6 +8902,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_json_h",
     "name": "test/util/json.h",
+    "path": "src/test/util/json.h",
     "subsystem": "test",
     "loc": 14,
     "classes": 0,
@@ -8058,6 +8912,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_logging_cpp",
     "name": "test/util/logging.cpp",
+    "path": "src/test/util/logging.cpp",
     "subsystem": "test",
     "loc": 31,
     "classes": 0,
@@ -8067,6 +8922,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_logging_h",
     "name": "test/util/logging.h",
+    "path": "src/test/util/logging.h",
     "subsystem": "test",
     "loc": 41,
     "classes": 1,
@@ -8076,6 +8932,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_mining_cpp",
     "name": "test/util/mining.cpp",
+    "path": "src/test/util/mining.cpp",
     "subsystem": "test",
     "loc": 130,
     "classes": 1,
@@ -8085,6 +8942,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_mining_h",
     "name": "test/util/mining.h",
+    "path": "src/test/util/mining.h",
     "subsystem": "test",
     "loc": 42,
     "classes": 5,
@@ -8094,6 +8952,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_net_cpp",
     "name": "test/util/net.cpp",
+    "path": "src/test/util/net.cpp",
     "subsystem": "test",
     "loc": 139,
     "classes": 0,
@@ -8103,6 +8962,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_net_h",
     "name": "test/util/net.h",
+    "path": "src/test/util/net.h",
     "subsystem": "test",
     "loc": 242,
     "classes": 4,
@@ -8112,6 +8972,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_poolresourcetester_h",
     "name": "test/util/poolresourcetester.h",
+    "path": "src/test/util/poolresourcetester.h",
     "subsystem": "test",
     "loc": 129,
     "classes": 1,
@@ -8121,6 +8982,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_random_cpp",
     "name": "test/util/random.cpp",
+    "path": "src/test/util/random.cpp",
     "subsystem": "test",
     "loc": 38,
     "classes": 0,
@@ -8130,6 +8992,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_random_h",
     "name": "test/util/random.h",
+    "path": "src/test/util/random.h",
     "subsystem": "test",
     "loc": 60,
     "classes": 0,
@@ -8139,6 +9002,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_script_cpp",
     "name": "test/util/script.cpp",
+    "path": "src/test/util/script.cpp",
     "subsystem": "test",
     "loc": 13,
     "classes": 0,
@@ -8148,6 +9012,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_script_h",
     "name": "test/util/script.h",
+    "path": "src/test/util/script.h",
     "subsystem": "test",
     "loc": 36,
     "classes": 0,
@@ -8157,6 +9022,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_setup_common_cpp",
     "name": "test/util/setup_common.cpp",
+    "path": "src/test/util/setup_common.cpp",
     "subsystem": "test",
     "loc": 612,
     "classes": 1,
@@ -8166,6 +9032,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_setup_common_h",
     "name": "test/util/setup_common.h",
+    "path": "src/test/util/setup_common.h",
     "subsystem": "test",
     "loc": 267,
     "classes": 14,
@@ -8175,6 +9042,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_str_cpp",
     "name": "test/util/str.cpp",
+    "path": "src/test/util/str.cpp",
     "subsystem": "test",
     "loc": 21,
     "classes": 0,
@@ -8184,6 +9052,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_str_h",
     "name": "test/util/str.h",
+    "path": "src/test/util/str.h",
     "subsystem": "test",
     "loc": 45,
     "classes": 0,
@@ -8193,6 +9062,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_transaction_utils_cpp",
     "name": "test/util/transaction_utils.cpp",
+    "path": "src/test/util/transaction_utils.cpp",
     "subsystem": "test",
     "loc": 92,
     "classes": 0,
@@ -8202,6 +9072,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_transaction_utils_h",
     "name": "test/util/transaction_utils.h",
+    "path": "src/test/util/transaction_utils.h",
     "subsystem": "test",
     "loc": 33,
     "classes": 2,
@@ -8211,6 +9082,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_txmempool_cpp",
     "name": "test/util/txmempool.cpp",
+    "path": "src/test/util/txmempool.cpp",
     "subsystem": "test",
     "loc": 173,
     "classes": 0,
@@ -8220,6 +9092,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_txmempool_h",
     "name": "test/util/txmempool.h",
+    "path": "src/test/util/txmempool.h",
     "subsystem": "test",
     "loc": 59,
     "classes": 3,
@@ -8229,6 +9102,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_validation_cpp",
     "name": "test/util/validation.cpp",
+    "path": "src/test/util/validation.cpp",
     "subsystem": "test",
     "loc": 32,
     "classes": 0,
@@ -8238,6 +9112,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_validation_h",
     "name": "test/util/validation.h",
+    "path": "src/test/util/validation.h",
     "subsystem": "test",
     "loc": 29,
     "classes": 3,
@@ -8247,6 +9122,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_tests_cpp",
     "name": "test/util_tests.cpp",
+    "path": "src/test/util_tests.cpp",
     "subsystem": "test",
     "loc": 1834,
     "classes": 2,
@@ -8256,6 +9132,7 @@ export const buildings: Building[] =
   {
     "id": "test_util_threadnames_tests_cpp",
     "name": "test/util_threadnames_tests.cpp",
+    "path": "src/test/util_threadnames_tests.cpp",
     "subsystem": "test",
     "loc": 66,
     "classes": 0,
@@ -8265,6 +9142,7 @@ export const buildings: Building[] =
   {
     "id": "test_validation_block_tests_cpp",
     "name": "test/validation_block_tests.cpp",
+    "path": "src/test/validation_block_tests.cpp",
     "subsystem": "test",
     "loc": 363,
     "classes": 2,
@@ -8274,6 +9152,7 @@ export const buildings: Building[] =
   {
     "id": "test_validation_chainstate_tests_cpp",
     "name": "test/validation_chainstate_tests.cpp",
+    "path": "src/test/validation_chainstate_tests.cpp",
     "subsystem": "test",
     "loc": 144,
     "classes": 0,
@@ -8283,6 +9162,7 @@ export const buildings: Building[] =
   {
     "id": "test_validation_chainstatemanager_tests_cpp",
     "name": "test/validation_chainstatemanager_tests.cpp",
+    "path": "src/test/validation_chainstatemanager_tests.cpp",
     "subsystem": "test",
     "loc": 772,
     "classes": 1,
@@ -8292,6 +9172,7 @@ export const buildings: Building[] =
   {
     "id": "test_validation_flush_tests_cpp",
     "name": "test/validation_flush_tests.cpp",
+    "path": "src/test/validation_flush_tests.cpp",
     "subsystem": "test",
     "loc": 157,
     "classes": 0,
@@ -8301,6 +9182,7 @@ export const buildings: Building[] =
   {
     "id": "test_validation_tests_cpp",
     "name": "test/validation_tests.cpp",
+    "path": "src/test/validation_tests.cpp",
     "subsystem": "test",
     "loc": 363,
     "classes": 0,
@@ -8310,6 +9192,7 @@ export const buildings: Building[] =
   {
     "id": "test_validationinterface_tests_cpp",
     "name": "test/validationinterface_tests.cpp",
+    "path": "src/test/validationinterface_tests.cpp",
     "subsystem": "test",
     "loc": 104,
     "classes": 2,
@@ -8319,6 +9202,7 @@ export const buildings: Building[] =
   {
     "id": "test_versionbits_tests_cpp",
     "name": "test/versionbits_tests.cpp",
+    "path": "src/test/versionbits_tests.cpp",
     "subsystem": "test",
     "loc": 459,
     "classes": 5,
@@ -8328,6 +9212,7 @@ export const buildings: Building[] =
   {
     "id": "threadsafety_h",
     "name": "threadsafety.h",
+    "path": "src/threadsafety.h",
     "subsystem": "other",
     "loc": 77,
     "classes": 0,
@@ -8337,6 +9222,7 @@ export const buildings: Building[] =
   {
     "id": "tinyformat_h",
     "name": "tinyformat.h",
+    "path": "src/tinyformat.h",
     "subsystem": "other",
     "loc": 1163,
     "classes": 9,
@@ -8346,6 +9232,7 @@ export const buildings: Building[] =
   {
     "id": "torcontrol_cpp",
     "name": "torcontrol.cpp",
+    "path": "src/torcontrol.cpp",
     "subsystem": "network",
     "loc": 719,
     "classes": 1,
@@ -8355,6 +9242,7 @@ export const buildings: Building[] =
   {
     "id": "torcontrol_h",
     "name": "torcontrol.h",
+    "path": "src/torcontrol.h",
     "subsystem": "network",
     "loc": 156,
     "classes": 3,
@@ -8364,6 +9252,7 @@ export const buildings: Building[] =
   {
     "id": "txdb_cpp",
     "name": "txdb.cpp",
+    "path": "src/txdb.cpp",
     "subsystem": "consensus",
     "loc": 228,
     "classes": 2,
@@ -8373,6 +9262,7 @@ export const buildings: Building[] =
   {
     "id": "txdb_h",
     "name": "txdb.h",
+    "path": "src/txdb.h",
     "subsystem": "consensus",
     "loc": 80,
     "classes": 4,
@@ -8382,6 +9272,7 @@ export const buildings: Building[] =
   {
     "id": "txmempool_cpp",
     "name": "txmempool.cpp",
+    "path": "src/txmempool.cpp",
     "subsystem": "mempool",
     "loc": 1369,
     "classes": 1,
@@ -8391,6 +9282,7 @@ export const buildings: Building[] =
   {
     "id": "txmempool_h",
     "name": "txmempool.h",
+    "path": "src/txmempool.h",
     "subsystem": "mempool",
     "loc": 863,
     "classes": 16,
@@ -8400,6 +9292,7 @@ export const buildings: Building[] =
   {
     "id": "txorphanage_cpp",
     "name": "txorphanage.cpp",
+    "path": "src/txorphanage.cpp",
     "subsystem": "mempool",
     "loc": 279,
     "classes": 0,
@@ -8409,6 +9302,7 @@ export const buildings: Building[] =
   {
     "id": "txorphanage_h",
     "name": "txorphanage.h",
+    "path": "src/txorphanage.h",
     "subsystem": "mempool",
     "loc": 112,
     "classes": 1,
@@ -8418,6 +9312,7 @@ export const buildings: Building[] =
   {
     "id": "txrequest_cpp",
     "name": "txrequest.cpp",
+    "path": "src/txrequest.cpp",
     "subsystem": "other",
     "loc": 756,
     "classes": 11,
@@ -8427,6 +9322,7 @@ export const buildings: Building[] =
   {
     "id": "txrequest_h",
     "name": "txrequest.h",
+    "path": "src/txrequest.h",
     "subsystem": "other",
     "loc": 211,
     "classes": 1,
@@ -8436,6 +9332,7 @@ export const buildings: Building[] =
   {
     "id": "uint256_cpp",
     "name": "uint256.cpp",
+    "path": "src/uint256.cpp",
     "subsystem": "util",
     "loc": 63,
     "classes": 0,
@@ -8445,6 +9342,7 @@ export const buildings: Building[] =
   {
     "id": "uint256_h",
     "name": "uint256.h",
+    "path": "src/uint256.h",
     "subsystem": "util",
     "loc": 199,
     "classes": 3,
@@ -8454,6 +9352,7 @@ export const buildings: Building[] =
   {
     "id": "undo_h",
     "name": "undo.h",
+    "path": "src/undo.h",
     "subsystem": "other",
     "loc": 70,
     "classes": 3,
@@ -8463,6 +9362,7 @@ export const buildings: Building[] =
   {
     "id": "util_any_h",
     "name": "util/any.h",
+    "path": "src/util/any.h",
     "subsystem": "util",
     "loc": 26,
     "classes": 0,
@@ -8472,6 +9372,7 @@ export const buildings: Building[] =
   {
     "id": "util_asmap_cpp",
     "name": "util/asmap.cpp",
+    "path": "src/util/asmap.cpp",
     "subsystem": "util",
     "loc": 223,
     "classes": 0,
@@ -8481,6 +9382,7 @@ export const buildings: Building[] =
   {
     "id": "util_asmap_h",
     "name": "util/asmap.h",
+    "path": "src/util/asmap.h",
     "subsystem": "util",
     "loc": 20,
     "classes": 0,
@@ -8490,6 +9392,7 @@ export const buildings: Building[] =
   {
     "id": "util_batchpriority_cpp",
     "name": "util/batchpriority.cpp",
+    "path": "src/util/batchpriority.cpp",
     "subsystem": "util",
     "loc": 26,
     "classes": 0,
@@ -8499,6 +9402,7 @@ export const buildings: Building[] =
   {
     "id": "util_batchpriority_h",
     "name": "util/batchpriority.h",
+    "path": "src/util/batchpriority.h",
     "subsystem": "util",
     "loc": 15,
     "classes": 0,
@@ -8508,6 +9412,7 @@ export const buildings: Building[] =
   {
     "id": "util_bip32_cpp",
     "name": "util/bip32.cpp",
+    "path": "src/util/bip32.cpp",
     "subsystem": "util",
     "loc": 67,
     "classes": 0,
@@ -8517,6 +9422,7 @@ export const buildings: Building[] =
   {
     "id": "util_bip32_h",
     "name": "util/bip32.h",
+    "path": "src/util/bip32.h",
     "subsystem": "util",
     "loc": 19,
     "classes": 0,
@@ -8526,6 +9432,7 @@ export const buildings: Building[] =
   {
     "id": "util_bitdeque_h",
     "name": "util/bitdeque.h",
+    "path": "src/util/bitdeque.h",
     "subsystem": "util",
     "loc": 468,
     "classes": 1,
@@ -8535,6 +9442,7 @@ export const buildings: Building[] =
   {
     "id": "util_bitset_h",
     "name": "util/bitset.h",
+    "path": "src/util/bitset.h",
     "subsystem": "util",
     "loc": 527,
     "classes": 2,
@@ -8544,6 +9452,7 @@ export const buildings: Building[] =
   {
     "id": "util_bytevectorhash_cpp",
     "name": "util/bytevectorhash.cpp",
+    "path": "src/util/bytevectorhash.cpp",
     "subsystem": "util",
     "loc": 20,
     "classes": 0,
@@ -8553,6 +9462,7 @@ export const buildings: Building[] =
   {
     "id": "util_bytevectorhash_h",
     "name": "util/bytevectorhash.h",
+    "path": "src/util/bytevectorhash.h",
     "subsystem": "util",
     "loc": 27,
     "classes": 1,
@@ -8562,6 +9472,7 @@ export const buildings: Building[] =
   {
     "id": "util_chaintype_cpp",
     "name": "util/chaintype.cpp",
+    "path": "src/util/chaintype.cpp",
     "subsystem": "util",
     "loc": 43,
     "classes": 0,
@@ -8571,6 +9482,7 @@ export const buildings: Building[] =
   {
     "id": "util_chaintype_h",
     "name": "util/chaintype.h",
+    "path": "src/util/chaintype.h",
     "subsystem": "util",
     "loc": 23,
     "classes": 0,
@@ -8580,6 +9492,7 @@ export const buildings: Building[] =
   {
     "id": "util_check_cpp",
     "name": "util/check.cpp",
+    "path": "src/util/check.cpp",
     "subsystem": "util",
     "loc": 35,
     "classes": 0,
@@ -8589,6 +9502,7 @@ export const buildings: Building[] =
   {
     "id": "util_check_h",
     "name": "util/check.h",
+    "path": "src/util/check.h",
     "subsystem": "util",
     "loc": 100,
     "classes": 1,
@@ -8598,6 +9512,7 @@ export const buildings: Building[] =
   {
     "id": "util_epochguard_h",
     "name": "util/epochguard.h",
+    "path": "src/util/epochguard.h",
     "subsystem": "util",
     "loc": 102,
     "classes": 0,
@@ -8607,6 +9522,7 @@ export const buildings: Building[] =
   {
     "id": "util_exception_cpp",
     "name": "util/exception.cpp",
+    "path": "src/util/exception.cpp",
     "subsystem": "util",
     "loc": 41,
     "classes": 0,
@@ -8616,6 +9532,7 @@ export const buildings: Building[] =
   {
     "id": "util_exception_h",
     "name": "util/exception.h",
+    "path": "src/util/exception.h",
     "subsystem": "util",
     "loc": 14,
     "classes": 0,
@@ -8625,6 +9542,7 @@ export const buildings: Building[] =
   {
     "id": "util_fastrange_h",
     "name": "util/fastrange.h",
+    "path": "src/util/fastrange.h",
     "subsystem": "util",
     "loc": 51,
     "classes": 0,
@@ -8634,6 +9552,7 @@ export const buildings: Building[] =
   {
     "id": "util_feefrac_cpp",
     "name": "util/feefrac.cpp",
+    "path": "src/util/feefrac.cpp",
     "subsystem": "util",
     "loc": 73,
     "classes": 0,
@@ -8643,6 +9562,7 @@ export const buildings: Building[] =
   {
     "id": "util_feefrac_h",
     "name": "util/feefrac.h",
+    "path": "src/util/feefrac.h",
     "subsystem": "util",
     "loc": 159,
     "classes": 1,
@@ -8652,6 +9572,7 @@ export const buildings: Building[] =
   {
     "id": "util_fs_cpp",
     "name": "util/fs.cpp",
+    "path": "src/util/fs.cpp",
     "subsystem": "util",
     "loc": 134,
     "classes": 0,
@@ -8661,6 +9582,7 @@ export const buildings: Building[] =
   {
     "id": "util_fs_h",
     "name": "util/fs.h",
+    "path": "src/util/fs.h",
     "subsystem": "util",
     "loc": 253,
     "classes": 2,
@@ -8670,6 +9592,7 @@ export const buildings: Building[] =
   {
     "id": "util_fs_helpers_cpp",
     "name": "util/fs_helpers.cpp",
+    "path": "src/util/fs_helpers.cpp",
     "subsystem": "util",
     "loc": 311,
     "classes": 0,
@@ -8679,6 +9602,7 @@ export const buildings: Building[] =
   {
     "id": "util_fs_helpers_h",
     "name": "util/fs_helpers.h",
+    "path": "src/util/fs_helpers.h",
     "subsystem": "util",
     "loc": 83,
     "classes": 0,
@@ -8688,6 +9612,7 @@ export const buildings: Building[] =
   {
     "id": "util_golombrice_h",
     "name": "util/golombrice.h",
+    "path": "src/util/golombrice.h",
     "subsystem": "util",
     "loc": 45,
     "classes": 0,
@@ -8697,6 +9622,7 @@ export const buildings: Building[] =
   {
     "id": "util_hash_type_h",
     "name": "util/hash_type.h",
+    "path": "src/util/hash_type.h",
     "subsystem": "util",
     "loc": 72,
     "classes": 1,
@@ -8706,6 +9632,7 @@ export const buildings: Building[] =
   {
     "id": "util_hasher_cpp",
     "name": "util/hasher.cpp",
+    "path": "src/util/hasher.cpp",
     "subsystem": "util",
     "loc": 26,
     "classes": 0,
@@ -8715,6 +9642,7 @@ export const buildings: Building[] =
   {
     "id": "util_hasher_h",
     "name": "util/hasher.h",
+    "path": "src/util/hasher.h",
     "subsystem": "util",
     "loc": 101,
     "classes": 7,
@@ -8724,6 +9652,7 @@ export const buildings: Building[] =
   {
     "id": "util_insert_h",
     "name": "util/insert.h",
+    "path": "src/util/insert.h",
     "subsystem": "util",
     "loc": 24,
     "classes": 0,
@@ -8733,6 +9662,7 @@ export const buildings: Building[] =
   {
     "id": "util_macros_h",
     "name": "util/macros.h",
+    "path": "src/util/macros.h",
     "subsystem": "util",
     "loc": 20,
     "classes": 0,
@@ -8742,6 +9672,7 @@ export const buildings: Building[] =
   {
     "id": "util_moneystr_cpp",
     "name": "util/moneystr.cpp",
+    "path": "src/util/moneystr.cpp",
     "subsystem": "util",
     "loc": 92,
     "classes": 0,
@@ -8751,6 +9682,7 @@ export const buildings: Building[] =
   {
     "id": "util_moneystr_h",
     "name": "util/moneystr.h",
+    "path": "src/util/moneystr.h",
     "subsystem": "util",
     "loc": 24,
     "classes": 0,
@@ -8760,6 +9692,7 @@ export const buildings: Building[] =
   {
     "id": "util_overflow_h",
     "name": "util/overflow.h",
+    "path": "src/util/overflow.h",
     "subsystem": "util",
     "loc": 50,
     "classes": 0,
@@ -8769,6 +9702,7 @@ export const buildings: Building[] =
   {
     "id": "util_overloaded_h",
     "name": "util/overloaded.h",
+    "path": "src/util/overloaded.h",
     "subsystem": "util",
     "loc": 22,
     "classes": 1,
@@ -8778,6 +9712,7 @@ export const buildings: Building[] =
   {
     "id": "util_rbf_cpp",
     "name": "util/rbf.cpp",
+    "path": "src/util/rbf.cpp",
     "subsystem": "util",
     "loc": 17,
     "classes": 0,
@@ -8787,6 +9722,7 @@ export const buildings: Building[] =
   {
     "id": "util_rbf_h",
     "name": "util/rbf.h",
+    "path": "src/util/rbf.h",
     "subsystem": "util",
     "loc": 23,
     "classes": 1,
@@ -8796,6 +9732,7 @@ export const buildings: Building[] =
   {
     "id": "util_readwritefile_cpp",
     "name": "util/readwritefile.cpp",
+    "path": "src/util/readwritefile.cpp",
     "subsystem": "util",
     "loc": 50,
     "classes": 0,
@@ -8805,6 +9742,7 @@ export const buildings: Building[] =
   {
     "id": "util_readwritefile_h",
     "name": "util/readwritefile.h",
+    "path": "src/util/readwritefile.h",
     "subsystem": "util",
     "loc": 28,
     "classes": 0,
@@ -8814,6 +9752,7 @@ export const buildings: Building[] =
   {
     "id": "util_result_h",
     "name": "util/result.h",
+    "path": "src/util/result.h",
     "subsystem": "util",
     "loc": 99,
     "classes": 2,
@@ -8823,6 +9762,7 @@ export const buildings: Building[] =
   {
     "id": "util_serfloat_cpp",
     "name": "util/serfloat.cpp",
+    "path": "src/util/serfloat.cpp",
     "subsystem": "util",
     "loc": 64,
     "classes": 0,
@@ -8832,6 +9772,7 @@ export const buildings: Building[] =
   {
     "id": "util_serfloat_h",
     "name": "util/serfloat.h",
+    "path": "src/util/serfloat.h",
     "subsystem": "util",
     "loc": 16,
     "classes": 0,
@@ -8841,6 +9782,7 @@ export const buildings: Building[] =
   {
     "id": "util_signalinterrupt_cpp",
     "name": "util/signalinterrupt.cpp",
+    "path": "src/util/signalinterrupt.cpp",
     "subsystem": "util",
     "loc": 77,
     "classes": 0,
@@ -8850,6 +9792,7 @@ export const buildings: Building[] =
   {
     "id": "util_signalinterrupt_h",
     "name": "util/signalinterrupt.h",
+    "path": "src/util/signalinterrupt.h",
     "subsystem": "util",
     "loc": 52,
     "classes": 1,
@@ -8859,6 +9802,7 @@ export const buildings: Building[] =
   {
     "id": "util_sock_cpp",
     "name": "util/sock.cpp",
+    "path": "src/util/sock.cpp",
     "subsystem": "util",
     "loc": 430,
     "classes": 0,
@@ -8868,6 +9812,7 @@ export const buildings: Building[] =
   {
     "id": "util_sock_h",
     "name": "util/sock.h",
+    "path": "src/util/sock.h",
     "subsystem": "util",
     "loc": 287,
     "classes": 1,
@@ -8877,6 +9822,7 @@ export const buildings: Building[] =
   {
     "id": "util_strencodings_cpp",
     "name": "util/strencodings.cpp",
+    "path": "src/util/strencodings.cpp",
     "subsystem": "util",
     "loc": 491,
     "classes": 0,
@@ -8886,6 +9832,7 @@ export const buildings: Building[] =
   {
     "id": "util_strencodings_h",
     "name": "util/strencodings.h",
+    "path": "src/util/strencodings.h",
     "subsystem": "util",
     "loc": 372,
     "classes": 1,
@@ -8895,6 +9842,7 @@ export const buildings: Building[] =
   {
     "id": "util_string_cpp",
     "name": "util/string.cpp",
+    "path": "src/util/string.cpp",
     "subsystem": "util",
     "loc": 16,
     "classes": 0,
@@ -8904,6 +9852,7 @@ export const buildings: Building[] =
   {
     "id": "util_string_h",
     "name": "util/string.h",
+    "path": "src/util/string.h",
     "subsystem": "util",
     "loc": 176,
     "classes": 0,
@@ -8913,6 +9862,7 @@ export const buildings: Building[] =
   {
     "id": "util_subprocess_h",
     "name": "util/subprocess.h",
+    "path": "src/util/subprocess.h",
     "subsystem": "util",
     "loc": 1462,
     "classes": 15,
@@ -8922,6 +9872,7 @@ export const buildings: Building[] =
   {
     "id": "util_syserror_cpp",
     "name": "util/syserror.cpp",
+    "path": "src/util/syserror.cpp",
     "subsystem": "util",
     "loc": 57,
     "classes": 0,
@@ -8931,6 +9882,7 @@ export const buildings: Building[] =
   {
     "id": "util_syserror_h",
     "name": "util/syserror.h",
+    "path": "src/util/syserror.h",
     "subsystem": "util",
     "loc": 20,
     "classes": 0,
@@ -8940,6 +9892,7 @@ export const buildings: Building[] =
   {
     "id": "util_task_runner_h",
     "name": "util/task_runner.h",
+    "path": "src/util/task_runner.h",
     "subsystem": "util",
     "loc": 52,
     "classes": 2,
@@ -8949,6 +9902,7 @@ export const buildings: Building[] =
   {
     "id": "util_thread_cpp",
     "name": "util/thread.cpp",
+    "path": "src/util/thread.cpp",
     "subsystem": "util",
     "loc": 30,
     "classes": 0,
@@ -8958,6 +9912,7 @@ export const buildings: Building[] =
   {
     "id": "util_thread_h",
     "name": "util/thread.h",
+    "path": "src/util/thread.h",
     "subsystem": "util",
     "loc": 19,
     "classes": 0,
@@ -8967,6 +9922,7 @@ export const buildings: Building[] =
   {
     "id": "util_threadinterrupt_cpp",
     "name": "util/threadinterrupt.cpp",
+    "path": "src/util/threadinterrupt.cpp",
     "subsystem": "util",
     "loc": 35,
     "classes": 0,
@@ -8976,6 +9932,7 @@ export const buildings: Building[] =
   {
     "id": "util_threadinterrupt_h",
     "name": "util/threadinterrupt.h",
+    "path": "src/util/threadinterrupt.h",
     "subsystem": "util",
     "loc": 42,
     "classes": 1,
@@ -8985,6 +9942,7 @@ export const buildings: Building[] =
   {
     "id": "util_threadnames_cpp",
     "name": "util/threadnames.cpp",
+    "path": "src/util/threadnames.cpp",
     "subsystem": "util",
     "loc": 66,
     "classes": 0,
@@ -8994,6 +9952,7 @@ export const buildings: Building[] =
   {
     "id": "util_threadnames_h",
     "name": "util/threadnames.h",
+    "path": "src/util/threadnames.h",
     "subsystem": "util",
     "loc": 26,
     "classes": 0,
@@ -9003,6 +9962,7 @@ export const buildings: Building[] =
   {
     "id": "util_time_cpp",
     "name": "util/time.cpp",
+    "path": "src/util/time.cpp",
     "subsystem": "util",
     "loc": 74,
     "classes": 0,
@@ -9012,6 +9972,7 @@ export const buildings: Building[] =
   {
     "id": "util_time_h",
     "name": "util/time.h",
+    "path": "src/util/time.h",
     "subsystem": "util",
     "loc": 119,
     "classes": 3,
@@ -9021,6 +9982,7 @@ export const buildings: Building[] =
   {
     "id": "util_tokenpipe_cpp",
     "name": "util/tokenpipe.cpp",
+    "path": "src/util/tokenpipe.cpp",
     "subsystem": "util",
     "loc": 109,
     "classes": 0,
@@ -9030,6 +9992,7 @@ export const buildings: Building[] =
   {
     "id": "util_tokenpipe_h",
     "name": "util/tokenpipe.h",
+    "path": "src/util/tokenpipe.h",
     "subsystem": "util",
     "loc": 127,
     "classes": 2,
@@ -9039,6 +10002,7 @@ export const buildings: Building[] =
   {
     "id": "util_trace_h",
     "name": "util/trace.h",
+    "path": "src/util/trace.h",
     "subsystem": "util",
     "loc": 47,
     "classes": 0,
@@ -9048,6 +10012,7 @@ export const buildings: Building[] =
   {
     "id": "util_transaction_identifier_h",
     "name": "util/transaction_identifier.h",
+    "path": "src/util/transaction_identifier.h",
     "subsystem": "util",
     "loc": 75,
     "classes": 1,
@@ -9057,6 +10022,7 @@ export const buildings: Building[] =
   {
     "id": "util_translation_h",
     "name": "util/translation.h",
+    "path": "src/util/translation.h",
     "subsystem": "util",
     "loc": 85,
     "classes": 2,
@@ -9066,6 +10032,7 @@ export const buildings: Building[] =
   {
     "id": "util_types_h",
     "name": "util/types.h",
+    "path": "src/util/types.h",
     "subsystem": "util",
     "loc": 12,
     "classes": 0,
@@ -9075,6 +10042,7 @@ export const buildings: Building[] =
   {
     "id": "util_ui_change_type_h",
     "name": "util/ui_change_type.h",
+    "path": "src/util/ui_change_type.h",
     "subsystem": "util",
     "loc": 15,
     "classes": 0,
@@ -9084,6 +10052,7 @@ export const buildings: Building[] =
   {
     "id": "util_vecdeque_h",
     "name": "util/vecdeque.h",
+    "path": "src/util/vecdeque.h",
     "subsystem": "util",
     "loc": 317,
     "classes": 1,
@@ -9093,6 +10062,7 @@ export const buildings: Building[] =
   {
     "id": "util_vector_h",
     "name": "util/vector.h",
+    "path": "src/util/vector.h",
     "subsystem": "util",
     "loc": 83,
     "classes": 0,
@@ -9102,6 +10072,7 @@ export const buildings: Building[] =
   {
     "id": "validation_cpp",
     "name": "validation.cpp",
+    "path": "src/validation.cpp",
     "subsystem": "consensus",
     "loc": 6521,
     "classes": 5,
@@ -9111,6 +10082,7 @@ export const buildings: Building[] =
   {
     "id": "validation_h",
     "name": "validation.h",
+    "path": "src/validation.h",
     "subsystem": "consensus",
     "loc": 1353,
     "classes": 20,
@@ -9120,6 +10092,7 @@ export const buildings: Building[] =
   {
     "id": "validationinterface_cpp",
     "name": "validationinterface.cpp",
+    "path": "src/validationinterface.cpp",
     "subsystem": "other",
     "loc": 258,
     "classes": 1,
@@ -9129,6 +10102,7 @@ export const buildings: Building[] =
   {
     "id": "validationinterface_h",
     "name": "validationinterface.h",
+    "path": "src/validationinterface.h",
     "subsystem": "other",
     "loc": 232,
     "classes": 10,
@@ -9138,6 +10112,7 @@ export const buildings: Building[] =
   {
     "id": "versionbits_cpp",
     "name": "versionbits.cpp",
+    "path": "src/versionbits.cpp",
     "subsystem": "consensus",
     "loc": 247,
     "classes": 1,
@@ -9147,6 +10122,7 @@ export const buildings: Building[] =
   {
     "id": "versionbits_h",
     "name": "versionbits.h",
+    "path": "src/versionbits.h",
     "subsystem": "consensus",
     "loc": 107,
     "classes": 3,
@@ -9156,6 +10132,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_bdb_cpp",
     "name": "wallet/bdb.cpp",
+    "path": "src/wallet/bdb.cpp",
     "subsystem": "wallet",
     "loc": 1020,
     "classes": 1,
@@ -9165,6 +10142,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_bdb_h",
     "name": "wallet/bdb.h",
+    "path": "src/wallet/bdb.h",
     "subsystem": "wallet",
     "loc": 226,
     "classes": 12,
@@ -9174,6 +10152,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_coincontrol_cpp",
     "name": "wallet/coincontrol.cpp",
+    "path": "src/wallet/coincontrol.cpp",
     "subsystem": "wallet",
     "loc": 155,
     "classes": 0,
@@ -9183,6 +10162,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_coincontrol_h",
     "name": "wallet/coincontrol.h",
+    "path": "src/wallet/coincontrol.h",
     "subsystem": "wallet",
     "loc": 190,
     "classes": 2,
@@ -9192,6 +10172,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_coinselection_cpp",
     "name": "wallet/coinselection.cpp",
+    "path": "src/wallet/coinselection.cpp",
     "subsystem": "wallet",
     "loc": 995,
     "classes": 1,
@@ -9201,6 +10182,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_coinselection_h",
     "name": "wallet/coinselection.h",
+    "path": "src/wallet/coinselection.h",
     "subsystem": "wallet",
     "loc": 468,
     "classes": 7,
@@ -9210,6 +10192,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_context_cpp",
     "name": "wallet/context.cpp",
+    "path": "src/wallet/context.cpp",
     "subsystem": "wallet",
     "loc": 10,
     "classes": 0,
@@ -9219,6 +10202,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_context_h",
     "name": "wallet/context.h",
+    "path": "src/wallet/context.h",
     "subsystem": "wallet",
     "loc": 54,
     "classes": 6,
@@ -9228,6 +10212,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_crypter_cpp",
     "name": "wallet/crypter.cpp",
+    "path": "src/wallet/crypter.cpp",
     "subsystem": "wallet",
     "loc": 140,
     "classes": 0,
@@ -9237,6 +10222,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_crypter_h",
     "name": "wallet/crypter.h",
+    "path": "src/wallet/crypter.h",
     "subsystem": "wallet",
     "loc": 111,
     "classes": 3,
@@ -9246,6 +10232,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_db_cpp",
     "name": "wallet/db.cpp",
+    "path": "src/wallet/db.cpp",
     "subsystem": "wallet",
     "loc": 161,
     "classes": 0,
@@ -9255,6 +10242,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_db_h",
     "name": "wallet/db.h",
+    "path": "src/wallet/db.h",
     "subsystem": "wallet",
     "loc": 233,
     "classes": 7,
@@ -9264,6 +10252,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_dump_cpp",
     "name": "wallet/dump.cpp",
+    "path": "src/wallet/dump.cpp",
     "subsystem": "wallet",
     "loc": 306,
     "classes": 0,
@@ -9273,6 +10262,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_dump_h",
     "name": "wallet/dump.h",
+    "path": "src/wallet/dump.h",
     "subsystem": "wallet",
     "loc": 23,
     "classes": 3,
@@ -9282,6 +10272,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_external_signer_scriptpubkeyman_cpp",
     "name": "wallet/external_signer_scriptpubkeyman.cpp",
+    "path": "src/wallet/external_signer_scriptpubkeyman.cpp",
     "subsystem": "wallet",
     "loc": 104,
     "classes": 0,
@@ -9291,6 +10282,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_external_signer_scriptpubkeyman_h",
     "name": "wallet/external_signer_scriptpubkeyman.h",
+    "path": "src/wallet/external_signer_scriptpubkeyman.h",
     "subsystem": "wallet",
     "loc": 41,
     "classes": 2,
@@ -9300,6 +10292,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_feebumper_cpp",
     "name": "wallet/feebumper.cpp",
+    "path": "src/wallet/feebumper.cpp",
     "subsystem": "wallet",
     "loc": 391,
     "classes": 0,
@@ -9309,6 +10302,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_feebumper_h",
     "name": "wallet/feebumper.h",
+    "path": "src/wallet/feebumper.h",
     "subsystem": "wallet",
     "loc": 127,
     "classes": 7,
@@ -9318,6 +10312,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_fees_cpp",
     "name": "wallet/fees.cpp",
+    "path": "src/wallet/fees.cpp",
     "subsystem": "wallet",
     "loc": 94,
     "classes": 0,
@@ -9327,6 +10322,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_fees_h",
     "name": "wallet/fees.h",
+    "path": "src/wallet/fees.h",
     "subsystem": "wallet",
     "loc": 48,
     "classes": 4,
@@ -9336,6 +10332,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_init_cpp",
     "name": "wallet/init.cpp",
+    "path": "src/wallet/init.cpp",
     "subsystem": "wallet",
     "loc": 138,
     "classes": 1,
@@ -9345,6 +10342,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_interfaces_cpp",
     "name": "wallet/interfaces.cpp",
+    "path": "src/wallet/interfaces.cpp",
     "subsystem": "wallet",
     "loc": 711,
     "classes": 2,
@@ -9354,6 +10352,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_load_cpp",
     "name": "wallet/load.cpp",
+    "path": "src/wallet/load.cpp",
     "subsystem": "wallet",
     "loc": 184,
     "classes": 0,
@@ -9363,6 +10362,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_load_h",
     "name": "wallet/load.h",
+    "path": "src/wallet/load.h",
     "subsystem": "wallet",
     "loc": 41,
     "classes": 4,
@@ -9372,6 +10372,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_migrate_cpp",
     "name": "wallet/migrate.cpp",
+    "path": "src/wallet/migrate.cpp",
     "subsystem": "wallet",
     "loc": 784,
     "classes": 9,
@@ -9381,6 +10382,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_migrate_h",
     "name": "wallet/migrate.h",
+    "path": "src/wallet/migrate.h",
     "subsystem": "wallet",
     "loc": 125,
     "classes": 3,
@@ -9390,6 +10392,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_receive_cpp",
     "name": "wallet/receive.cpp",
+    "path": "src/wallet/receive.cpp",
     "subsystem": "wallet",
     "loc": 452,
     "classes": 0,
@@ -9399,6 +10402,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_receive_h",
     "name": "wallet/receive.h",
+    "path": "src/wallet/receive.h",
     "subsystem": "wallet",
     "loc": 65,
     "classes": 2,
@@ -9408,6 +10412,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_addresses_cpp",
     "name": "wallet/rpc/addresses.cpp",
+    "path": "src/wallet/rpc/addresses.cpp",
     "subsystem": "wallet",
     "loc": 822,
     "classes": 1,
@@ -9417,6 +10422,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_backup_cpp",
     "name": "wallet/rpc/backup.cpp",
+    "path": "src/wallet/rpc/backup.cpp",
     "subsystem": "wallet",
     "loc": 1938,
     "classes": 1,
@@ -9426,6 +10432,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_coins_cpp",
     "name": "wallet/rpc/coins.cpp",
+    "path": "src/wallet/rpc/coins.cpp",
     "subsystem": "wallet",
     "loc": 734,
     "classes": 0,
@@ -9435,6 +10442,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_encrypt_cpp",
     "name": "wallet/rpc/encrypt.cpp",
+    "path": "src/wallet/rpc/encrypt.cpp",
     "subsystem": "wallet",
     "loc": 279,
     "classes": 0,
@@ -9444,6 +10452,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_signmessage_cpp",
     "name": "wallet/rpc/signmessage.cpp",
+    "path": "src/wallet/rpc/signmessage.cpp",
     "subsystem": "wallet",
     "loc": 70,
     "classes": 0,
@@ -9453,6 +10462,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_spend_cpp",
     "name": "wallet/rpc/spend.cpp",
+    "path": "src/wallet/rpc/spend.cpp",
     "subsystem": "wallet",
     "loc": 1785,
     "classes": 0,
@@ -9462,6 +10472,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_transactions_cpp",
     "name": "wallet/rpc/transactions.cpp",
+    "path": "src/wallet/rpc/transactions.cpp",
     "subsystem": "wallet",
     "loc": 965,
     "classes": 1,
@@ -9471,6 +10482,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_util_cpp",
     "name": "wallet/rpc/util.cpp",
+    "path": "src/wallet/rpc/util.cpp",
     "subsystem": "wallet",
     "loc": 191,
     "classes": 0,
@@ -9480,6 +10492,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_util_h",
     "name": "wallet/rpc/util.h",
+    "path": "src/wallet/rpc/util.h",
     "subsystem": "wallet",
     "loc": 58,
     "classes": 5,
@@ -9489,6 +10502,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_wallet_cpp",
     "name": "wallet/rpc/wallet.cpp",
+    "path": "src/wallet/rpc/wallet.cpp",
     "subsystem": "wallet",
     "loc": 1178,
     "classes": 0,
@@ -9498,6 +10512,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_rpc_wallet_h",
     "name": "wallet/rpc/wallet.h",
+    "path": "src/wallet/rpc/wallet.h",
     "subsystem": "wallet",
     "loc": 16,
     "classes": 1,
@@ -9507,6 +10522,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_salvage_cpp",
     "name": "wallet/salvage.cpp",
+    "path": "src/wallet/salvage.cpp",
     "subsystem": "wallet",
     "loc": 221,
     "classes": 3,
@@ -9516,6 +10532,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_salvage_h",
     "name": "wallet/salvage.h",
+    "path": "src/wallet/salvage.h",
     "subsystem": "wallet",
     "loc": 19,
     "classes": 2,
@@ -9525,6 +10542,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_scriptpubkeyman_cpp",
     "name": "wallet/scriptpubkeyman.cpp",
+    "path": "src/wallet/scriptpubkeyman.cpp",
     "subsystem": "wallet",
     "loc": 2808,
     "classes": 0,
@@ -9534,6 +10552,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_scriptpubkeyman_h",
     "name": "wallet/scriptpubkeyman.h",
+    "path": "src/wallet/scriptpubkeyman.h",
     "subsystem": "wallet",
     "loc": 716,
     "classes": 12,
@@ -9543,6 +10562,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_spend_cpp",
     "name": "wallet/spend.cpp",
+    "path": "src/wallet/spend.cpp",
     "subsystem": "wallet",
     "loc": 1470,
     "classes": 0,
@@ -9552,6 +10572,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_spend_h",
     "name": "wallet/spend.h",
+    "path": "src/wallet/spend.h",
     "subsystem": "wallet",
     "loc": 230,
     "classes": 6,
@@ -9561,6 +10582,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_sqlite_cpp",
     "name": "wallet/sqlite.cpp",
+    "path": "src/wallet/sqlite.cpp",
     "subsystem": "wallet",
     "loc": 716,
     "classes": 0,
@@ -9570,6 +10592,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_sqlite_h",
     "name": "wallet/sqlite.h",
+    "path": "src/wallet/sqlite.h",
     "subsystem": "wallet",
     "loc": 193,
     "classes": 8,
@@ -9579,6 +10602,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_coinselector_tests_cpp",
     "name": "wallet/test/coinselector_tests.cpp",
+    "path": "src/wallet/test/coinselector_tests.cpp",
     "subsystem": "wallet",
     "loc": 1592,
     "classes": 0,
@@ -9588,6 +10612,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_db_tests_cpp",
     "name": "wallet/test/db_tests.cpp",
+    "path": "src/wallet/test/db_tests.cpp",
     "subsystem": "wallet",
     "loc": 389,
     "classes": 1,
@@ -9597,6 +10622,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_feebumper_tests_cpp",
     "name": "wallet/test/feebumper_tests.cpp",
+    "path": "src/wallet/test/feebumper_tests.cpp",
     "subsystem": "wallet",
     "loc": 56,
     "classes": 0,
@@ -9606,6 +10632,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_coincontrol_cpp",
     "name": "wallet/test/fuzz/coincontrol.cpp",
+    "path": "src/wallet/test/fuzz/coincontrol.cpp",
     "subsystem": "wallet",
     "loc": 84,
     "classes": 0,
@@ -9615,6 +10642,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_coinselection_cpp",
     "name": "wallet/test/fuzz/coinselection.cpp",
+    "path": "src/wallet/test/fuzz/coinselection.cpp",
     "subsystem": "wallet",
     "loc": 333,
     "classes": 0,
@@ -9624,6 +10652,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_crypter_cpp",
     "name": "wallet/test/fuzz/crypter.cpp",
+    "path": "src/wallet/test/fuzz/crypter.cpp",
     "subsystem": "wallet",
     "loc": 87,
     "classes": 0,
@@ -9633,6 +10662,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_fees_cpp",
     "name": "wallet/test/fuzz/fees.cpp",
+    "path": "src/wallet/test/fuzz/fees.cpp",
     "subsystem": "wallet",
     "loc": 75,
     "classes": 0,
@@ -9642,6 +10672,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_notifications_cpp",
     "name": "wallet/test/fuzz/notifications.cpp",
+    "path": "src/wallet/test/fuzz/notifications.cpp",
     "subsystem": "wallet",
     "loc": 282,
     "classes": 1,
@@ -9651,6 +10682,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_parse_iso8601_cpp",
     "name": "wallet/test/fuzz/parse_iso8601.cpp",
+    "path": "src/wallet/test/fuzz/parse_iso8601.cpp",
     "subsystem": "wallet",
     "loc": 34,
     "classes": 0,
@@ -9660,6 +10692,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_scriptpubkeyman_cpp",
     "name": "wallet/test/fuzz/scriptpubkeyman.cpp",
+    "path": "src/wallet/test/fuzz/scriptpubkeyman.cpp",
     "subsystem": "wallet",
     "loc": 201,
     "classes": 0,
@@ -9669,6 +10702,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_fuzz_wallet_bdb_parser_cpp",
     "name": "wallet/test/fuzz/wallet_bdb_parser.cpp",
+    "path": "src/wallet/test/fuzz/wallet_bdb_parser.cpp",
     "subsystem": "wallet",
     "loc": 136,
     "classes": 0,
@@ -9678,6 +10712,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_group_outputs_tests_cpp",
     "name": "wallet/test/group_outputs_tests.cpp",
+    "path": "src/wallet/test/group_outputs_tests.cpp",
     "subsystem": "wallet",
     "loc": 235,
     "classes": 1,
@@ -9687,6 +10722,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_init_test_fixture_cpp",
     "name": "wallet/test/init_test_fixture.cpp",
+    "path": "src/wallet/test/init_test_fixture.cpp",
     "subsystem": "wallet",
     "loc": 52,
     "classes": 0,
@@ -9696,6 +10732,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_init_test_fixture_h",
     "name": "wallet/test/init_test_fixture.h",
+    "path": "src/wallet/test/init_test_fixture.h",
     "subsystem": "wallet",
     "loc": 28,
     "classes": 1,
@@ -9705,6 +10742,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_init_tests_cpp",
     "name": "wallet/test/init_tests.cpp",
+    "path": "src/wallet/test/init_tests.cpp",
     "subsystem": "wallet",
     "loc": 87,
     "classes": 0,
@@ -9714,6 +10752,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_ismine_tests_cpp",
     "name": "wallet/test/ismine_tests.cpp",
+    "path": "src/wallet/test/ismine_tests.cpp",
     "subsystem": "wallet",
     "loc": 724,
     "classes": 0,
@@ -9723,6 +10762,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_psbt_wallet_tests_cpp",
     "name": "wallet/test/psbt_wallet_tests.cpp",
+    "path": "src/wallet/test/psbt_wallet_tests.cpp",
     "subsystem": "wallet",
     "loc": 155,
     "classes": 0,
@@ -9732,6 +10772,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_rpc_util_tests_cpp",
     "name": "wallet/test/rpc_util_tests.cpp",
+    "path": "src/wallet/test/rpc_util_tests.cpp",
     "subsystem": "wallet",
     "loc": 24,
     "classes": 0,
@@ -9741,6 +10782,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_scriptpubkeyman_tests_cpp",
     "name": "wallet/test/scriptpubkeyman_tests.cpp",
+    "path": "src/wallet/test/scriptpubkeyman_tests.cpp",
     "subsystem": "wallet",
     "loc": 44,
     "classes": 0,
@@ -9750,6 +10792,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_spend_tests_cpp",
     "name": "wallet/test/spend_tests.cpp",
+    "path": "src/wallet/test/spend_tests.cpp",
     "subsystem": "wallet",
     "loc": 108,
     "classes": 0,
@@ -9759,6 +10802,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_util_cpp",
     "name": "wallet/test/util.cpp",
+    "path": "src/wallet/test/util.cpp",
     "subsystem": "wallet",
     "loc": 194,
     "classes": 0,
@@ -9768,6 +10812,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_util_h",
     "name": "wallet/test/util.h",
+    "path": "src/wallet/test/util.h",
     "subsystem": "wallet",
     "loc": 134,
     "classes": 10,
@@ -9777,6 +10822,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_wallet_crypto_tests_cpp",
     "name": "wallet/test/wallet_crypto_tests.cpp",
+    "path": "src/wallet/test/wallet_crypto_tests.cpp",
     "subsystem": "wallet",
     "loc": 129,
     "classes": 1,
@@ -9786,6 +10832,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_wallet_test_fixture_cpp",
     "name": "wallet/test/wallet_test_fixture.cpp",
+    "path": "src/wallet/test/wallet_test_fixture.cpp",
     "subsystem": "wallet",
     "loc": 26,
     "classes": 0,
@@ -9795,6 +10842,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_wallet_test_fixture_h",
     "name": "wallet/test/wallet_test_fixture.h",
+    "path": "src/wallet/test/wallet_test_fixture.h",
     "subsystem": "wallet",
     "loc": 32,
     "classes": 1,
@@ -9804,6 +10852,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_wallet_tests_cpp",
     "name": "wallet/test/wallet_tests.cpp",
+    "path": "src/wallet/test/wallet_tests.cpp",
     "subsystem": "wallet",
     "loc": 1025,
     "classes": 1,
@@ -9813,6 +10862,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_wallet_transaction_tests_cpp",
     "name": "wallet/test/wallet_transaction_tests.cpp",
+    "path": "src/wallet/test/wallet_transaction_tests.cpp",
     "subsystem": "wallet",
     "loc": 26,
     "classes": 0,
@@ -9822,6 +10872,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_walletdb_tests_cpp",
     "name": "wallet/test/walletdb_tests.cpp",
+    "path": "src/wallet/test/walletdb_tests.cpp",
     "subsystem": "wallet",
     "loc": 59,
     "classes": 0,
@@ -9831,6 +10882,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_test_walletload_tests_cpp",
     "name": "wallet/test/walletload_tests.cpp",
+    "path": "src/wallet/test/walletload_tests.cpp",
     "subsystem": "wallet",
     "loc": 214,
     "classes": 1,
@@ -9840,6 +10892,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_transaction_cpp",
     "name": "wallet/transaction.cpp",
+    "path": "src/wallet/transaction.cpp",
     "subsystem": "wallet",
     "loc": 57,
     "classes": 0,
@@ -9849,6 +10902,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_transaction_h",
     "name": "wallet/transaction.h",
+    "path": "src/wallet/transaction.h",
     "subsystem": "wallet",
     "loc": 374,
     "classes": 10,
@@ -9858,6 +10912,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_types_h",
     "name": "wallet/types.h",
+    "path": "src/wallet/types.h",
     "subsystem": "wallet",
     "loc": 68,
     "classes": 0,
@@ -9867,6 +10922,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_wallet_cpp",
     "name": "wallet/wallet.cpp",
+    "path": "src/wallet/wallet.cpp",
     "subsystem": "wallet",
     "loc": 4687,
     "classes": 2,
@@ -9876,6 +10932,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_wallet_h",
     "name": "wallet/wallet.h",
+    "path": "src/wallet/wallet.h",
     "subsystem": "wallet",
     "loc": 1132,
     "classes": 24,
@@ -9885,6 +10942,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_walletdb_cpp",
     "name": "wallet/walletdb.cpp",
+    "path": "src/wallet/walletdb.cpp",
     "subsystem": "wallet",
     "loc": 1455,
     "classes": 1,
@@ -9894,6 +10952,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_walletdb_h",
     "name": "wallet/walletdb.h",
+    "path": "src/wallet/walletdb.h",
     "subsystem": "wallet",
     "loc": 323,
     "classes": 12,
@@ -9903,6 +10962,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_wallettool_cpp",
     "name": "wallet/wallettool.cpp",
+    "path": "src/wallet/wallettool.cpp",
     "subsystem": "wallet",
     "loc": 233,
     "classes": 0,
@@ -9912,6 +10972,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_wallettool_h",
     "name": "wallet/wallettool.h",
+    "path": "src/wallet/wallettool.h",
     "subsystem": "wallet",
     "loc": 20,
     "classes": 1,
@@ -9921,6 +10982,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_walletutil_cpp",
     "name": "wallet/walletutil.cpp",
+    "path": "src/wallet/walletutil.cpp",
     "subsystem": "wallet",
     "loc": 102,
     "classes": 0,
@@ -9930,6 +10992,7 @@ export const buildings: Building[] =
   {
     "id": "wallet_walletutil_h",
     "name": "wallet/walletutil.h",
+    "path": "src/wallet/walletutil.h",
     "subsystem": "wallet",
     "loc": 121,
     "classes": 1,
@@ -9939,6 +11002,7 @@ export const buildings: Building[] =
   {
     "id": "walletinitinterface_h",
     "name": "walletinitinterface.h",
+    "path": "src/walletinitinterface.h",
     "subsystem": "other",
     "loc": 30,
     "classes": 3,
@@ -9948,6 +11012,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqabstractnotifier_cpp",
     "name": "zmq/zmqabstractnotifier.cpp",
+    "path": "src/zmq/zmqabstractnotifier.cpp",
     "subsystem": "zmq",
     "loc": 44,
     "classes": 0,
@@ -9957,6 +11022,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqabstractnotifier_h",
     "name": "zmq/zmqabstractnotifier.h",
+    "path": "src/zmq/zmqabstractnotifier.h",
     "subsystem": "zmq",
     "loc": 67,
     "classes": 4,
@@ -9966,6 +11032,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqnotificationinterface_cpp",
     "name": "zmq/zmqnotificationinterface.cpp",
+    "path": "src/zmq/zmqnotificationinterface.cpp",
     "subsystem": "zmq",
     "loc": 212,
     "classes": 0,
@@ -9975,6 +11042,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqnotificationinterface_h",
     "name": "zmq/zmqnotificationinterface.h",
+    "path": "src/zmq/zmqnotificationinterface.h",
     "subsystem": "zmq",
     "loc": 51,
     "classes": 5,
@@ -9984,6 +11052,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqpublishnotifier_cpp",
     "name": "zmq/zmqpublishnotifier.cpp",
+    "path": "src/zmq/zmqpublishnotifier.cpp",
     "subsystem": "zmq",
     "loc": 303,
     "classes": 1,
@@ -9993,6 +11062,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqpublishnotifier_h",
     "name": "zmq/zmqpublishnotifier.h",
+    "path": "src/zmq/zmqpublishnotifier.h",
     "subsystem": "zmq",
     "loc": 75,
     "classes": 8,
@@ -10002,6 +11072,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqrpc_cpp",
     "name": "zmq/zmqrpc.cpp",
+    "path": "src/zmq/zmqrpc.cpp",
     "subsystem": "zmq",
     "loc": 70,
     "classes": 1,
@@ -10011,6 +11082,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqrpc_h",
     "name": "zmq/zmqrpc.h",
+    "path": "src/zmq/zmqrpc.h",
     "subsystem": "zmq",
     "loc": 12,
     "classes": 1,
@@ -10020,6 +11092,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqutil_cpp",
     "name": "zmq/zmqutil.cpp",
+    "path": "src/zmq/zmqutil.cpp",
     "subsystem": "zmq",
     "loc": 16,
     "classes": 0,
@@ -10029,6 +11102,7 @@ export const buildings: Building[] =
   {
     "id": "zmq_zmqutil_h",
     "name": "zmq/zmqutil.h",
+    "path": "src/zmq/zmqutil.h",
     "subsystem": "zmq",
     "loc": 15,
     "classes": 0,
@@ -10043,16 +11117,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Raw block data files (128MB each)",
-    "crud": {
-      "write": [
-        "node_blockstorage_cpp"
-      ],
-      "read": [
-        "node_blockstorage_cpp",
-        "validation_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_rev_dat",
@@ -10062,16 +11127,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Block undo data for reorgs",
-    "crud": {
-      "write": [
-        "node_blockstorage_cpp"
-      ],
-      "read": [
-        "node_blockstorage_cpp",
-        "validation_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_chainstate",
@@ -10081,19 +11137,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "LevelDB UTXO set \u2014 which coins exist and can be spent",
-    "crud": {
-      "write": [
-        "txdb_cpp",
-        "coins_cpp",
-        "validation_cpp"
-      ],
-      "read": [
-        "txdb_cpp",
-        "coins_cpp",
-        "validation_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_block_index",
@@ -10103,16 +11147,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "LevelDB block metadata index",
-    "crud": {
-      "write": [
-        "node_blockstorage_cpp"
-      ],
-      "read": [
-        "node_blockstorage_cpp",
-        "validation_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_wallet_db",
@@ -10122,17 +11157,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Wallet database \u2014 keys, transactions, metadata",
-    "crud": {
-      "write": [
-        "wallet_walletdb_cpp",
-        "wallet_sqlite_cpp"
-      ],
-      "read": [
-        "wallet_walletdb_cpp",
-        "wallet_sqlite_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_mempool_dat",
@@ -10142,15 +11167,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Mempool snapshot saved on shutdown",
-    "crud": {
-      "write": [
-        "node_mempool_persist_cpp"
-      ],
-      "read": [
-        "node_mempool_persist_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_peers_dat",
@@ -10160,15 +11177,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Known peer addresses (AddrMan)",
-    "crud": {
-      "write": [
-        "addrdb_cpp"
-      ],
-      "read": [
-        "addrdb_cpp"
-      ]
-    }
+    "path": ""
   },
   {
     "id": "store_banlist",
@@ -10178,15 +11187,7 @@ export const buildings: Building[] =
     "classes": 0,
     "functions": 0,
     "enums": 0,
-    "description": "Banned peer list",
-    "crud": {
-      "write": [
-        "banman_cpp"
-      ],
-      "read": [
-        "banman_cpp"
-      ]
-    }
+    "path": ""
   }
 ];
 
