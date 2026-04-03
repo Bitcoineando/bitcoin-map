@@ -35,16 +35,17 @@ function JourneyPath({ journeyId }: { journeyId: string }) {
     return tubeGeo;
   }, [journey.stops]);
 
-  if (!geometry) return null;
+  // Only render when this journey is active
+  if (!isActive || !geometry) return null;
 
   return (
     <mesh geometry={geometry}>
       <meshStandardMaterial
         color={journey.color}
         transparent
-        opacity={isActive ? 0.6 : 0.15}
+        opacity={0.6}
         emissive={journey.color}
-        emissiveIntensity={isActive ? 0.4 : 0.05}
+        emissiveIntensity={0.4}
       />
     </mesh>
   );
