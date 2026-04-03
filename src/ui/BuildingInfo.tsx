@@ -10,6 +10,8 @@ export function BuildingInfo() {
   const building = selectedBuilding ? buildings.find((b) => b.id === selectedBuilding) : null;
 
   // Find connections
+  const hiddenDistricts = useStore((s) => s.hiddenDistricts);
+
   const { dependsOn, dependedBy } = useMemo(() => {
     if (!selectedBuilding) return { dependsOn: [], dependedBy: [] };
 
@@ -20,16 +22,16 @@ export function BuildingInfo() {
     for (const dep of dependencies) {
       if (dep.from === selectedBuilding) {
         const b = buildingMap.get(dep.to);
-        if (b) on.push(b);
+        if (b && !hiddenDistricts.has(b.subsystem)) on.push(b);
       }
       if (dep.to === selectedBuilding) {
         const b = buildingMap.get(dep.from);
-        if (b) by.push(b);
+        if (b && !hiddenDistricts.has(b.subsystem)) by.push(b);
       }
     }
 
     return { dependsOn: on, dependedBy: by };
-  }, [selectedBuilding]);
+  }, [selectedBuilding, hiddenDistricts]);
 
   if (!building) return null;
 
