@@ -36299,8 +36299,80 @@ export const dependencies: Dependency[] =
 
 // -- Journeys --
 
-export const journeys: Journey[] = 
-[
+export const journeys: Journey[] = [
+  {
+    "id": "cold-start",
+    "name": "Cold Start",
+    "description": "Node initialization \u2014 from main() to fully operational",
+    "color": "#e0e0e0",
+    "stops": [
+      {
+        "buildingId": "bitcoind_cpp",
+        "function": "main",
+        "annotation": "Everything begins here. The entry point is deceptively simple \u2014 it parses command-line arguments and hands off to AppInit. This file is tiny because it's just a launchpad."
+      },
+      {
+        "buildingId": "init_cpp",
+        "function": "AppInitBasicSetup",
+        "annotation": "The node reads bitcoin.conf and command-line flags. Network parameters are set (mainnet, testnet, regtest). Signal handlers are registered. Logging is initialized. The node is deciding what kind of node it's going to be."
+      },
+      {
+        "buildingId": "init_cpp",
+        "function": "AppInitSanityChecks",
+        "annotation": "Before touching any data, the node checks that cryptographic libraries work correctly (SHA256, secp256k1). If any sanity check fails, the node refuses to start. Better to fail at startup than to silently produce wrong results."
+      },
+      {
+        "buildingId": "txdb_cpp",
+        "function": "CBlockTreeDB",
+        "annotation": "The node opens the LevelDB database storing the block index \u2014 a mapping from block hash to where that block lives on disk. Without this, the node has no idea what chain it has."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "LoadChainstate",
+        "annotation": "The UTXO set is loaded \u2014 every unspent transaction output, indexed for fast lookup. This tells the node what the current state of all bitcoin ownership looks like, and which block is the chain tip."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "VerifyDB",
+        "annotation": "The node replays the last N blocks to verify the UTXO set is consistent. This catches corruption from crashes or bugs. The node is asking itself: do I trust the data I just loaded?"
+      },
+      {
+        "buildingId": "txmempool_cpp",
+        "function": "LoadMempool",
+        "annotation": "Previously-seen unconfirmed transactions are loaded from mempool.dat. These were valid before shutdown but hadn't been mined yet. The node doesn't lose track of pending transactions across restarts."
+      },
+      {
+        "buildingId": "policy_fees_cpp",
+        "function": "CBlockPolicyEstimator::Read",
+        "annotation": "The fee estimator loads historical fee data \u2014 how much fee was required to get into a block over the past hours/days. This data takes time to accumulate, so persisting it gives immediate fee estimation on restart."
+      },
+      {
+        "buildingId": "net_cpp",
+        "function": "CConnman::Start",
+        "annotation": "The node starts listening for incoming TCP connections and begins connecting to peers. It reads peers.dat for known nodes and queries DNS seeds. The node is now reachable by the Bitcoin network."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "PeerManagerImpl",
+        "annotation": "The peer manager registers itself to handle all incoming network messages. It knows what to do when a peer sends a version, inv, tx, or block message. The node can now speak the Bitcoin protocol."
+      },
+      {
+        "buildingId": "httpserver_cpp",
+        "function": "StartHTTPServer",
+        "annotation": "The HTTP server binds to port 8332 and starts accepting RPC calls. This is the control interface \u2014 bitcoin-cli, wallets, and other tools talk to the node through this."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "CWallet::Create",
+        "annotation": "Each configured wallet is loaded from disk \u2014 keys, descriptors, transaction history, labels. The wallet re-scans the UTXO set to find coins it owns. After this, the wallet knows its balance."
+      },
+      {
+        "buildingId": "init_cpp",
+        "function": "WaitForShutdown",
+        "annotation": "Initialization is complete. The node enters its main event loop \u2014 processing network messages, serving RPC requests, validating blocks and transactions. The machine is awake."
+      }
+    ]
+  },
   {
     "id": "tx-lifecycle",
     "name": "Life of a Transaction",
@@ -36310,214 +36382,374 @@ export const journeys: Journey[] =
       {
         "buildingId": "net_cpp",
         "function": "CConnman::SocketHandler",
-        "annotation": "Raw bytes arrive on a TCP socket from a peer. This is where every transaction begins its journey \u2014 as an undifferentiated stream of bytes on the wire."
+        "annotation": "Raw bytes arrive on a TCP socket from a connected peer. At this point, it's just a stream of data \u2014 the node doesn't even know it's a transaction yet."
+      },
+      {
+        "buildingId": "net_cpp",
+        "function": "V1Transport::GetReceivedMessage",
+        "annotation": "The raw bytes are deserialized into a structured network message. Magic bytes, command name, payload length, and checksum are parsed. The node now knows this is a 'tx' message."
       },
       {
         "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage",
-        "annotation": "The bytes are deserialized into a message. The node recognizes it as a 'tx' message and begins processing. This is the border checkpoint between the raw network and the structured Bitcoin protocol."
+        "function": "PeerManagerImpl::ProcessMessage",
+        "annotation": "The message dispatcher routes the tx message to transaction handling. But first \u2014 did the node even ask for this transaction? Bitcoin uses an inv/getdata protocol to avoid unsolicited data."
+      },
+      {
+        "buildingId": "primitives_transaction_cpp",
+        "function": "CTransaction",
+        "annotation": "The raw payload is deserialized into a CTransaction object \u2014 inputs, outputs, witness data, locktime. The transaction becomes a structured object with fields you can inspect."
       },
       {
         "buildingId": "validation_cpp",
-        "function": "AcceptToMemoryPool",
-        "annotation": "The main gate. The transaction is checked against every consensus rule: valid signatures, inputs exist and are unspent, fees are sufficient, no double spends. Most invalid transactions die here."
+        "function": "AcceptSingleTransaction",
+        "annotation": "The main gate. The transaction is checked against dozens of rules: Are inputs unspent? Do signatures verify? Is the fee sufficient? Is it a double-spend? Most invalid transactions die here. This single function is the immune system of Bitcoin."
+      },
+      {
+        "buildingId": "coins_cpp",
+        "function": "CCoinsViewCache::AccessCoin",
+        "annotation": "For each input, the node looks up the referenced UTXO in the coins database. If a UTXO doesn't exist or was already spent, the transaction is invalid. This is how double-spending is prevented."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "VerifyScript",
+        "annotation": "For each input, the spending script is combined with the locking script and run through the stack-based interpreter. If the script returns true, the spender has proven they own the coins."
       },
       {
         "buildingId": "txmempool_cpp",
         "function": "CTxMemPool::addUnchecked",
-        "annotation": "The transaction passed validation. It enters the mempool \u2014 the waiting room of unconfirmed transactions. It lives here until a miner picks it up or it expires."
+        "annotation": "The transaction passed every check. It enters the mempool \u2014 an in-memory structure holding all valid, unconfirmed transactions, tracking fee rates, ancestors, and descendants."
+      },
+      {
+        "buildingId": "policy_fees_cpp",
+        "function": "CBlockPolicyEstimator::processTransaction",
+        "annotation": "The fee estimator records this transaction's fee rate and entry height. Later, when mined, it will learn how many blocks it took to confirm. This data feeds future fee estimates."
       },
       {
         "buildingId": "net_processing_cpp",
-        "function": "RelayTransaction",
-        "annotation": "The node announces the transaction to its peers. The transaction propagates across the network, reaching thousands of nodes within seconds."
+        "function": "PeerManagerImpl::RelayTransaction",
+        "annotation": "The node announces the transaction to connected peers via inv messages. Each peer requests the full transaction if they haven't seen it. Within seconds, it propagates across thousands of nodes."
       },
       {
         "buildingId": "node_miner_cpp",
         "function": "BlockAssembler::addPackageTxs",
-        "annotation": "A miner builds a block template. Transactions are selected from the mempool by fee rate \u2014 highest paying first. Our transaction gets included in the candidate block."
+        "annotation": "A miner builds a block template. Transactions are pulled from the mempool sorted by fee rate \u2014 highest paying first, up to the block weight limit. Our transaction gets included."
       },
       {
         "buildingId": "validation_cpp",
         "function": "ConnectBlock",
-        "annotation": "A block containing our transaction is found and validated. Every transaction in the block is re-verified, the UTXO set is updated. The transaction is now confirmed."
+        "annotation": "A block containing our transaction is validated. Every transaction is re-verified against the UTXO set, spent outputs are removed, new outputs are added. The transaction is now confirmed."
       },
       {
         "buildingId": "txmempool_cpp",
         "function": "CTxMemPool::removeForBlock",
-        "annotation": "The transaction is removed from the mempool. Its journey is complete \u2014 it's now part of the permanent blockchain record."
+        "annotation": "The transaction is removed from the mempool. Any conflicting transactions are evicted. It's no longer pending \u2014 it's part of the permanent blockchain record. Journey complete."
       }
     ]
   },
   {
-    "id": "block-validation",
-    "name": "Block Validation",
-    "description": "What happens when a new block arrives from the network",
-    "color": "#3b82f6",
+    "id": "the-new-kid",
+    "name": "The New Kid",
+    "description": "Initial block download \u2014 a fresh node syncs the entire blockchain",
+    "color": "#38bdf8",
     "stops": [
       {
-        "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage(\"block\")",
-        "annotation": "A block message arrives from a peer. The raw bytes are deserialized into a CBlock object."
+        "buildingId": "net_cpp",
+        "function": "CConnman::ThreadDNSAddressSeed",
+        "annotation": "The node has no peer addresses yet. It queries hardcoded DNS seeds \u2014 domain names that resolve to IPs of known Bitcoin nodes. This is the one semi-trusted step in bootstrapping."
       },
-      {
-        "buildingId": "validation_cpp",
-        "function": "ProcessNewBlock",
-        "annotation": "Entry point for all new blocks. This function coordinates the entire validation pipeline \u2014 it must handle both valid blocks and attack attempts."
-      },
-      {
-        "buildingId": "validation_cpp",
-        "function": "CheckBlock",
-        "annotation": "Basic structural checks: is the block the right size? Is the merkle root correct? Is the coinbase transaction valid? These are cheap checks that reject obviously bad blocks."
-      },
-      {
-        "buildingId": "validation_cpp",
-        "function": "AcceptBlock",
-        "annotation": "Check the block header against consensus rules, verify proof-of-work, and store the block to disk. The block is now on disk but not yet part of the active chain."
-      },
-      {
-        "buildingId": "validation_cpp",
-        "function": "ConnectTip",
-        "annotation": "This block extends our best chain. Time to actually execute it \u2014 connect it to the tip of the chain and update all state."
-      },
-      {
-        "buildingId": "validation_cpp",
-        "function": "ConnectBlock",
-        "annotation": "The heavy lifting: execute every transaction in the block. Check every script, update the UTXO set, enforce all consensus rules. If anything fails, the entire block is rejected."
-      },
-      {
-        "buildingId": "validation_cpp",
-        "function": "UpdateTip",
-        "annotation": "The block is valid. Update the chain state, log the new tip, notify subscribers. The blockchain just grew by one block."
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "PeerManagerImpl::NewPoWValidBlock",
-        "annotation": "Announce the new block to peers using compact block relay. The block propagates across the network, and other nodes begin their own validation."
-      }
-    ]
-  },
-  {
-    "id": "peer-handshake",
-    "name": "Peer Connection & Handshake",
-    "description": "How two Bitcoin nodes find each other and establish a connection",
-    "color": "#f59e0b",
-    "stops": [
       {
         "buildingId": "net_cpp",
         "function": "CConnman::OpenNetworkConnection",
-        "annotation": "The node decides to connect to a peer. The address might come from DNS seeds, the address manager, or a manual -addnode flag."
+        "annotation": "TCP connections are opened to discovered peers. Each connection begins with a version handshake. The node connects to 8-10 outbound peers and learns each one's chain tip height."
       },
       {
-        "buildingId": "net_cpp",
-        "function": "CConnman::ConnectNode",
-        "annotation": "A TCP socket is established to the peer's IP:port. The connection exists at the network level but the Bitcoin protocol hasn't started yet."
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "PushMessage(\"version\")",
-        "annotation": "We send our version message: protocol version, services we offer, current block height, and our address. This is the Bitcoin handshake's opening move."
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage(\"version\")",
-        "annotation": "We receive the peer's version message. We check compatibility \u2014 do they speak a protocol version we understand? Do they offer services we need?"
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage(\"verack\")",
-        "annotation": "Version acknowledged. The handshake is complete. Both nodes have agreed on protocol parameters and are ready for normal operation."
+        "buildingId": "validation_cpp",
+        "function": "IsInitialBlockDownload",
+        "annotation": "The node recognizes it's far behind the network tip and enters IBD mode. It won't relay transactions, won't respond to certain queries, and prioritizes block downloading over everything else."
       },
       {
         "buildingId": "net_processing_cpp",
         "function": "SendMessages",
-        "annotation": "Normal operation begins. The node requests headers to sync, announces transactions from its mempool, and starts the ongoing conversation that keeps the network alive."
-      }
-    ]
-  },
-  {
-    "id": "wallet-send",
-    "name": "Wallet Sends a Transaction",
-    "description": "From user intent to broadcast \u2014 how the wallet creates and sends bitcoin",
-    "color": "#22c55e",
-    "stops": [
-      {
-        "buildingId": "wallet_rpc_spend_cpp",
-        "function": "sendtoaddress",
-        "annotation": "The user calls the sendtoaddress RPC. This is where human intent ('send 1 BTC to this address') enters the system."
+        "annotation": "The node sends getheaders messages requesting just the 80-byte block headers. Headers are tiny and can be validated quickly \u2014 get the roadmap first, download the data second."
       },
       {
-        "buildingId": "wallet_spend_cpp",
-        "function": "CreateTransaction",
-        "annotation": "The wallet selects which UTXOs to spend (coin selection), builds the transaction structure, calculates the fee, and creates change outputs."
+        "buildingId": "validation_cpp",
+        "function": "ProcessNewBlockHeaders",
+        "annotation": "Headers arrive in batches of 2000. For each: verify proof-of-work, check difficulty target, validate chain linkage. The node builds the entire header chain in memory \u2014 the shape of the blockchain without any transaction data."
       },
       {
-        "buildingId": "wallet_spend_cpp",
-        "function": "CWallet::FundTransaction",
-        "annotation": "Choose the optimal set of UTXOs. The wallet tries to minimize fees while avoiding dust outputs. This is a knapsack-like optimization problem."
-      },
-      {
-        "buildingId": "wallet_scriptpubkeyman_cpp",
-        "function": "SignTransaction",
-        "annotation": "Sign each input with the appropriate private key. For SegWit inputs, the witness data is constructed. The transaction is now authorized."
-      },
-      {
-        "buildingId": "wallet_wallet_cpp",
-        "function": "CWallet::CommitTransaction",
-        "annotation": "Save the transaction to the wallet database and mark the spent UTXOs. Even if broadcast fails, the wallet remembers this transaction."
-      },
-      {
-        "buildingId": "node_transaction_cpp",
-        "function": "BroadcastTransaction",
-        "annotation": "Submit the signed transaction to the local node's mempool. It goes through the same validation as any other transaction \u2014 no special treatment for local transactions."
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "RelayTransaction",
-        "annotation": "The transaction is announced to peers via inv messages. Within seconds, it propagates across the entire network, waiting to be included in a block."
-      }
-    ]
-  },
-  {
-    "id": "ibd",
-    "name": "Initial Block Download",
-    "description": "How a new node syncs the entire blockchain from scratch",
-    "color": "#a855f7",
-    "stops": [
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "SendMessages",
-        "annotation": "The newly started node sends getheaders messages to its peers, asking for the chain of block headers. Headers are small (80 bytes each) so this is fast."
-      },
-      {
-        "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage(\"headers\")",
-        "annotation": "Headers arrive. Each header is validated: correct proof-of-work, valid timestamps, proper chain linkage. The node builds a header chain without downloading full blocks yet."
+        "buildingId": "chain_cpp",
+        "function": "CChain::SetTip",
+        "annotation": "With all headers processed, the node identifies the chain with the most cumulative proof-of-work. This is the chain it will download. Nakamoto consensus happens here at the header level."
       },
       {
         "buildingId": "net_processing_cpp",
         "function": "HeadersDirectFetchBlocks",
-        "annotation": "With a validated header chain, the node requests full blocks from multiple peers in parallel. It knows exactly which blocks it needs and downloads them out of order for speed."
+        "annotation": "Full blocks are requested from multiple peers in parallel \u2014 different peers send different ranges. This parallelization is critical: 500GB from one peer takes days; from 8 peers, it's 8x faster."
       },
       {
         "buildingId": "net_processing_cpp",
-        "function": "ProcessMessage(\"block\")",
-        "annotation": "Full blocks arrive and are stored to disk. The node processes them in order, even though they may arrive out of order. Each block is fully validated."
+        "function": "ProcessMessage",
+        "annotation": "Full blocks arrive and are written to blk*.dat files on disk. The block index database is updated with each block's position. Blocks are stored but not yet validated."
       },
       {
         "buildingId": "validation_cpp",
         "function": "ConnectTip",
-        "annotation": "Each block is connected to the chain tip. Every transaction is executed, every script is verified, the UTXO set is updated. This is the slowest part \u2014 full validation of years of history."
+        "annotation": "Blocks are validated and connected one at a time, in order. Every transaction is checked, every signature verified, the UTXO set updated. This is the heaviest computation \u2014 verifying the entire chain history."
+      },
+      {
+        "buildingId": "coins_cpp",
+        "function": "CCoinsViewCache::BatchWrite",
+        "annotation": "As blocks are connected, the UTXO set is built up in an in-memory cache and periodically flushed to LevelDB. At the current tip, it contains roughly 80-90 million unspent outputs."
       },
       {
         "buildingId": "validation_cpp",
         "function": "FlushStateToDisk",
-        "annotation": "Periodically, the UTXO set cache is flushed to LevelDB on disk. This prevents data loss if the node crashes during sync. The flush interval balances safety vs. speed."
+        "annotation": "The node can't keep the entire UTXO set in memory. Periodically the cache is flushed to disk. If the node crashes during IBD, it resumes from the last flush point rather than starting over."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectBlock",
+        "annotation": "A critical optimization: for blocks below the assume-valid hash, signature verification is skipped. Structure and UTXO checks still run, but this cuts IBD time by 50-80%."
       },
       {
         "buildingId": "init_cpp",
-        "function": "IBD complete",
-        "annotation": "The node has caught up to the network tip. The IBD flag is cleared and the node switches to normal operation \u2014 relaying transactions, serving blocks to peers, and validating new blocks as they arrive."
+        "function": "IsInitialBlockDownload returns false",
+        "annotation": "The chain tip is within 24 hours of current time. IBD is complete. The node starts relaying transactions, serving peers, and processing blocks one at a time. The new kid is now a full participant."
+      }
+    ]
+  },
+  {
+    "id": "the-vault",
+    "name": "The Vault",
+    "description": "Full wallet lifecycle \u2014 create wallet, receive bitcoin, spend it",
+    "color": "#22c55e",
+    "stops": [
+      {
+        "buildingId": "wallet_rpc_wallet_cpp",
+        "function": "createwallet",
+        "annotation": "The user calls createwallet. This RPC handler parses options \u2014 encrypted? Descriptor-based? Watch-only? It hands off to the wallet creation logic. This is the user's first contact with the wallet subsystem."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "CWallet::Create",
+        "annotation": "A new wallet database is created on disk (SQLite for modern descriptor wallets). The wallet object is initialized with empty state \u2014 no keys, no transactions, zero balance. It registers for block/tx notifications."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "SetupDescriptorScriptPubKeyManagers",
+        "annotation": "A master seed is generated (random bytes from the OS) and output descriptors are created. A descriptor is a recipe for generating addresses \u2014 e.g., wpkh(xprv.../84'/0'/0'/0/*) for native segwit. Multiple descriptors cover different address types."
+      },
+      {
+        "buildingId": "wallet_scriptpubkeyman_cpp",
+        "function": "DescriptorScriptPubKeyMan::TopUp",
+        "annotation": "The descriptor pre-derives a pool of 1000 public keys and their scriptPubKeys. This keypool means the wallet can hand out new addresses without re-deriving each time. All keys are recoverable from the single master seed."
+      },
+      {
+        "buildingId": "wallet_rpc_addresses_cpp",
+        "function": "getnewaddress",
+        "annotation": "The user calls getnewaddress. The wallet pulls the next unused key from the keypool, encodes its scriptPubKey as a bech32 address, marks the key as used, and returns the address string."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage",
+        "annotation": "A transaction appears on the network sending bitcoin to our address. The node processes it normally through standard validation \u2014 it doesn't know or care that the wallet is interested."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "transactionAddedToMempool",
+        "annotation": "The wallet subscribes to mempool notifications. When a new tx enters, the wallet checks if any outputs match its watched scriptPubKeys. Our address matches \u2014 the wallet records it as incoming, 0 confirmations."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "blockConnected",
+        "annotation": "A block is mined containing our transaction. The wallet updates the confirmation count. After 1 confirmation the funds are received. After 6, the payment is considered irreversible. The available balance updates."
+      },
+      {
+        "buildingId": "wallet_rpc_spend_cpp",
+        "function": "sendtoaddress",
+        "annotation": "The user calls sendtoaddress with a destination and amount. The RPC handler converts the address back into a scriptPubKey. The wallet now needs to construct a spending transaction."
+      },
+      {
+        "buildingId": "wallet_spend_cpp",
+        "function": "AttemptSelection",
+        "annotation": "The wallet examines all confirmed UTXOs and selects which to spend. Multiple algorithms run \u2014 Branch and Bound (exact match), Knapsack (randomized), Single Random Draw \u2014 and the best result is picked."
+      },
+      {
+        "buildingId": "policy_fees_cpp",
+        "function": "estimateSmartFee",
+        "annotation": "The wallet asks: what fee rate do I need to confirm within N blocks? The estimator consults historical data and returns a recommendation. The wallet calculates the absolute fee based on expected transaction size."
+      },
+      {
+        "buildingId": "wallet_spend_cpp",
+        "function": "CreateTransactionInternal",
+        "annotation": "The raw transaction is constructed. Inputs point to selected UTXOs. Outputs include the payment and the change (sent back to our wallet via a fresh change address from our descriptor). Not yet signed."
+      },
+      {
+        "buildingId": "wallet_scriptpubkeyman_cpp",
+        "function": "SignTransaction",
+        "annotation": "For each input, the private key is retrieved from the descriptor, the signature hash is computed, and a cryptographic signature is produced using secp256k1. The signatures go into witness data. The transaction is now valid."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "VerifyScript",
+        "annotation": "Before broadcasting, the wallet verifies its own transaction by running the script interpreter on each input. A sanity check \u2014 catch signing mistakes locally rather than having the network reject it."
+      },
+      {
+        "buildingId": "node_transaction_cpp",
+        "function": "BroadcastTransaction",
+        "annotation": "The signed transaction is submitted to the node's own mempool. It goes through the exact same validation as any peer's transaction \u2014 AcceptToMemoryPool checks all consensus and policy rules. No special treatment."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "RelayTransaction",
+        "annotation": "The transaction is announced to all connected peers via inv messages. Within seconds, it's visible to thousands of nodes and mining pools worldwide."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "blockConnected",
+        "annotation": "The wallet watches for blocks. When one contains our spending transaction, spent UTXOs are marked spent, the change output becomes a new UTXO, and the transaction is confirmed. The full cycle is complete."
+      }
+    ]
+  },
+  {
+    "id": "the-gatekeeper",
+    "name": "The Gatekeeper",
+    "description": "Script evaluation \u2014 how Bitcoin verifies you own the coins you're spending",
+    "color": "#f97316",
+    "stops": [
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectBlock",
+        "annotation": "During block validation, each transaction input needs to answer one question: is the spender authorized? The input references a UTXO with a locking script. The spender provides an unlocking script. These go to the interpreter."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "VerifyScript",
+        "annotation": "The interpreter identifies the script type: bare (legacy), P2SH, SegWit v0 (P2WPKH/P2WSH), or Taproot (SegWit v1). Each has different rules for how unlocking data is structured. The correct verification path is dispatched."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "VerifyScript (flags)",
+        "annotation": "Script execution is controlled by flags \u2014 SCRIPT_VERIFY_P2SH, SCRIPT_VERIFY_WITNESS, SCRIPT_VERIFY_TAPROOT. Each flag enables a soft fork rule. Older blocks use fewer flags. This is how Bitcoin maintains backward compatibility."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "EvalScript (entry)",
+        "annotation": "The stack machine initializes with an empty stack. For a P2WPKH spend, witness data provides a signature and public key, pushed onto the stack. The stack is the interpreter's only memory \u2014 no variables, no heap."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "EvalScript (opcode loop)",
+        "annotation": "The script is read byte by byte. For P2WPKH: OP_DUP (duplicate top item), OP_HASH160 (hash it), push expected hash, OP_EQUALVERIFY (check match), OP_CHECKSIG (verify signature). Each opcode pops inputs and pushes results."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "OP_DUP",
+        "annotation": "The simplest opcode. The public key on top of the stack is duplicated. Stack: [sig, pubkey, pubkey]. The duplicate will be hashed; the original will be used for signature verification."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "OP_HASH160",
+        "annotation": "The duplicated public key is popped, hashed with SHA256, then RIPEMD160, and the 20-byte result pushed back. Stack: [sig, pubkey, hash-of-pubkey]. This hash is the 'address' the coins were locked to."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "OP_EQUALVERIFY",
+        "annotation": "The computed hash is compared to the hash embedded in the locking script. If they match, execution continues \u2014 the spender provided the right public key. If not, the script fails immediately. Stack: [sig, pubkey]."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "OP_CHECKSIG",
+        "annotation": "The critical opcode. It pops the public key and signature, computes the signature hash (a hash of the transaction data the signature commits to), then verifies using secp256k1 elliptic curve math. Valid? Push true."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "SignatureHash",
+        "annotation": "The sighash serializes specific parts of the transaction (determined by sighash type, usually SIGHASH_ALL). For SegWit: BIP143 includes the input amount. For Taproot: BIP341 with even more commitments. The signature is bound to exactly this transaction."
+      },
+      {
+        "buildingId": "crypto_sha256_cpp",
+        "function": "CSHA256::Finalize",
+        "annotation": "The actual cryptographic hash computation. SHA256 processes the serialized transaction data in 64-byte blocks, producing a 32-byte digest. This is the message that the signature signs. Bitcoin uses double-SHA256 for most hashing."
+      },
+      {
+        "buildingId": "script_interpreter_cpp",
+        "function": "VerifyScript (final check)",
+        "annotation": "After all opcodes execute, the interpreter checks the stack. Top item is true (non-zero)? The script succeeds \u2014 the spender is authorized. Empty stack or false? Rejected. For our P2WPKH, OP_CHECKSIG pushed true. Spend authorized."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectBlock (next input)",
+        "annotation": "Script verification returns success. The validator moves to the next input and repeats. After all inputs pass, the transaction is fully validated. After all transactions pass, the block is valid. Every bitcoin ever spent went through this path."
+      }
+    ]
+  },
+  {
+    "id": "the-ledger",
+    "name": "The Ledger",
+    "description": "How data hits disk \u2014 the storage layer that makes Bitcoin durable",
+    "color": "#a78bfa",
+    "stops": [
+      {
+        "buildingId": "coins_cpp",
+        "function": "CCoinsViewCache",
+        "annotation": "The UTXO set lives primarily in an in-memory cache. When transactions are validated, inputs are looked up here. When blocks connect, spent outputs are marked dirty and new ones added. Fast but volatile \u2014 a crash loses everything in the cache."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "FlushStateToDisk",
+        "annotation": "Periodically, the node flushes the UTXO cache to disk. Three triggers: cache exceeds ~450MB, too many blocks since last flush, or shutdown requested. The time between flushes is the danger window for crash recovery."
+      },
+      {
+        "buildingId": "txdb_cpp",
+        "function": "CCoinsViewDB::BatchWrite",
+        "annotation": "Dirty UTXO entries are written to LevelDB in a single atomic batch. Each entry is keyed by outpoint (txid + index) and stores value, scriptPubKey, and creation height. LevelDB guarantees all-or-nothing \u2014 no partial writes."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "SaveBlockToDisk",
+        "annotation": "Raw block data is NOT in LevelDB. It's written to flat files \u2014 blk00000.dat, blk00001.dat \u2014 each up to ~128MB. Blocks are serialized back-to-back, append-only. Simple, fast, sequential storage."
+      },
+      {
+        "buildingId": "txdb_cpp",
+        "function": "CBlockTreeDB::WriteBatchSync",
+        "annotation": "The block index goes to a separate LevelDB. It maps block hashes to metadata: file number, byte offset, height, chain work. This is how the node finds a specific block \u2014 look up hash, get file + offset, seek."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "UndoWriteToDisk",
+        "annotation": "When a block is connected, undo data is written to rev*.dat files. Undo data contains the UTXOs that were spent \u2014 the information needed to reverse the block. Without this, chain reorganizations would require re-downloading blocks."
+      },
+      {
+        "buildingId": "txmempool_cpp",
+        "function": "DumpMempool",
+        "annotation": "On shutdown and periodically, the mempool is serialized to mempool.dat. Each transaction is saved with arrival time and fee data. On restart, these are reloaded and re-validated. Without this, the node would have an empty mempool after every restart."
+      },
+      {
+        "buildingId": "wallet_walletdb_cpp",
+        "function": "WalletBatch::WriteTx",
+        "annotation": "The wallet maintains its own database (SQLite), separate from the node's databases. It stores master keys, descriptors, transaction history, address labels. Every wallet operation is a database transaction. This file is the user's most precious data."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "CWallet::BackupWallet",
+        "annotation": "The wallet can be backed up via RPC. For descriptor wallets, the backup contains the key recipes, sufficient to reconstruct all keys and find all funds. This is the ultimate safety net against disk failure."
+      },
+      {
+        "buildingId": "addrman_cpp",
+        "function": "AddrManImpl::Serialize",
+        "annotation": "The peer database is persisted to peers.dat \u2014 IP addresses of known nodes, organized into tried and new tables. The bucketing design is deliberately hard to manipulate, protecting against eclipse attacks."
+      },
+      {
+        "buildingId": "policy_fees_cpp",
+        "function": "CBlockPolicyEstimator::Write",
+        "annotation": "Fee estimation data is persisted to fee_estimates.dat. Building this data from scratch takes hours of observation, so persisting it means accurate fee estimates are available immediately after restart."
+      },
+      {
+        "buildingId": "init_cpp",
+        "function": "Shutdown",
+        "annotation": "On clean shutdown, everything flushes in reverse init order: wallet closed, mempool dumped, fees saved, peers written, UTXO cache flushed completely, block index synced, file handles closed. A clean shutdown guarantees zero data loss."
       }
     ]
   }
