@@ -1,0 +1,35517 @@
+// Auto-generated from codebase-index.json
+// Bitcoin Core v28.4
+// Generated: 2026-04-03T00:55:23
+// Files: 1084, Dependencies: 6275
+
+export interface Building {
+  id: string;
+  name: string;
+  subsystem: string;
+  loc: number;
+  classes: number;
+  functions: number;
+  enums: number;
+}
+
+export interface District {
+  id: string;
+  name: string;
+  color: string;
+  position: [number, number];
+  size: [number, number];
+  buildingCount: number;
+}
+
+export interface Dependency {
+  from: string;
+  to: string;
+}
+
+export interface JourneyStop {
+  buildingId: string;
+  function: string;
+  annotation: string;
+}
+
+export interface Journey {
+  id: string;
+  name: string;
+  description: string;
+  color: string;
+  stops: JourneyStop[];
+}
+
+// -- Districts --
+
+export const districts: District[] = 
+[
+  {
+    "id": "init",
+    "name": "INIT",
+    "color": "#e0e0e0",
+    "position": [
+      -75.0,
+      0
+    ],
+    "size": [
+      10.4,
+      10.4
+    ],
+    "buildingCount": 8
+  },
+  {
+    "id": "network",
+    "name": "NETWORK",
+    "color": "#f59e0b",
+    "position": [
+      -45.0,
+      0
+    ],
+    "size": [
+      20.0,
+      20.0
+    ],
+    "buildingCount": 20
+  },
+  {
+    "id": "mempool",
+    "name": "MEMPOOL",
+    "color": "#ef4444",
+    "position": [
+      -15.0,
+      0
+    ],
+    "size": [
+      20.0,
+      20.0
+    ],
+    "buildingCount": 20
+  },
+  {
+    "id": "consensus",
+    "name": "CONSENSUS",
+    "color": "#3b82f6",
+    "position": [
+      15.0,
+      0
+    ],
+    "size": [
+      24.8,
+      24.8
+    ],
+    "buildingCount": 26
+  },
+  {
+    "id": "script",
+    "name": "SCRIPT",
+    "color": "#8b5cf6",
+    "position": [
+      45.0,
+      0
+    ],
+    "size": [
+      20.8,
+      20.8
+    ],
+    "buildingCount": 21
+  },
+  {
+    "id": "primitives",
+    "name": "PRIMITIVES",
+    "color": "#06b6d4",
+    "position": [
+      -75.0,
+      -28
+    ],
+    "size": [
+      10,
+      10
+    ],
+    "buildingCount": 4
+  },
+  {
+    "id": "mining",
+    "name": "MINING",
+    "color": "#a855f7",
+    "position": [
+      -45.0,
+      -28
+    ],
+    "size": [
+      10.4,
+      10.4
+    ],
+    "buildingCount": 8
+  },
+  {
+    "id": "wallet",
+    "name": "WALLET",
+    "color": "#22c55e",
+    "position": [
+      -15.0,
+      -28
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 87
+  },
+  {
+    "id": "rpc",
+    "name": "RPC",
+    "color": "#14b8a6",
+    "position": [
+      15.0,
+      -28
+    ],
+    "size": [
+      31.2,
+      31.2
+    ],
+    "buildingCount": 34
+  },
+  {
+    "id": "kernel",
+    "name": "KERNEL",
+    "color": "#f97316",
+    "position": [
+      45.0,
+      -28
+    ],
+    "size": [
+      24.0,
+      24.0
+    ],
+    "buildingCount": 25
+  },
+  {
+    "id": "node",
+    "name": "NODE",
+    "color": "#ec4899",
+    "position": [
+      -75.0,
+      -56
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 53
+  },
+  {
+    "id": "interfaces",
+    "name": "INTERFACES",
+    "color": "#64748b",
+    "position": [
+      -45.0,
+      -56
+    ],
+    "size": [
+      10.4,
+      10.4
+    ],
+    "buildingCount": 8
+  },
+  {
+    "id": "storage",
+    "name": "STORAGE",
+    "color": "#dc2626",
+    "position": [
+      -15.0,
+      -56
+    ],
+    "size": [
+      10.4,
+      10.4
+    ],
+    "buildingCount": 8
+  },
+  {
+    "id": "crypto",
+    "name": "CRYPTO",
+    "color": "#eab308",
+    "position": [
+      15.0,
+      -56
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 45
+  },
+  {
+    "id": "util",
+    "name": "UTIL",
+    "color": "#6b7280",
+    "position": [
+      45.0,
+      -56
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 111
+  },
+  {
+    "id": "index",
+    "name": "INDEX",
+    "color": "#78716c",
+    "position": [
+      -75.0,
+      -84
+    ],
+    "size": [
+      11.2,
+      11.2
+    ],
+    "buildingCount": 9
+  },
+  {
+    "id": "zmq",
+    "name": "ZMQ",
+    "color": "#d946ef",
+    "position": [
+      -45.0,
+      -84
+    ],
+    "size": [
+      12.0,
+      12.0
+    ],
+    "buildingCount": 10
+  },
+  {
+    "id": "gui",
+    "name": "GUI",
+    "color": "#fb923c",
+    "position": [
+      -15.0,
+      -84
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 134
+  },
+  {
+    "id": "bench",
+    "name": "BENCH",
+    "color": "#a3a3a3",
+    "position": [
+      15.0,
+      -84
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 56
+  },
+  {
+    "id": "test",
+    "name": "TEST",
+    "color": "#94a3b8",
+    "position": [
+      45.0,
+      -84
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 297
+  },
+  {
+    "id": "other",
+    "name": "OTHER",
+    "color": "#d4d4d8",
+    "position": [
+      -75.0,
+      -112
+    ],
+    "size": [
+      40,
+      40
+    ],
+    "buildingCount": 100
+  }
+];
+
+// -- Buildings --
+
+export const buildings: Building[] = 
+[
+  {
+    "id": "contrib_devtools_bitcoin-tidy_bitcoin-tidy_cpp",
+    "name": "contrib/devtools/bitcoin-tidy/bitcoin-tidy.cpp",
+    "subsystem": "test",
+    "loc": 24,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_example_logprintf_cpp",
+    "name": "contrib/devtools/bitcoin-tidy/example_logprintf.cpp",
+    "subsystem": "test",
+    "loc": 108,
+    "classes": 2,
+    "functions": 8,
+    "enums": 2
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_example_nontrivial-threadlocal_cpp",
+    "name": "contrib/devtools/bitcoin-tidy/example_nontrivial-threadlocal.cpp",
+    "subsystem": "test",
+    "loc": 2,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_logprintf_cpp",
+    "name": "contrib/devtools/bitcoin-tidy/logprintf.cpp",
+    "subsystem": "test",
+    "loc": 60,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_logprintf_h",
+    "name": "contrib/devtools/bitcoin-tidy/logprintf.h",
+    "subsystem": "test",
+    "loc": 29,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_cpp",
+    "name": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.cpp",
+    "subsystem": "test",
+    "loc": 44,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_h",
+    "name": "contrib/devtools/bitcoin-tidy/nontrivial-threadlocal.h",
+    "subsystem": "test",
+    "loc": 29,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "addrdb_cpp",
+    "name": "addrdb.cpp",
+    "subsystem": "network",
+    "loc": 241,
+    "classes": 1,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "addrdb_h",
+    "name": "addrdb.h",
+    "subsystem": "network",
+    "loc": 70,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "addresstype_cpp",
+    "name": "addresstype.cpp",
+    "subsystem": "other",
+    "loc": 173,
+    "classes": 2,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "addresstype_h",
+    "name": "addresstype.h",
+    "subsystem": "other",
+    "loc": 164,
+    "classes": 10,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "addrman_cpp",
+    "name": "addrman.cpp",
+    "subsystem": "network",
+    "loc": 1347,
+    "classes": 0,
+    "functions": 59,
+    "enums": 0
+  },
+  {
+    "id": "addrman_h",
+    "name": "addrman.h",
+    "subsystem": "network",
+    "loc": 213,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "addrman_impl_h",
+    "name": "addrman_impl.h",
+    "subsystem": "other",
+    "loc": 295,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "arith_uint256_cpp",
+    "name": "arith_uint256.cpp",
+    "subsystem": "consensus",
+    "loc": 231,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "arith_uint256_h",
+    "name": "arith_uint256.h",
+    "subsystem": "consensus",
+    "loc": 283,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "attributes_h",
+    "name": "attributes.h",
+    "subsystem": "other",
+    "loc": 27,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "banman_cpp",
+    "name": "banman.cpp",
+    "subsystem": "network",
+    "loc": 206,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "banman_h",
+    "name": "banman.h",
+    "subsystem": "network",
+    "loc": 96,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "base58_cpp",
+    "name": "base58.cpp",
+    "subsystem": "other",
+    "loc": 169,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "base58_h",
+    "name": "base58.h",
+    "subsystem": "other",
+    "loc": 44,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bech32_cpp",
+    "name": "bech32.cpp",
+    "subsystem": "other",
+    "loc": 574,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "bech32_h",
+    "name": "bech32.h",
+    "subsystem": "other",
+    "loc": 64,
+    "classes": 1,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "bench_addrman_cpp",
+    "name": "bench/addrman.cpp",
+    "subsystem": "bench",
+    "loc": 177,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "bench_base58_cpp",
+    "name": "bench/base58.cpp",
+    "subsystem": "bench",
+    "loc": 55,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "bench_bech32_cpp",
+    "name": "bench/bech32.cpp",
+    "subsystem": "bench",
+    "loc": 36,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_bench_cpp",
+    "name": "bench/bench.cpp",
+    "subsystem": "bench",
+    "loc": 142,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "bench_bench_h",
+    "name": "bench/bench.h",
+    "subsystem": "bench",
+    "loc": 82,
+    "classes": 2,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "bench_bench_bitcoin_cpp",
+    "name": "bench/bench_bitcoin.cpp",
+    "subsystem": "bench",
+    "loc": 141,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_bip324_ecdh_cpp",
+    "name": "bench/bip324_ecdh.cpp",
+    "subsystem": "bench",
+    "loc": 49,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_block_assemble_cpp",
+    "name": "bench/block_assemble.cpp",
+    "subsystem": "bench",
+    "loc": 64,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_ccoins_caching_cpp",
+    "name": "bench/ccoins_caching.cpp",
+    "subsystem": "bench",
+    "loc": 52,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_chacha20_cpp",
+    "name": "bench/chacha20.cpp",
+    "subsystem": "bench",
+    "loc": 74,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "bench_checkblock_cpp",
+    "name": "bench/checkblock.cpp",
+    "subsystem": "bench",
+    "loc": 55,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_checkblockindex_cpp",
+    "name": "bench/checkblockindex.cpp",
+    "subsystem": "bench",
+    "loc": 20,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_checkqueue_cpp",
+    "name": "bench/checkqueue.cpp",
+    "subsystem": "bench",
+    "loc": 66,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_cluster_linearize_cpp",
+    "name": "bench/cluster_linearize.cpp",
+    "subsystem": "bench",
+    "loc": 274,
+    "classes": 0,
+    "functions": 38,
+    "enums": 0
+  },
+  {
+    "id": "bench_coin_selection_cpp",
+    "name": "bench/coin_selection.cpp",
+    "subsystem": "bench",
+    "loc": 128,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "bench_crypto_hash_cpp",
+    "name": "bench/crypto_hash.cpp",
+    "subsystem": "bench",
+    "loc": 265,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "bench_data_cpp",
+    "name": "bench/data.cpp",
+    "subsystem": "bench",
+    "loc": 14,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bench_data_h",
+    "name": "bench/data.h",
+    "subsystem": "bench",
+    "loc": 19,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bench_data_block413567_raw_h",
+    "name": "bench/data/block413567.raw.h",
+    "subsystem": "bench",
+    "loc": 124988,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bench_descriptors_cpp",
+    "name": "bench/descriptors.cpp",
+    "subsystem": "bench",
+    "loc": 32,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_disconnected_transactions_cpp",
+    "name": "bench/disconnected_transactions.cpp",
+    "subsystem": "bench",
+    "loc": 130,
+    "classes": 1,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "bench_duplicate_inputs_cpp",
+    "name": "bench/duplicate_inputs.cpp",
+    "subsystem": "bench",
+    "loc": 66,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_ellswift_cpp",
+    "name": "bench/ellswift.cpp",
+    "subsystem": "bench",
+    "loc": 27,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_examples_cpp",
+    "name": "bench/examples.cpp",
+    "subsystem": "bench",
+    "loc": 21,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_gcs_filter_cpp",
+    "name": "bench/gcs_filter.cpp",
+    "subsystem": "bench",
+    "loc": 88,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "bench_hashpadding_cpp",
+    "name": "bench/hashpadding.cpp",
+    "subsystem": "bench",
+    "loc": 47,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_index_blockfilter_cpp",
+    "name": "bench/index_blockfilter.cpp",
+    "subsystem": "bench",
+    "loc": 43,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_load_external_cpp",
+    "name": "bench/load_external.cpp",
+    "subsystem": "bench",
+    "loc": 64,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_lockedpool_cpp",
+    "name": "bench/lockedpool.cpp",
+    "subsystem": "bench",
+    "loc": 40,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_logging_cpp",
+    "name": "bench/logging.cpp",
+    "subsystem": "bench",
+    "loc": 92,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "bench_mempool_eviction_cpp",
+    "name": "bench/mempool_eviction.cpp",
+    "subsystem": "bench",
+    "loc": 137,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_mempool_stress_cpp",
+    "name": "bench/mempool_stress.cpp",
+    "subsystem": "bench",
+    "loc": 122,
+    "classes": 1,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_merkle_root_cpp",
+    "name": "bench/merkle_root.cpp",
+    "subsystem": "bench",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_nanobench_cpp",
+    "name": "bench/nanobench.cpp",
+    "subsystem": "bench",
+    "loc": 6,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bench_nanobench_h",
+    "name": "bench/nanobench.h",
+    "subsystem": "bench",
+    "loc": 3484,
+    "classes": 30,
+    "functions": 177,
+    "enums": 0
+  },
+  {
+    "id": "bench_parse_hex_cpp",
+    "name": "bench/parse_hex.cpp",
+    "subsystem": "bench",
+    "loc": 36,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_peer_eviction_cpp",
+    "name": "bench/peer_eviction.cpp",
+    "subsystem": "bench",
+    "loc": 155,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "bench_poly1305_cpp",
+    "name": "bench/poly1305.cpp",
+    "subsystem": "bench",
+    "loc": 43,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_pool_cpp",
+    "name": "bench/pool.cpp",
+    "subsystem": "bench",
+    "loc": 49,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "bench_prevector_cpp",
+    "name": "bench/prevector.cpp",
+    "subsystem": "bench",
+    "loc": 124,
+    "classes": 1,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "bench_random_cpp",
+    "name": "bench/random.cpp",
+    "subsystem": "bench",
+    "loc": 103,
+    "classes": 0,
+    "functions": 22,
+    "enums": 0
+  },
+  {
+    "id": "bench_readblock_cpp",
+    "name": "bench/readblock.cpp",
+    "subsystem": "bench",
+    "loc": 53,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "bench_rollingbloom_cpp",
+    "name": "bench/rollingbloom.cpp",
+    "subsystem": "bench",
+    "loc": 36,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_rpc_blockchain_cpp",
+    "name": "bench/rpc_blockchain.cpp",
+    "subsystem": "bench",
+    "loc": 61,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_rpc_mempool_cpp",
+    "name": "bench/rpc_mempool.cpp",
+    "subsystem": "bench",
+    "loc": 45,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_sign_transaction_cpp",
+    "name": "bench/sign_transaction.cpp",
+    "subsystem": "bench",
+    "loc": 99,
+    "classes": 0,
+    "functions": 6,
+    "enums": 1
+  },
+  {
+    "id": "bench_streams_findbyte_cpp",
+    "name": "bench/streams_findbyte.cpp",
+    "subsystem": "bench",
+    "loc": 35,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_strencodings_cpp",
+    "name": "bench/strencodings.cpp",
+    "subsystem": "bench",
+    "loc": 18,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bench_util_time_cpp",
+    "name": "bench/util_time.cpp",
+    "subsystem": "bench",
+    "loc": 42,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_verify_script_cpp",
+    "name": "bench/verify_script.cpp",
+    "subsystem": "bench",
+    "loc": 84,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "bench_wallet_balance_cpp",
+    "name": "bench/wallet_balance.cpp",
+    "subsystem": "bench",
+    "loc": 63,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "bench_wallet_create_cpp",
+    "name": "bench/wallet_create.cpp",
+    "subsystem": "bench",
+    "loc": 58,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "bench_wallet_create_tx_cpp",
+    "name": "bench/wallet_create_tx.cpp",
+    "subsystem": "bench",
+    "loc": 186,
+    "classes": 2,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "bench_wallet_ismine_cpp",
+    "name": "bench/wallet_ismine.cpp",
+    "subsystem": "bench",
+    "loc": 75,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_wallet_loading_cpp",
+    "name": "bench/wallet_loading.cpp",
+    "subsystem": "bench",
+    "loc": 76,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "bench_xor_cpp",
+    "name": "bench/xor.cpp",
+    "subsystem": "bench",
+    "loc": 24,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bip324_cpp",
+    "name": "bip324.cpp",
+    "subsystem": "other",
+    "loc": 109,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "bip324_h",
+    "name": "bip324.h",
+    "subsystem": "other",
+    "loc": 96,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "bitcoin-chainstate_cpp",
+    "name": "bitcoin-chainstate.cpp",
+    "subsystem": "other",
+    "loc": 298,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "bitcoin-cli_cpp",
+    "name": "bitcoin-cli.cpp",
+    "subsystem": "init",
+    "loc": 1316,
+    "classes": 8,
+    "functions": 17,
+    "enums": 0
+  },
+  {
+    "id": "bitcoin-tx_cpp",
+    "name": "bitcoin-tx.cpp",
+    "subsystem": "init",
+    "loc": 889,
+    "classes": 0,
+    "functions": 30,
+    "enums": 0
+  },
+  {
+    "id": "bitcoin-util_cpp",
+    "name": "bitcoin-util.cpp",
+    "subsystem": "other",
+    "loc": 192,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "bitcoin-wallet_cpp",
+    "name": "bitcoin-wallet.cpp",
+    "subsystem": "init",
+    "loc": 139,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "bitcoind_cpp",
+    "name": "bitcoind.cpp",
+    "subsystem": "init",
+    "loc": 283,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "blockencodings_cpp",
+    "name": "blockencodings.cpp",
+    "subsystem": "mining",
+    "loc": 228,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "blockencodings_h",
+    "name": "blockencodings.h",
+    "subsystem": "mining",
+    "loc": 155,
+    "classes": 9,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "blockfilter_cpp",
+    "name": "blockfilter.cpp",
+    "subsystem": "mining",
+    "loc": 254,
+    "classes": 0,
+    "functions": 18,
+    "enums": 0
+  },
+  {
+    "id": "blockfilter_h",
+    "name": "blockfilter.h",
+    "subsystem": "mining",
+    "loc": 175,
+    "classes": 4,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "chain_cpp",
+    "name": "chain.cpp",
+    "subsystem": "consensus",
+    "loc": 180,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "chain_h",
+    "name": "chain.h",
+    "subsystem": "consensus",
+    "loc": 486,
+    "classes": 4,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "chainparams_cpp",
+    "name": "chainparams.cpp",
+    "subsystem": "other",
+    "loc": 138,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "chainparams_h",
+    "name": "chainparams.h",
+    "subsystem": "other",
+    "loc": 31,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "chainparamsbase_cpp",
+    "name": "chainparamsbase.cpp",
+    "subsystem": "other",
+    "loc": 61,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "chainparamsbase_h",
+    "name": "chainparamsbase.h",
+    "subsystem": "other",
+    "loc": 57,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "chainparamsseeds_h",
+    "name": "chainparamsseeds.h",
+    "subsystem": "other",
+    "loc": 2393,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "checkqueue_h",
+    "name": "checkqueue.h",
+    "subsystem": "other",
+    "loc": 236,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "clientversion_cpp",
+    "name": "clientversion.cpp",
+    "subsystem": "other",
+    "loc": 101,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "clientversion_h",
+    "name": "clientversion.h",
+    "subsystem": "other",
+    "loc": 49,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "cluster_linearize_h",
+    "name": "cluster_linearize.h",
+    "subsystem": "other",
+    "loc": 1052,
+    "classes": 5,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "coins_cpp",
+    "name": "coins.cpp",
+    "subsystem": "consensus",
+    "loc": 390,
+    "classes": 0,
+    "functions": 40,
+    "enums": 0
+  },
+  {
+    "id": "coins_h",
+    "name": "coins.h",
+    "subsystem": "consensus",
+    "loc": 526,
+    "classes": 9,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "common_args_cpp",
+    "name": "common/args.cpp",
+    "subsystem": "util",
+    "loc": 868,
+    "classes": 0,
+    "functions": 63,
+    "enums": 0
+  },
+  {
+    "id": "common_args_h",
+    "name": "common/args.h",
+    "subsystem": "util",
+    "loc": 489,
+    "classes": 5,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "common_bloom_cpp",
+    "name": "common/bloom.cpp",
+    "subsystem": "util",
+    "loc": 246,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "common_bloom_h",
+    "name": "common/bloom.h",
+    "subsystem": "util",
+    "loc": 127,
+    "classes": 4,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "common_config_cpp",
+    "name": "common/config.cpp",
+    "subsystem": "util",
+    "loc": 220,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "common_init_cpp",
+    "name": "common/init.cpp",
+    "subsystem": "util",
+    "loc": 114,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "common_init_h",
+    "name": "common/init.h",
+    "subsystem": "util",
+    "loc": 39,
+    "classes": 2,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "common_interfaces_cpp",
+    "name": "common/interfaces.cpp",
+    "subsystem": "util",
+    "loc": 53,
+    "classes": 3,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "common_messages_cpp",
+    "name": "common/messages.cpp",
+    "subsystem": "util",
+    "loc": 167,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "common_messages_h",
+    "name": "common/messages.h",
+    "subsystem": "util",
+    "loc": 40,
+    "classes": 1,
+    "functions": 0,
+    "enums": 4
+  },
+  {
+    "id": "common_run_command_cpp",
+    "name": "common/run_command.cpp",
+    "subsystem": "util",
+    "loc": 48,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "common_run_command_h",
+    "name": "common/run_command.h",
+    "subsystem": "util",
+    "loc": 21,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "common_settings_cpp",
+    "name": "common/settings.cpp",
+    "subsystem": "util",
+    "loc": 276,
+    "classes": 0,
+    "functions": 12,
+    "enums": 1
+  },
+  {
+    "id": "common_settings_h",
+    "name": "common/settings.h",
+    "subsystem": "util",
+    "loc": 115,
+    "classes": 3,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "common_signmessage_cpp",
+    "name": "common/signmessage.cpp",
+    "subsystem": "util",
+    "loc": 93,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "common_signmessage_h",
+    "name": "common/signmessage.h",
+    "subsystem": "util",
+    "loc": 77,
+    "classes": 1,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "common_system_cpp",
+    "name": "common/system.cpp",
+    "subsystem": "util",
+    "loc": 112,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "common_system_h",
+    "name": "common/system.h",
+    "subsystem": "util",
+    "loc": 32,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "common_types_h",
+    "name": "common/types.h",
+    "subsystem": "util",
+    "loc": 26,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "common_url_cpp",
+    "name": "common/url.cpp",
+    "subsystem": "util",
+    "loc": 39,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "common_url_h",
+    "name": "common/url.h",
+    "subsystem": "util",
+    "loc": 17,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "compat_assumptions_h",
+    "name": "compat/assumptions.h",
+    "subsystem": "other",
+    "loc": 44,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "compat_byteswap_h",
+    "name": "compat/byteswap.h",
+    "subsystem": "other",
+    "loc": 79,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "compat_compat_h",
+    "name": "compat/compat.h",
+    "subsystem": "other",
+    "loc": 115,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "compat_cpuid_h",
+    "name": "compat/cpuid.h",
+    "subsystem": "other",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "compat_endian_h",
+    "name": "compat/endian.h",
+    "subsystem": "other",
+    "loc": 74,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "compat_stdin_cpp",
+    "name": "compat/stdin.cpp",
+    "subsystem": "other",
+    "loc": 68,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "compat_stdin_h",
+    "name": "compat/stdin.h",
+    "subsystem": "other",
+    "loc": 18,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "compressor_cpp",
+    "name": "compressor.cpp",
+    "subsystem": "other",
+    "loc": 192,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "compressor_h",
+    "name": "compressor.h",
+    "subsystem": "other",
+    "loc": 118,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "config_bitcoin-config_h",
+    "name": "config/bitcoin-config.h",
+    "subsystem": "other",
+    "loc": 328,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "consensus_amount_h",
+    "name": "consensus/amount.h",
+    "subsystem": "consensus",
+    "loc": 29,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "consensus_consensus_h",
+    "name": "consensus/consensus.h",
+    "subsystem": "consensus",
+    "loc": 37,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "consensus_merkle_cpp",
+    "name": "consensus/merkle.cpp",
+    "subsystem": "consensus",
+    "loc": 85,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "consensus_merkle_h",
+    "name": "consensus/merkle.h",
+    "subsystem": "consensus",
+    "loc": 27,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "consensus_params_h",
+    "name": "consensus/params.h",
+    "subsystem": "consensus",
+    "loc": 156,
+    "classes": 2,
+    "functions": 2,
+    "enums": 2
+  },
+  {
+    "id": "consensus_tx_check_cpp",
+    "name": "consensus/tx_check.cpp",
+    "subsystem": "consensus",
+    "loc": 60,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "consensus_tx_check_h",
+    "name": "consensus/tx_check.h",
+    "subsystem": "consensus",
+    "loc": 20,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "consensus_tx_verify_cpp",
+    "name": "consensus/tx_verify.cpp",
+    "subsystem": "consensus",
+    "loc": 205,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "consensus_tx_verify_h",
+    "name": "consensus/tx_verify.h",
+    "subsystem": "consensus",
+    "loc": 78,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "consensus_validation_h",
+    "name": "consensus/validation.h",
+    "subsystem": "consensus",
+    "loc": 184,
+    "classes": 3,
+    "functions": 4,
+    "enums": 2
+  },
+  {
+    "id": "core_io_h",
+    "name": "core_io.h",
+    "subsystem": "other",
+    "loc": 50,
+    "classes": 9,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "core_memusage_h",
+    "name": "core_memusage.h",
+    "subsystem": "other",
+    "loc": 71,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "core_read_cpp",
+    "name": "core_read.cpp",
+    "subsystem": "other",
+    "loc": 254,
+    "classes": 1,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "core_write_cpp",
+    "name": "core_write.cpp",
+    "subsystem": "other",
+    "loc": 267,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "crypto_aes_cpp",
+    "name": "crypto/aes.cpp",
+    "subsystem": "crypto",
+    "loc": 152,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "crypto_aes_h",
+    "name": "crypto/aes.h",
+    "subsystem": "crypto",
+    "loc": 67,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_chacha20_cpp",
+    "name": "crypto/chacha20.cpp",
+    "subsystem": "crypto",
+    "loc": 372,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "crypto_chacha20_h",
+    "name": "crypto/chacha20.h",
+    "subsystem": "crypto",
+    "loc": 159,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_chacha20poly1305_cpp",
+    "name": "crypto/chacha20poly1305.cpp",
+    "subsystem": "crypto",
+    "loc": 135,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "crypto_chacha20poly1305_h",
+    "name": "crypto/chacha20poly1305.h",
+    "subsystem": "crypto",
+    "loc": 148,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_common_h",
+    "name": "crypto/common.h",
+    "subsystem": "crypto",
+    "loc": 85,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "crypto_ctaes_ctaes_h",
+    "name": "crypto/ctaes/ctaes.h",
+    "subsystem": "crypto",
+    "loc": 41,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hex_base_cpp",
+    "name": "crypto/hex_base.cpp",
+    "subsystem": "crypto",
+    "loc": 67,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hex_base_h",
+    "name": "crypto/hex_base.h",
+    "subsystem": "crypto",
+    "loc": 23,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hkdf_sha256_32_cpp",
+    "name": "crypto/hkdf_sha256_32.cpp",
+    "subsystem": "crypto",
+    "loc": 21,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hkdf_sha256_32_h",
+    "name": "crypto/hkdf_sha256_32.h",
+    "subsystem": "crypto",
+    "loc": 25,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hmac_sha256_cpp",
+    "name": "crypto/hmac_sha256.cpp",
+    "subsystem": "crypto",
+    "loc": 34,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hmac_sha256_h",
+    "name": "crypto/hmac_sha256.h",
+    "subsystem": "crypto",
+    "loc": 32,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hmac_sha512_cpp",
+    "name": "crypto/hmac_sha512.cpp",
+    "subsystem": "crypto",
+    "loc": 34,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "crypto_hmac_sha512_h",
+    "name": "crypto/hmac_sha512.h",
+    "subsystem": "crypto",
+    "loc": 32,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_muhash_cpp",
+    "name": "crypto/muhash.cpp",
+    "subsystem": "crypto",
+    "loc": 347,
+    "classes": 0,
+    "functions": 24,
+    "enums": 0
+  },
+  {
+    "id": "crypto_muhash_h",
+    "name": "crypto/muhash.h",
+    "subsystem": "crypto",
+    "loc": 127,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_poly1305_cpp",
+    "name": "crypto/poly1305.cpp",
+    "subsystem": "crypto",
+    "loc": 223,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "crypto_poly1305_h",
+    "name": "crypto/poly1305.h",
+    "subsystem": "crypto",
+    "loc": 70,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_ripemd160_cpp",
+    "name": "crypto/ripemd160.cpp",
+    "subsystem": "crypto",
+    "loc": 292,
+    "classes": 0,
+    "functions": 23,
+    "enums": 0
+  },
+  {
+    "id": "crypto_ripemd160_h",
+    "name": "crypto/ripemd160.h",
+    "subsystem": "crypto",
+    "loc": 28,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha1_cpp",
+    "name": "crypto/sha1.cpp",
+    "subsystem": "crypto",
+    "loc": 199,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha1_h",
+    "name": "crypto/sha1.h",
+    "subsystem": "crypto",
+    "loc": 28,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_cpp",
+    "name": "crypto/sha256.cpp",
+    "subsystem": "crypto",
+    "loc": 783,
+    "classes": 0,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_h",
+    "name": "crypto/sha256.h",
+    "subsystem": "crypto",
+    "loc": 53,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "crypto_sha256_arm_shani_cpp",
+    "name": "crypto/sha256_arm_shani.cpp",
+    "subsystem": "crypto",
+    "loc": 899,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_avx2_cpp",
+    "name": "crypto/sha256_avx2.cpp",
+    "subsystem": "crypto",
+    "loc": 329,
+    "classes": 0,
+    "functions": 24,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_sse4_cpp",
+    "name": "crypto/sha256_sse4.cpp",
+    "subsystem": "crypto",
+    "loc": 1513,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_sse41_cpp",
+    "name": "crypto/sha256_sse41.cpp",
+    "subsystem": "crypto",
+    "loc": 321,
+    "classes": 0,
+    "functions": 24,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha256_x86_shani_cpp",
+    "name": "crypto/sha256_x86_shani.cpp",
+    "subsystem": "crypto",
+    "loc": 358,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha3_cpp",
+    "name": "crypto/sha3.cpp",
+    "subsystem": "crypto",
+    "loc": 156,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha3_h",
+    "name": "crypto/sha3.h",
+    "subsystem": "crypto",
+    "loc": 41,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha512_cpp",
+    "name": "crypto/sha512.cpp",
+    "subsystem": "crypto",
+    "loc": 207,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "crypto_sha512_h",
+    "name": "crypto/sha512.h",
+    "subsystem": "crypto",
+    "loc": 29,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "crypto_siphash_cpp",
+    "name": "crypto/siphash.cpp",
+    "subsystem": "crypto",
+    "loc": 174,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "crypto_siphash_h",
+    "name": "crypto/siphash.h",
+    "subsystem": "crypto",
+    "loc": 48,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "cuckoocache_h",
+    "name": "cuckoocache.h",
+    "subsystem": "other",
+    "loc": 488,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "dbwrapper_cpp",
+    "name": "dbwrapper.cpp",
+    "subsystem": "util",
+    "loc": 426,
+    "classes": 2,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "dbwrapper_h",
+    "name": "dbwrapper.h",
+    "subsystem": "util",
+    "loc": 297,
+    "classes": 8,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "deploymentinfo_cpp",
+    "name": "deploymentinfo.cpp",
+    "subsystem": "other",
+    "loc": 54,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "deploymentinfo_h",
+    "name": "deploymentinfo.h",
+    "subsystem": "other",
+    "loc": 32,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "deploymentstatus_cpp",
+    "name": "deploymentstatus.cpp",
+    "subsystem": "consensus",
+    "loc": 32,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "deploymentstatus_h",
+    "name": "deploymentstatus.h",
+    "subsystem": "consensus",
+    "loc": 52,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "dummywallet_cpp",
+    "name": "dummywallet.cpp",
+    "subsystem": "other",
+    "loc": 69,
+    "classes": 6,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "external_signer_cpp",
+    "name": "external_signer.cpp",
+    "subsystem": "other",
+    "loc": 121,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "external_signer_h",
+    "name": "external_signer.h",
+    "subsystem": "other",
+    "loc": 66,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "flatfile_cpp",
+    "name": "flatfile.cpp",
+    "subsystem": "other",
+    "loc": 102,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "flatfile_h",
+    "name": "flatfile.h",
+    "subsystem": "other",
+    "loc": 89,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "hash_cpp",
+    "name": "hash.cpp",
+    "subsystem": "crypto",
+    "loc": 92,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "hash_h",
+    "name": "hash.h",
+    "subsystem": "crypto",
+    "loc": 229,
+    "classes": 5,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "headerssync_cpp",
+    "name": "headerssync.cpp",
+    "subsystem": "other",
+    "loc": 318,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "headerssync_h",
+    "name": "headerssync.h",
+    "subsystem": "other",
+    "loc": 278,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "httprpc_cpp",
+    "name": "httprpc.cpp",
+    "subsystem": "rpc",
+    "loc": 392,
+    "classes": 2,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "httprpc_h",
+    "name": "httprpc.h",
+    "subsystem": "rpc",
+    "loc": 34,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "httpserver_cpp",
+    "name": "httpserver.cpp",
+    "subsystem": "rpc",
+    "loc": 763,
+    "classes": 6,
+    "functions": 32,
+    "enums": 0
+  },
+  {
+    "id": "httpserver_h",
+    "name": "httpserver.h",
+    "subsystem": "rpc",
+    "loc": 185,
+    "classes": 9,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "i2p_cpp",
+    "name": "i2p.cpp",
+    "subsystem": "network",
+    "loc": 494,
+    "classes": 0,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "i2p_h",
+    "name": "i2p.h",
+    "subsystem": "network",
+    "loc": 283,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "index_base_cpp",
+    "name": "index/base.cpp",
+    "subsystem": "index",
+    "loc": 452,
+    "classes": 0,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "index_base_h",
+    "name": "index/base.h",
+    "subsystem": "index",
+    "loc": 165,
+    "classes": 7,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "index_blockfilterindex_cpp",
+    "name": "index/blockfilterindex.cpp",
+    "subsystem": "index",
+    "loc": 525,
+    "classes": 3,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "index_blockfilterindex_h",
+    "name": "index/blockfilterindex.h",
+    "subsystem": "index",
+    "loc": 113,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "index_coinstatsindex_cpp",
+    "name": "index/coinstatsindex.cpp",
+    "subsystem": "index",
+    "loc": 510,
+    "classes": 3,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "index_coinstatsindex_h",
+    "name": "index/coinstatsindex.h",
+    "subsystem": "index",
+    "loc": 67,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "index_disktxpos_h",
+    "name": "index/disktxpos.h",
+    "subsystem": "index",
+    "loc": 26,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "index_txindex_cpp",
+    "name": "index/txindex.cpp",
+    "subsystem": "index",
+    "loc": 102,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "index_txindex_h",
+    "name": "index/txindex.h",
+    "subsystem": "index",
+    "loc": 51,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "indirectmap_h",
+    "name": "indirectmap.h",
+    "subsystem": "other",
+    "loc": 58,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "init_cpp",
+    "name": "init.cpp",
+    "subsystem": "init",
+    "loc": 2065,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "init_h",
+    "name": "init.h",
+    "subsystem": "init",
+    "loc": 82,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "init_bitcoin-gui_cpp",
+    "name": "init/bitcoin-gui.cpp",
+    "subsystem": "other",
+    "loc": 48,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "init_bitcoin-node_cpp",
+    "name": "init/bitcoin-node.cpp",
+    "subsystem": "other",
+    "loc": 58,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "init_bitcoin-qt_cpp",
+    "name": "init/bitcoin-qt.cpp",
+    "subsystem": "other",
+    "loc": 45,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "init_bitcoin-wallet_cpp",
+    "name": "init/bitcoin-wallet.cpp",
+    "subsystem": "other",
+    "loc": 14,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "init_bitcoind_cpp",
+    "name": "init/bitcoind.cpp",
+    "subsystem": "other",
+    "loc": 47,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "init_common_cpp",
+    "name": "init/common.cpp",
+    "subsystem": "other",
+    "loc": 151,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "init_common_h",
+    "name": "init/common.h",
+    "subsystem": "other",
+    "loc": 24,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_chain_h",
+    "name": "interfaces/chain.h",
+    "subsystem": "interfaces",
+    "loc": 424,
+    "classes": 19,
+    "functions": 0,
+    "enums": 4
+  },
+  {
+    "id": "interfaces_echo_h",
+    "name": "interfaces/echo.h",
+    "subsystem": "interfaces",
+    "loc": 26,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_handler_h",
+    "name": "interfaces/handler.h",
+    "subsystem": "interfaces",
+    "loc": 39,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_init_h",
+    "name": "interfaces/init.h",
+    "subsystem": "interfaces",
+    "loc": 57,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_ipc_h",
+    "name": "interfaces/ipc.h",
+    "subsystem": "interfaces",
+    "loc": 78,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_mining_h",
+    "name": "interfaces/mining.h",
+    "subsystem": "interfaces",
+    "loc": 86,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "interfaces_node_h",
+    "name": "interfaces/node.h",
+    "subsystem": "interfaces",
+    "loc": 290,
+    "classes": 18,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "interfaces_wallet_h",
+    "name": "interfaces/wallet.h",
+    "subsystem": "interfaces",
+    "loc": 459,
+    "classes": 23,
+    "functions": 0,
+    "enums": 6
+  },
+  {
+    "id": "ipc_capnp_common-types_h",
+    "name": "ipc/capnp/common-types.h",
+    "subsystem": "other",
+    "loc": 108,
+    "classes": 2,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "ipc_capnp_context_h",
+    "name": "ipc/capnp/context.h",
+    "subsystem": "other",
+    "loc": 23,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_capnp_init-types_h",
+    "name": "ipc/capnp/init-types.h",
+    "subsystem": "other",
+    "loc": 10,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_capnp_protocol_cpp",
+    "name": "ipc/capnp/protocol.cpp",
+    "subsystem": "other",
+    "loc": 93,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "ipc_capnp_protocol_h",
+    "name": "ipc/capnp/protocol.h",
+    "subsystem": "other",
+    "loc": 17,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_context_h",
+    "name": "ipc/context.h",
+    "subsystem": "other",
+    "loc": 19,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_exception_h",
+    "name": "ipc/exception.h",
+    "subsystem": "other",
+    "loc": 20,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_interfaces_cpp",
+    "name": "ipc/interfaces.cpp",
+    "subsystem": "other",
+    "loc": 78,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "ipc_process_cpp",
+    "name": "ipc/process.cpp",
+    "subsystem": "other",
+    "loc": 61,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "ipc_process_h",
+    "name": "ipc/process.h",
+    "subsystem": "other",
+    "loc": 44,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "ipc_protocol_h",
+    "name": "ipc/protocol.h",
+    "subsystem": "other",
+    "loc": 44,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_bitcoinkernel_cpp",
+    "name": "kernel/bitcoinkernel.cpp",
+    "subsystem": "kernel",
+    "loc": 10,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_blockmanager_opts_h",
+    "name": "kernel/blockmanager_opts.h",
+    "subsystem": "kernel",
+    "loc": 34,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_chain_cpp",
+    "name": "kernel/chain.cpp",
+    "subsystem": "kernel",
+    "loc": 38,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "kernel_chain_h",
+    "name": "kernel/chain.h",
+    "subsystem": "kernel",
+    "loc": 39,
+    "classes": 3,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "kernel_chainparams_cpp",
+    "name": "kernel/chainparams.cpp",
+    "subsystem": "kernel",
+    "loc": 708,
+    "classes": 5,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "kernel_chainparams_h",
+    "name": "kernel/chainparams.h",
+    "subsystem": "kernel",
+    "loc": 190,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_chainstatemanager_opts_h",
+    "name": "kernel/chainstatemanager_opts.h",
+    "subsystem": "kernel",
+    "loc": 58,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_checks_cpp",
+    "name": "kernel/checks.cpp",
+    "subsystem": "kernel",
+    "loc": 24,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "kernel_checks_h",
+    "name": "kernel/checks.h",
+    "subsystem": "kernel",
+    "loc": 20,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_coinstats_cpp",
+    "name": "kernel/coinstats.cpp",
+    "subsystem": "kernel",
+    "loc": 194,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "kernel_coinstats_h",
+    "name": "kernel/coinstats.h",
+    "subsystem": "kernel",
+    "loc": 82,
+    "classes": 6,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "kernel_context_cpp",
+    "name": "kernel/context.cpp",
+    "subsystem": "kernel",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "kernel_context_h",
+    "name": "kernel/context.h",
+    "subsystem": "kernel",
+    "loc": 21,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_cs_main_cpp",
+    "name": "kernel/cs_main.cpp",
+    "subsystem": "kernel",
+    "loc": 8,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_cs_main_h",
+    "name": "kernel/cs_main.h",
+    "subsystem": "kernel",
+    "loc": 22,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_disconnected_transactions_cpp",
+    "name": "kernel/disconnected_transactions.cpp",
+    "subsystem": "kernel",
+    "loc": 90,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "kernel_disconnected_transactions_h",
+    "name": "kernel/disconnected_transactions.h",
+    "subsystem": "kernel",
+    "loc": 76,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_mempool_entry_h",
+    "name": "kernel/mempool_entry.h",
+    "subsystem": "kernel",
+    "loc": 252,
+    "classes": 7,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_mempool_limits_h",
+    "name": "kernel/mempool_limits.h",
+    "subsystem": "kernel",
+    "loc": 39,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_mempool_options_h",
+    "name": "kernel/mempool_options.h",
+    "subsystem": "kernel",
+    "loc": 66,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_mempool_removal_reason_cpp",
+    "name": "kernel/mempool_removal_reason.cpp",
+    "subsystem": "kernel",
+    "loc": 21,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "kernel_mempool_removal_reason_h",
+    "name": "kernel/mempool_removal_reason.h",
+    "subsystem": "kernel",
+    "loc": 24,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "kernel_messagestartchars_h",
+    "name": "kernel/messagestartchars.h",
+    "subsystem": "kernel",
+    "loc": 13,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "kernel_notifications_interface_h",
+    "name": "kernel/notifications_interface.h",
+    "subsystem": "kernel",
+    "loc": 65,
+    "classes": 4,
+    "functions": 1,
+    "enums": 2
+  },
+  {
+    "id": "kernel_warning_h",
+    "name": "kernel/warning.h",
+    "subsystem": "kernel",
+    "loc": 14,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "key_cpp",
+    "name": "key.cpp",
+    "subsystem": "crypto",
+    "loc": 484,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "key_h",
+    "name": "key.h",
+    "subsystem": "crypto",
+    "loc": 328,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "key_io_cpp",
+    "name": "key_io.cpp",
+    "subsystem": "crypto",
+    "loc": 319,
+    "classes": 1,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "key_io_h",
+    "name": "key_io.h",
+    "subsystem": "crypto",
+    "loc": 30,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "logging_cpp",
+    "name": "logging.cpp",
+    "subsystem": "util",
+    "loc": 528,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "logging_h",
+    "name": "logging.h",
+    "subsystem": "util",
+    "loc": 295,
+    "classes": 2,
+    "functions": 2,
+    "enums": 2
+  },
+  {
+    "id": "logging_timer_h",
+    "name": "logging/timer.h",
+    "subsystem": "other",
+    "loc": 111,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "mapport_cpp",
+    "name": "mapport.cpp",
+    "subsystem": "other",
+    "loc": 334,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "mapport_h",
+    "name": "mapport.h",
+    "subsystem": "other",
+    "loc": 22,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "memusage_h",
+    "name": "memusage.h",
+    "subsystem": "other",
+    "loc": 207,
+    "classes": 4,
+    "functions": 27,
+    "enums": 0
+  },
+  {
+    "id": "merkleblock_cpp",
+    "name": "merkleblock.cpp",
+    "subsystem": "other",
+    "loc": 183,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "merkleblock_h",
+    "name": "merkleblock.h",
+    "subsystem": "other",
+    "loc": 159,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "net_cpp",
+    "name": "net.cpp",
+    "subsystem": "network",
+    "loc": 3959,
+    "classes": 2,
+    "functions": 145,
+    "enums": 1
+  },
+  {
+    "id": "net_h",
+    "name": "net.h",
+    "subsystem": "network",
+    "loc": 1667,
+    "classes": 21,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "net_permissions_cpp",
+    "name": "net_permissions.cpp",
+    "subsystem": "other",
+    "loc": 146,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "net_permissions_h",
+    "name": "net_permissions.h",
+    "subsystem": "other",
+    "loc": 96,
+    "classes": 4,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "net_processing_cpp",
+    "name": "net_processing.cpp",
+    "subsystem": "network",
+    "loc": 6377,
+    "classes": 5,
+    "functions": 96,
+    "enums": 0
+  },
+  {
+    "id": "net_processing_h",
+    "name": "net_processing.h",
+    "subsystem": "network",
+    "loc": 148,
+    "classes": 8,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "net_types_cpp",
+    "name": "net_types.cpp",
+    "subsystem": "other",
+    "loc": 74,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "net_types_h",
+    "name": "net_types.h",
+    "subsystem": "other",
+    "loc": 60,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "netaddress_cpp",
+    "name": "netaddress.cpp",
+    "subsystem": "network",
+    "loc": 1095,
+    "classes": 0,
+    "functions": 72,
+    "enums": 0
+  },
+  {
+    "id": "netaddress_h",
+    "name": "netaddress.h",
+    "subsystem": "network",
+    "loc": 591,
+    "classes": 4,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "netbase_cpp",
+    "name": "netbase.cpp",
+    "subsystem": "network",
+    "loc": 888,
+    "classes": 0,
+    "functions": 29,
+    "enums": 6
+  },
+  {
+    "id": "netbase_h",
+    "name": "netbase.h",
+    "subsystem": "network",
+    "loc": 347,
+    "classes": 3,
+    "functions": 2,
+    "enums": 2
+  },
+  {
+    "id": "netgroup_cpp",
+    "name": "netgroup.cpp",
+    "subsystem": "network",
+    "loc": 132,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "netgroup_h",
+    "name": "netgroup.h",
+    "subsystem": "network",
+    "loc": 76,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "netmessagemaker_h",
+    "name": "netmessagemaker.h",
+    "subsystem": "other",
+    "loc": 23,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_abort_cpp",
+    "name": "node/abort.cpp",
+    "subsystem": "node",
+    "loc": 27,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_abort_h",
+    "name": "node/abort.h",
+    "subsystem": "node",
+    "loc": 21,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_blockmanager_args_cpp",
+    "name": "node/blockmanager_args.cpp",
+    "subsystem": "node",
+    "loc": 39,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_blockmanager_args_h",
+    "name": "node/blockmanager_args.h",
+    "subsystem": "node",
+    "loc": 18,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_blockstorage_cpp",
+    "name": "node/blockstorage.cpp",
+    "subsystem": "mining",
+    "loc": 1290,
+    "classes": 1,
+    "functions": 54,
+    "enums": 0
+  },
+  {
+    "id": "node_blockstorage_h",
+    "name": "node/blockstorage.h",
+    "subsystem": "mining",
+    "loc": 435,
+    "classes": 12,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "node_caches_cpp",
+    "name": "node/caches.cpp",
+    "subsystem": "node",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_caches_h",
+    "name": "node/caches.h",
+    "subsystem": "node",
+    "loc": 24,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_chainstate_cpp",
+    "name": "node/chainstate.cpp",
+    "subsystem": "node",
+    "loc": 287,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "node_chainstate_h",
+    "name": "node/chainstate.h",
+    "subsystem": "node",
+    "loc": 77,
+    "classes": 3,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "node_chainstatemanager_args_cpp",
+    "name": "node/chainstatemanager_args.cpp",
+    "subsystem": "node",
+    "loc": 71,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_chainstatemanager_args_h",
+    "name": "node/chainstatemanager_args.h",
+    "subsystem": "node",
+    "loc": 22,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_coin_cpp",
+    "name": "node/coin.cpp",
+    "subsystem": "node",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_coin_h",
+    "name": "node/coin.h",
+    "subsystem": "node",
+    "loc": 27,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_coins_view_args_cpp",
+    "name": "node/coins_view_args.cpp",
+    "subsystem": "node",
+    "loc": 16,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_coins_view_args_h",
+    "name": "node/coins_view_args.h",
+    "subsystem": "node",
+    "loc": 15,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_connection_types_cpp",
+    "name": "node/connection_types.cpp",
+    "subsystem": "node",
+    "loc": 40,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "node_connection_types_h",
+    "name": "node/connection_types.h",
+    "subsystem": "node",
+    "loc": 93,
+    "classes": 0,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "node_context_cpp",
+    "name": "node/context.cpp",
+    "subsystem": "node",
+    "loc": 27,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "node_context_h",
+    "name": "node/context.h",
+    "subsystem": "node",
+    "loc": 98,
+    "classes": 23,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_database_args_cpp",
+    "name": "node/database_args.cpp",
+    "subsystem": "node",
+    "loc": 18,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_database_args_h",
+    "name": "node/database_args.h",
+    "subsystem": "node",
+    "loc": 15,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_eviction_cpp",
+    "name": "node/eviction.cpp",
+    "subsystem": "node",
+    "loc": 240,
+    "classes": 1,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "node_eviction_h",
+    "name": "node/eviction.h",
+    "subsystem": "node",
+    "loc": 69,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_interface_ui_cpp",
+    "name": "node/interface_ui.cpp",
+    "subsystem": "node",
+    "loc": 83,
+    "classes": 1,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "node_interface_ui_h",
+    "name": "node/interface_ui.h",
+    "subsystem": "node",
+    "loc": 124,
+    "classes": 4,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "node_interfaces_cpp",
+    "name": "node/interfaces.cpp",
+    "subsystem": "node",
+    "loc": 930,
+    "classes": 7,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "node_kernel_notifications_cpp",
+    "name": "node/kernel_notifications.cpp",
+    "subsystem": "node",
+    "loc": 101,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "node_kernel_notifications_h",
+    "name": "node/kernel_notifications.h",
+    "subsystem": "node",
+    "loc": 65,
+    "classes": 6,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "node_mempool_args_cpp",
+    "name": "node/mempool_args.cpp",
+    "subsystem": "node",
+    "loc": 106,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "node_mempool_args_h",
+    "name": "node/mempool_args.h",
+    "subsystem": "node",
+    "loc": 27,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_mempool_persist_cpp",
+    "name": "node/mempool_persist.cpp",
+    "subsystem": "node",
+    "loc": 221,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "node_mempool_persist_h",
+    "name": "node/mempool_persist.h",
+    "subsystem": "node",
+    "loc": 34,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_mempool_persist_args_cpp",
+    "name": "node/mempool_persist_args.cpp",
+    "subsystem": "node",
+    "loc": 23,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "node_mempool_persist_args_h",
+    "name": "node/mempool_persist_args.h",
+    "subsystem": "node",
+    "loc": 25,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_miner_cpp",
+    "name": "node/miner.cpp",
+    "subsystem": "mining",
+    "loc": 433,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "node_miner_h",
+    "name": "node/miner.h",
+    "subsystem": "mining",
+    "loc": 216,
+    "classes": 15,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_mini_miner_cpp",
+    "name": "node/mini_miner.cpp",
+    "subsystem": "node",
+    "loc": 433,
+    "classes": 1,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "node_mini_miner_h",
+    "name": "node/mini_miner.h",
+    "subsystem": "node",
+    "loc": 172,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_minisketchwrapper_cpp",
+    "name": "node/minisketchwrapper.cpp",
+    "subsystem": "node",
+    "loc": 79,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "node_minisketchwrapper_h",
+    "name": "node/minisketchwrapper.h",
+    "subsystem": "node",
+    "loc": 20,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_peerman_args_cpp",
+    "name": "node/peerman_args.cpp",
+    "subsystem": "node",
+    "loc": 29,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_peerman_args_h",
+    "name": "node/peerman_args.h",
+    "subsystem": "node",
+    "loc": 12,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_protocol_version_h",
+    "name": "node/protocol_version.h",
+    "subsystem": "node",
+    "loc": 38,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_psbt_cpp",
+    "name": "node/psbt.cpp",
+    "subsystem": "node",
+    "loc": 151,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "node_psbt_h",
+    "name": "node/psbt.h",
+    "subsystem": "node",
+    "loc": 58,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_timeoffsets_cpp",
+    "name": "node/timeoffsets.cpp",
+    "subsystem": "node",
+    "loc": 66,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "node_timeoffsets_h",
+    "name": "node/timeoffsets.h",
+    "subsystem": "node",
+    "loc": 49,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_transaction_cpp",
+    "name": "node/transaction.cpp",
+    "subsystem": "node",
+    "loc": 158,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "node_transaction_h",
+    "name": "node/transaction.h",
+    "subsystem": "node",
+    "loc": 69,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_txreconciliation_cpp",
+    "name": "node/txreconciliation.cpp",
+    "subsystem": "node",
+    "loc": 170,
+    "classes": 1,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "node_txreconciliation_h",
+    "name": "node/txreconciliation.h",
+    "subsystem": "node",
+    "loc": 89,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "node_types_h",
+    "name": "node/types.h",
+    "subsystem": "node",
+    "loc": 49,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "node_utxo_snapshot_cpp",
+    "name": "node/utxo_snapshot.cpp",
+    "subsystem": "node",
+    "loc": 97,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "node_utxo_snapshot_h",
+    "name": "node/utxo_snapshot.h",
+    "subsystem": "node",
+    "loc": 132,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "node_warnings_cpp",
+    "name": "node/warnings.cpp",
+    "subsystem": "node",
+    "loc": 67,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "node_warnings_h",
+    "name": "node/warnings.h",
+    "subsystem": "node",
+    "loc": 90,
+    "classes": 2,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "noui_cpp",
+    "name": "noui.cpp",
+    "subsystem": "init",
+    "loc": 100,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "noui_h",
+    "name": "noui.h",
+    "subsystem": "init",
+    "loc": 28,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "obj_build_h",
+    "name": "obj/build.h",
+    "subsystem": "other",
+    "loc": 1,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "outputtype_cpp",
+    "name": "outputtype.cpp",
+    "subsystem": "other",
+    "loc": 124,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "outputtype_h",
+    "name": "outputtype.h",
+    "subsystem": "other",
+    "loc": 54,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "policy_feerate_cpp",
+    "name": "policy/feerate.cpp",
+    "subsystem": "mempool",
+    "loc": 45,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "policy_feerate_h",
+    "name": "policy/feerate.h",
+    "subsystem": "mempool",
+    "loc": 76,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "policy_fees_cpp",
+    "name": "policy/fees.cpp",
+    "subsystem": "mempool",
+    "loc": 1102,
+    "classes": 2,
+    "functions": 39,
+    "enums": 0
+  },
+  {
+    "id": "policy_fees_h",
+    "name": "policy/fees.h",
+    "subsystem": "mempool",
+    "loc": 345,
+    "classes": 9,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "policy_fees_args_cpp",
+    "name": "policy/fees_args.cpp",
+    "subsystem": "mempool",
+    "loc": 16,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "policy_fees_args_h",
+    "name": "policy/fees_args.h",
+    "subsystem": "mempool",
+    "loc": 15,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "policy_packages_cpp",
+    "name": "policy/packages.cpp",
+    "subsystem": "mempool",
+    "loc": 170,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "policy_packages_h",
+    "name": "policy/packages.h",
+    "subsystem": "mempool",
+    "loc": 96,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "policy_policy_cpp",
+    "name": "policy/policy.cpp",
+    "subsystem": "mempool",
+    "loc": 313,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "policy_policy_h",
+    "name": "policy/policy.h",
+    "subsystem": "mempool",
+    "loc": 171,
+    "classes": 3,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "policy_rbf_cpp",
+    "name": "policy/rbf.cpp",
+    "subsystem": "mempool",
+    "loc": 204,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "policy_rbf_h",
+    "name": "policy/rbf.h",
+    "subsystem": "mempool",
+    "loc": 135,
+    "classes": 2,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "policy_settings_cpp",
+    "name": "policy/settings.cpp",
+    "subsystem": "mempool",
+    "loc": 10,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "policy_settings_h",
+    "name": "policy/settings.h",
+    "subsystem": "mempool",
+    "loc": 11,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "policy_truc_policy_cpp",
+    "name": "policy/truc_policy.cpp",
+    "subsystem": "mempool",
+    "loc": 243,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "policy_truc_policy_h",
+    "name": "policy/truc_policy.h",
+    "subsystem": "mempool",
+    "loc": 94,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "pow_cpp",
+    "name": "pow.cpp",
+    "subsystem": "consensus",
+    "loc": 154,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "pow_h",
+    "name": "pow.h",
+    "subsystem": "consensus",
+    "loc": 37,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "prevector_h",
+    "name": "prevector.h",
+    "subsystem": "other",
+    "loc": 541,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "primitives_block_cpp",
+    "name": "primitives/block.cpp",
+    "subsystem": "primitives",
+    "loc": 30,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "primitives_block_h",
+    "name": "primitives/block.h",
+    "subsystem": "primitives",
+    "loc": 158,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "primitives_transaction_cpp",
+    "name": "primitives/transaction.cpp",
+    "subsystem": "primitives",
+    "loc": 131,
+    "classes": 0,
+    "functions": 17,
+    "enums": 0
+  },
+  {
+    "id": "primitives_transaction_h",
+    "name": "primitives/transaction.h",
+    "subsystem": "primitives",
+    "loc": 442,
+    "classes": 8,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "protocol_cpp",
+    "name": "protocol.cpp",
+    "subsystem": "other",
+    "loc": 125,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "protocol_h",
+    "name": "protocol.h",
+    "subsystem": "other",
+    "loc": 531,
+    "classes": 3,
+    "functions": 2,
+    "enums": 2
+  },
+  {
+    "id": "psbt_cpp",
+    "name": "psbt.cpp",
+    "subsystem": "other",
+    "loc": 568,
+    "classes": 0,
+    "functions": 28,
+    "enums": 0
+  },
+  {
+    "id": "psbt_h",
+    "name": "psbt.h",
+    "subsystem": "other",
+    "loc": 1284,
+    "classes": 4,
+    "functions": 8,
+    "enums": 2
+  },
+  {
+    "id": "pubkey_cpp",
+    "name": "pubkey.cpp",
+    "subsystem": "crypto",
+    "loc": 423,
+    "classes": 1,
+    "functions": 22,
+    "enums": 0
+  },
+  {
+    "id": "pubkey_h",
+    "name": "pubkey.h",
+    "subsystem": "crypto",
+    "loc": 381,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_addressbookpage_cpp",
+    "name": "qt/addressbookpage.cpp",
+    "subsystem": "gui",
+    "loc": 330,
+    "classes": 1,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "qt_addressbookpage_h",
+    "name": "qt/addressbookpage.h",
+    "subsystem": "gui",
+    "loc": 86,
+    "classes": 6,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_addresstablemodel_cpp",
+    "name": "qt/addresstablemodel.cpp",
+    "subsystem": "gui",
+    "loc": 456,
+    "classes": 3,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "qt_addresstablemodel_h",
+    "name": "qt/addresstablemodel.h",
+    "subsystem": "gui",
+    "loc": 112,
+    "classes": 4,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "qt_askpassphrasedialog_cpp",
+    "name": "qt/askpassphrasedialog.cpp",
+    "subsystem": "gui",
+    "loc": 307,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "qt_askpassphrasedialog_h",
+    "name": "qt/askpassphrasedialog.h",
+    "subsystem": "gui",
+    "loc": 56,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_bantablemodel_cpp",
+    "name": "qt/bantablemodel.cpp",
+    "subsystem": "gui",
+    "loc": 186,
+    "classes": 1,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "qt_bantablemodel_h",
+    "name": "qt/bantablemodel.h",
+    "subsystem": "gui",
+    "loc": 82,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoin_cpp",
+    "name": "qt/bitcoin.cpp",
+    "subsystem": "gui",
+    "loc": 719,
+    "classes": 0,
+    "functions": 27,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoin_h",
+    "name": "qt/bitcoin.h",
+    "subsystem": "gui",
+    "loc": 112,
+    "classes": 11,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinaddressvalidator_cpp",
+    "name": "qt/bitcoinaddressvalidator.cpp",
+    "subsystem": "gui",
+    "loc": 97,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinaddressvalidator_h",
+    "name": "qt/bitcoinaddressvalidator.h",
+    "subsystem": "gui",
+    "loc": 35,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinamountfield_cpp",
+    "name": "qt/bitcoinamountfield.cpp",
+    "subsystem": "gui",
+    "loc": 343,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinamountfield_h",
+    "name": "qt/bitcoinamountfield.h",
+    "subsystem": "gui",
+    "loc": 85,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoingui_cpp",
+    "name": "qt/bitcoingui.cpp",
+    "subsystem": "gui",
+    "loc": 1683,
+    "classes": 0,
+    "functions": 69,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoingui_h",
+    "name": "qt/bitcoingui.h",
+    "subsystem": "gui",
+    "loc": 356,
+    "classes": 21,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "qt_bitcoinstrings_cpp",
+    "name": "qt/bitcoinstrings.cpp",
+    "subsystem": "gui",
+    "loc": 438,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinunits_cpp",
+    "name": "qt/bitcoinunits.cpp",
+    "subsystem": "gui",
+    "loc": 266,
+    "classes": 0,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "qt_bitcoinunits_h",
+    "name": "qt/bitcoinunits.h",
+    "subsystem": "gui",
+    "loc": 116,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_clientmodel_cpp",
+    "name": "qt/clientmodel.cpp",
+    "subsystem": "gui",
+    "loc": 296,
+    "classes": 0,
+    "functions": 25,
+    "enums": 0
+  },
+  {
+    "id": "qt_clientmodel_h",
+    "name": "qt/clientmodel.h",
+    "subsystem": "gui",
+    "loc": 132,
+    "classes": 10,
+    "functions": 0,
+    "enums": 3
+  },
+  {
+    "id": "qt_coincontroldialog_cpp",
+    "name": "qt/coincontroldialog.cpp",
+    "subsystem": "gui",
+    "loc": 682,
+    "classes": 0,
+    "functions": 27,
+    "enums": 0
+  },
+  {
+    "id": "qt_coincontroldialog_h",
+    "name": "qt/coincontroldialog.h",
+    "subsystem": "gui",
+    "loc": 118,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_coincontroltreewidget_cpp",
+    "name": "qt/coincontroltreewidget.cpp",
+    "subsystem": "gui",
+    "loc": 34,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_coincontroltreewidget_h",
+    "name": "qt/coincontroltreewidget.h",
+    "subsystem": "gui",
+    "loc": 22,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_createwalletdialog_cpp",
+    "name": "qt/createwalletdialog.cpp",
+    "subsystem": "gui",
+    "loc": 144,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "qt_createwalletdialog_h",
+    "name": "qt/createwalletdialog.h",
+    "subsystem": "gui",
+    "loc": 45,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_csvmodelwriter_cpp",
+    "name": "qt/csvmodelwriter.cpp",
+    "subsystem": "gui",
+    "loc": 91,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "qt_csvmodelwriter_h",
+    "name": "qt/csvmodelwriter.h",
+    "subsystem": "gui",
+    "loc": 46,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_editaddressdialog_cpp",
+    "name": "qt/editaddressdialog.cpp",
+    "subsystem": "gui",
+    "loc": 166,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "qt_editaddressdialog_h",
+    "name": "qt/editaddressdialog.h",
+    "subsystem": "gui",
+    "loc": 59,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_guiconstants_h",
+    "name": "qt/guiconstants.h",
+    "subsystem": "gui",
+    "loc": 63,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_guiutil_cpp",
+    "name": "qt/guiutil.cpp",
+    "subsystem": "gui",
+    "loc": 1020,
+    "classes": 0,
+    "functions": 73,
+    "enums": 0
+  },
+  {
+    "id": "qt_guiutil_h",
+    "name": "qt/guiutil.h",
+    "subsystem": "gui",
+    "loc": 444,
+    "classes": 16,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_initexecutor_cpp",
+    "name": "qt/initexecutor.cpp",
+    "subsystem": "gui",
+    "loc": 71,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "qt_initexecutor_h",
+    "name": "qt/initexecutor.h",
+    "subsystem": "gui",
+    "loc": 47,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_intro_cpp",
+    "name": "qt/intro.cpp",
+    "subsystem": "gui",
+    "loc": 397,
+    "classes": 1,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "qt_intro_h",
+    "name": "qt/intro.h",
+    "subsystem": "gui",
+    "loc": 88,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_macdockiconhandler_h",
+    "name": "qt/macdockiconhandler.h",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_macnotificationhandler_h",
+    "name": "qt/macnotificationhandler.h",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_macos_appnap_h",
+    "name": "qt/macos_appnap.h",
+    "subsystem": "gui",
+    "loc": 24,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_main_cpp",
+    "name": "qt/main.cpp",
+    "subsystem": "gui",
+    "loc": 25,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_modaloverlay_cpp",
+    "name": "qt/modaloverlay.cpp",
+    "subsystem": "gui",
+    "loc": 206,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "qt_modaloverlay_h",
+    "name": "qt/modaloverlay.h",
+    "subsystem": "gui",
+    "loc": 58,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_networkstyle_cpp",
+    "name": "qt/networkstyle.cpp",
+    "subsystem": "gui",
+    "loc": 94,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_networkstyle_h",
+    "name": "qt/networkstyle.h",
+    "subsystem": "gui",
+    "loc": 35,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_notificator_cpp",
+    "name": "qt/notificator.cpp",
+    "subsystem": "gui",
+    "loc": 244,
+    "classes": 1,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "qt_notificator_h",
+    "name": "qt/notificator.h",
+    "subsystem": "gui",
+    "loc": 75,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_openuridialog_cpp",
+    "name": "qt/openuridialog.cpp",
+    "subsystem": "gui",
+    "loc": 55,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "qt_openuridialog_h",
+    "name": "qt/openuridialog.h",
+    "subsystem": "gui",
+    "loc": 36,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_optionsdialog_cpp",
+    "name": "qt/optionsdialog.cpp",
+    "subsystem": "gui",
+    "loc": 496,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "qt_optionsdialog_h",
+    "name": "qt/optionsdialog.h",
+    "subsystem": "gui",
+    "loc": 82,
+    "classes": 5,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_optionsmodel_cpp",
+    "name": "qt/optionsmodel.cpp",
+    "subsystem": "gui",
+    "loc": 809,
+    "classes": 1,
+    "functions": 31,
+    "enums": 0
+  },
+  {
+    "id": "qt_optionsmodel_h",
+    "name": "qt/optionsmodel.h",
+    "subsystem": "gui",
+    "loc": 160,
+    "classes": 3,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_overviewpage_cpp",
+    "name": "qt/overviewpage.cpp",
+    "subsystem": "gui",
+    "loc": 353,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "qt_overviewpage_h",
+    "name": "qt/overviewpage.h",
+    "subsystem": "gui",
+    "loc": 71,
+    "classes": 6,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_paymentserver_cpp",
+    "name": "qt/paymentserver.cpp",
+    "subsystem": "gui",
+    "loc": 264,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "qt_paymentserver_h",
+    "name": "qt/paymentserver.h",
+    "subsystem": "gui",
+    "loc": 107,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_peertablemodel_cpp",
+    "name": "qt/peertablemodel.cpp",
+    "subsystem": "gui",
+    "loc": 190,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "qt_peertablemodel_h",
+    "name": "qt/peertablemodel.h",
+    "subsystem": "gui",
+    "loc": 116,
+    "classes": 3,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_peertablesortproxy_cpp",
+    "name": "qt/peertablesortproxy.cpp",
+    "subsystem": "gui",
+    "loc": 47,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_peertablesortproxy_h",
+    "name": "qt/peertablesortproxy.h",
+    "subsystem": "gui",
+    "loc": 25,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_platformstyle_cpp",
+    "name": "qt/platformstyle.cpp",
+    "subsystem": "gui",
+    "loc": 137,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "qt_platformstyle_h",
+    "name": "qt/platformstyle.h",
+    "subsystem": "gui",
+    "loc": 49,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_psbtoperationsdialog_cpp",
+    "name": "qt/psbtoperationsdialog.cpp",
+    "subsystem": "gui",
+    "loc": 297,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "qt_psbtoperationsdialog_h",
+    "name": "qt/psbtoperationsdialog.h",
+    "subsystem": "gui",
+    "loc": 55,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_qrimagewidget_cpp",
+    "name": "qt/qrimagewidget.cpp",
+    "subsystem": "gui",
+    "loc": 140,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "qt_qrimagewidget_h",
+    "name": "qt/qrimagewidget.h",
+    "subsystem": "gui",
+    "loc": 47,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_qvalidatedlineedit_cpp",
+    "name": "qt/qvalidatedlineedit.cpp",
+    "subsystem": "gui",
+    "loc": 128,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "qt_qvalidatedlineedit_h",
+    "name": "qt/qvalidatedlineedit.h",
+    "subsystem": "gui",
+    "loc": 44,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_qvaluecombobox_cpp",
+    "name": "qt/qvaluecombobox.cpp",
+    "subsystem": "gui",
+    "loc": 31,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "qt_qvaluecombobox_h",
+    "name": "qt/qvaluecombobox.h",
+    "subsystem": "gui",
+    "loc": 37,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_receivecoinsdialog_cpp",
+    "name": "qt/receivecoinsdialog.cpp",
+    "subsystem": "gui",
+    "loc": 315,
+    "classes": 0,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "qt_receivecoinsdialog_h",
+    "name": "qt/receivecoinsdialog.h",
+    "subsystem": "gui",
+    "loc": 79,
+    "classes": 3,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_receiverequestdialog_cpp",
+    "name": "qt/receiverequestdialog.cpp",
+    "subsystem": "gui",
+    "loc": 111,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "qt_receiverequestdialog_h",
+    "name": "qt/receiverequestdialog.h",
+    "subsystem": "gui",
+    "loc": 40,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_recentrequeststablemodel_cpp",
+    "name": "qt/recentrequeststablemodel.cpp",
+    "subsystem": "gui",
+    "loc": 246,
+    "classes": 0,
+    "functions": 18,
+    "enums": 0
+  },
+  {
+    "id": "qt_recentrequeststablemodel_h",
+    "name": "qt/recentrequeststablemodel.h",
+    "subsystem": "gui",
+    "loc": 101,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_rpcconsole_cpp",
+    "name": "qt/rpcconsole.cpp",
+    "subsystem": "gui",
+    "loc": 1418,
+    "classes": 4,
+    "functions": 47,
+    "enums": 0
+  },
+  {
+    "id": "qt_rpcconsole_h",
+    "name": "qt/rpcconsole.h",
+    "subsystem": "gui",
+    "loc": 196,
+    "classes": 8,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_sendcoinsdialog_cpp",
+    "name": "qt/sendcoinsdialog.cpp",
+    "subsystem": "gui",
+    "loc": 1115,
+    "classes": 0,
+    "functions": 47,
+    "enums": 0
+  },
+  {
+    "id": "qt_sendcoinsdialog_h",
+    "name": "qt/sendcoinsdialog.h",
+    "subsystem": "gui",
+    "loc": 151,
+    "classes": 6,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "qt_sendcoinsentry_cpp",
+    "name": "qt/sendcoinsentry.cpp",
+    "subsystem": "gui",
+    "loc": 240,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "qt_sendcoinsentry_h",
+    "name": "qt/sendcoinsentry.h",
+    "subsystem": "gui",
+    "loc": 82,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_sendcoinsrecipient_h",
+    "name": "qt/sendcoinsrecipient.h",
+    "subsystem": "gui",
+    "loc": 61,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_signverifymessagedialog_cpp",
+    "name": "qt/signverifymessagedialog.cpp",
+    "subsystem": "gui",
+    "loc": 298,
+    "classes": 0,
+    "functions": 17,
+    "enums": 0
+  },
+  {
+    "id": "qt_signverifymessagedialog_h",
+    "name": "qt/signverifymessagedialog.h",
+    "subsystem": "gui",
+    "loc": 54,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_splashscreen_cpp",
+    "name": "qt/splashscreen.cpp",
+    "subsystem": "gui",
+    "loc": 232,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "qt_splashscreen_h",
+    "name": "qt/splashscreen.h",
+    "subsystem": "gui",
+    "loc": 72,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_addressbooktests_cpp",
+    "name": "qt/test/addressbooktests.cpp",
+    "subsystem": "gui",
+    "loc": 231,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_addressbooktests_h",
+    "name": "qt/test/addressbooktests.h",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_apptests_cpp",
+    "name": "qt/test/apptests.cpp",
+    "subsystem": "gui",
+    "loc": 114,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_apptests_h",
+    "name": "qt/test/apptests.h",
+    "subsystem": "gui",
+    "loc": 50,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_optiontests_cpp",
+    "name": "qt/test/optiontests.cpp",
+    "subsystem": "gui",
+    "loc": 151,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_optiontests_h",
+    "name": "qt/test/optiontests.h",
+    "subsystem": "gui",
+    "loc": 32,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_rpcnestedtests_cpp",
+    "name": "qt/test/rpcnestedtests.cpp",
+    "subsystem": "gui",
+    "loc": 139,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_rpcnestedtests_h",
+    "name": "qt/test/rpcnestedtests.h",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_test_main_cpp",
+    "name": "qt/test/test_main.cpp",
+    "subsystem": "gui",
+    "loc": 129,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_uritests_cpp",
+    "name": "qt/test/uritests.cpp",
+    "subsystem": "gui",
+    "loc": 92,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_uritests_h",
+    "name": "qt/test/uritests.h",
+    "subsystem": "gui",
+    "loc": 19,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_util_cpp",
+    "name": "qt/test/util.cpp",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_util_h",
+    "name": "qt/test/util.h",
+    "subsystem": "gui",
+    "loc": 24,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_wallettests_cpp",
+    "name": "qt/test/wallettests.cpp",
+    "subsystem": "gui",
+    "loc": 482,
+    "classes": 1,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "qt_test_wallettests_h",
+    "name": "qt/test/wallettests.h",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_trafficgraphwidget_cpp",
+    "name": "qt/trafficgraphwidget.cpp",
+    "subsystem": "gui",
+    "loc": 171,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "qt_trafficgraphwidget_h",
+    "name": "qt/trafficgraphwidget.h",
+    "subsystem": "gui",
+    "loc": 50,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiondesc_cpp",
+    "name": "qt/transactiondesc.cpp",
+    "subsystem": "gui",
+    "loc": 383,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiondesc_h",
+    "name": "qt/transactiondesc.h",
+    "subsystem": "gui",
+    "loc": 37,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiondescdialog_cpp",
+    "name": "qt/transactiondescdialog.cpp",
+    "subsystem": "gui",
+    "loc": 28,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiondescdialog_h",
+    "name": "qt/transactiondescdialog.h",
+    "subsystem": "gui",
+    "loc": 31,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionfilterproxy_cpp",
+    "name": "qt/transactionfilterproxy.cpp",
+    "subsystem": "gui",
+    "loc": 95,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionfilterproxy_h",
+    "name": "qt/transactionfilterproxy.h",
+    "subsystem": "gui",
+    "loc": 61,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionoverviewwidget_cpp",
+    "name": "qt/transactionoverviewwidget.cpp",
+    "subsystem": "gui",
+    "loc": 27,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionoverviewwidget_h",
+    "name": "qt/transactionoverviewwidget.h",
+    "subsystem": "gui",
+    "loc": 28,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionrecord_cpp",
+    "name": "qt/transactionrecord.cpp",
+    "subsystem": "gui",
+    "loc": 234,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionrecord_h",
+    "name": "qt/transactionrecord.h",
+    "subsystem": "gui",
+    "loc": 135,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiontablemodel_cpp",
+    "name": "qt/transactiontablemodel.cpp",
+    "subsystem": "gui",
+    "loc": 754,
+    "classes": 3,
+    "functions": 26,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactiontablemodel_h",
+    "name": "qt/transactiontablemodel.h",
+    "subsystem": "gui",
+    "loc": 123,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionview_cpp",
+    "name": "qt/transactionview.cpp",
+    "subsystem": "gui",
+    "loc": 665,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "qt_transactionview_h",
+    "name": "qt/transactionview.h",
+    "subsystem": "gui",
+    "loc": 132,
+    "classes": 10,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_utilitydialog_cpp",
+    "name": "qt/utilitydialog.cpp",
+    "subsystem": "gui",
+    "loc": 169,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "qt_utilitydialog_h",
+    "name": "qt/utilitydialog.h",
+    "subsystem": "gui",
+    "loc": 53,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletcontroller_cpp",
+    "name": "qt/walletcontroller.cpp",
+    "subsystem": "gui",
+    "loc": 498,
+    "classes": 0,
+    "functions": 26,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletcontroller_h",
+    "name": "qt/walletcontroller.h",
+    "subsystem": "gui",
+    "loc": 201,
+    "classes": 21,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletframe_cpp",
+    "name": "qt/walletframe.cpp",
+    "subsystem": "gui",
+    "loc": 289,
+    "classes": 0,
+    "functions": 24,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletframe_h",
+    "name": "qt/walletframe.h",
+    "subsystem": "gui",
+    "loc": 102,
+    "classes": 5,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletmodel_cpp",
+    "name": "qt/walletmodel.cpp",
+    "subsystem": "gui",
+    "loc": 630,
+    "classes": 0,
+    "functions": 43,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletmodel_h",
+    "name": "qt/walletmodel.h",
+    "subsystem": "gui",
+    "loc": 241,
+    "classes": 14,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "qt_walletmodeltransaction_cpp",
+    "name": "qt/walletmodeltransaction.cpp",
+    "subsystem": "gui",
+    "loc": 68,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletmodeltransaction_h",
+    "name": "qt/walletmodeltransaction.h",
+    "subsystem": "gui",
+    "loc": 47,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletview_cpp",
+    "name": "qt/walletview.cpp",
+    "subsystem": "gui",
+    "loc": 286,
+    "classes": 0,
+    "functions": 20,
+    "enums": 0
+  },
+  {
+    "id": "qt_walletview_h",
+    "name": "qt/walletview.h",
+    "subsystem": "gui",
+    "loc": 127,
+    "classes": 10,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "qt_winshutdownmonitor_cpp",
+    "name": "qt/winshutdownmonitor.cpp",
+    "subsystem": "gui",
+    "loc": 56,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "qt_winshutdownmonitor_h",
+    "name": "qt/winshutdownmonitor.h",
+    "subsystem": "gui",
+    "loc": 33,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "random_cpp",
+    "name": "random.cpp",
+    "subsystem": "util",
+    "loc": 789,
+    "classes": 1,
+    "functions": 38,
+    "enums": 1
+  },
+  {
+    "id": "random_h",
+    "name": "random.h",
+    "subsystem": "util",
+    "loc": 468,
+    "classes": 4,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "randomenv_cpp",
+    "name": "randomenv.cpp",
+    "subsystem": "other",
+    "loc": 511,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "randomenv_h",
+    "name": "randomenv.h",
+    "subsystem": "other",
+    "loc": 17,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rest_cpp",
+    "name": "rest.cpp",
+    "subsystem": "rpc",
+    "loc": 1041,
+    "classes": 1,
+    "functions": 22,
+    "enums": 0
+  },
+  {
+    "id": "rest_h",
+    "name": "rest.h",
+    "subsystem": "rpc",
+    "loc": 28,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "rpc_blockchain_cpp",
+    "name": "rpc/blockchain.cpp",
+    "subsystem": "rpc",
+    "loc": 2994,
+    "classes": 4,
+    "functions": 52,
+    "enums": 0
+  },
+  {
+    "id": "rpc_blockchain_h",
+    "name": "rpc/blockchain.h",
+    "subsystem": "rpc",
+    "loc": 64,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_client_cpp",
+    "name": "rpc/client.cpp",
+    "subsystem": "rpc",
+    "loc": 401,
+    "classes": 2,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "rpc_client_h",
+    "name": "rpc/client.h",
+    "subsystem": "rpc",
+    "loc": 20,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_external_signer_cpp",
+    "name": "rpc/external_signer.cpp",
+    "subsystem": "rpc",
+    "loc": 78,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "rpc_fees_cpp",
+    "name": "rpc/fees.cpp",
+    "subsystem": "rpc",
+    "loc": 226,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "rpc_mempool_cpp",
+    "name": "rpc/mempool.cpp",
+    "subsystem": "rpc",
+    "loc": 1035,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "rpc_mempool_h",
+    "name": "rpc/mempool.h",
+    "subsystem": "rpc",
+    "loc": 17,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_mining_cpp",
+    "name": "rpc/mining.cpp",
+    "subsystem": "rpc",
+    "loc": 1128,
+    "classes": 1,
+    "functions": 18,
+    "enums": 0
+  },
+  {
+    "id": "rpc_mining_h",
+    "name": "rpc/mining.h",
+    "subsystem": "rpc",
+    "loc": 11,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_net_cpp",
+    "name": "rpc/net.cpp",
+    "subsystem": "rpc",
+    "loc": 1207,
+    "classes": 0,
+    "functions": 23,
+    "enums": 0
+  },
+  {
+    "id": "rpc_node_cpp",
+    "name": "rpc/node.cpp",
+    "subsystem": "rpc",
+    "loc": 418,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "rpc_output_script_cpp",
+    "name": "rpc/output_script.cpp",
+    "subsystem": "rpc",
+    "loc": 311,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "rpc_protocol_h",
+    "name": "rpc/protocol.h",
+    "subsystem": "rpc",
+    "loc": 92,
+    "classes": 0,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "rpc_rawtransaction_cpp",
+    "name": "rpc/rawtransaction.cpp",
+    "subsystem": "rpc",
+    "loc": 2032,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "rpc_rawtransaction_util_cpp",
+    "name": "rpc/rawtransaction_util.cpp",
+    "subsystem": "rpc",
+    "loc": 336,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "rpc_rawtransaction_util_h",
+    "name": "rpc/rawtransaction_util.h",
+    "subsystem": "rpc",
+    "loc": 58,
+    "classes": 7,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_register_h",
+    "name": "rpc/register.h",
+    "subsystem": "rpc",
+    "loc": 43,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "rpc_request_cpp",
+    "name": "rpc/request.cpp",
+    "subsystem": "rpc",
+    "loc": 242,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "rpc_request_h",
+    "name": "rpc/request.h",
+    "subsystem": "rpc",
+    "loc": 52,
+    "classes": 1,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "rpc_server_cpp",
+    "name": "rpc/server.cpp",
+    "subsystem": "rpc",
+    "loc": 590,
+    "classes": 4,
+    "functions": 30,
+    "enums": 0
+  },
+  {
+    "id": "rpc_server_h",
+    "name": "rpc/server.h",
+    "subsystem": "rpc",
+    "loc": 184,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_server_util_cpp",
+    "name": "rpc/server_util.cpp",
+    "subsystem": "rpc",
+    "loc": 131,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "rpc_server_util_h",
+    "name": "rpc/server_util.h",
+    "subsystem": "rpc",
+    "loc": 42,
+    "classes": 10,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "rpc_signmessage_cpp",
+    "name": "rpc/signmessage.cpp",
+    "subsystem": "rpc",
+    "loc": 113,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "rpc_txoutproof_cpp",
+    "name": "rpc/txoutproof.cpp",
+    "subsystem": "rpc",
+    "loc": 180,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "rpc_util_cpp",
+    "name": "rpc/util.cpp",
+    "subsystem": "rpc",
+    "loc": 1391,
+    "classes": 3,
+    "functions": 54,
+    "enums": 0
+  },
+  {
+    "id": "rpc_util_h",
+    "name": "rpc/util.h",
+    "subsystem": "rpc",
+    "loc": 506,
+    "classes": 13,
+    "functions": 0,
+    "enums": 5
+  },
+  {
+    "id": "scheduler_cpp",
+    "name": "scheduler.cpp",
+    "subsystem": "other",
+    "loc": 200,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "scheduler_h",
+    "name": "scheduler.h",
+    "subsystem": "other",
+    "loc": 160,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_descriptor_cpp",
+    "name": "script/descriptor.cpp",
+    "subsystem": "script",
+    "loc": 2198,
+    "classes": 21,
+    "functions": 26,
+    "enums": 2
+  },
+  {
+    "id": "script_descriptor_h",
+    "name": "script/descriptor.h",
+    "subsystem": "script",
+    "loc": 209,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_interpreter_cpp",
+    "name": "script/interpreter.cpp",
+    "subsystem": "script",
+    "loc": 2124,
+    "classes": 2,
+    "functions": 42,
+    "enums": 0
+  },
+  {
+    "id": "script_interpreter_h",
+    "name": "script/interpreter.h",
+    "subsystem": "script",
+    "loc": 354,
+    "classes": 10,
+    "functions": 0,
+    "enums": 4
+  },
+  {
+    "id": "script_keyorigin_h",
+    "name": "script/keyorigin.h",
+    "subsystem": "script",
+    "loc": 49,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_miniscript_cpp",
+    "name": "script/miniscript.cpp",
+    "subsystem": "script",
+    "loc": 433,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "script_miniscript_h",
+    "name": "script/miniscript.h",
+    "subsystem": "script",
+    "loc": 2637,
+    "classes": 11,
+    "functions": 11,
+    "enums": 5
+  },
+  {
+    "id": "script_parsing_cpp",
+    "name": "script/parsing.cpp",
+    "subsystem": "script",
+    "loc": 52,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "script_parsing_h",
+    "name": "script/parsing.h",
+    "subsystem": "script",
+    "loc": 40,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_script_cpp",
+    "name": "script/script.cpp",
+    "subsystem": "script",
+    "loc": 389,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "script_script_h",
+    "name": "script/script.h",
+    "subsystem": "script",
+    "loc": 628,
+    "classes": 5,
+    "functions": 2,
+    "enums": 1
+  },
+  {
+    "id": "script_script_error_cpp",
+    "name": "script/script_error.cpp",
+    "subsystem": "script",
+    "loc": 123,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "script_script_error_h",
+    "name": "script/script_error.h",
+    "subsystem": "script",
+    "loc": 92,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_sigcache_cpp",
+    "name": "script/sigcache.cpp",
+    "subsystem": "script",
+    "loc": 84,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "script_sigcache_h",
+    "name": "script/sigcache.h",
+    "subsystem": "script",
+    "loc": 76,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_sign_cpp",
+    "name": "script/sign.cpp",
+    "subsystem": "script",
+    "loc": 853,
+    "classes": 7,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "script_sign_h",
+    "name": "script/sign.h",
+    "subsystem": "script",
+    "loc": 129,
+    "classes": 10,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_signingprovider_cpp",
+    "name": "script/signingprovider.cpp",
+    "subsystem": "script",
+    "loc": 578,
+    "classes": 0,
+    "functions": 43,
+    "enums": 0
+  },
+  {
+    "id": "script_signingprovider_h",
+    "name": "script/signingprovider.h",
+    "subsystem": "script",
+    "loc": 316,
+    "classes": 8,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "script_solver_cpp",
+    "name": "script/solver.cpp",
+    "subsystem": "script",
+    "loc": 228,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "script_solver_h",
+    "name": "script/solver.h",
+    "subsystem": "script",
+    "loc": 67,
+    "classes": 2,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "serialize_h",
+    "name": "serialize.h",
+    "subsystem": "util",
+    "loc": 1230,
+    "classes": 17,
+    "functions": 70,
+    "enums": 1
+  },
+  {
+    "id": "signet_cpp",
+    "name": "signet.cpp",
+    "subsystem": "other",
+    "loc": 151,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "signet_h",
+    "name": "signet.h",
+    "subsystem": "other",
+    "loc": 37,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "span_h",
+    "name": "span.h",
+    "subsystem": "other",
+    "loc": 306,
+    "classes": 1,
+    "functions": 38,
+    "enums": 0
+  },
+  {
+    "id": "streams_cpp",
+    "name": "streams.cpp",
+    "subsystem": "util",
+    "loc": 117,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "streams_h",
+    "name": "streams.h",
+    "subsystem": "util",
+    "loc": 609,
+    "classes": 7,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "support_allocators_pool_h",
+    "name": "support/allocators/pool.h",
+    "subsystem": "util",
+    "loc": 349,
+    "classes": 2,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "support_allocators_secure_h",
+    "name": "support/allocators/secure.h",
+    "subsystem": "util",
+    "loc": 84,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "support_allocators_zeroafterfree_h",
+    "name": "support/allocators/zeroafterfree.h",
+    "subsystem": "util",
+    "loc": 51,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "support_cleanse_cpp",
+    "name": "support/cleanse.cpp",
+    "subsystem": "util",
+    "loc": 35,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "support_cleanse_h",
+    "name": "support/cleanse.h",
+    "subsystem": "util",
+    "loc": 15,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "support_events_h",
+    "name": "support/events.h",
+    "subsystem": "util",
+    "loc": 56,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "support_lockedpool_cpp",
+    "name": "support/lockedpool.cpp",
+    "subsystem": "util",
+    "loc": 402,
+    "classes": 2,
+    "functions": 27,
+    "enums": 0
+  },
+  {
+    "id": "support_lockedpool_h",
+    "name": "support/lockedpool.h",
+    "subsystem": "util",
+    "loc": 240,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "sync_cpp",
+    "name": "sync.cpp",
+    "subsystem": "other",
+    "loc": 322,
+    "classes": 2,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "sync_h",
+    "name": "sync.h",
+    "subsystem": "other",
+    "loc": 430,
+    "classes": 3,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "test_addrman_tests_cpp",
+    "name": "test/addrman_tests.cpp",
+    "subsystem": "test",
+    "loc": 1165,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "test_allocator_tests_cpp",
+    "name": "test/allocator_tests.cpp",
+    "subsystem": "test",
+    "loc": 239,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_amount_tests_cpp",
+    "name": "test/amount_tests.cpp",
+    "subsystem": "test",
+    "loc": 142,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_argsman_tests_cpp",
+    "name": "test/argsman_tests.cpp",
+    "subsystem": "test",
+    "loc": 1054,
+    "classes": 5,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "test_arith_uint256_tests_cpp",
+    "name": "test/arith_uint256_tests.cpp",
+    "subsystem": "test",
+    "loc": 574,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "test_banman_tests_cpp",
+    "name": "test/banman_tests.cpp",
+    "subsystem": "test",
+    "loc": 43,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_base32_tests_cpp",
+    "name": "test/base32_tests.cpp",
+    "subsystem": "test",
+    "loc": 37,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_base58_tests_cpp",
+    "name": "test/base58_tests.cpp",
+    "subsystem": "test",
+    "loc": 100,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_base64_tests_cpp",
+    "name": "test/base64_tests.cpp",
+    "subsystem": "test",
+    "loc": 44,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_bech32_tests_cpp",
+    "name": "test/bech32_tests.cpp",
+    "subsystem": "test",
+    "loc": 159,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_bip324_tests_cpp",
+    "name": "test/bip324_tests.cpp",
+    "subsystem": "test",
+    "loc": 300,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_bip32_tests_cpp",
+    "name": "test/bip32_tests.cpp",
+    "subsystem": "test",
+    "loc": 205,
+    "classes": 2,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "test_blockchain_tests_cpp",
+    "name": "test/blockchain_tests.cpp",
+    "subsystem": "test",
+    "loc": 120,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "test_blockencodings_tests_cpp",
+    "name": "test/blockencodings_tests.cpp",
+    "subsystem": "test",
+    "loc": 426,
+    "classes": 1,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_blockfilter_index_tests_cpp",
+    "name": "test/blockfilter_index_tests.cpp",
+    "subsystem": "test",
+    "loc": 310,
+    "classes": 1,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_blockfilter_tests_cpp",
+    "name": "test/blockfilter_tests.cpp",
+    "subsystem": "test",
+    "loc": 191,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_blockmanager_tests_cpp",
+    "name": "test/blockmanager_tests.cpp",
+    "subsystem": "test",
+    "loc": 201,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_bloom_tests_cpp",
+    "name": "test/bloom_tests.cpp",
+    "subsystem": "test",
+    "loc": 534,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "test_bswap_tests_cpp",
+    "name": "test/bswap_tests.cpp",
+    "subsystem": "test",
+    "loc": 24,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_checkqueue_tests_cpp",
+    "name": "test/checkqueue_tests.cpp",
+    "subsystem": "test",
+    "loc": 417,
+    "classes": 7,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "test_cluster_linearize_tests_cpp",
+    "name": "test/cluster_linearize_tests.cpp",
+    "subsystem": "test",
+    "loc": 138,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_coins_tests_cpp",
+    "name": "test/coins_tests.cpp",
+    "subsystem": "test",
+    "loc": 1117,
+    "classes": 3,
+    "functions": 23,
+    "enums": 0
+  },
+  {
+    "id": "test_coinscachepair_tests_cpp",
+    "name": "test/coinscachepair_tests.cpp",
+    "subsystem": "test",
+    "loc": 219,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_coinstatsindex_tests_cpp",
+    "name": "test/coinstatsindex_tests.cpp",
+    "subsystem": "test",
+    "loc": 121,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_common_url_tests_cpp",
+    "name": "test/common_url_tests.cpp",
+    "subsystem": "test",
+    "loc": 75,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_compilerbug_tests_cpp",
+    "name": "test/compilerbug_tests.cpp",
+    "subsystem": "test",
+    "loc": 42,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_compress_tests_cpp",
+    "name": "test/compress_tests.cpp",
+    "subsystem": "test",
+    "loc": 167,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_crypto_tests_cpp",
+    "name": "test/crypto_tests.cpp",
+    "subsystem": "test",
+    "loc": 1273,
+    "classes": 0,
+    "functions": 35,
+    "enums": 0
+  },
+  {
+    "id": "test_cuckoocache_tests_cpp",
+    "name": "test/cuckoocache_tests.cpp",
+    "subsystem": "test",
+    "loc": 373,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_data_asmap_raw_h",
+    "name": "test/data/asmap.raw.h",
+    "subsystem": "test",
+    "loc": 10,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_base58_encode_decode_json_h",
+    "name": "test/data/base58_encode_decode.json.h",
+    "subsystem": "test",
+    "loc": 187,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_bip341_wallet_vectors_json_h",
+    "name": "test/data/bip341_wallet_vectors.json.h",
+    "subsystem": "test",
+    "loc": 3666,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_blockfilters_json_h",
+    "name": "test/data/blockfilters.json.h",
+    "subsystem": "test",
+    "loc": 2231,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_key_io_invalid_json_h",
+    "name": "test/data/key_io_invalid.json.h",
+    "subsystem": "test",
+    "loc": 654,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_key_io_valid_json_h",
+    "name": "test/data/key_io_valid.json.h",
+    "subsystem": "test",
+    "loc": 2139,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_script_tests_json_h",
+    "name": "test/data/script_tests.json.h",
+    "subsystem": "test",
+    "loc": 26958,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_sighash_json_h",
+    "name": "test/data/sighash.json.h",
+    "subsystem": "test",
+    "loc": 26315,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_tx_invalid_json_h",
+    "name": "test/data/tx_invalid.json.h",
+    "subsystem": "test",
+    "loc": 6681,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_data_tx_valid_json_h",
+    "name": "test/data/tx_valid.json.h",
+    "subsystem": "test",
+    "loc": 10742,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_dbwrapper_tests_cpp",
+    "name": "test/dbwrapper_tests.cpp",
+    "subsystem": "test",
+    "loc": 403,
+    "classes": 1,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_denialofservice_tests_cpp",
+    "name": "test/denialofservice_tests.cpp",
+    "subsystem": "test",
+    "loc": 432,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "test_descriptor_tests_cpp",
+    "name": "test/descriptor_tests.cpp",
+    "subsystem": "test",
+    "loc": 662,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "test_disconnected_transactions_cpp",
+    "name": "test/disconnected_transactions.cpp",
+    "subsystem": "test",
+    "loc": 95,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_feefrac_tests_cpp",
+    "name": "test/feefrac_tests.cpp",
+    "subsystem": "test",
+    "loc": 85,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_flatfile_tests_cpp",
+    "name": "test/flatfile_tests.cpp",
+    "subsystem": "test",
+    "loc": 129,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_fs_tests_cpp",
+    "name": "test/fs_tests.cpp",
+    "subsystem": "test",
+    "loc": 166,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_FuzzedDataProvider_h",
+    "name": "test/fuzz/FuzzedDataProvider.h",
+    "subsystem": "test",
+    "loc": 398,
+    "classes": 1,
+    "functions": 22,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_addition_overflow_cpp",
+    "name": "test/fuzz/addition_overflow.cpp",
+    "subsystem": "test",
+    "loc": 57,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_addrman_cpp",
+    "name": "test/fuzz/addrman.cpp",
+    "subsystem": "test",
+    "loc": 304,
+    "classes": 1,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_asmap_cpp",
+    "name": "test/fuzz/asmap.cpp",
+    "subsystem": "test",
+    "loc": 62,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_asmap_direct_cpp",
+    "name": "test/fuzz/asmap_direct.cpp",
+    "subsystem": "test",
+    "loc": 49,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_autofile_cpp",
+    "name": "test/fuzz/autofile.cpp",
+    "subsystem": "test",
+    "loc": 66,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_banman_cpp",
+    "name": "test/fuzz/banman.cpp",
+    "subsystem": "test",
+    "loc": 131,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_base_encode_decode_cpp",
+    "name": "test/fuzz/base_encode_decode.cpp",
+    "subsystem": "test",
+    "loc": 54,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_bech32_cpp",
+    "name": "test/fuzz/bech32.cpp",
+    "subsystem": "test",
+    "loc": 44,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_bip324_cpp",
+    "name": "test/fuzz/bip324.cpp",
+    "subsystem": "test",
+    "loc": 128,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_bitdeque_cpp",
+    "name": "test/fuzz/bitdeque.cpp",
+    "subsystem": "test",
+    "loc": 541,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_bitset_cpp",
+    "name": "test/fuzz/bitset.cpp",
+    "subsystem": "test",
+    "loc": 316,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_block_cpp",
+    "name": "test/fuzz/block.cpp",
+    "subsystem": "test",
+    "loc": 68,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_block_header_cpp",
+    "name": "test/fuzz/block_header.cpp",
+    "subsystem": "test",
+    "loc": 49,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_block_index_cpp",
+    "name": "test/fuzz/block_index.cpp",
+    "subsystem": "test",
+    "loc": 133,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_blockfilter_cpp",
+    "name": "test/fuzz/blockfilter.cpp",
+    "subsystem": "test",
+    "loc": 45,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_bloom_filter_cpp",
+    "name": "test/fuzz/bloom_filter.cpp",
+    "subsystem": "test",
+    "loc": 71,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_buffered_file_cpp",
+    "name": "test/fuzz/buffered_file.cpp",
+    "subsystem": "test",
+    "loc": 68,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_chain_cpp",
+    "name": "test/fuzz/chain.cpp",
+    "subsystem": "test",
+    "loc": 67,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_checkqueue_cpp",
+    "name": "test/fuzz/checkqueue.cpp",
+    "subsystem": "test",
+    "loc": 58,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_cluster_linearize_cpp",
+    "name": "test/fuzz/cluster_linearize.cpp",
+    "subsystem": "test",
+    "loc": 957,
+    "classes": 2,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_coins_view_cpp",
+    "name": "test/fuzz/coins_view.cpp",
+    "subsystem": "test",
+    "loc": 290,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_coinscache_sim_cpp",
+    "name": "test/fuzz/coinscache_sim.cpp",
+    "subsystem": "test",
+    "loc": 480,
+    "classes": 4,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "test_fuzz_connman_cpp",
+    "name": "test/fuzz/connman.cpp",
+    "subsystem": "test",
+    "loc": 147,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_cpp",
+    "name": "test/fuzz/crypto.cpp",
+    "subsystem": "test",
+    "loc": 127,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_aes256_cpp",
+    "name": "test/fuzz/crypto_aes256.cpp",
+    "subsystem": "test",
+    "loc": 30,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_aes256cbc_cpp",
+    "name": "test/fuzz/crypto_aes256cbc.cpp",
+    "subsystem": "test",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_chacha20_cpp",
+    "name": "test/fuzz/crypto_chacha20.cpp",
+    "subsystem": "test",
+    "loc": 155,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "name": "test/fuzz/crypto_chacha20poly1305.cpp",
+    "subsystem": "test",
+    "loc": 200,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_common_cpp",
+    "name": "test/fuzz/crypto_common.cpp",
+    "subsystem": "test",
+    "loc": 70,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
+    "name": "test/fuzz/crypto_diff_fuzz_chacha20.cpp",
+    "subsystem": "test",
+    "loc": 342,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
+    "name": "test/fuzz/crypto_hkdf_hmac_sha256_l32.cpp",
+    "subsystem": "test",
+    "loc": 25,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_crypto_poly1305_cpp",
+    "name": "test/fuzz/crypto_poly1305.cpp",
+    "subsystem": "test",
+    "loc": 52,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_cuckoocache_cpp",
+    "name": "test/fuzz/cuckoocache.cpp",
+    "subsystem": "test",
+    "loc": 48,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_decode_tx_cpp",
+    "name": "test/fuzz/decode_tx.cpp",
+    "subsystem": "test",
+    "loc": 32,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_descriptor_parse_cpp",
+    "name": "test/fuzz/descriptor_parse.cpp",
+    "subsystem": "test",
+    "loc": 106,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_deserialize_cpp",
+    "name": "test/fuzz/deserialize.cpp",
+    "subsystem": "test",
+    "loc": 336,
+    "classes": 1,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_eval_script_cpp",
+    "name": "test/fuzz/eval_script.cpp",
+    "subsystem": "test",
+    "loc": 31,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_fee_rate_cpp",
+    "name": "test/fuzz/fee_rate.cpp",
+    "subsystem": "test",
+    "loc": 40,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_feefrac_cpp",
+    "name": "test/fuzz/feefrac.cpp",
+    "subsystem": "test",
+    "loc": 123,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_feeratediagram_cpp",
+    "name": "test/fuzz/feeratediagram.cpp",
+    "subsystem": "test",
+    "loc": 133,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_fees_cpp",
+    "name": "test/fuzz/fees.cpp",
+    "subsystem": "test",
+    "loc": 31,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_flatfile_cpp",
+    "name": "test/fuzz/flatfile.cpp",
+    "subsystem": "test",
+    "loc": 28,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_float_cpp",
+    "name": "test/fuzz/float.cpp",
+    "subsystem": "test",
+    "loc": 61,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_fuzz_cpp",
+    "name": "test/fuzz/fuzz.cpp",
+    "subsystem": "test",
+    "loc": 270,
+    "classes": 1,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_fuzz_h",
+    "name": "test/fuzz/fuzz.h",
+    "subsystem": "test",
+    "loc": 47,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_golomb_rice_cpp",
+    "name": "test/fuzz/golomb_rice.cpp",
+    "subsystem": "test",
+    "loc": 98,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_headerssync_cpp",
+    "name": "test/fuzz/headerssync.cpp",
+    "subsystem": "test",
+    "loc": 118,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_hex_cpp",
+    "name": "test/fuzz/hex.cpp",
+    "subsystem": "test",
+    "loc": 45,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_http_request_cpp",
+    "name": "test/fuzz/http_request.cpp",
+    "subsystem": "test",
+    "loc": 68,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_i2p_cpp",
+    "name": "test/fuzz/i2p.cpp",
+    "subsystem": "test",
+    "loc": 63,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_integer_cpp",
+    "name": "test/fuzz/integer.cpp",
+    "subsystem": "test",
+    "loc": 263,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_key_cpp",
+    "name": "test/fuzz/key.cpp",
+    "subsystem": "test",
+    "loc": 370,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_key_io_cpp",
+    "name": "test/fuzz/key_io.cpp",
+    "subsystem": "test",
+    "loc": 39,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_kitchen_sink_cpp",
+    "name": "test/fuzz/kitchen_sink.cpp",
+    "subsystem": "test",
+    "loc": 58,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_load_external_block_file_cpp",
+    "name": "test/fuzz/load_external_block_file.cpp",
+    "subsystem": "test",
+    "loc": 44,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_locale_cpp",
+    "name": "test/fuzz/locale.cpp",
+    "subsystem": "test",
+    "loc": 87,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_merkleblock_cpp",
+    "name": "test/fuzz/merkleblock.cpp",
+    "subsystem": "test",
+    "loc": 49,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_message_cpp",
+    "name": "test/fuzz/message.cpp",
+    "subsystem": "test",
+    "loc": 45,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_mini_miner_cpp",
+    "name": "test/fuzz/mini_miner.cpp",
+    "subsystem": "test",
+    "loc": 199,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_miniscript_cpp",
+    "name": "test/fuzz/miniscript.cpp",
+    "subsystem": "test",
+    "loc": 1265,
+    "classes": 8,
+    "functions": 17,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_minisketch_cpp",
+    "name": "test/fuzz/minisketch.cpp",
+    "subsystem": "test",
+    "loc": 82,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_muhash_cpp",
+    "name": "test/fuzz/muhash.cpp",
+    "subsystem": "test",
+    "loc": 70,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_multiplication_overflow_cpp",
+    "name": "test/fuzz/multiplication_overflow.cpp",
+    "subsystem": "test",
+    "loc": 47,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_net_cpp",
+    "name": "test/fuzz/net.cpp",
+    "subsystem": "test",
+    "loc": 114,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_net_permissions_cpp",
+    "name": "test/fuzz/net_permissions.cpp",
+    "subsystem": "test",
+    "loc": 44,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_netaddress_cpp",
+    "name": "test/fuzz/netaddress.cpp",
+    "subsystem": "test",
+    "loc": 112,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_netbase_dns_lookup_cpp",
+    "name": "test/fuzz/netbase_dns_lookup.cpp",
+    "subsystem": "test",
+    "loc": 64,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_node_eviction_cpp",
+    "name": "test/fuzz/node_eviction.cpp",
+    "subsystem": "test",
+    "loc": 47,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_p2p_handshake_cpp",
+    "name": "test/fuzz/p2p_handshake.cpp",
+    "subsystem": "test",
+    "loc": 107,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_p2p_transport_serialization_cpp",
+    "name": "test/fuzz/p2p_transport_serialization.cpp",
+    "subsystem": "test",
+    "loc": 405,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_package_eval_cpp",
+    "name": "test/fuzz/package_eval.cpp",
+    "subsystem": "test",
+    "loc": 330,
+    "classes": 3,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_parse_hd_keypath_cpp",
+    "name": "test/fuzz/parse_hd_keypath.cpp",
+    "subsystem": "test",
+    "loc": 23,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_parse_numbers_cpp",
+    "name": "test/fuzz/parse_numbers.cpp",
+    "subsystem": "test",
+    "loc": 37,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_parse_script_cpp",
+    "name": "test/fuzz/parse_script.cpp",
+    "subsystem": "test",
+    "loc": 16,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_parse_univalue_cpp",
+    "name": "test/fuzz/parse_univalue.cpp",
+    "subsystem": "test",
+    "loc": 94,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_partially_downloaded_block_cpp",
+    "name": "test/fuzz/partially_downloaded_block.cpp",
+    "subsystem": "test",
+    "loc": 146,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_policy_estimator_cpp",
+    "name": "test/fuzz/policy_estimator.cpp",
+    "subsystem": "test",
+    "loc": 99,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_policy_estimator_io_cpp",
+    "name": "test/fuzz/policy_estimator_io.cpp",
+    "subsystem": "test",
+    "loc": 35,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_poolresource_cpp",
+    "name": "test/fuzz/poolresource.cpp",
+    "subsystem": "test",
+    "loc": 147,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_pow_cpp",
+    "name": "test/fuzz/pow.cpp",
+    "subsystem": "test",
+    "loc": 124,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_prevector_cpp",
+    "name": "test/fuzz/prevector.cpp",
+    "subsystem": "test",
+    "loc": 283,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_primitives_transaction_cpp",
+    "name": "test/fuzz/primitives_transaction.cpp",
+    "subsystem": "test",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_process_message_cpp",
+    "name": "test/fuzz/process_message.cpp",
+    "subsystem": "test",
+    "loc": 94,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_process_messages_cpp",
+    "name": "test/fuzz/process_messages.cpp",
+    "subsystem": "test",
+    "loc": 94,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_protocol_cpp",
+    "name": "test/fuzz/protocol.cpp",
+    "subsystem": "test",
+    "loc": 32,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_psbt_cpp",
+    "name": "test/fuzz/psbt.cpp",
+    "subsystem": "test",
+    "loc": 93,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_random_cpp",
+    "name": "test/fuzz/random.cpp",
+    "subsystem": "test",
+    "loc": 30,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_rbf_cpp",
+    "name": "test/fuzz/rbf.cpp",
+    "subsystem": "test",
+    "loc": 210,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_rolling_bloom_filter_cpp",
+    "name": "test/fuzz/rolling_bloom_filter.cpp",
+    "subsystem": "test",
+    "loc": 46,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_rpc_cpp",
+    "name": "test/fuzz/rpc.cpp",
+    "subsystem": "test",
+    "loc": 391,
+    "classes": 1,
+    "functions": 5,
+    "enums": 1
+  },
+  {
+    "id": "test_fuzz_script_cpp",
+    "name": "test/fuzz/script.cpp",
+    "subsystem": "test",
+    "loc": 171,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_assets_test_minimizer_cpp",
+    "name": "test/fuzz/script_assets_test_minimizer.cpp",
+    "subsystem": "test",
+    "loc": 201,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_descriptor_cache_cpp",
+    "name": "test/fuzz/script_descriptor_cache.cpp",
+    "subsystem": "test",
+    "loc": 42,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_flags_cpp",
+    "name": "test/fuzz/script_flags.cpp",
+    "subsystem": "test",
+    "loc": 71,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_format_cpp",
+    "name": "test/fuzz/script_format.cpp",
+    "subsystem": "test",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_interpreter_cpp",
+    "name": "test/fuzz/script_interpreter.cpp",
+    "subsystem": "test",
+    "loc": 41,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_ops_cpp",
+    "name": "test/fuzz/script_ops.cpp",
+    "subsystem": "test",
+    "loc": 67,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_parsing_cpp",
+    "name": "test/fuzz/script_parsing.cpp",
+    "subsystem": "test",
+    "loc": 33,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_sigcache_cpp",
+    "name": "test/fuzz/script_sigcache.cpp",
+    "subsystem": "test",
+    "loc": 55,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_script_sign_cpp",
+    "name": "test/fuzz/script_sign.cpp",
+    "subsystem": "test",
+    "loc": 139,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_scriptnum_ops_cpp",
+    "name": "test/fuzz/scriptnum_ops.cpp",
+    "subsystem": "test",
+    "loc": 128,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
+    "name": "test/fuzz/secp256k1_ec_seckey_import_export_der.cpp",
+    "subsystem": "test",
+    "loc": 38,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
+    "name": "test/fuzz/secp256k1_ecdsa_signature_parse_der_lax.cpp",
+    "subsystem": "test",
+    "loc": 30,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_signature_checker_cpp",
+    "name": "test/fuzz/signature_checker.cpp",
+    "subsystem": "test",
+    "loc": 64,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_signet_cpp",
+    "name": "test/fuzz/signet.cpp",
+    "subsystem": "test",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_socks5_cpp",
+    "name": "test/fuzz/socks5.cpp",
+    "subsystem": "test",
+    "loc": 48,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_span_cpp",
+    "name": "test/fuzz/span.cpp",
+    "subsystem": "test",
+    "loc": 39,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_string_cpp",
+    "name": "test/fuzz/string.cpp",
+    "subsystem": "test",
+    "loc": 150,
+    "classes": 0,
+    "functions": 1,
+    "enums": 1
+  },
+  {
+    "id": "test_fuzz_strprintf_cpp",
+    "name": "test/fuzz/strprintf.cpp",
+    "subsystem": "test",
+    "loc": 134,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_system_cpp",
+    "name": "test/fuzz/system.cpp",
+    "subsystem": "test",
+    "loc": 122,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_timeoffsets_cpp",
+    "name": "test/fuzz/timeoffsets.cpp",
+    "subsystem": "test",
+    "loc": 30,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_torcontrol_cpp",
+    "name": "test/fuzz/torcontrol.cpp",
+    "subsystem": "test",
+    "loc": 80,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_transaction_cpp",
+    "name": "test/fuzz/transaction.cpp",
+    "subsystem": "test",
+    "loc": 103,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_tx_in_cpp",
+    "name": "test/fuzz/tx_in.cpp",
+    "subsystem": "test",
+    "loc": 29,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_tx_out_cpp",
+    "name": "test/fuzz/tx_out.cpp",
+    "subsystem": "test",
+    "loc": 32,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_tx_pool_cpp",
+    "name": "test/fuzz/tx_pool.cpp",
+    "subsystem": "test",
+    "loc": 427,
+    "classes": 2,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_txorphan_cpp",
+    "name": "test/fuzz/txorphan.cpp",
+    "subsystem": "test",
+    "loc": 158,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_txrequest_cpp",
+    "name": "test/fuzz/txrequest.cpp",
+    "subsystem": "test",
+    "loc": 374,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_cpp",
+    "name": "test/fuzz/util.cpp",
+    "subsystem": "test",
+    "loc": 356,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_h",
+    "name": "test/fuzz/util.h",
+    "subsystem": "test",
+    "loc": 325,
+    "classes": 2,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_descriptor_cpp",
+    "name": "test/fuzz/util/descriptor.cpp",
+    "subsystem": "test",
+    "loc": 145,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_descriptor_h",
+    "name": "test/fuzz/util/descriptor.h",
+    "subsystem": "test",
+    "loc": 79,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_mempool_cpp",
+    "name": "test/fuzz/util/mempool.cpp",
+    "subsystem": "test",
+    "loc": 31,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_mempool_h",
+    "name": "test/fuzz/util/mempool.h",
+    "subsystem": "test",
+    "loc": 26,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_net_cpp",
+    "name": "test/fuzz/util/net.cpp",
+    "subsystem": "test",
+    "loc": 423,
+    "classes": 1,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_util_net_h",
+    "name": "test/fuzz/util/net.h",
+    "subsystem": "test",
+    "loc": 149,
+    "classes": 1,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_utxo_snapshot_cpp",
+    "name": "test/fuzz/utxo_snapshot.cpp",
+    "subsystem": "test",
+    "loc": 200,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_utxo_total_supply_cpp",
+    "name": "test/fuzz/utxo_total_supply.cpp",
+    "subsystem": "test",
+    "loc": 167,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_validation_load_mempool_cpp",
+    "name": "test/fuzz/validation_load_mempool.cpp",
+    "subsystem": "test",
+    "loc": 61,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_vecdeque_cpp",
+    "name": "test/fuzz/vecdeque.cpp",
+    "subsystem": "test",
+    "loc": 491,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_fuzz_versionbits_cpp",
+    "name": "test/fuzz/versionbits.cpp",
+    "subsystem": "test",
+    "loc": 365,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_getarg_tests_cpp",
+    "name": "test/getarg_tests.cpp",
+    "subsystem": "test",
+    "loc": 457,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_hash_tests_cpp",
+    "name": "test/hash_tests.cpp",
+    "subsystem": "test",
+    "loc": 151,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_headers_sync_chainwork_tests_cpp",
+    "name": "test/headers_sync_chainwork_tests.cpp",
+    "subsystem": "test",
+    "loc": 146,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_httpserver_tests_cpp",
+    "name": "test/httpserver_tests.cpp",
+    "subsystem": "test",
+    "loc": 42,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_i2p_tests_cpp",
+    "name": "test/i2p_tests.cpp",
+    "subsystem": "test",
+    "loc": 174,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_interfaces_tests_cpp",
+    "name": "test/interfaces_tests.cpp",
+    "subsystem": "test",
+    "loc": 165,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_ipc_test_cpp",
+    "name": "test/ipc_test.cpp",
+    "subsystem": "test",
+    "loc": 67,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_ipc_test_h",
+    "name": "test/ipc_test.h",
+    "subsystem": "test",
+    "loc": 21,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_ipc_tests_cpp",
+    "name": "test/ipc_tests.cpp",
+    "subsystem": "test",
+    "loc": 13,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_key_io_tests_cpp",
+    "name": "test/key_io_tests.cpp",
+    "subsystem": "test",
+    "loc": 149,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_key_tests_cpp",
+    "name": "test/key_tests.cpp",
+    "subsystem": "test",
+    "loc": 389,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_logging_tests_cpp",
+    "name": "test/logging_tests.cpp",
+    "subsystem": "test",
+    "loc": 283,
+    "classes": 1,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_main_cpp",
+    "name": "test/main.cpp",
+    "subsystem": "test",
+    "loc": 48,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_mempool_tests_cpp",
+    "name": "test/mempool_tests.cpp",
+    "subsystem": "test",
+    "loc": 807,
+    "classes": 1,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_merkle_tests_cpp",
+    "name": "test/merkle_tests.cpp",
+    "subsystem": "test",
+    "loc": 352,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "test_merkleblock_tests_cpp",
+    "name": "test/merkleblock_tests.cpp",
+    "subsystem": "test",
+    "loc": 80,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_miner_tests_cpp",
+    "name": "test/miner_tests.cpp",
+    "subsystem": "test",
+    "loc": 665,
+    "classes": 1,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_miniminer_tests_cpp",
+    "name": "test/miniminer_tests.cpp",
+    "subsystem": "test",
+    "loc": 712,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_miniscript_tests_cpp",
+    "name": "test/miniscript_tests.cpp",
+    "subsystem": "test",
+    "loc": 724,
+    "classes": 4,
+    "functions": 10,
+    "enums": 2
+  },
+  {
+    "id": "test_minisketch_tests_cpp",
+    "name": "test/minisketch_tests.cpp",
+    "subsystem": "test",
+    "loc": 52,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_multisig_tests_cpp",
+    "name": "test/multisig_tests.cpp",
+    "subsystem": "test",
+    "loc": 226,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_net_peer_connection_tests_cpp",
+    "name": "test/net_peer_connection_tests.cpp",
+    "subsystem": "test",
+    "loc": 163,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_net_peer_eviction_tests_cpp",
+    "name": "test/net_peer_eviction_tests.cpp",
+    "subsystem": "test",
+    "loc": 685,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_net_tests_cpp",
+    "name": "test/net_tests.cpp",
+    "subsystem": "test",
+    "loc": 1563,
+    "classes": 1,
+    "functions": 18,
+    "enums": 0
+  },
+  {
+    "id": "test_netbase_tests_cpp",
+    "name": "test/netbase_tests.cpp",
+    "subsystem": "test",
+    "loc": 616,
+    "classes": 0,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "test_node_warnings_tests_cpp",
+    "name": "test/node_warnings_tests.cpp",
+    "subsystem": "test",
+    "loc": 52,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_orphanage_tests_cpp",
+    "name": "test/orphanage_tests.cpp",
+    "subsystem": "test",
+    "loc": 369,
+    "classes": 1,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_peerman_tests_cpp",
+    "name": "test/peerman_tests.cpp",
+    "subsystem": "test",
+    "loc": 77,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_pmt_tests_cpp",
+    "name": "test/pmt_tests.cpp",
+    "subsystem": "test",
+    "loc": 124,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_policy_fee_tests_cpp",
+    "name": "test/policy_fee_tests.cpp",
+    "subsystem": "test",
+    "loc": 35,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_policyestimator_tests_cpp",
+    "name": "test/policyestimator_tests.cpp",
+    "subsystem": "test",
+    "loc": 268,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_pool_tests_cpp",
+    "name": "test/pool_tests.cpp",
+    "subsystem": "test",
+    "loc": 194,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_pow_tests_cpp",
+    "name": "test/pow_tests.cpp",
+    "subsystem": "test",
+    "loc": 211,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "test_prevector_tests_cpp",
+    "name": "test/prevector_tests.cpp",
+    "subsystem": "test",
+    "loc": 296,
+    "classes": 1,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_raii_event_tests_cpp",
+    "name": "test/raii_event_tests.cpp",
+    "subsystem": "test",
+    "loc": 99,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_random_tests_cpp",
+    "name": "test/random_tests.cpp",
+    "subsystem": "test",
+    "loc": 259,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_rbf_tests_cpp",
+    "name": "test/rbf_tests.cpp",
+    "subsystem": "test",
+    "loc": 625,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_rest_tests_cpp",
+    "name": "test/rest_tests.cpp",
+    "subsystem": "test",
+    "loc": 48,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_result_tests_cpp",
+    "name": "test/result_tests.cpp",
+    "subsystem": "test",
+    "loc": 96,
+    "classes": 1,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "test_reverselock_tests_cpp",
+    "name": "test/reverselock_tests.cpp",
+    "subsystem": "test",
+    "loc": 93,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_rpc_tests_cpp",
+    "name": "test/rpc_tests.cpp",
+    "subsystem": "test",
+    "loc": 641,
+    "classes": 2,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "test_sanity_tests_cpp",
+    "name": "test/sanity_tests.cpp",
+    "subsystem": "test",
+    "loc": 17,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_scheduler_tests_cpp",
+    "name": "test/scheduler_tests.cpp",
+    "subsystem": "test",
+    "loc": 215,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_script_p2sh_tests_cpp",
+    "name": "test/script_p2sh_tests.cpp",
+    "subsystem": "test",
+    "loc": 391,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_script_parse_tests_cpp",
+    "name": "test/script_parse_tests.cpp",
+    "subsystem": "test",
+    "loc": 55,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_script_segwit_tests_cpp",
+    "name": "test/script_segwit_tests.cpp",
+    "subsystem": "test",
+    "loc": 164,
+    "classes": 0,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "test_script_standard_tests_cpp",
+    "name": "test/script_standard_tests.cpp",
+    "subsystem": "test",
+    "loc": 452,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "test_script_tests_cpp",
+    "name": "test/script_tests.cpp",
+    "subsystem": "test",
+    "loc": 1711,
+    "classes": 3,
+    "functions": 32,
+    "enums": 1
+  },
+  {
+    "id": "test_scriptnum10_h",
+    "name": "test/scriptnum10.h",
+    "subsystem": "test",
+    "loc": 182,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_scriptnum_tests_cpp",
+    "name": "test/scriptnum_tests.cpp",
+    "subsystem": "test",
+    "loc": 200,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "test_serfloat_tests_cpp",
+    "name": "test/serfloat_tests.cpp",
+    "subsystem": "test",
+    "loc": 153,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_serialize_tests_cpp",
+    "name": "test/serialize_tests.cpp",
+    "subsystem": "test",
+    "loc": 499,
+    "classes": 9,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "test_settings_tests_cpp",
+    "name": "test/settings_tests.cpp",
+    "subsystem": "test",
+    "loc": 269,
+    "classes": 1,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_sighash_tests_cpp",
+    "name": "test/sighash_tests.cpp",
+    "subsystem": "test",
+    "loc": 208,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_sigopcount_tests_cpp",
+    "name": "test/sigopcount_tests.cpp",
+    "subsystem": "test",
+    "loc": 231,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_skiplist_tests_cpp",
+    "name": "test/skiplist_tests.cpp",
+    "subsystem": "test",
+    "loc": 191,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_sock_tests_cpp",
+    "name": "test/sock_tests.cpp",
+    "subsystem": "test",
+    "loc": 174,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_span_tests_cpp",
+    "name": "test/span_tests.cpp",
+    "subsystem": "test",
+    "loc": 73,
+    "classes": 3,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_streams_tests_cpp",
+    "name": "test/streams_tests.cpp",
+    "subsystem": "test",
+    "loc": 570,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "test_sync_tests_cpp",
+    "name": "test/sync_tests.cpp",
+    "subsystem": "test",
+    "loc": 143,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_system_tests_cpp",
+    "name": "test/system_tests.cpp",
+    "subsystem": "test",
+    "loc": 82,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_timeoffsets_tests_cpp",
+    "name": "test/timeoffsets_tests.cpp",
+    "subsystem": "test",
+    "loc": 72,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_torcontrol_tests_cpp",
+    "name": "test/torcontrol_tests.cpp",
+    "subsystem": "test",
+    "loc": 202,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_transaction_tests_cpp",
+    "name": "test/transaction_tests.cpp",
+    "subsystem": "test",
+    "loc": 1039,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "test_translation_tests_cpp",
+    "name": "test/translation_tests.cpp",
+    "subsystem": "test",
+    "loc": 21,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_txindex_tests_cpp",
+    "name": "test/txindex_tests.cpp",
+    "subsystem": "test",
+    "loc": 80,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_txpackage_tests_cpp",
+    "name": "test/txpackage_tests.cpp",
+    "subsystem": "test",
+    "loc": 1078,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "test_txreconciliation_tests_cpp",
+    "name": "test/txreconciliation_tests.cpp",
+    "subsystem": "test",
+    "loc": 84,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_txrequest_tests_cpp",
+    "name": "test/txrequest_tests.cpp",
+    "subsystem": "test",
+    "loc": 740,
+    "classes": 2,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "test_txvalidation_tests_cpp",
+    "name": "test/txvalidation_tests.cpp",
+    "subsystem": "test",
+    "loc": 390,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_txvalidationcache_tests_cpp",
+    "name": "test/txvalidationcache_tests.cpp",
+    "subsystem": "test",
+    "loc": 388,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_uint256_tests_cpp",
+    "name": "test/uint256_tests.cpp",
+    "subsystem": "test",
+    "loc": 409,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "test_util_blockfilter_cpp",
+    "name": "test/util/blockfilter.cpp",
+    "subsystem": "test",
+    "loc": 31,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_blockfilter_h",
+    "name": "test/util/blockfilter.h",
+    "subsystem": "test",
+    "loc": 17,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_chainstate_h",
+    "name": "test/util/chainstate.h",
+    "subsystem": "test",
+    "loc": 135,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_cluster_linearize_h",
+    "name": "test/util/cluster_linearize.h",
+    "subsystem": "test",
+    "loc": 353,
+    "classes": 1,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_util_coins_cpp",
+    "name": "test/util/coins.cpp",
+    "subsystem": "test",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_coins_h",
+    "name": "test/util/coins.h",
+    "subsystem": "test",
+    "loc": 19,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_index_cpp",
+    "name": "test/util/index.cpp",
+    "subsystem": "test",
+    "loc": 22,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_index_h",
+    "name": "test/util/index.h",
+    "subsystem": "test",
+    "loc": 16,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_json_cpp",
+    "name": "test/util/json.cpp",
+    "subsystem": "test",
+    "loc": 17,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_json_h",
+    "name": "test/util/json.h",
+    "subsystem": "test",
+    "loc": 14,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_logging_cpp",
+    "name": "test/util/logging.cpp",
+    "subsystem": "test",
+    "loc": 31,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_util_logging_h",
+    "name": "test/util/logging.h",
+    "subsystem": "test",
+    "loc": 41,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_mining_cpp",
+    "name": "test/util/mining.cpp",
+    "subsystem": "test",
+    "loc": 130,
+    "classes": 1,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_util_mining_h",
+    "name": "test/util/mining.h",
+    "subsystem": "test",
+    "loc": 42,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_net_cpp",
+    "name": "test/util/net.cpp",
+    "subsystem": "test",
+    "loc": 139,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "test_util_net_h",
+    "name": "test/util/net.h",
+    "subsystem": "test",
+    "loc": 242,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_poolresourcetester_h",
+    "name": "test/util/poolresourcetester.h",
+    "subsystem": "test",
+    "loc": 129,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_random_cpp",
+    "name": "test/util/random.cpp",
+    "subsystem": "test",
+    "loc": 38,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_random_h",
+    "name": "test/util/random.h",
+    "subsystem": "test",
+    "loc": 60,
+    "classes": 0,
+    "functions": 6,
+    "enums": 1
+  },
+  {
+    "id": "test_util_script_cpp",
+    "name": "test/util/script.cpp",
+    "subsystem": "test",
+    "loc": 13,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_script_h",
+    "name": "test/util/script.h",
+    "subsystem": "test",
+    "loc": 36,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_setup_common_cpp",
+    "name": "test/util/setup_common.cpp",
+    "subsystem": "test",
+    "loc": 612,
+    "classes": 1,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "test_util_setup_common_h",
+    "name": "test/util/setup_common.h",
+    "subsystem": "test",
+    "loc": 267,
+    "classes": 14,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_util_str_cpp",
+    "name": "test/util/str.cpp",
+    "subsystem": "test",
+    "loc": 21,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_util_str_h",
+    "name": "test/util/str.h",
+    "subsystem": "test",
+    "loc": 45,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_util_transaction_utils_cpp",
+    "name": "test/util/transaction_utils.cpp",
+    "subsystem": "test",
+    "loc": 92,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "test_util_transaction_utils_h",
+    "name": "test/util/transaction_utils.h",
+    "subsystem": "test",
+    "loc": 33,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_txmempool_cpp",
+    "name": "test/util/txmempool.cpp",
+    "subsystem": "test",
+    "loc": 173,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "test_util_txmempool_h",
+    "name": "test/util/txmempool.h",
+    "subsystem": "test",
+    "loc": 59,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_validation_cpp",
+    "name": "test/util/validation.cpp",
+    "subsystem": "test",
+    "loc": 32,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "test_util_validation_h",
+    "name": "test/util/validation.h",
+    "subsystem": "test",
+    "loc": 29,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "test_util_tests_cpp",
+    "name": "test/util_tests.cpp",
+    "subsystem": "test",
+    "loc": 1834,
+    "classes": 2,
+    "functions": 54,
+    "enums": 1
+  },
+  {
+    "id": "test_util_threadnames_tests_cpp",
+    "name": "test/util_threadnames_tests.cpp",
+    "subsystem": "test",
+    "loc": 66,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_validation_block_tests_cpp",
+    "name": "test/validation_block_tests.cpp",
+    "subsystem": "test",
+    "loc": 363,
+    "classes": 2,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "test_validation_chainstate_tests_cpp",
+    "name": "test/validation_chainstate_tests.cpp",
+    "subsystem": "test",
+    "loc": 144,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_validation_chainstatemanager_tests_cpp",
+    "name": "test/validation_chainstatemanager_tests.cpp",
+    "subsystem": "test",
+    "loc": 772,
+    "classes": 1,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "test_validation_flush_tests_cpp",
+    "name": "test/validation_flush_tests.cpp",
+    "subsystem": "test",
+    "loc": 157,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "test_validation_tests_cpp",
+    "name": "test/validation_tests.cpp",
+    "subsystem": "test",
+    "loc": 363,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "test_validationinterface_tests_cpp",
+    "name": "test/validationinterface_tests.cpp",
+    "subsystem": "test",
+    "loc": 104,
+    "classes": 2,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "test_versionbits_tests_cpp",
+    "name": "test/versionbits_tests.cpp",
+    "subsystem": "test",
+    "loc": 459,
+    "classes": 5,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "threadsafety_h",
+    "name": "threadsafety.h",
+    "subsystem": "other",
+    "loc": 77,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "tinyformat_h",
+    "name": "tinyformat.h",
+    "subsystem": "other",
+    "loc": 1163,
+    "classes": 9,
+    "functions": 19,
+    "enums": 0
+  },
+  {
+    "id": "torcontrol_cpp",
+    "name": "torcontrol.cpp",
+    "subsystem": "network",
+    "loc": 719,
+    "classes": 1,
+    "functions": 27,
+    "enums": 0
+  },
+  {
+    "id": "torcontrol_h",
+    "name": "torcontrol.h",
+    "subsystem": "network",
+    "loc": 156,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "txdb_cpp",
+    "name": "txdb.cpp",
+    "subsystem": "consensus",
+    "loc": 228,
+    "classes": 2,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "txdb_h",
+    "name": "txdb.h",
+    "subsystem": "consensus",
+    "loc": 80,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "txmempool_cpp",
+    "name": "txmempool.cpp",
+    "subsystem": "mempool",
+    "loc": 1369,
+    "classes": 1,
+    "functions": 65,
+    "enums": 0
+  },
+  {
+    "id": "txmempool_h",
+    "name": "txmempool.h",
+    "subsystem": "mempool",
+    "loc": 863,
+    "classes": 16,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "txorphanage_cpp",
+    "name": "txorphanage.cpp",
+    "subsystem": "mempool",
+    "loc": 279,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "txorphanage_h",
+    "name": "txorphanage.h",
+    "subsystem": "mempool",
+    "loc": 112,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "txrequest_cpp",
+    "name": "txrequest.cpp",
+    "subsystem": "other",
+    "loc": 756,
+    "classes": 11,
+    "functions": 20,
+    "enums": 2
+  },
+  {
+    "id": "txrequest_h",
+    "name": "txrequest.h",
+    "subsystem": "other",
+    "loc": 211,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "uint256_cpp",
+    "name": "uint256.cpp",
+    "subsystem": "util",
+    "loc": 63,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "uint256_h",
+    "name": "uint256.h",
+    "subsystem": "util",
+    "loc": 199,
+    "classes": 3,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "undo_h",
+    "name": "undo.h",
+    "subsystem": "other",
+    "loc": 70,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_any_h",
+    "name": "util/any.h",
+    "subsystem": "util",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_asmap_cpp",
+    "name": "util/asmap.cpp",
+    "subsystem": "util",
+    "loc": 223,
+    "classes": 0,
+    "functions": 8,
+    "enums": 1
+  },
+  {
+    "id": "util_asmap_h",
+    "name": "util/asmap.h",
+    "subsystem": "util",
+    "loc": 20,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_batchpriority_cpp",
+    "name": "util/batchpriority.cpp",
+    "subsystem": "util",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_batchpriority_h",
+    "name": "util/batchpriority.h",
+    "subsystem": "util",
+    "loc": 15,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_bip32_cpp",
+    "name": "util/bip32.cpp",
+    "subsystem": "util",
+    "loc": 67,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "util_bip32_h",
+    "name": "util/bip32.h",
+    "subsystem": "util",
+    "loc": 19,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_bitdeque_h",
+    "name": "util/bitdeque.h",
+    "subsystem": "util",
+    "loc": 468,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_bitset_h",
+    "name": "util/bitset.h",
+    "subsystem": "util",
+    "loc": 527,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_bytevectorhash_cpp",
+    "name": "util/bytevectorhash.cpp",
+    "subsystem": "util",
+    "loc": 20,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_bytevectorhash_h",
+    "name": "util/bytevectorhash.h",
+    "subsystem": "util",
+    "loc": 27,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_chaintype_cpp",
+    "name": "util/chaintype.cpp",
+    "subsystem": "util",
+    "loc": 43,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_chaintype_h",
+    "name": "util/chaintype.h",
+    "subsystem": "util",
+    "loc": 23,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "util_check_cpp",
+    "name": "util/check.cpp",
+    "subsystem": "util",
+    "loc": 35,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "util_check_h",
+    "name": "util/check.h",
+    "subsystem": "util",
+    "loc": 100,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_epochguard_h",
+    "name": "util/epochguard.h",
+    "subsystem": "util",
+    "loc": 102,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_exception_cpp",
+    "name": "util/exception.cpp",
+    "subsystem": "util",
+    "loc": 41,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_exception_h",
+    "name": "util/exception.h",
+    "subsystem": "util",
+    "loc": 14,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_fastrange_h",
+    "name": "util/fastrange.h",
+    "subsystem": "util",
+    "loc": 51,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_feefrac_cpp",
+    "name": "util/feefrac.cpp",
+    "subsystem": "util",
+    "loc": 73,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_feefrac_h",
+    "name": "util/feefrac.h",
+    "subsystem": "util",
+    "loc": 159,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_fs_cpp",
+    "name": "util/fs.cpp",
+    "subsystem": "util",
+    "loc": 134,
+    "classes": 0,
+    "functions": 11,
+    "enums": 0
+  },
+  {
+    "id": "util_fs_h",
+    "name": "util/fs.h",
+    "subsystem": "util",
+    "loc": 253,
+    "classes": 2,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "util_fs_helpers_cpp",
+    "name": "util/fs_helpers.cpp",
+    "subsystem": "util",
+    "loc": 311,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "util_fs_helpers_h",
+    "name": "util/fs_helpers.h",
+    "subsystem": "util",
+    "loc": 83,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "util_golombrice_h",
+    "name": "util/golombrice.h",
+    "subsystem": "util",
+    "loc": 45,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_hash_type_h",
+    "name": "util/hash_type.h",
+    "subsystem": "util",
+    "loc": 72,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_hasher_cpp",
+    "name": "util/hasher.cpp",
+    "subsystem": "util",
+    "loc": 26,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "util_hasher_h",
+    "name": "util/hasher.h",
+    "subsystem": "util",
+    "loc": 101,
+    "classes": 7,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_insert_h",
+    "name": "util/insert.h",
+    "subsystem": "util",
+    "loc": 24,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_macros_h",
+    "name": "util/macros.h",
+    "subsystem": "util",
+    "loc": 20,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_moneystr_cpp",
+    "name": "util/moneystr.cpp",
+    "subsystem": "util",
+    "loc": 92,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_moneystr_h",
+    "name": "util/moneystr.h",
+    "subsystem": "util",
+    "loc": 24,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_overflow_h",
+    "name": "util/overflow.h",
+    "subsystem": "util",
+    "loc": 50,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "util_overloaded_h",
+    "name": "util/overloaded.h",
+    "subsystem": "util",
+    "loc": 22,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_rbf_cpp",
+    "name": "util/rbf.cpp",
+    "subsystem": "util",
+    "loc": 17,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_rbf_h",
+    "name": "util/rbf.h",
+    "subsystem": "util",
+    "loc": 23,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_readwritefile_cpp",
+    "name": "util/readwritefile.cpp",
+    "subsystem": "util",
+    "loc": 50,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_readwritefile_h",
+    "name": "util/readwritefile.h",
+    "subsystem": "util",
+    "loc": 28,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_result_h",
+    "name": "util/result.h",
+    "subsystem": "util",
+    "loc": 99,
+    "classes": 2,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_serfloat_cpp",
+    "name": "util/serfloat.cpp",
+    "subsystem": "util",
+    "loc": 64,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_serfloat_h",
+    "name": "util/serfloat.h",
+    "subsystem": "util",
+    "loc": 16,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_signalinterrupt_cpp",
+    "name": "util/signalinterrupt.cpp",
+    "subsystem": "util",
+    "loc": 77,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "util_signalinterrupt_h",
+    "name": "util/signalinterrupt.h",
+    "subsystem": "util",
+    "loc": 52,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_sock_cpp",
+    "name": "util/sock.cpp",
+    "subsystem": "util",
+    "loc": 430,
+    "classes": 0,
+    "functions": 25,
+    "enums": 0
+  },
+  {
+    "id": "util_sock_h",
+    "name": "util/sock.h",
+    "subsystem": "util",
+    "loc": 287,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_strencodings_cpp",
+    "name": "util/strencodings.cpp",
+    "subsystem": "util",
+    "loc": 491,
+    "classes": 0,
+    "functions": 24,
+    "enums": 0
+  },
+  {
+    "id": "util_strencodings_h",
+    "name": "util/strencodings.h",
+    "subsystem": "util",
+    "loc": 372,
+    "classes": 1,
+    "functions": 11,
+    "enums": 2
+  },
+  {
+    "id": "util_string_cpp",
+    "name": "util/string.cpp",
+    "subsystem": "util",
+    "loc": 16,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_string_h",
+    "name": "util/string.h",
+    "subsystem": "util",
+    "loc": 176,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "util_subprocess_h",
+    "name": "util/subprocess.h",
+    "subsystem": "util",
+    "loc": 1462,
+    "classes": 15,
+    "functions": 26,
+    "enums": 1
+  },
+  {
+    "id": "util_syserror_cpp",
+    "name": "util/syserror.cpp",
+    "subsystem": "util",
+    "loc": 57,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "util_syserror_h",
+    "name": "util/syserror.h",
+    "subsystem": "util",
+    "loc": 20,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_task_runner_h",
+    "name": "util/task_runner.h",
+    "subsystem": "util",
+    "loc": 52,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_thread_cpp",
+    "name": "util/thread.cpp",
+    "subsystem": "util",
+    "loc": 30,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "util_thread_h",
+    "name": "util/thread.h",
+    "subsystem": "util",
+    "loc": 19,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_threadinterrupt_cpp",
+    "name": "util/threadinterrupt.cpp",
+    "subsystem": "util",
+    "loc": 35,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "util_threadinterrupt_h",
+    "name": "util/threadinterrupt.h",
+    "subsystem": "util",
+    "loc": 42,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_threadnames_cpp",
+    "name": "util/threadnames.cpp",
+    "subsystem": "util",
+    "loc": 66,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "util_threadnames_h",
+    "name": "util/threadnames.h",
+    "subsystem": "util",
+    "loc": 26,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_time_cpp",
+    "name": "util/time.cpp",
+    "subsystem": "util",
+    "loc": 74,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "util_time_h",
+    "name": "util/time.h",
+    "subsystem": "util",
+    "loc": 119,
+    "classes": 3,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "util_tokenpipe_cpp",
+    "name": "util/tokenpipe.cpp",
+    "subsystem": "util",
+    "loc": 109,
+    "classes": 0,
+    "functions": 10,
+    "enums": 0
+  },
+  {
+    "id": "util_tokenpipe_h",
+    "name": "util/tokenpipe.h",
+    "subsystem": "util",
+    "loc": 127,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_trace_h",
+    "name": "util/trace.h",
+    "subsystem": "util",
+    "loc": 47,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_transaction_identifier_h",
+    "name": "util/transaction_identifier.h",
+    "subsystem": "util",
+    "loc": 75,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_translation_h",
+    "name": "util/translation.h",
+    "subsystem": "util",
+    "loc": 85,
+    "classes": 2,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "util_types_h",
+    "name": "util/types.h",
+    "subsystem": "util",
+    "loc": 12,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_ui_change_type_h",
+    "name": "util/ui_change_type.h",
+    "subsystem": "util",
+    "loc": 15,
+    "classes": 0,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "util_vecdeque_h",
+    "name": "util/vecdeque.h",
+    "subsystem": "util",
+    "loc": 317,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "util_vector_h",
+    "name": "util/vector.h",
+    "subsystem": "util",
+    "loc": 83,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "validation_cpp",
+    "name": "validation.cpp",
+    "subsystem": "consensus",
+    "loc": 6521,
+    "classes": 5,
+    "functions": 128,
+    "enums": 0
+  },
+  {
+    "id": "validation_h",
+    "name": "validation.h",
+    "subsystem": "consensus",
+    "loc": 1353,
+    "classes": 20,
+    "functions": 3,
+    "enums": 6
+  },
+  {
+    "id": "validationinterface_cpp",
+    "name": "validationinterface.cpp",
+    "subsystem": "other",
+    "loc": 258,
+    "classes": 1,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "validationinterface_h",
+    "name": "validationinterface.h",
+    "subsystem": "other",
+    "loc": 232,
+    "classes": 10,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "versionbits_cpp",
+    "name": "versionbits.cpp",
+    "subsystem": "consensus",
+    "loc": 247,
+    "classes": 1,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "versionbits_h",
+    "name": "versionbits.h",
+    "subsystem": "consensus",
+    "loc": 107,
+    "classes": 3,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_bdb_cpp",
+    "name": "wallet/bdb.cpp",
+    "subsystem": "wallet",
+    "loc": 1020,
+    "classes": 1,
+    "functions": 56,
+    "enums": 0
+  },
+  {
+    "id": "wallet_bdb_h",
+    "name": "wallet/bdb.h",
+    "subsystem": "wallet",
+    "loc": 226,
+    "classes": 12,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_coincontrol_cpp",
+    "name": "wallet/coincontrol.cpp",
+    "subsystem": "wallet",
+    "loc": 155,
+    "classes": 0,
+    "functions": 26,
+    "enums": 0
+  },
+  {
+    "id": "wallet_coincontrol_h",
+    "name": "wallet/coincontrol.h",
+    "subsystem": "wallet",
+    "loc": 190,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_coinselection_cpp",
+    "name": "wallet/coinselection.cpp",
+    "subsystem": "wallet",
+    "loc": 995,
+    "classes": 1,
+    "functions": 31,
+    "enums": 0
+  },
+  {
+    "id": "wallet_coinselection_h",
+    "name": "wallet/coinselection.h",
+    "subsystem": "wallet",
+    "loc": 468,
+    "classes": 7,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_context_cpp",
+    "name": "wallet/context.cpp",
+    "subsystem": "wallet",
+    "loc": 10,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_context_h",
+    "name": "wallet/context.h",
+    "subsystem": "wallet",
+    "loc": 54,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_crypter_cpp",
+    "name": "wallet/crypter.cpp",
+    "subsystem": "wallet",
+    "loc": 140,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "wallet_crypter_h",
+    "name": "wallet/crypter.h",
+    "subsystem": "wallet",
+    "loc": 111,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_db_cpp",
+    "name": "wallet/db.cpp",
+    "subsystem": "wallet",
+    "loc": 161,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "wallet_db_h",
+    "name": "wallet/db.h",
+    "subsystem": "wallet",
+    "loc": 233,
+    "classes": 7,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "wallet_dump_cpp",
+    "name": "wallet/dump.cpp",
+    "subsystem": "wallet",
+    "loc": 306,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "wallet_dump_h",
+    "name": "wallet/dump.h",
+    "subsystem": "wallet",
+    "loc": 23,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_external_signer_scriptpubkeyman_cpp",
+    "name": "wallet/external_signer_scriptpubkeyman.cpp",
+    "subsystem": "wallet",
+    "loc": 104,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_external_signer_scriptpubkeyman_h",
+    "name": "wallet/external_signer_scriptpubkeyman.h",
+    "subsystem": "wallet",
+    "loc": 41,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_feebumper_cpp",
+    "name": "wallet/feebumper.cpp",
+    "subsystem": "wallet",
+    "loc": 391,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "wallet_feebumper_h",
+    "name": "wallet/feebumper.h",
+    "subsystem": "wallet",
+    "loc": 127,
+    "classes": 7,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "wallet_fees_cpp",
+    "name": "wallet/fees.cpp",
+    "subsystem": "wallet",
+    "loc": 94,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "wallet_fees_h",
+    "name": "wallet/fees.h",
+    "subsystem": "wallet",
+    "loc": 48,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_init_cpp",
+    "name": "wallet/init.cpp",
+    "subsystem": "wallet",
+    "loc": 138,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "wallet_interfaces_cpp",
+    "name": "wallet/interfaces.cpp",
+    "subsystem": "wallet",
+    "loc": 711,
+    "classes": 2,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "wallet_load_cpp",
+    "name": "wallet/load.cpp",
+    "subsystem": "wallet",
+    "loc": 184,
+    "classes": 0,
+    "functions": 6,
+    "enums": 0
+  },
+  {
+    "id": "wallet_load_h",
+    "name": "wallet/load.h",
+    "subsystem": "wallet",
+    "loc": 41,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_migrate_cpp",
+    "name": "wallet/migrate.cpp",
+    "subsystem": "wallet",
+    "loc": 784,
+    "classes": 9,
+    "functions": 10,
+    "enums": 3
+  },
+  {
+    "id": "wallet_migrate_h",
+    "name": "wallet/migrate.h",
+    "subsystem": "wallet",
+    "loc": 125,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_receive_cpp",
+    "name": "wallet/receive.cpp",
+    "subsystem": "wallet",
+    "loc": 452,
+    "classes": 0,
+    "functions": 21,
+    "enums": 0
+  },
+  {
+    "id": "wallet_receive_h",
+    "name": "wallet/receive.h",
+    "subsystem": "wallet",
+    "loc": 65,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_addresses_cpp",
+    "name": "wallet/rpc/addresses.cpp",
+    "subsystem": "wallet",
+    "loc": 822,
+    "classes": 1,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_backup_cpp",
+    "name": "wallet/rpc/backup.cpp",
+    "subsystem": "wallet",
+    "loc": 1938,
+    "classes": 1,
+    "functions": 24,
+    "enums": 1
+  },
+  {
+    "id": "wallet_rpc_coins_cpp",
+    "name": "wallet/rpc/coins.cpp",
+    "subsystem": "wallet",
+    "loc": 734,
+    "classes": 0,
+    "functions": 9,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_encrypt_cpp",
+    "name": "wallet/rpc/encrypt.cpp",
+    "subsystem": "wallet",
+    "loc": 279,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_signmessage_cpp",
+    "name": "wallet/rpc/signmessage.cpp",
+    "subsystem": "wallet",
+    "loc": 70,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_spend_cpp",
+    "name": "wallet/rpc/spend.cpp",
+    "subsystem": "wallet",
+    "loc": 1785,
+    "classes": 0,
+    "functions": 23,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_transactions_cpp",
+    "name": "wallet/rpc/transactions.cpp",
+    "subsystem": "wallet",
+    "loc": 965,
+    "classes": 1,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_util_cpp",
+    "name": "wallet/rpc/util.cpp",
+    "subsystem": "wallet",
+    "loc": 191,
+    "classes": 0,
+    "functions": 13,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_util_h",
+    "name": "wallet/rpc/util.h",
+    "subsystem": "wallet",
+    "loc": 58,
+    "classes": 5,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_rpc_wallet_cpp",
+    "name": "wallet/rpc/wallet.cpp",
+    "subsystem": "wallet",
+    "loc": 1178,
+    "classes": 0,
+    "functions": 15,
+    "enums": 0
+  },
+  {
+    "id": "wallet_rpc_wallet_h",
+    "name": "wallet/rpc/wallet.h",
+    "subsystem": "wallet",
+    "loc": 16,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_salvage_cpp",
+    "name": "wallet/salvage.cpp",
+    "subsystem": "wallet",
+    "loc": 221,
+    "classes": 3,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_salvage_h",
+    "name": "wallet/salvage.h",
+    "subsystem": "wallet",
+    "loc": 19,
+    "classes": 2,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_scriptpubkeyman_cpp",
+    "name": "wallet/scriptpubkeyman.cpp",
+    "subsystem": "wallet",
+    "loc": 2808,
+    "classes": 0,
+    "functions": 138,
+    "enums": 2
+  },
+  {
+    "id": "wallet_scriptpubkeyman_h",
+    "name": "wallet/scriptpubkeyman.h",
+    "subsystem": "wallet",
+    "loc": 716,
+    "classes": 12,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_spend_cpp",
+    "name": "wallet/spend.cpp",
+    "subsystem": "wallet",
+    "loc": 1470,
+    "classes": 0,
+    "functions": 35,
+    "enums": 0
+  },
+  {
+    "id": "wallet_spend_h",
+    "name": "wallet/spend.h",
+    "subsystem": "wallet",
+    "loc": 230,
+    "classes": 6,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_sqlite_cpp",
+    "name": "wallet/sqlite.cpp",
+    "subsystem": "wallet",
+    "loc": 716,
+    "classes": 0,
+    "functions": 35,
+    "enums": 0
+  },
+  {
+    "id": "wallet_sqlite_h",
+    "name": "wallet/sqlite.h",
+    "subsystem": "wallet",
+    "loc": 193,
+    "classes": 8,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_coinselector_tests_cpp",
+    "name": "wallet/test/coinselector_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 1592,
+    "classes": 0,
+    "functions": 29,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_db_tests_cpp",
+    "name": "wallet/test/db_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 389,
+    "classes": 1,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_feebumper_tests_cpp",
+    "name": "wallet/test/feebumper_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 56,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_coincontrol_cpp",
+    "name": "wallet/test/fuzz/coincontrol.cpp",
+    "subsystem": "wallet",
+    "loc": 84,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_coinselection_cpp",
+    "name": "wallet/test/fuzz/coinselection.cpp",
+    "subsystem": "wallet",
+    "loc": 333,
+    "classes": 0,
+    "functions": 8,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_crypter_cpp",
+    "name": "wallet/test/fuzz/crypter.cpp",
+    "subsystem": "wallet",
+    "loc": 87,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_fees_cpp",
+    "name": "wallet/test/fuzz/fees.cpp",
+    "subsystem": "wallet",
+    "loc": 75,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_notifications_cpp",
+    "name": "wallet/test/fuzz/notifications.cpp",
+    "subsystem": "wallet",
+    "loc": 282,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_parse_iso8601_cpp",
+    "name": "wallet/test/fuzz/parse_iso8601.cpp",
+    "subsystem": "wallet",
+    "loc": 34,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "name": "wallet/test/fuzz/scriptpubkeyman.cpp",
+    "subsystem": "wallet",
+    "loc": 201,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "name": "wallet/test/fuzz/wallet_bdb_parser.cpp",
+    "subsystem": "wallet",
+    "loc": 136,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_group_outputs_tests_cpp",
+    "name": "wallet/test/group_outputs_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 235,
+    "classes": 1,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_init_test_fixture_cpp",
+    "name": "wallet/test/init_test_fixture.cpp",
+    "subsystem": "wallet",
+    "loc": 52,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_init_test_fixture_h",
+    "name": "wallet/test/init_test_fixture.h",
+    "subsystem": "wallet",
+    "loc": 28,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_init_tests_cpp",
+    "name": "wallet/test/init_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 87,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_ismine_tests_cpp",
+    "name": "wallet/test/ismine_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 724,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_psbt_wallet_tests_cpp",
+    "name": "wallet/test/psbt_wallet_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 155,
+    "classes": 0,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_rpc_util_tests_cpp",
+    "name": "wallet/test/rpc_util_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 24,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_scriptpubkeyman_tests_cpp",
+    "name": "wallet/test/scriptpubkeyman_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 44,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_spend_tests_cpp",
+    "name": "wallet/test/spend_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 108,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_util_cpp",
+    "name": "wallet/test/util.cpp",
+    "subsystem": "wallet",
+    "loc": 194,
+    "classes": 0,
+    "functions": 16,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_util_h",
+    "name": "wallet/test/util.h",
+    "subsystem": "wallet",
+    "loc": 134,
+    "classes": 10,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_test_wallet_crypto_tests_cpp",
+    "name": "wallet/test/wallet_crypto_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 129,
+    "classes": 1,
+    "functions": 3,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_wallet_test_fixture_cpp",
+    "name": "wallet/test/wallet_test_fixture.cpp",
+    "subsystem": "wallet",
+    "loc": 26,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_wallet_test_fixture_h",
+    "name": "wallet/test/wallet_test_fixture.h",
+    "subsystem": "wallet",
+    "loc": 32,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_wallet_tests_cpp",
+    "name": "wallet/test/wallet_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 1025,
+    "classes": 1,
+    "functions": 26,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_wallet_transaction_tests_cpp",
+    "name": "wallet/test/wallet_transaction_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 26,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_walletdb_tests_cpp",
+    "name": "wallet/test/walletdb_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 59,
+    "classes": 0,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "wallet_test_walletload_tests_cpp",
+    "name": "wallet/test/walletload_tests.cpp",
+    "subsystem": "wallet",
+    "loc": 214,
+    "classes": 1,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_transaction_cpp",
+    "name": "wallet/transaction.cpp",
+    "subsystem": "wallet",
+    "loc": 57,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "wallet_transaction_h",
+    "name": "wallet/transaction.h",
+    "subsystem": "wallet",
+    "loc": 374,
+    "classes": 10,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_types_h",
+    "name": "wallet/types.h",
+    "subsystem": "wallet",
+    "loc": 68,
+    "classes": 0,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "wallet_wallet_cpp",
+    "name": "wallet/wallet.cpp",
+    "subsystem": "wallet",
+    "loc": 4687,
+    "classes": 2,
+    "functions": 184,
+    "enums": 0
+  },
+  {
+    "id": "wallet_wallet_h",
+    "name": "wallet/wallet.h",
+    "subsystem": "wallet",
+    "loc": 1132,
+    "classes": 24,
+    "functions": 2,
+    "enums": 4
+  },
+  {
+    "id": "wallet_walletdb_cpp",
+    "name": "wallet/walletdb.cpp",
+    "subsystem": "wallet",
+    "loc": 1455,
+    "classes": 1,
+    "functions": 62,
+    "enums": 0
+  },
+  {
+    "id": "wallet_walletdb_h",
+    "name": "wallet/walletdb.h",
+    "subsystem": "wallet",
+    "loc": 323,
+    "classes": 12,
+    "functions": 0,
+    "enums": 1
+  },
+  {
+    "id": "wallet_wallettool_cpp",
+    "name": "wallet/wallettool.cpp",
+    "subsystem": "wallet",
+    "loc": 233,
+    "classes": 0,
+    "functions": 5,
+    "enums": 0
+  },
+  {
+    "id": "wallet_wallettool_h",
+    "name": "wallet/wallettool.h",
+    "subsystem": "wallet",
+    "loc": 20,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "wallet_walletutil_cpp",
+    "name": "wallet/walletutil.cpp",
+    "subsystem": "wallet",
+    "loc": 102,
+    "classes": 0,
+    "functions": 4,
+    "enums": 0
+  },
+  {
+    "id": "wallet_walletutil_h",
+    "name": "wallet/walletutil.h",
+    "subsystem": "wallet",
+    "loc": 121,
+    "classes": 1,
+    "functions": 0,
+    "enums": 2
+  },
+  {
+    "id": "walletinitinterface_h",
+    "name": "walletinitinterface.h",
+    "subsystem": "other",
+    "loc": 30,
+    "classes": 3,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqabstractnotifier_cpp",
+    "name": "zmq/zmqabstractnotifier.cpp",
+    "subsystem": "zmq",
+    "loc": 44,
+    "classes": 0,
+    "functions": 7,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqabstractnotifier_h",
+    "name": "zmq/zmqabstractnotifier.h",
+    "subsystem": "zmq",
+    "loc": 67,
+    "classes": 4,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqnotificationinterface_cpp",
+    "name": "zmq/zmqnotificationinterface.cpp",
+    "subsystem": "zmq",
+    "loc": 212,
+    "classes": 0,
+    "functions": 12,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqnotificationinterface_h",
+    "name": "zmq/zmqnotificationinterface.h",
+    "subsystem": "zmq",
+    "loc": 51,
+    "classes": 5,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqpublishnotifier_cpp",
+    "name": "zmq/zmqpublishnotifier.cpp",
+    "subsystem": "zmq",
+    "loc": 303,
+    "classes": 1,
+    "functions": 14,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqpublishnotifier_h",
+    "name": "zmq/zmqpublishnotifier.h",
+    "subsystem": "zmq",
+    "loc": 75,
+    "classes": 8,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqrpc_cpp",
+    "name": "zmq/zmqrpc.cpp",
+    "subsystem": "zmq",
+    "loc": 70,
+    "classes": 1,
+    "functions": 2,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqrpc_h",
+    "name": "zmq/zmqrpc.h",
+    "subsystem": "zmq",
+    "loc": 12,
+    "classes": 1,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqutil_cpp",
+    "name": "zmq/zmqutil.cpp",
+    "subsystem": "zmq",
+    "loc": 16,
+    "classes": 0,
+    "functions": 1,
+    "enums": 0
+  },
+  {
+    "id": "zmq_zmqutil_h",
+    "name": "zmq/zmqutil.h",
+    "subsystem": "zmq",
+    "loc": 15,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0
+  },
+  {
+    "id": "store_blk_dat",
+    "name": "blk*.dat",
+    "subsystem": "storage",
+    "loc": 128000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Raw block data files (128MB each)",
+    "crud": {
+      "write": [
+        "node_blockstorage_cpp"
+      ],
+      "read": [
+        "node_blockstorage_cpp",
+        "validation_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_rev_dat",
+    "name": "rev*.dat",
+    "subsystem": "storage",
+    "loc": 20000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Block undo data for reorgs",
+    "crud": {
+      "write": [
+        "node_blockstorage_cpp"
+      ],
+      "read": [
+        "node_blockstorage_cpp",
+        "validation_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_chainstate",
+    "name": "chainstate/ (UTXO set)",
+    "subsystem": "storage",
+    "loc": 7000000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "LevelDB UTXO set \u2014 which coins exist and can be spent",
+    "crud": {
+      "write": [
+        "txdb_cpp",
+        "coins_cpp",
+        "validation_cpp"
+      ],
+      "read": [
+        "txdb_cpp",
+        "coins_cpp",
+        "validation_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_block_index",
+    "name": "blocks/index/ (block index)",
+    "subsystem": "storage",
+    "loc": 500000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "LevelDB block metadata index",
+    "crud": {
+      "write": [
+        "node_blockstorage_cpp"
+      ],
+      "read": [
+        "node_blockstorage_cpp",
+        "validation_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_wallet_db",
+    "name": "wallets/ (SQLite)",
+    "subsystem": "storage",
+    "loc": 100000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Wallet database \u2014 keys, transactions, metadata",
+    "crud": {
+      "write": [
+        "wallet_walletdb_cpp",
+        "wallet_sqlite_cpp"
+      ],
+      "read": [
+        "wallet_walletdb_cpp",
+        "wallet_sqlite_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_mempool_dat",
+    "name": "mempool.dat",
+    "subsystem": "storage",
+    "loc": 5000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Mempool snapshot saved on shutdown",
+    "crud": {
+      "write": [
+        "node_mempool_persist_cpp"
+      ],
+      "read": [
+        "node_mempool_persist_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_peers_dat",
+    "name": "peers.dat",
+    "subsystem": "storage",
+    "loc": 2000,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Known peer addresses (AddrMan)",
+    "crud": {
+      "write": [
+        "addrdb_cpp"
+      ],
+      "read": [
+        "addrdb_cpp"
+      ]
+    }
+  },
+  {
+    "id": "store_banlist",
+    "name": "banlist.json",
+    "subsystem": "storage",
+    "loc": 500,
+    "classes": 0,
+    "functions": 0,
+    "enums": 0,
+    "description": "Banned peer list",
+    "crud": {
+      "write": [
+        "banman_cpp"
+      ],
+      "read": [
+        "banman_cpp"
+      ]
+    }
+  }
+];
+
+// -- Dependencies (from #include graph) --
+
+export const dependencies: Dependency[] = 
+[
+  {
+    "from": "contrib_devtools_bitcoin-tidy_bitcoin-tidy_cpp",
+    "to": "contrib_devtools_bitcoin-tidy_logprintf_h"
+  },
+  {
+    "from": "contrib_devtools_bitcoin-tidy_bitcoin-tidy_cpp",
+    "to": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_h"
+  },
+  {
+    "from": "contrib_devtools_bitcoin-tidy_logprintf_cpp",
+    "to": "contrib_devtools_bitcoin-tidy_logprintf_h"
+  },
+  {
+    "from": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_cpp",
+    "to": "contrib_devtools_bitcoin-tidy_nontrivial-threadlocal_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "addrdb_h",
+    "to": "net_types_h"
+  },
+  {
+    "from": "addrdb_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "addrdb_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "addresstype_cpp",
+    "to": "util_hash_type_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "addresstype_h",
+    "to": "util_hash_type_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "addrman_impl_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "addrman_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "addrman_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "addrman_h",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "addrman_h",
+    "to": "protocol_h"
+  },
+  {
+    "from": "addrman_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "addrman_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "protocol_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "addrman_impl_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "arith_uint256_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "arith_uint256_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "arith_uint256_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "banman_h",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "banman_h",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "banman_h",
+    "to": "net_types_h"
+  },
+  {
+    "from": "banman_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "banman_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "base58_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "base58_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "base58_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "base58_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "base58_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "base58_h",
+    "to": "span_h"
+  },
+  {
+    "from": "bech32_cpp",
+    "to": "bech32_h"
+  },
+  {
+    "from": "bech32_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "bench_addrman_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "bench_base58_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_base58_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "bench_bech32_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_bech32_cpp",
+    "to": "bech32_h"
+  },
+  {
+    "from": "bench_bech32_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bench_bench_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_bench_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_bench_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bench_bench_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "bench_bench_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bench_bench_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "bench_bench_h",
+    "to": "bench_nanobench_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bench_bench_bitcoin_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bench_bip324_ecdh_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_bip324_ecdh_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_bip324_ecdh_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bench_bip324_ecdh_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_bip324_ecdh_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "bench_block_assemble_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_ccoins_caching_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_ccoins_caching_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "bench_ccoins_caching_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "bench_ccoins_caching_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "bench_ccoins_caching_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "bench_chacha20_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_chacha20_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "bench_chacha20_cpp",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_checkblock_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_checkblockindex_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_checkblockindex_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_checkblockindex_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "prevector_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bench_checkqueue_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_cluster_linearize_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_cluster_linearize_cpp",
+    "to": "util_bitset_h"
+  },
+  {
+    "from": "bench_cluster_linearize_cpp",
+    "to": "cluster_linearize_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_coin_selection_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_sha1_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_sha3_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "bench_crypto_hash_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "bench_data_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_data_cpp",
+    "to": "bench_data_block413567_raw_h"
+  },
+  {
+    "from": "bench_descriptors_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_descriptors_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_descriptors_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bench_descriptors_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "bench_disconnected_transactions_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_disconnected_transactions_cpp",
+    "to": "kernel_disconnected_transactions_h"
+  },
+  {
+    "from": "bench_disconnected_transactions_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "bench_disconnected_transactions_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "bench_disconnected_transactions_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "bench_duplicate_inputs_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_ellswift_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_ellswift_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_ellswift_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_examples_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_gcs_filter_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_gcs_filter_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "bench_hashpadding_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_hashpadding_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "bench_hashpadding_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_hashpadding_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_index_blockfilter_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_load_external_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_lockedpool_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_lockedpool_cpp",
+    "to": "support_lockedpool_h"
+  },
+  {
+    "from": "bench_logging_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_logging_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "bench_logging_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_logging_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_mempool_eviction_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_mempool_eviction_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "bench_mempool_eviction_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "bench_mempool_eviction_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_mempool_eviction_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_mempool_stress_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_merkle_root_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_merkle_root_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "bench_merkle_root_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_merkle_root_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "bench_nanobench_cpp",
+    "to": "bench_nanobench_h"
+  },
+  {
+    "from": "bench_parse_hex_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_parse_hex_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_parse_hex_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "bench_peer_eviction_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_poly1305_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_poly1305_cpp",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "bench_poly1305_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "bench_pool_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_pool_cpp",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "bench_prevector_cpp",
+    "to": "prevector_h"
+  },
+  {
+    "from": "bench_prevector_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "bench_prevector_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_prevector_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_random_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_random_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_readblock_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_rollingbloom_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_rollingbloom_cpp",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "bench_rollingbloom_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_rpc_blockchain_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "rpc_mempool_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "bench_rpc_mempool_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "bench_sign_transaction_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bench_streams_findbyte_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_streams_findbyte_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_streams_findbyte_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bench_strencodings_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_strencodings_cpp",
+    "to": "bench_data_h"
+  },
+  {
+    "from": "bench_strencodings_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bench_util_time_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_util_time_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bench_verify_script_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "bench_wallet_balance_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "bench_wallet_create_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "bench_wallet_create_tx_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_wallet_ismine_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "bench_wallet_loading_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "bench_xor_cpp",
+    "to": "bench_bench_h"
+  },
+  {
+    "from": "bench_xor_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bench_xor_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "bip324_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "crypto_hkdf_sha256_32_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "bip324_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "bip324_h",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "bip324_h",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "bip324_h",
+    "to": "key_h"
+  },
+  {
+    "from": "bip324_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bip324_h",
+    "to": "span_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "kernel_chainstatemanager_opts_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "kernel_checks_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "kernel_warning_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "node_caches_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "util_task_runner_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "bitcoin-chainstate_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "compat_stdin_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "rpc_mining_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bitcoin-cli_cpp",
+    "to": "support_events_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "bitcoin-tx_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bitcoin-util_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "bitcoin-wallet_cpp",
+    "to": "wallet_wallettool_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "common_init_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_tokenpipe_h"
+  },
+  {
+    "from": "bitcoind_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "blockencodings_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "blockencodings_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "blockencodings_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "util_golombrice_h"
+  },
+  {
+    "from": "blockfilter_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "blockfilter_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "blockfilter_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "blockfilter_h",
+    "to": "util_bytevectorhash_h"
+  },
+  {
+    "from": "chain_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "chain_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "chain_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "chain_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "deploymentinfo_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "chainparams_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "chainparams_h",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "chainparamsbase_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "chainparamsbase_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "chainparamsbase_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "chainparamsbase_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "chainparamsbase_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "checkqueue_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "checkqueue_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "checkqueue_h",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "clientversion_cpp",
+    "to": "obj_build_h"
+  },
+  {
+    "from": "clientversion_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "clientversion_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "cluster_linearize_h",
+    "to": "random_h"
+  },
+  {
+    "from": "cluster_linearize_h",
+    "to": "span_h"
+  },
+  {
+    "from": "cluster_linearize_h",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "cluster_linearize_h",
+    "to": "util_vecdeque_h"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "compressor_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "memusage_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "coins_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "common_args_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "common_args_h",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "common_args_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "common_args_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "common_args_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "common_args_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "common_bloom_cpp",
+    "to": "util_fastrange_h"
+  },
+  {
+    "from": "common_bloom_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "common_bloom_h",
+    "to": "span_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_config_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "common_init_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_init_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "common_init_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "common_interfaces_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "common_interfaces_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "common_types_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "common_messages_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "common_run_command_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "common_run_command_cpp",
+    "to": "common_run_command_h"
+  },
+  {
+    "from": "common_run_command_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_run_command_cpp",
+    "to": "util_subprocess_h"
+  },
+  {
+    "from": "common_settings_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "common_settings_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "common_settings_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "common_settings_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_settings_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "common_signmessage_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "common_signmessage_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "common_system_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "common_system_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "common_url_cpp",
+    "to": "common_url_h"
+  },
+  {
+    "from": "compat_endian_h",
+    "to": "compat_byteswap_h"
+  },
+  {
+    "from": "compat_stdin_cpp",
+    "to": "compat_stdin_h"
+  },
+  {
+    "from": "compressor_cpp",
+    "to": "compressor_h"
+  },
+  {
+    "from": "compressor_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "compressor_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "compressor_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "compressor_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "compressor_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "compressor_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "compressor_h",
+    "to": "span_h"
+  },
+  {
+    "from": "consensus_merkle_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "consensus_merkle_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "consensus_merkle_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "consensus_merkle_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "consensus_params_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "consensus_tx_check_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "consensus_tx_check_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "consensus_tx_check_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "consensus_tx_check_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "consensus_tx_verify_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "consensus_tx_verify_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "consensus_validation_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "consensus_validation_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "consensus_validation_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "core_io_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "core_io_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "core_memusage_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "core_memusage_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "core_memusage_h",
+    "to": "memusage_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "core_read_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "core_write_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "crypto_aes_cpp",
+    "to": "crypto_aes_h"
+  },
+  {
+    "from": "crypto_aes_h",
+    "to": "crypto_ctaes_ctaes_h"
+  },
+  {
+    "from": "crypto_chacha20_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_chacha20_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "crypto_chacha20_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "crypto_chacha20_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_chacha20_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_h",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_h",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "crypto_chacha20poly1305_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_common_h",
+    "to": "compat_endian_h"
+  },
+  {
+    "from": "crypto_hex_base_cpp",
+    "to": "crypto_hex_base_h"
+  },
+  {
+    "from": "crypto_hex_base_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_hkdf_sha256_32_cpp",
+    "to": "crypto_hkdf_sha256_32_h"
+  },
+  {
+    "from": "crypto_hkdf_sha256_32_h",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "crypto_hmac_sha256_cpp",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "crypto_hmac_sha256_h",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "crypto_hmac_sha512_cpp",
+    "to": "crypto_hmac_sha512_h"
+  },
+  {
+    "from": "crypto_hmac_sha512_h",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "crypto_muhash_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "crypto_muhash_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "crypto_muhash_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_muhash_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "crypto_muhash_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "crypto_muhash_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "crypto_poly1305_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_poly1305_cpp",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "crypto_poly1305_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_ripemd160_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "crypto_ripemd160_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha1_cpp",
+    "to": "crypto_sha1_h"
+  },
+  {
+    "from": "crypto_sha1_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha256_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "crypto_sha256_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "crypto_sha256_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha256_cpp",
+    "to": "compat_cpuid_h"
+  },
+  {
+    "from": "crypto_sha256_avx2_cpp",
+    "to": "attributes_h"
+  },
+  {
+    "from": "crypto_sha256_avx2_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha256_sse41_cpp",
+    "to": "attributes_h"
+  },
+  {
+    "from": "crypto_sha256_sse41_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha256_x86_shani_cpp",
+    "to": "attributes_h"
+  },
+  {
+    "from": "crypto_sha3_cpp",
+    "to": "crypto_sha3_h"
+  },
+  {
+    "from": "crypto_sha3_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_sha3_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_sha3_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_sha512_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "crypto_sha512_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "crypto_siphash_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "crypto_siphash_h",
+    "to": "span_h"
+  },
+  {
+    "from": "crypto_siphash_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "cuckoocache_h",
+    "to": "util_fastrange_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "dbwrapper_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "span_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "dbwrapper_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "deploymentinfo_cpp",
+    "to": "deploymentinfo_h"
+  },
+  {
+    "from": "deploymentinfo_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "deploymentinfo_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "deploymentstatus_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "deploymentstatus_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "deploymentstatus_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "deploymentstatus_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "deploymentstatus_h",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "dummywallet_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "dummywallet_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "dummywallet_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "common_run_command_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "external_signer_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "external_signer_h",
+    "to": "common_system_h"
+  },
+  {
+    "from": "flatfile_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "flatfile_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "flatfile_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "flatfile_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "flatfile_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "flatfile_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "hash_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "hash_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "hash_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "hash_cpp",
+    "to": "crypto_hmac_sha512_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "span_h"
+  },
+  {
+    "from": "hash_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "headerssync_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "headerssync_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "net_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "util_bitdeque_h"
+  },
+  {
+    "from": "headerssync_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "httprpc_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "httprpc_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "httpserver_cpp",
+    "to": "support_events_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "compat_endian_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "i2p_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "i2p_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "netbase_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "i2p_h",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "index_base_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "node_abort_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "node_database_args_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "index_base_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "index_base_h",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "index_base_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "index_base_h",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "index_base_h",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "index_blockfilterindex_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "index_base_h"
+  },
+  {
+    "from": "index_blockfilterindex_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "index_coinstatsindex_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "index_coinstatsindex_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "index_coinstatsindex_h",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "index_coinstatsindex_h",
+    "to": "index_base_h"
+  },
+  {
+    "from": "index_disktxpos_h",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "index_disktxpos_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "index_disktxpos_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "index_txindex_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "index_txindex_h",
+    "to": "index_base_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "kernel_checks_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "httprpc_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "index_coinstatsindex_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "init_common_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "mapport_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_blockmanager_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_caches_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_chainstatemanager_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_mempool_persist_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_mempool_persist_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "node_peerman_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "policy_fees_args_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "rpc_register_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "torcontrol_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_batchpriority_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "zmq_zmqabstractnotifier_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "zmq_zmqnotificationinterface_h"
+  },
+  {
+    "from": "init_cpp",
+    "to": "zmq_zmqrpc_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_ipc_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "init_bitcoin-gui_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_ipc_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "init_bitcoin-node_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "init_bitcoin-qt_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "init_bitcoin-wallet_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "init_bitcoind_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "init_common_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "init_common_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "interfaces_chain_h",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "interfaces_chain_h",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "interfaces_chain_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "interfaces_chain_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "interfaces_init_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "interfaces_init_h",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "interfaces_init_h",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "interfaces_init_h",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "interfaces_init_h",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "interfaces_mining_h",
+    "to": "node_types_h"
+  },
+  {
+    "from": "interfaces_mining_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "net_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "net_types_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "netbase_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "interfaces_node_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "interfaces_wallet_h",
+    "to": "util_ui_change_type_h"
+  },
+  {
+    "from": "ipc_capnp_common-types_h",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "ipc_capnp_common-types_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "ipc_capnp_context_h",
+    "to": "ipc_context_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "ipc_capnp_context_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "ipc_capnp_protocol_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "ipc_exception_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "ipc_protocol_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "ipc_capnp_protocol_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "interfaces_ipc_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "ipc_capnp_protocol_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "ipc_process_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "ipc_protocol_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "ipc_interfaces_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "ipc_process_cpp",
+    "to": "ipc_process_h"
+  },
+  {
+    "from": "ipc_process_cpp",
+    "to": "ipc_protocol_h"
+  },
+  {
+    "from": "ipc_process_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "ipc_process_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "ipc_process_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "ipc_process_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "ipc_protocol_h",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "kernel_blockmanager_opts_h",
+    "to": "kernel_notifications_interface_h"
+  },
+  {
+    "from": "kernel_blockmanager_opts_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "kernel_chain_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "kernel_chain_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "kernel_chain_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "kernel_chain_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "kernel_chain_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "chainparamsseeds_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "kernel_chainparams_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "util_hash_type_h"
+  },
+  {
+    "from": "kernel_chainparams_h",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "kernel_notifications_interface_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "txdb_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_chainstatemanager_opts_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "kernel_checks_cpp",
+    "to": "kernel_checks_h"
+  },
+  {
+    "from": "kernel_checks_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "kernel_checks_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "kernel_checks_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "kernel_checks_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "kernel_coinstats_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "kernel_coinstats_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "kernel_coinstats_h",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "kernel_coinstats_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "kernel_coinstats_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "kernel_context_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "kernel_context_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "kernel_context_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "kernel_context_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "kernel_cs_main_cpp",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "kernel_cs_main_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "kernel_cs_main_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_cpp",
+    "to": "kernel_disconnected_transactions_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_cpp",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "kernel_disconnected_transactions_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "util_epochguard_h"
+  },
+  {
+    "from": "kernel_mempool_entry_h",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "kernel_mempool_limits_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "kernel_mempool_options_h",
+    "to": "kernel_mempool_limits_h"
+  },
+  {
+    "from": "kernel_mempool_options_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "kernel_mempool_options_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "kernel_mempool_removal_reason_cpp",
+    "to": "kernel_mempool_removal_reason_h"
+  },
+  {
+    "from": "key_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "key_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "key_cpp",
+    "to": "crypto_hmac_sha512_h"
+  },
+  {
+    "from": "key_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "key_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "key_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "key_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "key_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "key_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "bech32_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "key_io_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "key_io_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "key_io_h",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "key_io_h",
+    "to": "key_h"
+  },
+  {
+    "from": "key_io_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "logging_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "logging_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "logging_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "logging_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "logging_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "logging_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "logging_timer_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "logging_timer_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "logging_timer_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "logging_timer_h",
+    "to": "util_types_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "mapport_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "mapport_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "memusage_h",
+    "to": "indirectmap_h"
+  },
+  {
+    "from": "memusage_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "memusage_h",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "merkleblock_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "merkleblock_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "merkleblock_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "merkleblock_h",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "merkleblock_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "merkleblock_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "merkleblock_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "i2p_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "net_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "net_h",
+    "to": "bip324_h"
+  },
+  {
+    "from": "net_h",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "net_h",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "net_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "net_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "net_h",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "net_h",
+    "to": "hash_h"
+  },
+  {
+    "from": "net_h",
+    "to": "i2p_h"
+  },
+  {
+    "from": "net_h",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "net_h",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "net_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "net_h",
+    "to": "netbase_h"
+  },
+  {
+    "from": "net_h",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "net_h",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "net_h",
+    "to": "node_protocol_version_h"
+  },
+  {
+    "from": "net_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "net_h",
+    "to": "protocol_h"
+  },
+  {
+    "from": "net_h",
+    "to": "random_h"
+  },
+  {
+    "from": "net_h",
+    "to": "span_h"
+  },
+  {
+    "from": "net_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "net_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "net_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "net_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "net_h",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "net_h",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "net_permissions_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "net_permissions_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "net_permissions_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "net_permissions_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "net_permissions_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "net_permissions_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "net_permissions_h",
+    "to": "netbase_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "blockencodings_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "headerssync_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "netmessagemaker_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "node_timeoffsets_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "node_txreconciliation_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "txorphanage_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "txrequest_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "net_processing_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "net_processing_h",
+    "to": "net_h"
+  },
+  {
+    "from": "net_processing_h",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "net_types_cpp",
+    "to": "net_types_h"
+  },
+  {
+    "from": "net_types_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "net_types_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "net_types_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "crypto_sha3_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "prevector_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "netaddress_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "random_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "netaddress_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "netbase_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "netbase_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "netbase_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "netbase_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "netbase_h",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "netbase_h",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "netgroup_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "netgroup_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "netgroup_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "netgroup_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "netgroup_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "netgroup_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "netmessagemaker_h",
+    "to": "net_h"
+  },
+  {
+    "from": "netmessagemaker_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "node_abort_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_abort_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "node_blockmanager_args_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_blockmanager_args_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_blockmanager_args_h",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_blockmanager_args_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "kernel_blockmanager_opts_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "kernel_notifications_interface_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "signet_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_batchpriority_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "kernel_blockmanager_opts_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_blockstorage_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "node_caches_cpp",
+    "to": "node_caches_h"
+  },
+  {
+    "from": "node_caches_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_caches_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "node_caches_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "node_caches_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_chainstate_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_chainstate_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_chainstate_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "node_chainstatemanager_args_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "node_coins_view_args_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "node_database_args_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_chainstatemanager_args_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_coin_cpp",
+    "to": "node_coin_h"
+  },
+  {
+    "from": "node_coin_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "node_coin_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_coin_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_coins_view_args_cpp",
+    "to": "node_coins_view_args_h"
+  },
+  {
+    "from": "node_coins_view_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_coins_view_args_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "node_connection_types_cpp",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_context_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "node_database_args_cpp",
+    "to": "node_database_args_h"
+  },
+  {
+    "from": "node_database_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_database_args_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "node_eviction_cpp",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "node_eviction_h",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "node_eviction_h",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "node_interface_ui_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "node_interface_ui_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "node_interface_ui_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "mapport_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_coin_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_mini_miner_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "node_interfaces_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "kernel_warning_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "node_abort_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "node_kernel_notifications_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_kernel_notifications_h",
+    "to": "kernel_notifications_interface_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "kernel_mempool_limits_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "kernel_mempool_options_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "node_mempool_args_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_mempool_args_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "node_mempool_persist_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_mempool_persist_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_mempool_persist_args_cpp",
+    "to": "node_mempool_persist_args_h"
+  },
+  {
+    "from": "node_mempool_persist_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_mempool_persist_args_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_mempool_persist_args_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_mempool_persist_args_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "node_miner_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_miner_h",
+    "to": "node_types_h"
+  },
+  {
+    "from": "node_miner_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "node_miner_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "node_miner_h",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "node_mini_miner_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_mini_miner_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_mini_miner_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_mini_miner_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_mini_miner_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_minisketchwrapper_cpp",
+    "to": "node_minisketchwrapper_h"
+  },
+  {
+    "from": "node_minisketchwrapper_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_minisketchwrapper_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "node_peerman_args_cpp",
+    "to": "node_peerman_args_h"
+  },
+  {
+    "from": "node_peerman_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "node_peerman_args_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "node_peerman_args_h",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "node_psbt_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "node_psbt_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_psbt_h",
+    "to": "psbt_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "node_timeoffsets_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "node_timeoffsets_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_timeoffsets_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "node_transaction_cpp",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "node_transaction_h",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "node_transaction_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "node_transaction_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "node_txreconciliation_cpp",
+    "to": "node_txreconciliation_h"
+  },
+  {
+    "from": "node_txreconciliation_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "node_txreconciliation_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_txreconciliation_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_txreconciliation_h",
+    "to": "net_h"
+  },
+  {
+    "from": "node_txreconciliation_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_utxo_snapshot_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "node_utxo_snapshot_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_warnings_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "node_warnings_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "node_warnings_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "noui_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "noui_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "noui_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "noui_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "outputtype_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "outputtype_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "outputtype_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "policy_feerate_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_feerate_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "policy_feerate_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "policy_feerate_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_feerate_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "util_serfloat_h"
+  },
+  {
+    "from": "policy_fees_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "random_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "policy_fees_h",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "policy_fees_args_cpp",
+    "to": "policy_fees_args_h"
+  },
+  {
+    "from": "policy_fees_args_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "policy_fees_args_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "policy_packages_cpp",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "policy_packages_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "policy_packages_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_packages_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "policy_packages_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "policy_packages_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "policy_packages_h",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "policy_packages_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "policy_packages_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_packages_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "policy_policy_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "policy_policy_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_policy_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "policy_policy_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_policy_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "policy_policy_h",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "policy_rbf_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "policy_rbf_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_rbf_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_rbf_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "policy_rbf_h",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "policy_rbf_h",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "policy_settings_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "policy_settings_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "policy_truc_policy_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "policy_truc_policy_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "pow_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "pow_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "pow_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "pow_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "pow_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "pow_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "primitives_block_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "primitives_block_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "primitives_block_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "primitives_block_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "primitives_block_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "primitives_block_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "primitives_block_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "crypto_hex_base_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "primitives_transaction_cpp",
+    "to": "util_transaction_identifier_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "primitives_transaction_h",
+    "to": "util_transaction_identifier_h"
+  },
+  {
+    "from": "protocol_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "protocol_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "protocol_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "psbt_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "span_h"
+  },
+  {
+    "from": "psbt_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "pubkey_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "pubkey_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "pubkey_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "pubkey_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "pubkey_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "pubkey_h",
+    "to": "hash_h"
+  },
+  {
+    "from": "pubkey_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "pubkey_h",
+    "to": "span_h"
+  },
+  {
+    "from": "pubkey_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_addressbookpage_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_csvmodelwriter_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_editaddressdialog_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_addressbookpage_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "qt_addresstablemodel_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_cpp",
+    "to": "qt_askpassphrasedialog_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_cpp",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "qt_askpassphrasedialog_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "qt_bantablemodel_cpp",
+    "to": "qt_bantablemodel_h"
+  },
+  {
+    "from": "qt_bantablemodel_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_bantablemodel_cpp",
+    "to": "net_types_h"
+  },
+  {
+    "from": "qt_bantablemodel_h",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "qt_bantablemodel_h",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_bitcoin_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "common_init_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_bitcoingui_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_initexecutor_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_intro_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_networkstyle_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_splashscreen_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_utilitydialog_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_winshutdownmonitor_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_paymentserver_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_walletcontroller_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_bitcoin_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "qt_bitcoin_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_bitcoin_h",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_bitcoin_h",
+    "to": "qt_initexecutor_h"
+  },
+  {
+    "from": "qt_bitcoinaddressvalidator_cpp",
+    "to": "qt_bitcoinaddressvalidator_h"
+  },
+  {
+    "from": "qt_bitcoinaddressvalidator_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_cpp",
+    "to": "qt_bitcoinamountfield_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_cpp",
+    "to": "qt_qvaluecombobox_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_bitcoinamountfield_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_bitcoingui_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_createwalletdialog_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_modaloverlay_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_networkstyle_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_notificator_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_openuridialog_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_optionsdialog_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_rpcconsole_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_utilitydialog_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_walletcontroller_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_walletframe_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_walletview_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "qt_macdockiconhandler_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_bitcoingui_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "qt_optionsdialog_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_bitcoingui_h",
+    "to": "qt_macos_appnap_h"
+  },
+  {
+    "from": "qt_bitcoinunits_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_bitcoinunits_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_bitcoinunits_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_bantablemodel_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_peertablemodel_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "qt_peertablesortproxy_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "qt_clientmodel_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_clientmodel_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "qt_clientmodel_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_clientmodel_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_coincontroldialog_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "qt_coincontroldialog_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_coincontroldialog_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_coincontroltreewidget_cpp",
+    "to": "qt_coincontroltreewidget_h"
+  },
+  {
+    "from": "qt_coincontroltreewidget_cpp",
+    "to": "qt_coincontroldialog_h"
+  },
+  {
+    "from": "qt_createwalletdialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_createwalletdialog_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_createwalletdialog_cpp",
+    "to": "qt_createwalletdialog_h"
+  },
+  {
+    "from": "qt_createwalletdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_csvmodelwriter_cpp",
+    "to": "qt_csvmodelwriter_h"
+  },
+  {
+    "from": "qt_editaddressdialog_cpp",
+    "to": "qt_editaddressdialog_h"
+  },
+  {
+    "from": "qt_editaddressdialog_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_editaddressdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_editaddressdialog_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_bitcoinaddressvalidator_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_qvalidatedlineedit_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "qt_guiutil_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "qt_guiutil_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_guiutil_h",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_guiutil_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "qt_guiutil_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "qt_guiutil_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "qt_initexecutor_cpp",
+    "to": "qt_initexecutor_h"
+  },
+  {
+    "from": "qt_initexecutor_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_initexecutor_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "qt_initexecutor_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "qt_initexecutor_h",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "qt_intro_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "qt_intro_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_main_cpp",
+    "to": "qt_bitcoin_h"
+  },
+  {
+    "from": "qt_main_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "qt_main_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_modaloverlay_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_modaloverlay_cpp",
+    "to": "qt_modaloverlay_h"
+  },
+  {
+    "from": "qt_modaloverlay_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_modaloverlay_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_networkstyle_cpp",
+    "to": "qt_networkstyle_h"
+  },
+  {
+    "from": "qt_networkstyle_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_networkstyle_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "qt_networkstyle_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "qt_networkstyle_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "qt_notificator_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_notificator_cpp",
+    "to": "qt_notificator_h"
+  },
+  {
+    "from": "qt_notificator_cpp",
+    "to": "qt_macnotificationhandler_h"
+  },
+  {
+    "from": "qt_notificator_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_openuridialog_cpp",
+    "to": "qt_openuridialog_h"
+  },
+  {
+    "from": "qt_openuridialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_openuridialog_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_openuridialog_cpp",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_optionsdialog_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "node_chainstatemanager_args_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "qt_optionsdialog_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "mapport_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "node_chainstatemanager_args_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_optionsmodel_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_optionsmodel_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_optionsmodel_h",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_overviewpage_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_transactionfilterproxy_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_transactionoverviewwidget_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_overviewpage_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_overviewpage_h",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "qt_paymentserver_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_paymentserver_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_paymentserver_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_peertablemodel_cpp",
+    "to": "qt_peertablemodel_h"
+  },
+  {
+    "from": "qt_peertablemodel_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_peertablemodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_peertablemodel_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_peertablemodel_h",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "qt_peertablemodel_h",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_peertablesortproxy_cpp",
+    "to": "qt_peertablesortproxy_h"
+  },
+  {
+    "from": "qt_peertablesortproxy_cpp",
+    "to": "qt_peertablemodel_h"
+  },
+  {
+    "from": "qt_peertablesortproxy_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "qt_platformstyle_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "qt_psbtoperationsdialog_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "node_psbt_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_h",
+    "to": "psbt_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_h",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_psbtoperationsdialog_h",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_qrimagewidget_cpp",
+    "to": "qt_qrimagewidget_h"
+  },
+  {
+    "from": "qt_qrimagewidget_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_qrimagewidget_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_qvalidatedlineedit_cpp",
+    "to": "qt_qvalidatedlineedit_h"
+  },
+  {
+    "from": "qt_qvalidatedlineedit_cpp",
+    "to": "qt_bitcoinaddressvalidator_h"
+  },
+  {
+    "from": "qt_qvalidatedlineedit_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_qvaluecombobox_cpp",
+    "to": "qt_qvaluecombobox_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_receivecoinsdialog_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_receiverequestdialog_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_recentrequeststablemodel_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_receivecoinsdialog_h",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_receiverequestdialog_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_qrimagewidget_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_receiverequestdialog_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "qt_recentrequeststablemodel_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "qt_recentrequeststablemodel_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_rpcconsole_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_bantablemodel_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_peertablesortproxy_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "qt_rpcconsole_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "qt_rpcconsole_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_rpcconsole_h",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_rpcconsole_h",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_rpcconsole_h",
+    "to": "qt_peertablemodel_h"
+  },
+  {
+    "from": "qt_rpcconsole_h",
+    "to": "net_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_sendcoinsdialog_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_coincontroldialog_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "qt_sendcoinsentry_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_h",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsdialog_h",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_sendcoinsentry_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_addressbookpage_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_sendcoinsentry_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_sendcoinsrecipient_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_sendcoinsrecipient_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "qt_signverifymessagedialog_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "qt_addressbookpage_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_signverifymessagedialog_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "qt_splashscreen_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "qt_networkstyle_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_splashscreen_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_test_addressbooktests_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_test_util_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_addressbookpage_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_editaddressdialog_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_qvalidatedlineedit_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "qt_test_addressbooktests_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "qt_test_apptests_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "qt_bitcoin_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "qt_bitcoingui_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "qt_networkstyle_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "qt_rpcconsole_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_apptests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "qt_bitcoin_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "qt_test_optiontests_h"
+  },
+  {
+    "from": "qt_test_optiontests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_optiontests_h",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "qt_test_optiontests_h",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "qt_test_rpcnestedtests_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "qt_rpcconsole_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "qt_test_rpcnestedtests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_bitcoin_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_apptests_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_optiontests_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_rpcnestedtests_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_uritests_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_addressbooktests_h"
+  },
+  {
+    "from": "qt_test_test_main_cpp",
+    "to": "qt_test_wallettests_h"
+  },
+  {
+    "from": "qt_test_uritests_cpp",
+    "to": "qt_test_uritests_h"
+  },
+  {
+    "from": "qt_test_uritests_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_test_uritests_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_test_util_cpp",
+    "to": "qt_test_util_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_test_wallettests_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_test_util_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_bitcoinamountfield_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_overviewpage_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_qvalidatedlineedit_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_receivecoinsdialog_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_receiverequestdialog_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_recentrequeststablemodel_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_sendcoinsdialog_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_sendcoinsentry_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_transactionview_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "qt_test_wallettests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_trafficgraphwidget_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_trafficgraphwidget_cpp",
+    "to": "qt_trafficgraphwidget_h"
+  },
+  {
+    "from": "qt_trafficgraphwidget_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "qt_transactiondesc_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "qt_paymentserver_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "qt_transactionrecord_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "qt_transactiondesc_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "qt_transactiondesc_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_transactiondescdialog_cpp",
+    "to": "qt_transactiondescdialog_h"
+  },
+  {
+    "from": "qt_transactiondescdialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_transactiondescdialog_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_transactionfilterproxy_cpp",
+    "to": "qt_transactionfilterproxy_h"
+  },
+  {
+    "from": "qt_transactionfilterproxy_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_transactionfilterproxy_cpp",
+    "to": "qt_transactionrecord_h"
+  },
+  {
+    "from": "qt_transactionfilterproxy_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_transactionoverviewwidget_cpp",
+    "to": "qt_transactionoverviewwidget_h"
+  },
+  {
+    "from": "qt_transactionoverviewwidget_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_transactionrecord_cpp",
+    "to": "qt_transactionrecord_h"
+  },
+  {
+    "from": "qt_transactionrecord_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "qt_transactionrecord_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_transactionrecord_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_transactionrecord_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "qt_transactionrecord_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_transactionrecord_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_transactiondesc_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_transactionrecord_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_transactiontablemodel_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_transactionview_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_csvmodelwriter_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_editaddressdialog_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_transactiondescdialog_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_transactionfilterproxy_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_transactionrecord_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_transactionview_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_transactionview_h",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_transactionview_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "qt_utilitydialog_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "qt_utilitydialog_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_walletcontroller_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_askpassphrasedialog_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_createwalletdialog_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_walletcontroller_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_walletcontroller_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_walletcontroller_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "qt_walletcontroller_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "qt_walletcontroller_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_walletframe_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_overviewpage_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_psbtoperationsdialog_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "qt_walletview_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "qt_walletframe_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_addresstablemodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_guiconstants_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_paymentserver_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_recentrequeststablemodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_sendcoinsdialog_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "qt_walletmodel_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "qt_walletmodel_h",
+    "to": "key_h"
+  },
+  {
+    "from": "qt_walletmodel_h",
+    "to": "qt_walletmodeltransaction_h"
+  },
+  {
+    "from": "qt_walletmodel_h",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "qt_walletmodel_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "qt_walletmodeltransaction_cpp",
+    "to": "qt_walletmodeltransaction_h"
+  },
+  {
+    "from": "qt_walletmodeltransaction_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "qt_walletmodeltransaction_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "qt_walletmodeltransaction_h",
+    "to": "qt_sendcoinsrecipient_h"
+  },
+  {
+    "from": "qt_walletmodeltransaction_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_walletview_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_addressbookpage_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_askpassphrasedialog_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_clientmodel_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_guiutil_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_optionsmodel_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_overviewpage_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_platformstyle_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_receivecoinsdialog_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_sendcoinsdialog_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_signverifymessagedialog_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_transactiontablemodel_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_transactionview_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "qt_walletmodel_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "interfaces_node_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "qt_walletview_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "qt_walletview_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "qt_walletview_h",
+    "to": "qt_bitcoinunits_h"
+  },
+  {
+    "from": "qt_winshutdownmonitor_cpp",
+    "to": "qt_winshutdownmonitor_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "compat_cpuid_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "randomenv_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "random_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "random_h",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "random_h",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "random_h",
+    "to": "span_h"
+  },
+  {
+    "from": "random_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "random_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "randomenv_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "compat_cpuid_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "randomenv_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "randomenv_h",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rest_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rpc_mempool_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "util_any_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rest_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "deploymentinfo_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "index_coinstatsindex_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "rpc_blockchain_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "rpc_blockchain_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_client_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_client_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "rpc_client_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_external_signer_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rpc_fees_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "node_mempool_persist_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "node_mempool_persist_args_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_mempool_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "deploymentinfo_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "interfaces_mining_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "rpc_mining_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_mining_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "addrman_impl_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "net_types_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "node_protocol_version_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "rpc_net_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "index_coinstatsindex_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "interfaces_echo_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "interfaces_ipc_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "util_any_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rpc_node_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rpc_output_script_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_coin_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_psbt_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "rpc_rawtransaction_util_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_rawtransaction_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "rpc_rawtransaction_util_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "rpc_rawtransaction_util_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_register_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "rpc_request_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_request_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "rpc_server_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "rpc_server_h",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_server_h",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "util_any_h"
+  },
+  {
+    "from": "rpc_server_util_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_signmessage_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "rpc_server_util_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_txoutproof_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "common_types_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "rpc_util_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "node_transaction_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "rpc_protocol_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "rpc_util_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "scheduler_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "scheduler_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "scheduler_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "scheduler_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "scheduler_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "scheduler_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "scheduler_h",
+    "to": "util_task_runner_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_miniscript_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "script_descriptor_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "script_descriptor_h",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "script_descriptor_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_descriptor_h",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "script_descriptor_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "crypto_sha1_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_interpreter_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "hash_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "span_h"
+  },
+  {
+    "from": "script_interpreter_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_keyorigin_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "script_miniscript_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "script_miniscript_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "span_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "script_miniscript_h",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "script_parsing_cpp",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "script_parsing_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "script_parsing_h",
+    "to": "span_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "crypto_hex_base_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_script_cpp",
+    "to": "util_hash_type_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_script_h",
+    "to": "util_hash_type_h"
+  },
+  {
+    "from": "script_script_error_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "script_sigcache_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "cuckoocache_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "span_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_sigcache_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_miniscript_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "script_sign_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "coins_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "hash_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "script_sign_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "script_signingprovider_cpp",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "script_signingprovider_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_signingprovider_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "script_signingprovider_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "key_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_signingprovider_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "script_solver_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "script_solver_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "script_solver_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "script_solver_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "script_solver_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "script_solver_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "script_solver_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "serialize_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "serialize_h",
+    "to": "compat_assumptions_h"
+  },
+  {
+    "from": "serialize_h",
+    "to": "compat_endian_h"
+  },
+  {
+    "from": "serialize_h",
+    "to": "prevector_h"
+  },
+  {
+    "from": "serialize_h",
+    "to": "span_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "signet_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "signet_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "signet_h",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "signet_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "signet_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "streams_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "streams_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "streams_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "streams_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "streams_h",
+    "to": "span_h"
+  },
+  {
+    "from": "streams_h",
+    "to": "support_allocators_zeroafterfree_h"
+  },
+  {
+    "from": "streams_h",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "support_allocators_secure_h",
+    "to": "support_lockedpool_h"
+  },
+  {
+    "from": "support_allocators_secure_h",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "support_allocators_zeroafterfree_h",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "support_cleanse_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "support_lockedpool_cpp",
+    "to": "support_lockedpool_h"
+  },
+  {
+    "from": "support_lockedpool_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "sync_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "sync_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "sync_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "sync_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "sync_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "sync_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "sync_h",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "sync_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "sync_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "addrman_impl_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "test_data_asmap_raw_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "test_addrman_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_allocator_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_allocator_tests_cpp",
+    "to": "support_lockedpool_h"
+  },
+  {
+    "from": "test_amount_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_amount_tests_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "test_util_str_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_argsman_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_arith_uint256_tests_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_arith_uint256_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_arith_uint256_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_banman_tests_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "test_base32_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "test_data_base58_encode_decode_json_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_base58_tests_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "test_base64_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_bech32_tests_cpp",
+    "to": "bech32_h"
+  },
+  {
+    "from": "test_bech32_tests_cpp",
+    "to": "test_util_str_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "bip324_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_bip324_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_bip32_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_blockchain_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "blockencodings_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_blockencodings_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "index_blockfilterindex_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "test_util_blockfilter_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "test_util_index_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_blockfilter_index_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "test_data_blockfilters_json_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "test_blockfilter_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_blockmanager_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_bloom_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_bswap_tests_cpp",
+    "to": "compat_byteswap_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_checkqueue_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_cluster_linearize_tests_cpp",
+    "to": "cluster_linearize_h"
+  },
+  {
+    "from": "test_cluster_linearize_tests_cpp",
+    "to": "test_util_cluster_linearize_h"
+  },
+  {
+    "from": "test_cluster_linearize_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_cluster_linearize_tests_cpp",
+    "to": "util_bitset_h"
+  },
+  {
+    "from": "test_cluster_linearize_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "test_util_poolresourcetester_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "test_coins_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_coinscachepair_tests_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "index_coinstatsindex_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "test_util_index_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_coinstatsindex_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_common_url_tests_cpp",
+    "to": "common_url_h"
+  },
+  {
+    "from": "test_compress_tests_cpp",
+    "to": "compressor_h"
+  },
+  {
+    "from": "test_compress_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_compress_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_compress_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_aes_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_hkdf_sha256_32_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_hmac_sha512_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_sha1_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_sha3_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_crypto_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_cuckoocache_tests_cpp",
+    "to": "cuckoocache_h"
+  },
+  {
+    "from": "test_cuckoocache_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_cuckoocache_tests_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_cuckoocache_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_cuckoocache_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_dbwrapper_tests_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "test_dbwrapper_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_dbwrapper_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_dbwrapper_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_dbwrapper_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_denialofservice_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_descriptor_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_disconnected_transactions_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_disconnected_transactions_cpp",
+    "to": "kernel_disconnected_transactions_h"
+  },
+  {
+    "from": "test_disconnected_transactions_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_feefrac_tests_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "test_feefrac_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_flatfile_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_flatfile_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_flatfile_tests_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "test_flatfile_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_flatfile_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fs_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fs_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_fs_tests_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "test_fuzz_addition_overflow_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_addition_overflow_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_addition_overflow_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_addition_overflow_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "addrman_impl_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "test_fuzz_addrman_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_asmap_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_asmap_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "test_fuzz_asmap_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_asmap_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "test_fuzz_asmap_direct_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_asmap_direct_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "test_fuzz_asmap_direct_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_autofile_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_autofile_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_autofile_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_autofile_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_autofile_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_fuzz_banman_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "test_fuzz_base_encode_decode_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_base_encode_decode_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "test_fuzz_base_encode_decode_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "test_fuzz_base_encode_decode_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_base_encode_decode_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_bech32_cpp",
+    "to": "bech32_h"
+  },
+  {
+    "from": "test_fuzz_bech32_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_bech32_cpp",
+    "to": "test_util_str_h"
+  },
+  {
+    "from": "test_fuzz_bech32_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "bip324_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_bip324_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_bitdeque_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_bitdeque_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_bitdeque_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_bitdeque_cpp",
+    "to": "util_bitdeque_h"
+  },
+  {
+    "from": "test_fuzz_bitset_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_bitset_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_bitset_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_bitset_cpp",
+    "to": "util_bitset_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_block_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_block_header_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_block_header_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_block_header_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_block_header_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_block_header_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "test_fuzz_block_index_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_blockfilter_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_fuzz_blockfilter_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_blockfilter_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_blockfilter_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_bloom_filter_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_buffered_file_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_buffered_file_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_buffered_file_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_buffered_file_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_buffered_file_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_chain_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_chain_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_chain_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_chain_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_checkqueue_cpp",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "test_fuzz_checkqueue_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_checkqueue_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_checkqueue_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "cluster_linearize_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "test_util_cluster_linearize_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "util_bitset_h"
+  },
+  {
+    "from": "test_fuzz_cluster_linearize_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_coins_view_cpp",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_coinscache_sim_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_connman_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_hmac_sha512_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_sha1_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_sha3_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256_cpp",
+    "to": "crypto_aes_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256cbc_cpp",
+    "to": "crypto_aes_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256cbc_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256cbc_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_aes256cbc_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "crypto_chacha20poly1305_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_chacha20poly1305_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_common_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "test_fuzz_crypto_common_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_common_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_common_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
+    "to": "crypto_chacha20_h"
+  },
+  {
+    "from": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_diff_fuzz_chacha20_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
+    "to": "crypto_hkdf_sha256_32_h"
+  },
+  {
+    "from": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_hkdf_hmac_sha256_l32_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_crypto_poly1305_cpp",
+    "to": "crypto_poly1305_h"
+  },
+  {
+    "from": "test_fuzz_crypto_poly1305_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_crypto_poly1305_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_crypto_poly1305_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "cuckoocache_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_cuckoocache_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_decode_tx_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_decode_tx_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_decode_tx_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_decode_tx_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "test_fuzz_util_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_descriptor_parse_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "addrdb_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "addrman_impl_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "blockencodings_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "compressor_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_deserialize_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "test_fuzz_eval_script_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_eval_script_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_eval_script_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_eval_script_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_fee_rate_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_fee_rate_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "test_fuzz_fee_rate_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_fee_rate_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_fee_rate_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_feefrac_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "test_fuzz_feefrac_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_feefrac_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_feefrac_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_feeratediagram_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "test_fuzz_feeratediagram_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "test_fuzz_feeratediagram_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_feeratediagram_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_fees_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_flatfile_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "test_fuzz_flatfile_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_flatfile_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_flatfile_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_float_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "test_fuzz_float_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_float_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_float_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_float_cpp",
+    "to": "util_serfloat_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "test_fuzz_fuzz_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "util_bytevectorhash_h"
+  },
+  {
+    "from": "test_fuzz_golomb_rice_cpp",
+    "to": "util_golombrice_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "headerssync_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_headerssync_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_hex_cpp",
+    "to": "util_transaction_identifier_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "test_fuzz_http_request_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "i2p_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "test_fuzz_i2p_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "compressor_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_integer_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_key_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_key_io_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_key_io_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_key_io_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_key_io_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_kitchen_sink_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_load_external_block_file_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_locale_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_locale_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_locale_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_fuzz_locale_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_locale_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_merkleblock_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_fuzz_merkleblock_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_merkleblock_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_merkleblock_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_merkleblock_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_message_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "node_mini_miner_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_mini_miner_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "script_miniscript_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_miniscript_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_minisketch_cpp",
+    "to": "node_minisketchwrapper_h"
+  },
+  {
+    "from": "test_fuzz_minisketch_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_minisketch_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_minisketch_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_minisketch_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_muhash_cpp",
+    "to": "crypto_muhash_h"
+  },
+  {
+    "from": "test_fuzz_muhash_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_muhash_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_muhash_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_multiplication_overflow_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_multiplication_overflow_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_multiplication_overflow_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "test_fuzz_net_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_net_permissions_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_netaddress_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_netaddress_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_netaddress_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_netaddress_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_netbase_dns_lookup_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_netbase_dns_lookup_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_netbase_dns_lookup_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_netbase_dns_lookup_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_netbase_dns_lookup_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_node_eviction_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_p2p_handshake_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "netmessagemaker_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_p2p_transport_serialization_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_package_eval_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_fuzz_parse_hd_keypath_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_parse_hd_keypath_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_parse_hd_keypath_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_parse_hd_keypath_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "test_fuzz_parse_numbers_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_parse_numbers_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "test_fuzz_parse_numbers_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_parse_script_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_parse_script_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_parse_script_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_parse_univalue_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_parse_univalue_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "test_fuzz_parse_univalue_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_parse_univalue_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_parse_univalue_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "blockencodings_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_partially_downloaded_block_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "policy_fees_args_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "policy_fees_args_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_policy_estimator_io_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_poolresource_cpp",
+    "to": "test_util_poolresourcetester_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_pow_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "test_fuzz_prevector_cpp",
+    "to": "prevector_h"
+  },
+  {
+    "from": "test_fuzz_prevector_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_prevector_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_prevector_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_prevector_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_primitives_transaction_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_primitives_transaction_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_primitives_transaction_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_primitives_transaction_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_process_message_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_process_messages_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_fuzz_protocol_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_protocol_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_protocol_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_protocol_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "node_psbt_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_psbt_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_random_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_random_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_random_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_random_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_rbf_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_rolling_bloom_filter_cpp",
+    "to": "common_bloom_h"
+  },
+  {
+    "from": "test_fuzz_rolling_bloom_filter_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_rolling_bloom_filter_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_rolling_bloom_filter_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_rolling_bloom_filter_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "base58_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_rpc_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "compressor_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_script_assets_test_minimizer_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_script_descriptor_cache_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_script_descriptor_cache_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_script_descriptor_cache_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_descriptor_cache_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_descriptor_cache_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_flags_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_format_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_script_interpreter_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_script_interpreter_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_script_interpreter_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_interpreter_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_interpreter_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_ops_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_script_ops_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_ops_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_ops_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_parsing_cpp",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "test_fuzz_script_parsing_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_parsing_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_parsing_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_script_sigcache_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_script_sign_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_scriptnum_ops_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_scriptnum_ops_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_scriptnum_ops_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_scriptnum_ops_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ec_seckey_import_export_der_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_secp256k1_ecdsa_signature_parse_der_lax_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_signature_checker_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "signet_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_signet_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_socks5_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_span_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_span_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_span_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_span_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "common_url_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "rpc_request_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_fuzz_string_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_strprintf_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_system_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_system_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_system_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_system_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_system_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_timeoffsets_cpp",
+    "to": "node_timeoffsets_h"
+  },
+  {
+    "from": "test_fuzz_timeoffsets_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "test_fuzz_timeoffsets_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_timeoffsets_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_timeoffsets_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_torcontrol_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_torcontrol_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_torcontrol_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_torcontrol_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_torcontrol_cpp",
+    "to": "torcontrol_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "test_fuzz_transaction_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_tx_in_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "core_memusage_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_tx_out_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_tx_pool_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "txorphanage_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_txorphan_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_txrequest_cpp",
+    "to": "txrequest_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "test_fuzz_util_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "key_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_util_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_util_descriptor_cpp",
+    "to": "test_fuzz_util_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_util_descriptor_h",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_fuzz_util_descriptor_h",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_fuzz_util_descriptor_h",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "test_fuzz_util_descriptor_h",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_h",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "test_fuzz_util_mempool_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "test_fuzz_util_net_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "node_protocol_version_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "test_fuzz_util_net_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "net_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "test_fuzz_util_net_h",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "test_fuzz_utxo_snapshot_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_utxo_total_supply_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "node_mempool_persist_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "node_mempool_persist_args_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_fuzz_util_mempool_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_fuzz_validation_load_mempool_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_fuzz_vecdeque_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_fuzz_vecdeque_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_fuzz_vecdeque_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_fuzz_vecdeque_cpp",
+    "to": "util_vecdeque_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "test_fuzz_versionbits_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "test_getarg_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_getarg_tests_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "test_getarg_tests_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_getarg_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_getarg_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_hash_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "headerssync_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_headers_sync_chainwork_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_httpserver_tests_cpp",
+    "to": "httpserver_h"
+  },
+  {
+    "from": "test_httpserver_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "i2p_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "test_i2p_tests_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_interfaces_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_ipc_test_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_ipc_test_cpp",
+    "to": "test_ipc_test_h"
+  },
+  {
+    "from": "test_ipc_test_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_ipc_tests_cpp",
+    "to": "test_ipc_test_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "test_data_key_io_invalid_json_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "test_data_key_io_valid_json_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_key_io_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_key_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_logging_tests_cpp",
+    "to": "init_common_h"
+  },
+  {
+    "from": "test_logging_tests_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_logging_tests_cpp",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "test_logging_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_logging_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_main_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_mempool_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_merkle_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_merkle_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_merkle_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_merkleblock_tests_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_merkleblock_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_merkleblock_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "test_miner_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "node_mini_miner_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_miniminer_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "crypto_ripemd160_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "script_miniscript_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_miniscript_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_minisketch_tests_cpp",
+    "to": "node_minisketchwrapper_h"
+  },
+  {
+    "from": "test_minisketch_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_minisketch_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_minisketch_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_multisig_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "node_protocol_version_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_net_peer_connection_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_net_peer_eviction_tests_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_net_peer_eviction_tests_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_net_peer_eviction_tests_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_net_peer_eviction_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "netmessagemaker_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "node_protocol_version_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_net_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "netgroup_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_netbase_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_node_warnings_tests_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "test_node_warnings_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_node_warnings_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_orphanage_tests_cpp",
+    "to": "txorphanage_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_peerman_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_pmt_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_policy_fee_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_policy_fee_tests_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "policy_fees_args_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_policyestimator_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_pool_tests_cpp",
+    "to": "memusage_h"
+  },
+  {
+    "from": "test_pool_tests_cpp",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "test_pool_tests_cpp",
+    "to": "test_util_poolresourcetester_h"
+  },
+  {
+    "from": "test_pool_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_pool_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_pow_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_prevector_tests_cpp",
+    "to": "prevector_h"
+  },
+  {
+    "from": "test_prevector_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_prevector_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_prevector_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_prevector_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_raii_event_tests_cpp",
+    "to": "support_events_h"
+  },
+  {
+    "from": "test_raii_event_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_random_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_random_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_random_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_random_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_rbf_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_rest_tests_cpp",
+    "to": "rest_h"
+  },
+  {
+    "from": "test_rest_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_result_tests_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "test_reverselock_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_reverselock_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "rpc_client_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_rpc_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_sanity_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_sanity_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_scheduler_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_scheduler_tests_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "test_scheduler_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_script_p2sh_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_script_parse_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_script_parse_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_script_parse_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_script_parse_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_script_segwit_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_script_segwit_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "test_data_bip341_wallet_vectors_json_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_script_standard_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_data_script_tests_json_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_data_bip341_wallet_vectors_json_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_script_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_scriptnum_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_scriptnum_tests_cpp",
+    "to": "test_scriptnum10_h"
+  },
+  {
+    "from": "test_scriptnum_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "util_serfloat_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_serfloat_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_serialize_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_serialize_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_serialize_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_serialize_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_serialize_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "test_util_str_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_settings_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "test_data_sighash_json_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_sighash_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_sigopcount_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_skiplist_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_skiplist_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_skiplist_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_sock_tests_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_sock_tests_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_sock_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_sock_tests_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "test_sock_tests_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "test_span_tests_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_streams_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_streams_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_streams_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_streams_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_streams_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_sync_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_sync_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_system_tests_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "test_system_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_system_tests_cpp",
+    "to": "common_run_command_h"
+  },
+  {
+    "from": "test_system_tests_cpp",
+    "to": "util_subprocess_h"
+  },
+  {
+    "from": "test_timeoffsets_tests_cpp",
+    "to": "node_timeoffsets_h"
+  },
+  {
+    "from": "test_timeoffsets_tests_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "test_timeoffsets_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_data_tx_invalid_json_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_data_tx_valid_json_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "util_transaction_identifier_h"
+  },
+  {
+    "from": "test_transaction_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_translation_tests_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_translation_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "index_txindex_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "test_util_index_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txindex_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_txpackage_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_txreconciliation_tests_cpp",
+    "to": "node_txreconciliation_h"
+  },
+  {
+    "from": "test_txreconciliation_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txrequest_tests_cpp",
+    "to": "txrequest_h"
+  },
+  {
+    "from": "test_txrequest_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_txrequest_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_txrequest_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_txvalidation_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_txvalidationcache_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_uint256_tests_cpp",
+    "to": "util_transaction_identifier_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "test_util_blockfilter_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "test_util_blockfilter_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_blockfilter_h",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_util_chainstate_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "cluster_linearize_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "span_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "util_bitset_h"
+  },
+  {
+    "from": "test_util_cluster_linearize_h",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "test_util_coins_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_util_coins_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_util_coins_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_util_index_cpp",
+    "to": "test_util_index_h"
+  },
+  {
+    "from": "test_util_index_cpp",
+    "to": "index_base_h"
+  },
+  {
+    "from": "test_util_index_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_index_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "test_util_index_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_json_cpp",
+    "to": "test_util_json_h"
+  },
+  {
+    "from": "test_util_json_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_logging_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_util_logging_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_util_logging_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "test_util_logging_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_util_logging_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "test_util_mining_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_util_mining_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "test_util_mining_h",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "netmessagemaker_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "test_util_net_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "net_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "net_permissions_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "node_connection_types_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "node_eviction_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_util_net_h",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "test_util_poolresourcetester_h",
+    "to": "support_allocators_pool_h"
+  },
+  {
+    "from": "test_util_random_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_util_random_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_util_random_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_util_random_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_util_random_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_util_random_h",
+    "to": "random_h"
+  },
+  {
+    "from": "test_util_random_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_util_script_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "test_util_script_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_util_script_h",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_util_script_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "addrman_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "banman_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "crypto_sha256_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "init_common_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "net_processing_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_chainstate_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_peerman_args_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "node_warnings_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "rpc_register_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "test_util_net_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_util_setup_common_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "common_args_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "kernel_context_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "key_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "node_caches_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_util_setup_common_h",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "test_util_str_cpp",
+    "to": "test_util_str_h"
+  },
+  {
+    "from": "test_util_transaction_utils_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "test_util_transaction_utils_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_util_transaction_utils_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "test_util_transaction_utils_cpp",
+    "to": "test_util_transaction_utils_h"
+  },
+  {
+    "from": "test_util_transaction_utils_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "test_util_txmempool_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "node_mempool_args_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "test_util_txmempool_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_txmempool_h",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "test_util_txmempool_h",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "test_util_txmempool_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_validation_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_util_validation_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_util_validation_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_validation_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_validation_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_util_validation_h",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "script_parsing_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_bitdeque_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_util_tests_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "test_util_threadnames_tests_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "test_util_threadnames_tests_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "node_miner_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "test_util_script_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_validation_block_tests_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "test_util_chainstate_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "test_util_coins_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_validation_chainstate_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "kernel_disconnected_transactions_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "node_kernel_notifications_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "rpc_blockchain_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "test_util_chainstate_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "test_util_validation_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_validation_chainstatemanager_tests_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "test_validation_flush_tests_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "test_validation_flush_tests_cpp",
+    "to": "test_util_coins_h"
+  },
+  {
+    "from": "test_validation_flush_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_validation_flush_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validation_flush_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "signet_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "test_validation_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "test_validationinterface_tests_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "test_versionbits_tests_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "torcontrol_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "chainparamsbase_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "crypto_hmac_sha256_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "torcontrol_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "torcontrol_h",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "torcontrol_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "txdb_h",
+    "to": "coins_h"
+  },
+  {
+    "from": "txdb_h",
+    "to": "dbwrapper_h"
+  },
+  {
+    "from": "txdb_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "txdb_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "txdb_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_overflow_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "txmempool_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "coins_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "indirectmap_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "kernel_mempool_limits_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "kernel_mempool_options_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "kernel_mempool_removal_reason_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "util_epochguard_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "txmempool_h",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "txorphanage_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txorphanage_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "txorphanage_h",
+    "to": "net_h"
+  },
+  {
+    "from": "txorphanage_h",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "txorphanage_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txorphanage_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "txorphanage_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "txrequest_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "txrequest_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "txrequest_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "txrequest_h",
+    "to": "net_h"
+  },
+  {
+    "from": "txrequest_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "uint256_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "uint256_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "uint256_h",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "uint256_h",
+    "to": "span_h"
+  },
+  {
+    "from": "uint256_h",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "undo_h",
+    "to": "coins_h"
+  },
+  {
+    "from": "undo_h",
+    "to": "compressor_h"
+  },
+  {
+    "from": "undo_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "undo_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "undo_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "util_asmap_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "util_asmap_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_asmap_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_batchpriority_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_batchpriority_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_bip32_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_bip32_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "util_bip32_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "util_bitset_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "util_bytevectorhash_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "util_bytevectorhash_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "util_bytevectorhash_cpp",
+    "to": "util_bytevectorhash_h"
+  },
+  {
+    "from": "util_chaintype_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "util_check_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "util_check_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_check_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "util_check_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_check_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "util_epochguard_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "util_epochguard_h",
+    "to": "util_macros_h"
+  },
+  {
+    "from": "util_exception_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "util_exception_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_exception_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_feefrac_cpp",
+    "to": "util_feefrac_h"
+  },
+  {
+    "from": "util_feefrac_h",
+    "to": "span_h"
+  },
+  {
+    "from": "util_feefrac_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "util_fs_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_fs_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_fs_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_fs_helpers_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_fs_helpers_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_golombrice_h",
+    "to": "util_fastrange_h"
+  },
+  {
+    "from": "util_golombrice_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "util_hasher_cpp",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "util_hasher_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "util_hasher_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "util_hasher_cpp",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "util_hasher_h",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "util_hasher_h",
+    "to": "crypto_siphash_h"
+  },
+  {
+    "from": "util_hasher_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "util_hasher_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "util_moneystr_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "util_moneystr_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "util_moneystr_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_moneystr_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "util_moneystr_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "util_moneystr_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "util_rbf_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "util_rbf_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "util_readwritefile_cpp",
+    "to": "util_readwritefile_h"
+  },
+  {
+    "from": "util_readwritefile_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_readwritefile_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "util_result_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "util_result_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "util_serfloat_cpp",
+    "to": "util_serfloat_h"
+  },
+  {
+    "from": "util_signalinterrupt_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "util_signalinterrupt_cpp",
+    "to": "util_tokenpipe_h"
+  },
+  {
+    "from": "util_signalinterrupt_h",
+    "to": "util_tokenpipe_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "util_sock_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "util_sock_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "util_sock_h",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "util_sock_h",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "util_sock_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "util_strencodings_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "util_strencodings_cpp",
+    "to": "crypto_hex_base_h"
+  },
+  {
+    "from": "util_strencodings_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "util_strencodings_h",
+    "to": "crypto_hex_base_h"
+  },
+  {
+    "from": "util_strencodings_h",
+    "to": "span_h"
+  },
+  {
+    "from": "util_strencodings_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "util_string_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "util_string_h",
+    "to": "span_h"
+  },
+  {
+    "from": "util_subprocess_h",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_syserror_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_syserror_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_syserror_cpp",
+    "to": "util_syserror_h"
+  },
+  {
+    "from": "util_thread_cpp",
+    "to": "util_thread_h"
+  },
+  {
+    "from": "util_thread_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "util_thread_cpp",
+    "to": "util_exception_h"
+  },
+  {
+    "from": "util_thread_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "util_threadinterrupt_cpp",
+    "to": "util_threadinterrupt_h"
+  },
+  {
+    "from": "util_threadinterrupt_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "util_threadinterrupt_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "util_threadinterrupt_h",
+    "to": "threadsafety_h"
+  },
+  {
+    "from": "util_threadnames_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_threadnames_cpp",
+    "to": "util_threadnames_h"
+  },
+  {
+    "from": "util_time_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "util_time_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "util_time_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_time_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "util_tokenpipe_cpp",
+    "to": "util_tokenpipe_h"
+  },
+  {
+    "from": "util_tokenpipe_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_trace_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "util_transaction_identifier_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "util_transaction_identifier_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "util_transaction_identifier_h",
+    "to": "util_types_h"
+  },
+  {
+    "from": "util_translation_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "util_vecdeque_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_merkle_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_tx_check_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_tx_verify_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "cuckoocache_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "flatfile_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_coinstats_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_disconnected_transactions_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_messagestartchars_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_notifications_interface_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "kernel_warning_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "logging_timer_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "node_utxo_snapshot_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "policy_settings_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "policy_truc_policy_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "pow_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "signet_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "txdb_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "undo_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_signalinterrupt_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "arith_uint256_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "checkqueue_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "cuckoocache_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "deploymentstatus_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "kernel_chainparams_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "kernel_chainstatemanager_opts_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "policy_packages_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "script_script_error_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "script_sigcache_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "txdb_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "txmempool_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "validation_h",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "validationinterface_cpp",
+    "to": "util_task_runner_h"
+  },
+  {
+    "from": "validationinterface_h",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "validationinterface_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "validationinterface_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "validationinterface_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "versionbits_cpp",
+    "to": "consensus_params_h"
+  },
+  {
+    "from": "versionbits_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "versionbits_cpp",
+    "to": "versionbits_h"
+  },
+  {
+    "from": "versionbits_h",
+    "to": "chain_h"
+  },
+  {
+    "from": "versionbits_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "compat_compat_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_bdb_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_bdb_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_coincontrol_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_coincontrol_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "script_keyorigin_h"
+  },
+  {
+    "from": "wallet_coincontrol_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_coinselection_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "random_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "util_insert_h"
+  },
+  {
+    "from": "wallet_coinselection_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_context_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_context_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_crypter_cpp",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_crypter_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_crypter_cpp",
+    "to": "crypto_aes_h"
+  },
+  {
+    "from": "wallet_crypter_cpp",
+    "to": "crypto_sha512_h"
+  },
+  {
+    "from": "wallet_crypter_h",
+    "to": "serialize_h"
+  },
+  {
+    "from": "wallet_crypter_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "wallet_crypter_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_db_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "wallet_db_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_db_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_db_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_db_cpp",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_db_h",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "wallet_db_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_db_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "wallet_db_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "wallet_dump_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_dump_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_dump_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "wallet_external_signer_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_external_signer_scriptpubkeyman_h",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_feebumper_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_feebumper_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_feebumper_h",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "wallet_feebumper_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "wallet_feebumper_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_fees_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_fees_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_fees_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_fees_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "init_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "interfaces_init_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "net_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "node_interface_ui_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_init_cpp",
+    "to": "walletinitinterface_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "util_ui_change_type_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_feebumper_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_load_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_rpc_wallet_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_interfaces_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "wallet_load_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_load_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "compat_byteswap_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_migrate_cpp",
+    "to": "wallet_migrate_h"
+  },
+  {
+    "from": "wallet_migrate_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_receive_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_receive_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "wallet_receive_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_receive_cpp",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_receive_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_receive_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_receive_h",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_receive_h",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_receive_h",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_addresses_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "merkleblock_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_backup_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_rpc_coins_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_encrypt_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_encrypt_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_encrypt_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_signmessage_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "wallet_rpc_signmessage_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_signmessage_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_signmessage_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_signmessage_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "rpc_rawtransaction_util_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_feebumper_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_rpc_spend_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "policy_rbf_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "util_vector_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_transactions_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "common_url_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "util_any_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_rpc_util_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_util_h",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_util_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_rpc_util_h",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "core_io_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_rpc_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_rpc_wallet_h",
+    "to": "span_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "wallet_salvage_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_salvage_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_salvage_h",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_salvage_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "hash_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_cpp",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "common_types_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "psbt_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_scriptpubkeyman_h",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "util_rbf_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "util_trace_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_spend_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_spend_h",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "wallet_sqlite_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_sqlite_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_sqlite_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_coinselector_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "wallet_sqlite_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "wallet_migrate_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_db_tests_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "wallet_feebumper_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_feebumper_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coincontrol_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_coinselection_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "wallet_test_fuzz_crypter_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_crypter_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_crypter_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_crypter_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_crypter_cpp",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_fees_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_fees_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_fuzz_notifications_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_test_fuzz_parse_iso8601_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_parse_iso8601_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_parse_iso8601_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_test_fuzz_parse_iso8601_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "test_fuzz_util_descriptor_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_fuzz_scriptpubkeyman_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "test_fuzz_FuzzedDataProvider_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "test_fuzz_fuzz_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "test_fuzz_util_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "wallet_dump_h"
+  },
+  {
+    "from": "wallet_test_fuzz_wallet_bdb_parser_cpp",
+    "to": "wallet_migrate_h"
+  },
+  {
+    "from": "wallet_test_group_outputs_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_group_outputs_tests_cpp",
+    "to": "wallet_coinselection_h"
+  },
+  {
+    "from": "wallet_test_group_outputs_tests_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_test_group_outputs_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_group_outputs_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_cpp",
+    "to": "wallet_test_init_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_h",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_h",
+    "to": "node_context_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_h",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_init_test_fixture_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "wallet_test_init_tests_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_test_init_tests_cpp",
+    "to": "noui_h"
+  },
+  {
+    "from": "wallet_test_init_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "wallet_test_init_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_init_tests_cpp",
+    "to": "wallet_test_init_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "node_context_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_ismine_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_psbt_wallet_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_rpc_util_tests_cpp",
+    "to": "wallet_rpc_util_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_scriptpubkeyman_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "policy_fees_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_spend_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_util_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_test_util_h",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_test_util_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_test_util_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_test_wallet_crypto_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "wallet_test_wallet_crypto_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_wallet_crypto_tests_cpp",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_test_wallet_crypto_tests_cpp",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_cpp",
+    "to": "scheduler_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_cpp",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "node_context_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "util_chaintype_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_test_wallet_test_fixture_h",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "policy_policy_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "test_util_random_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "validation_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_receive_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_spend_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_wallet_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_wallet_transaction_tests_cpp",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_test_wallet_transaction_tests_cpp",
+    "to": "wallet_test_wallet_test_fixture_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "clientversion_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_walletdb_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_walletload_tests_cpp",
+    "to": "wallet_test_util_h"
+  },
+  {
+    "from": "wallet_test_walletload_tests_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_test_walletload_tests_cpp",
+    "to": "test_util_logging_h"
+  },
+  {
+    "from": "wallet_test_walletload_tests_cpp",
+    "to": "test_util_setup_common_h"
+  },
+  {
+    "from": "wallet_transaction_cpp",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_transaction_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "attributes_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "util_overloaded_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "util_strencodings_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "wallet_transaction_h",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "blockfilter_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "coins_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "common_messages_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "common_settings_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "common_signmessage_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "consensus_consensus_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "consensus_validation_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "external_signer_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "interfaces_wallet_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "kernel_mempool_removal_reason_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "node_types_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "psbt_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "pubkey_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "random_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_signingprovider_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "script_solver_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "span_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "support_allocators_zeroafterfree_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "support_cleanse_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_fs_helpers_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_moneystr_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_string_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_coincontrol_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_context_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_external_signer_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_wallet_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "addresstype_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "consensus_amount_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "interfaces_chain_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "interfaces_handler_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "outputtype_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "policy_feerate_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "script_interpreter_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "support_allocators_secure_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "tinyformat_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "uint256_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_hasher_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_result_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_string_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "util_ui_change_type_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_crypter_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_scriptpubkeyman_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_transaction_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_types_h"
+  },
+  {
+    "from": "wallet_wallet_h",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "wallet_walletdb_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "common_system_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "protocol_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "script_script_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "util_bip32_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "util_check_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "util_time_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "wallet_bdb_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "wallet_migrate_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "wallet_sqlite_h"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_walletdb_h",
+    "to": "script_sign_h"
+  },
+  {
+    "from": "wallet_walletdb_h",
+    "to": "wallet_db_h"
+  },
+  {
+    "from": "wallet_walletdb_h",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_walletdb_h",
+    "to": "key_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "config_bitcoin-config_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "wallet_wallettool_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "util_translation_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "wallet_dump_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "wallet_salvage_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "wallet_wallet_h"
+  },
+  {
+    "from": "wallet_wallettool_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_walletutil_cpp",
+    "to": "wallet_walletutil_h"
+  },
+  {
+    "from": "wallet_walletutil_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "wallet_walletutil_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "wallet_walletutil_cpp",
+    "to": "key_io_h"
+  },
+  {
+    "from": "wallet_walletutil_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "wallet_walletutil_h",
+    "to": "script_descriptor_h"
+  },
+  {
+    "from": "wallet_walletutil_h",
+    "to": "util_fs_h"
+  },
+  {
+    "from": "zmq_zmqabstractnotifier_cpp",
+    "to": "zmq_zmqabstractnotifier_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "zmq_zmqnotificationinterface_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "common_args_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "kernel_chain_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "kernel_mempool_entry_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "zmq_zmqabstractnotifier_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "zmq_zmqpublishnotifier_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_cpp",
+    "to": "zmq_zmqutil_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_h",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "zmq_zmqnotificationinterface_h",
+    "to": "validationinterface_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "zmq_zmqpublishnotifier_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "chain_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "chainparams_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "crypto_common_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "kernel_cs_main_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "netaddress_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "netbase_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "node_blockstorage_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "primitives_block_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "primitives_transaction_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "serialize_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "streams_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "sync_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "uint256_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_cpp",
+    "to": "zmq_zmqutil_h"
+  },
+  {
+    "from": "zmq_zmqpublishnotifier_h",
+    "to": "zmq_zmqabstractnotifier_h"
+  },
+  {
+    "from": "zmq_zmqrpc_cpp",
+    "to": "zmq_zmqrpc_h"
+  },
+  {
+    "from": "zmq_zmqrpc_cpp",
+    "to": "rpc_server_h"
+  },
+  {
+    "from": "zmq_zmqrpc_cpp",
+    "to": "rpc_util_h"
+  },
+  {
+    "from": "zmq_zmqrpc_cpp",
+    "to": "zmq_zmqabstractnotifier_h"
+  },
+  {
+    "from": "zmq_zmqrpc_cpp",
+    "to": "zmq_zmqnotificationinterface_h"
+  },
+  {
+    "from": "zmq_zmqutil_cpp",
+    "to": "zmq_zmqutil_h"
+  },
+  {
+    "from": "zmq_zmqutil_cpp",
+    "to": "logging_h"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "store_blk_dat"
+  },
+  {
+    "from": "store_blk_dat",
+    "to": "node_blockstorage_cpp"
+  },
+  {
+    "from": "store_blk_dat",
+    "to": "validation_cpp"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "store_rev_dat"
+  },
+  {
+    "from": "store_rev_dat",
+    "to": "node_blockstorage_cpp"
+  },
+  {
+    "from": "store_rev_dat",
+    "to": "validation_cpp"
+  },
+  {
+    "from": "txdb_cpp",
+    "to": "store_chainstate"
+  },
+  {
+    "from": "coins_cpp",
+    "to": "store_chainstate"
+  },
+  {
+    "from": "validation_cpp",
+    "to": "store_chainstate"
+  },
+  {
+    "from": "store_chainstate",
+    "to": "txdb_cpp"
+  },
+  {
+    "from": "store_chainstate",
+    "to": "coins_cpp"
+  },
+  {
+    "from": "store_chainstate",
+    "to": "validation_cpp"
+  },
+  {
+    "from": "node_blockstorage_cpp",
+    "to": "store_block_index"
+  },
+  {
+    "from": "store_block_index",
+    "to": "node_blockstorage_cpp"
+  },
+  {
+    "from": "store_block_index",
+    "to": "validation_cpp"
+  },
+  {
+    "from": "wallet_walletdb_cpp",
+    "to": "store_wallet_db"
+  },
+  {
+    "from": "wallet_sqlite_cpp",
+    "to": "store_wallet_db"
+  },
+  {
+    "from": "store_wallet_db",
+    "to": "wallet_walletdb_cpp"
+  },
+  {
+    "from": "store_wallet_db",
+    "to": "wallet_sqlite_cpp"
+  },
+  {
+    "from": "node_mempool_persist_cpp",
+    "to": "store_mempool_dat"
+  },
+  {
+    "from": "store_mempool_dat",
+    "to": "node_mempool_persist_cpp"
+  },
+  {
+    "from": "addrdb_cpp",
+    "to": "store_peers_dat"
+  },
+  {
+    "from": "store_peers_dat",
+    "to": "addrdb_cpp"
+  },
+  {
+    "from": "banman_cpp",
+    "to": "store_banlist"
+  },
+  {
+    "from": "store_banlist",
+    "to": "banman_cpp"
+  }
+];
+
+// -- Journeys --
+
+export const journeys: Journey[] = 
+[
+  {
+    "id": "tx-lifecycle",
+    "name": "Life of a Transaction",
+    "description": "Follow a transaction from network arrival to block confirmation",
+    "color": "#facc15",
+    "stops": [
+      {
+        "buildingId": "net_cpp",
+        "function": "CConnman::SocketHandler",
+        "annotation": "Raw bytes arrive on a TCP socket from a peer. This is where every transaction begins its journey \u2014 as an undifferentiated stream of bytes on the wire."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage",
+        "annotation": "The bytes are deserialized into a message. The node recognizes it as a 'tx' message and begins processing. This is the border checkpoint between the raw network and the structured Bitcoin protocol."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "AcceptToMemoryPool",
+        "annotation": "The main gate. The transaction is checked against every consensus rule: valid signatures, inputs exist and are unspent, fees are sufficient, no double spends. Most invalid transactions die here."
+      },
+      {
+        "buildingId": "txmempool_cpp",
+        "function": "CTxMemPool::addUnchecked",
+        "annotation": "The transaction passed validation. It enters the mempool \u2014 the waiting room of unconfirmed transactions. It lives here until a miner picks it up or it expires."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "RelayTransaction",
+        "annotation": "The node announces the transaction to its peers. The transaction propagates across the network, reaching thousands of nodes within seconds."
+      },
+      {
+        "buildingId": "node_miner_cpp",
+        "function": "BlockAssembler::addPackageTxs",
+        "annotation": "A miner builds a block template. Transactions are selected from the mempool by fee rate \u2014 highest paying first. Our transaction gets included in the candidate block."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectBlock",
+        "annotation": "A block containing our transaction is found and validated. Every transaction in the block is re-verified, the UTXO set is updated. The transaction is now confirmed."
+      },
+      {
+        "buildingId": "txmempool_cpp",
+        "function": "CTxMemPool::removeForBlock",
+        "annotation": "The transaction is removed from the mempool. Its journey is complete \u2014 it's now part of the permanent blockchain record."
+      }
+    ]
+  },
+  {
+    "id": "block-validation",
+    "name": "Block Validation",
+    "description": "What happens when a new block arrives from the network",
+    "color": "#3b82f6",
+    "stops": [
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage(\"block\")",
+        "annotation": "A block message arrives from a peer. The raw bytes are deserialized into a CBlock object."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ProcessNewBlock",
+        "annotation": "Entry point for all new blocks. This function coordinates the entire validation pipeline \u2014 it must handle both valid blocks and attack attempts."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "CheckBlock",
+        "annotation": "Basic structural checks: is the block the right size? Is the merkle root correct? Is the coinbase transaction valid? These are cheap checks that reject obviously bad blocks."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "AcceptBlock",
+        "annotation": "Check the block header against consensus rules, verify proof-of-work, and store the block to disk. The block is now on disk but not yet part of the active chain."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectTip",
+        "annotation": "This block extends our best chain. Time to actually execute it \u2014 connect it to the tip of the chain and update all state."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectBlock",
+        "annotation": "The heavy lifting: execute every transaction in the block. Check every script, update the UTXO set, enforce all consensus rules. If anything fails, the entire block is rejected."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "UpdateTip",
+        "annotation": "The block is valid. Update the chain state, log the new tip, notify subscribers. The blockchain just grew by one block."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "PeerManagerImpl::NewPoWValidBlock",
+        "annotation": "Announce the new block to peers using compact block relay. The block propagates across the network, and other nodes begin their own validation."
+      }
+    ]
+  },
+  {
+    "id": "peer-handshake",
+    "name": "Peer Connection & Handshake",
+    "description": "How two Bitcoin nodes find each other and establish a connection",
+    "color": "#f59e0b",
+    "stops": [
+      {
+        "buildingId": "net_cpp",
+        "function": "CConnman::OpenNetworkConnection",
+        "annotation": "The node decides to connect to a peer. The address might come from DNS seeds, the address manager, or a manual -addnode flag."
+      },
+      {
+        "buildingId": "net_cpp",
+        "function": "CConnman::ConnectNode",
+        "annotation": "A TCP socket is established to the peer's IP:port. The connection exists at the network level but the Bitcoin protocol hasn't started yet."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "PushMessage(\"version\")",
+        "annotation": "We send our version message: protocol version, services we offer, current block height, and our address. This is the Bitcoin handshake's opening move."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage(\"version\")",
+        "annotation": "We receive the peer's version message. We check compatibility \u2014 do they speak a protocol version we understand? Do they offer services we need?"
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage(\"verack\")",
+        "annotation": "Version acknowledged. The handshake is complete. Both nodes have agreed on protocol parameters and are ready for normal operation."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "SendMessages",
+        "annotation": "Normal operation begins. The node requests headers to sync, announces transactions from its mempool, and starts the ongoing conversation that keeps the network alive."
+      }
+    ]
+  },
+  {
+    "id": "wallet-send",
+    "name": "Wallet Sends a Transaction",
+    "description": "From user intent to broadcast \u2014 how the wallet creates and sends bitcoin",
+    "color": "#22c55e",
+    "stops": [
+      {
+        "buildingId": "wallet_rpc_spend_cpp",
+        "function": "sendtoaddress",
+        "annotation": "The user calls the sendtoaddress RPC. This is where human intent ('send 1 BTC to this address') enters the system."
+      },
+      {
+        "buildingId": "wallet_spend_cpp",
+        "function": "CreateTransaction",
+        "annotation": "The wallet selects which UTXOs to spend (coin selection), builds the transaction structure, calculates the fee, and creates change outputs."
+      },
+      {
+        "buildingId": "wallet_spend_cpp",
+        "function": "CWallet::FundTransaction",
+        "annotation": "Choose the optimal set of UTXOs. The wallet tries to minimize fees while avoiding dust outputs. This is a knapsack-like optimization problem."
+      },
+      {
+        "buildingId": "wallet_scriptpubkeyman_cpp",
+        "function": "SignTransaction",
+        "annotation": "Sign each input with the appropriate private key. For SegWit inputs, the witness data is constructed. The transaction is now authorized."
+      },
+      {
+        "buildingId": "wallet_wallet_cpp",
+        "function": "CWallet::CommitTransaction",
+        "annotation": "Save the transaction to the wallet database and mark the spent UTXOs. Even if broadcast fails, the wallet remembers this transaction."
+      },
+      {
+        "buildingId": "node_transaction_cpp",
+        "function": "BroadcastTransaction",
+        "annotation": "Submit the signed transaction to the local node's mempool. It goes through the same validation as any other transaction \u2014 no special treatment for local transactions."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "RelayTransaction",
+        "annotation": "The transaction is announced to peers via inv messages. Within seconds, it propagates across the entire network, waiting to be included in a block."
+      }
+    ]
+  },
+  {
+    "id": "ibd",
+    "name": "Initial Block Download",
+    "description": "How a new node syncs the entire blockchain from scratch",
+    "color": "#a855f7",
+    "stops": [
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "SendMessages",
+        "annotation": "The newly started node sends getheaders messages to its peers, asking for the chain of block headers. Headers are small (80 bytes each) so this is fast."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage(\"headers\")",
+        "annotation": "Headers arrive. Each header is validated: correct proof-of-work, valid timestamps, proper chain linkage. The node builds a header chain without downloading full blocks yet."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "HeadersDirectFetchBlocks",
+        "annotation": "With a validated header chain, the node requests full blocks from multiple peers in parallel. It knows exactly which blocks it needs and downloads them out of order for speed."
+      },
+      {
+        "buildingId": "net_processing_cpp",
+        "function": "ProcessMessage(\"block\")",
+        "annotation": "Full blocks arrive and are stored to disk. The node processes them in order, even though they may arrive out of order. Each block is fully validated."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "ConnectTip",
+        "annotation": "Each block is connected to the chain tip. Every transaction is executed, every script is verified, the UTXO set is updated. This is the slowest part \u2014 full validation of years of history."
+      },
+      {
+        "buildingId": "validation_cpp",
+        "function": "FlushStateToDisk",
+        "annotation": "Periodically, the UTXO set cache is flushed to LevelDB on disk. This prevents data loss if the node crashes during sync. The flush interval balances safety vs. speed."
+      },
+      {
+        "buildingId": "init_cpp",
+        "function": "IBD complete",
+        "annotation": "The node has caught up to the network tip. The IBD flag is cleared and the node switches to normal operation \u2014 relaying transactions, serving blocks to peers, and validating new blocks as they arrive."
+      }
+    ]
+  }
+];
