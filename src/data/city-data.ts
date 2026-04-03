@@ -11,6 +11,12 @@ export interface Building {
   classes: number;
   functions: number;
   enums: number;
+  /** Present on synthetic storage / index “buildings” in the city data. */
+  description?: string;
+  crud?: {
+    write: string[];
+    read: string[];
+  };
 }
 
 export interface District {
