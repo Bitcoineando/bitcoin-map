@@ -1,20 +1,24 @@
 import { useMemo } from 'react';
 import * as THREE from 'three';
-import { dependencies } from '../data/city-data';
-import { getBuildingPosition } from '../layout';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
+import { computeBuildingPositions, buildPositionMap } from '../layout';
 
 export function Roads({ hiddenBuildingIds }: { hiddenBuildingIds: Set<string> }) {
   const selectedBuilding = useStore((s) => s.selectedBuilding);
+  const buildings = useVersionStore((s) => s.buildings);
+  const districts = useVersionStore((s) => s.districts);
+  const dependencies = useVersionStore((s) => s.dependencies);
 
-  // Build a quick lookup: which buildings connect to/from the selected one?
-  const { selectedGeo, connectedIds } = useMemo(() => {
-    if (!selectedBuilding) {
-      return { selectedGeo: null, connectedIds: new Set<string>() };
-    }
+  const positionMap = useMemo(
+    () => buildPositionMap(computeBuildingPositions(buildings, districts)),
+    [buildings, districts]
+  );
+
+  const selectedGeo = useMemo(() => {
+    if (!selectedBuilding) return null;
 
     const points: number[] = [];
-    const connected = new Set<string>();
 
     for (const dep of dependencies) {
       if (hiddenBuildingIds.has(dep.from) || hiddenBuildingIds.has(dep.to)) continue;
@@ -23,21 +27,20 @@ export function Roads({ hiddenBuildingIds }: { hiddenBuildingIds: Set<string> })
       const isTo = dep.to === selectedBuilding;
       if (!isFrom && !isTo) continue;
 
-      const from = getBuildingPosition(dep.from);
-      const to = getBuildingPosition(dep.to);
+      const from = positionMap.get(dep.from);
+      const to = positionMap.get(dep.to);
       if (!from || !to) continue;
 
       points.push(from.position[0], 0.05, from.position[2]);
       points.push(to.position[0], 0.05, to.position[2]);
-      connected.add(isFrom ? dep.to : dep.from);
     }
 
-    if (points.length === 0) return { selectedGeo: null, connectedIds: connected };
+    if (points.length === 0) return null;
 
     const geo = new THREE.BufferGeometry();
     geo.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
-    return { selectedGeo: geo, connectedIds: connected };
-  }, [selectedBuilding, hiddenBuildingIds]);
+    return geo;
+  }, [selectedBuilding, hiddenBuildingIds, dependencies, positionMap]);
 
   if (!selectedGeo) return null;
 

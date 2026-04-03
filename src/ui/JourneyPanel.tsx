@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { journeys } from '../data/city-data';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
 
 export function JourneyPanel() {
@@ -11,6 +11,7 @@ export function JourneyPanel() {
   const prevStop = useStore((s) => s.prevStop);
   const journeyPanelOpen = useStore((s) => s.journeyPanelOpen);
   const setJourneyPanelOpen = useStore((s) => s.setJourneyPanelOpen);
+  const journeys = useVersionStore((s) => s.journeys);
 
   const journey = activeJourney ? journeys.find((j) => j.id === activeJourney) : null;
   const stop = journey?.stops[currentStop];

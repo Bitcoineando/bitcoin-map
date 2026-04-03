@@ -1,4 +1,4 @@
-import { buildings, districts, type Building, type District } from './data/city-data';
+import type { Building, District } from './data/types';
 
 export interface BuildingPosition {
   id: string;
@@ -16,7 +16,7 @@ function seededRandom(seed: number): () => number {
   };
 }
 
-export function computeBuildingPositions(): BuildingPosition[] {
+export function computeBuildingPositions(buildings: Building[], districts: District[]): BuildingPosition[] {
   const districtMap = new Map<string, District>();
   for (const d of districts) {
     districtMap.set(d.id, d);
@@ -62,7 +62,7 @@ export function computeBuildingPositions(): BuildingPosition[] {
 
       positions.push({
         id: b.id,
-        position: [x, height / 2, z], // y is half-height so box sits on ground
+        position: [x, height / 2, z],
         dimensions: [width, height, depth],
         color: district.color,
       });
@@ -72,13 +72,11 @@ export function computeBuildingPositions(): BuildingPosition[] {
   return positions;
 }
 
-// Get building position by id
-const _cache = new Map<string, BuildingPosition>();
-export function getBuildingPosition(id: string): BuildingPosition | undefined {
-  if (_cache.size === 0) {
-    for (const bp of computeBuildingPositions()) {
-      _cache.set(bp.id, bp);
-    }
+// Build a position lookup map
+export function buildPositionMap(positions: BuildingPosition[]): Map<string, BuildingPosition> {
+  const map = new Map<string, BuildingPosition>();
+  for (const bp of positions) {
+    map.set(bp.id, bp);
   }
-  return _cache.get(id);
+  return map;
 }

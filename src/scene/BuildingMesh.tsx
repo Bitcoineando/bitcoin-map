@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Text } from '@react-three/drei';
 import type { Mesh } from 'three';
 import type { BuildingPosition } from '../layout';
-import { buildings } from '../data/city-data';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
 
 interface Props {
@@ -20,6 +20,7 @@ export function BuildingMesh({ bp, isOnJourney, isCurrentStop, journeyActive, is
   const selectBuilding = useStore((s) => s.selectBuilding);
   const selectedBuilding = useStore((s) => s.selectedBuilding);
 
+  const buildings = useVersionStore((s) => s.buildings);
   const building = buildings.find((b) => b.id === bp.id);
   const isSelected = selectedBuilding === bp.id;
 

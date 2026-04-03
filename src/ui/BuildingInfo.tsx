@@ -1,11 +1,15 @@
 import { useMemo } from 'react';
-import { buildings, dependencies, GITHUB_BASE } from '../data/city-data';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
 
 export function BuildingInfo() {
   const selectedBuilding = useStore((s) => s.selectedBuilding);
   const selectBuilding = useStore((s) => s.selectBuilding);
   const setCameraTarget = useStore((s) => s.setCameraTarget);
+
+  const buildings = useVersionStore((s) => s.buildings);
+  const dependencies = useVersionStore((s) => s.dependencies);
+  const githubBase = useVersionStore((s) => s.githubBase);
 
   const building = selectedBuilding ? buildings.find((b) => b.id === selectedBuilding) : null;
 
@@ -52,13 +56,13 @@ export function BuildingInfo() {
         <span style={styles.label}>Lines</span>
         <span style={styles.value}>{building.loc.toLocaleString()}</span>
       </div>
-      {building.classes > 0 && (
+      {(building.classes ?? 0) > 0 && (
         <div style={styles.row}>
           <span style={styles.label}>Classes</span>
           <span style={styles.value}>{building.classes}</span>
         </div>
       )}
-      {building.functions > 0 && (
+      {(building.functions ?? 0) > 0 && (
         <div style={styles.row}>
           <span style={styles.label}>Functions</span>
           <span style={styles.value}>{building.functions}</span>
@@ -68,7 +72,7 @@ export function BuildingInfo() {
       {/* GitHub link */}
       {building.path && (
         <a
-          href={`${GITHUB_BASE}/${building.path}`}
+          href={`${githubBase}/${building.path}`}
           target="_blank"
           rel="noopener noreferrer"
           style={styles.githubLink}

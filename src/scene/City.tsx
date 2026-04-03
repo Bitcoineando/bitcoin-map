@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { buildings, dependencies, districts, journeys } from '../data/city-data';
-import { computeBuildingPositions } from '../layout';
+import { useVersionStore } from '../version-store';
+import { computeBuildingPositions, buildPositionMap } from '../layout';
 import { useStore } from '../store';
 import { DistrictMesh } from './District';
 import { BuildingMesh } from './BuildingMesh';
@@ -10,11 +10,24 @@ import { Traveler } from './Traveler';
 import { CameraRig } from './CameraRig';
 
 export function City() {
-  const allPositions = useMemo(() => computeBuildingPositions(), []);
+  const buildings = useVersionStore((s) => s.buildings);
+  const districts = useVersionStore((s) => s.districts);
+  const dependencies = useVersionStore((s) => s.dependencies);
+  const journeys = useVersionStore((s) => s.journeys);
+  const currentVersion = useVersionStore((s) => s.currentVersion);
+
   const activeJourney = useStore((s) => s.activeJourney);
   const currentStop = useStore((s) => s.currentStop);
   const hiddenDistricts = useStore((s) => s.hiddenDistricts);
   const selectedBuilding = useStore((s) => s.selectedBuilding);
+
+  const allPositions = useMemo(
+    () => computeBuildingPositions(buildings, districts),
+    [buildings, districts]
+  );
+
+  // Expose position map for other components
+  const positionMap = useMemo(() => buildPositionMap(allPositions), [allPositions]);
 
   // Build a set of hidden building IDs for filtering
   const hiddenBuildingIds = useMemo(() => {
@@ -23,7 +36,7 @@ export function City() {
       if (hiddenDistricts.has(b.subsystem)) hidden.add(b.id);
     }
     return hidden;
-  }, [hiddenDistricts]);
+  }, [buildings, hiddenDistricts]);
 
   // Filter building positions by visible districts
   const buildingPositions = useMemo(() => {
@@ -33,7 +46,7 @@ export function City() {
   // Filter districts
   const visibleDistricts = useMemo(() => {
     return districts.filter((d) => !hiddenDistricts.has(d.id));
-  }, [hiddenDistricts]);
+  }, [districts, hiddenDistricts]);
 
   // Connected buildings for the selected building
   const connectedIds = useMemo(() => {
@@ -44,7 +57,7 @@ export function City() {
       if (dep.to === selectedBuilding) connected.add(dep.from);
     }
     return connected;
-  }, [selectedBuilding]);
+  }, [selectedBuilding, dependencies]);
 
   // Which buildings are on the active journey?
   const journeyBuildingIds = useMemo(() => {
@@ -52,14 +65,14 @@ export function City() {
     const journey = journeys.find((j) => j.id === activeJourney);
     if (!journey) return new Set<string>();
     return new Set(journey.stops.map((s) => s.buildingId));
-  }, [activeJourney]);
+  }, [activeJourney, journeys]);
 
   const currentStopBuildingId = useMemo(() => {
     if (!activeJourney) return null;
     const journey = journeys.find((j) => j.id === activeJourney);
     if (!journey) return null;
     return journey.stops[currentStop]?.buildingId ?? null;
-  }, [activeJourney, currentStop]);
+  }, [activeJourney, currentStop, journeys]);
 
   return (
     <>
@@ -76,7 +89,7 @@ export function City() {
       <Roads hiddenBuildingIds={hiddenBuildingIds} />
 
       {/* Journey paths */}
-      <JourneyPaths />
+      <JourneyPaths positionMap={positionMap} />
 
       {/* Buildings */}
       {buildingPositions.map((bp) => (
@@ -92,10 +105,10 @@ export function City() {
       ))}
 
       {/* Animated traveler */}
-      <Traveler />
+      <Traveler positionMap={positionMap} />
 
       {/* Camera */}
-      <CameraRig />
+      <CameraRig positionMap={positionMap} />
     </>
   );
 }

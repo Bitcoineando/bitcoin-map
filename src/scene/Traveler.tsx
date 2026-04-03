@@ -1,21 +1,22 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import { journeys } from '../data/city-data';
-import { getBuildingPosition } from '../layout';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
+import type { BuildingPosition } from '../layout';
 
-export function Traveler() {
+export function Traveler({ positionMap }: { positionMap: Map<string, BuildingPosition> }) {
   const activeJourney = useStore((s) => s.activeJourney);
   const currentStop = useStore((s) => s.currentStop);
 
   if (!activeJourney) return null;
 
-  return <TravelerDot journeyId={activeJourney} currentStop={currentStop} />;
+  return <TravelerDot journeyId={activeJourney} currentStop={currentStop} positionMap={positionMap} />;
 }
 
-function TravelerDot({ journeyId, currentStop }: { journeyId: string; currentStop: number }) {
+function TravelerDot({ journeyId, currentStop, positionMap }: { journeyId: string; currentStop: number; positionMap: Map<string, BuildingPosition> }) {
   const meshRef = useRef<THREE.Mesh>(null);
+  const journeys = useVersionStore((s) => s.journeys);
   const journey = journeys.find((j) => j.id === journeyId)!;
   const playing = useStore((s) => s.journeyPlaying);
   const setPlaying = useStore((s) => s.setPlaying);
@@ -23,12 +24,11 @@ function TravelerDot({ journeyId, currentStop }: { journeyId: string; currentSto
   const targetPos = useMemo(() => {
     const stop = journey.stops[currentStop];
     if (!stop) return null;
-    const bp = getBuildingPosition(stop.buildingId);
+    const bp = positionMap.get(stop.buildingId);
     if (!bp) return null;
     return new THREE.Vector3(bp.position[0], bp.dimensions[1] + 1.5, bp.position[2]);
-  }, [journey, currentStop]);
+  }, [journey, currentStop, positionMap]);
 
-  // Animate toward target
   useFrame(() => {
     if (!meshRef.current || !targetPos) return;
     const pos = meshRef.current.position;

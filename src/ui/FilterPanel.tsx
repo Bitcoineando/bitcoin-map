@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { districts } from '../data/city-data';
+import { useVersionStore } from '../version-store';
 import { useStore } from '../store';
 
 export function FilterPanel() {
   const [open, setOpen] = useState(false);
+  const districts = useVersionStore((s) => s.districts);
   const hiddenDistricts = useStore((s) => s.hiddenDistricts);
   const toggleDistrict = useStore((s) => s.toggleDistrict);
 
